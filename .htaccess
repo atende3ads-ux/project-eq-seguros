@@ -1,0 +1,7 @@
+DirectoryIndex index.html
+
+# Bloqueia acesso à pasta .git e a arquivos internos do repositório
+RedirectMatch 404 /\.git
+<FilesMatch "^(README\.md|\.cpanel\.yml|\.gitignore|\.htaccess)$">
+  Require all denied
+</FilesMatch>
