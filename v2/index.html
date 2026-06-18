@@ -42,14 +42,33 @@
   .wf-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;}
   .wf-nav span{cursor:pointer;color:var(--ink2);}
   .wf-nav span:hover{color:var(--ink);}
-  .wf-nav .has-dropdown{position:relative;display:inline-flex;}
+  .wf-nav .has-dropdown{position:static;display:inline-flex;}
   .wf-nav .nav-top{cursor:pointer;color:var(--ink2);}
-  .wf-nav .has-dropdown:hover .nav-top{color:var(--ink);}
-  .wf-nav .dropdown{position:absolute;top:100%;left:0;min-width:238px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 28px rgba(0,0,0,.10);padding:6px;display:none;z-index:80;}
-  .wf-nav .has-dropdown:hover .dropdown{display:block;}
-  .wf-nav .dd-item{display:flex;align-items:center;gap:11px;padding:9px 10px;font-size:.82rem;color:var(--ink);cursor:pointer;border-radius:3px;white-space:nowrap;}
-  .wf-nav .dd-item:hover{background:var(--alt);}
-  .wf-nav .dd-item svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .wf-nav .has-dropdown:hover .nav-top,.wf-nav .has-dropdown.open .nav-top{color:var(--ink);}
+  .wf-nav .dropdown{position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 18px 34px rgba(0,0,0,.10);padding:0;display:none;z-index:80;}
+  .wf-nav .has-dropdown:hover .dropdown,.wf-nav .has-dropdown.open .dropdown{display:block;}
+  .mega-head{font-family:var(--serif);font-size:1.05rem;font-weight:700;padding:20px 40px 14px;max-width:1180px;margin:0 auto;}
+  .mega-body{display:flex;padding:0 40px 12px;max-width:1180px;margin:0 auto;}
+  .mega-cats{flex:0 0 210px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--line);padding:4px 18px 4px 0;}
+  .mega-cat{padding:11px 12px;font-size:.86rem;color:var(--ink2);cursor:pointer;border-radius:5px;}
+  .mega-cat:hover{background:var(--alt);color:var(--ink);}
+  .mega-cat.active{background:var(--alt);color:var(--ink);font-weight:600;}
+  .mega-panels{flex:1 1 auto;padding-left:28px;min-width:0;}
+  .mega-panel{display:none;}
+  .mega-panel.active{display:block;}
+  .mega-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:14px;}
+  .mega-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .mega-card{display:flex;gap:14px;padding:16px;background:var(--alt);border-radius:8px;cursor:pointer;align-items:flex-start;border:1px solid transparent;}
+  .mega-card:hover{background:#fff;border-color:var(--line);}
+  .mega-card .ico{flex:0 0 38px;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:9px;}
+  .mega-card .ico svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .mega-txt{min-width:0;}
+  .mega-card h4{font-size:.92rem;margin:0 0 5px;}
+  .mega-card p{font-size:.78rem;color:var(--ink2);margin:0 0 9px;line-height:1.45;}
+  .mega-more{font-size:.78rem;font-weight:600;color:var(--ink);}
+  .mega-foot{display:flex;justify-content:flex-end;gap:30px;background:var(--alt);border-top:1px solid var(--line);padding:14px 40px;}
+  .mega-act{display:flex;align-items:center;gap:9px;font-size:.84rem;color:var(--ink);cursor:pointer;}
+  .mega-act svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
   .menu-toggle{display:none;}
 
   /* ---------- Pages ---------- */
@@ -195,8 +214,14 @@
     .wf-nav.open{display:flex;}
     .wf-nav .has-dropdown{width:100%;flex-direction:column;padding:0;border:none;}
     .wf-nav .nav-top{display:block;width:100%;padding:11px 0;border-bottom:1px solid var(--line2);}
-    .wf-nav .dropdown{position:static;display:block;border:none;box-shadow:none;padding:2px 0 8px 16px;min-width:0;}
-    .wf-nav .dd-item{padding:8px 0;}
+    .wf-nav .dropdown{position:static;display:block;border:none;box-shadow:none;padding:2px 0 10px 12px;}
+    .mega-head{padding:8px 0 6px;font-size:.85rem;max-width:none;}
+    .mega-body{flex-direction:column;padding:0;max-width:none;}
+    .mega-cats{display:none;}
+    .mega-panels{padding-left:0;}
+    .mega-cards{grid-template-columns:1fr;gap:8px;}
+    .mega-card{padding:11px;}
+    .mega-foot{display:none;}
     .wf-nav span{padding:11px 0;border-bottom:1px solid var(--line2);}
     .wf-header{padding:12px 18px;gap:12px;}
     .wf-header>.btn{padding:9px 14px;font-size:.78rem;white-space:nowrap;}
@@ -243,21 +268,78 @@
         <span class="has-dropdown">
           <span class="nav-top" data-target="seguros">Seguros ▾</span>
           <div class="dropdown">
-            <a class="dd-item" data-target="vida"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg> <span>Seguro de Vida</span></a>
-            <a class="dd-item" data-target="prestamista"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span>Seguro Prestamista</span></a>
-            <a class="dd-item" data-target="viagem"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg> <span>Seguro Viagem</span></a>
-            <a class="dd-item" data-target="funeral"><svg viewBox="0 0 24 24"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg> <span>Seguro Funeral</span></a>
-            <a class="dd-item" data-target="acidentes"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> <span>Seguro de Acidentes</span></a>
+            <div class="mega-head">Nossos Seguros</div>
+            <div class="mega-body">
+              <div class="mega-cats">
+            <a class="mega-cat active" data-cat="seg-pessoas">Para Pessoas</a>
+            <a class="mega-cat" data-cat="seg-coletivo">Coletivo / Empresas</a>
+            <a class="mega-cat" data-cat="seg-outros">Outros seguros</a>
+              </div>
+              <div class="mega-panels">
+          <div class="mega-panel active" id="seg-pessoas">
+            <div class="mega-label">Pessoas</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="vida"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><span class="mega-txt"><h4>Seguro de Vida</h4><p>Indenização por morte ou invalidez, com proteção para a sua família.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="prestamista"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="mega-txt"><h4>Seguro Prestamista</h4><p>Quita ou amortiza sua dívida em caso de morte, invalidez ou desemprego.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="acidentes"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span class="mega-txt"><h4>Seguro de Acidentes</h4><p>Indenização por morte acidental ou invalidez por acidente.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="funeral"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></span><span class="mega-txt"><h4>Seguro Funeral</h4><p>Auxílio funeral com livre escolha do prestador.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="viagem"><span class="ico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></span><span class="mega-txt"><h4>Seguro Viagem</h4><p>Despesas médicas, bagagem e assistência 24h em viagens.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+          <div class="mega-panel" id="seg-coletivo">
+            <div class="mega-label">Empresas e grupos</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="beneficios"><span class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mega-txt"><h4>Vida em Grupo</h4><p>Seguro de vida coletivo para empresas e grupos.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="beneficios"><span class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="mega-txt"><h4>Benefícios Coletivos</h4><p>Pacote de benefícios para colaboradores.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="prestamista"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="mega-txt"><h4>Prestamista Coletivo</h4><p>Proteção de operações de crédito em grupo.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+          <div class="mega-panel" id="seg-outros">
+            <div class="mega-label">Outros</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="seguros"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10z"/><circle cx="7" cy="7" r="1.2"/></svg></span><span class="mega-txt"><h4>Microsseguro</h4><p>Microsseguro de pessoas por bilhete, contratação simples.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="atendimento"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="14.8" y1="9.2" x2="19.1" y2="4.9"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/></svg></span><span class="mega-txt"><h4>Assistências</h4><p>Telemedicina, residencial, pet e mais assistências.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a class="mega-act" data-target="atendimento"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span>Acione seu seguro</span></a>
+              <a class="mega-act" data-target="contato"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg> <span>Fale Conosco</span></a>
+            </div>
           </div>
         </span>
         <span class="has-dropdown">
           <span class="nav-top" data-target="credito">Crédito ▾</span>
           <div class="dropdown">
-            <a class="dd-item" data-target="consig"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> <span>Crédito Consignado</span></a>
-            <a class="dd-item" data-target="fgts"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span>Antecipação de FGTS</span></a>
-            <a class="dd-item" data-target="clt"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> <span>Crédito CLT</span></a>
-            <a class="dd-item" data-target="inss"><svg viewBox="0 0 24 24"><path d="M23 12a11 11 0 0 0-22 0z"/><path d="M12 12v7a3 3 0 0 0 6 0"/></svg> <span>Crédito INSS</span></a>
-            <a class="dd-item" data-target="prev"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> <span>Previdência</span></a>
+            <div class="mega-head">Crédito e Previdência</div>
+            <div class="mega-body">
+              <div class="mega-cats">
+            <a class="mega-cat active" data-cat="cred-emp">Empréstimo</a>
+            <a class="mega-cat" data-cat="cred-prev">Previdência</a>
+              </div>
+              <div class="mega-panels">
+          <div class="mega-panel active" id="cred-emp">
+            <div class="mega-label">Empréstimo e crédito</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="consig"><span class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="mega-txt"><h4>Crédito Consignado</h4><p>Desconto em folha com taxas reduzidas — forte para servidor público.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="clt"><span class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span class="mega-txt"><h4>Crédito CLT</h4><p>Empréstimo consignado para quem tem carteira assinada.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="inss"><span class="ico"><svg viewBox="0 0 24 24"><path d="M23 12a11 11 0 0 0-22 0z"/><path d="M12 12v7a3 3 0 0 0 6 0"/></svg></span><span class="mega-txt"><h4>Crédito INSS</h4><p>Para aposentados e pensionistas do INSS.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="fgts"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="mega-txt"><h4>Antecipação de FGTS</h4><p>Antecipe o saque-aniversário do seu FGTS.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+          <div class="mega-panel" id="cred-prev">
+            <div class="mega-label">Previdência</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="prev"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span><span class="mega-txt"><h4>Previdência (EQ Prev)</h4><p>Previdência voltada a estratégias de empréstimo.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a class="mega-act" data-target="atendimento"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span>Acione seu seguro</span></a>
+              <a class="mega-act" data-target="contato"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg> <span>Fale Conosco</span></a>
+            </div>
           </div>
         </span>
         <span data-target="tech">Tecnologia EQ</span>
@@ -1371,6 +1453,21 @@
     });
     var mt = document.getElementById('menuToggle');
     if(mt){ mt.addEventListener('click', function(){ if(nav){ nav.classList.toggle('open'); } }); }
+    document.querySelectorAll('.wf-nav .has-dropdown').forEach(function(hd){
+      var t;
+      hd.addEventListener('mouseenter', function(){ clearTimeout(t); hd.classList.add('open'); });
+      hd.addEventListener('mouseleave', function(){ t = setTimeout(function(){ hd.classList.remove('open'); }, 180); });
+    });
+    document.querySelectorAll('.mega-cat').forEach(function(cat){
+      function act(){
+        var m = cat.closest('.dropdown'); if(!m) return;
+        m.querySelectorAll('.mega-cat').forEach(function(x){ x.classList.toggle('active', x===cat); });
+        var id = cat.getAttribute('data-cat');
+        m.querySelectorAll('.mega-panel').forEach(function(pl){ pl.classList.toggle('active', pl.id===id); });
+      }
+      cat.addEventListener('mouseenter', act);
+      cat.addEventListener('click', function(e){ e.preventDefault(); act(); });
+    });
   })();
 </script>
 </body>
