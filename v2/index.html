@@ -69,6 +69,8 @@
   .mega-foot{display:flex;justify-content:flex-end;gap:30px;background:var(--alt);border-top:1px solid var(--line);padding:14px 40px;}
   .mega-act{display:flex;align-items:center;gap:9px;font-size:.84rem;color:var(--ink);cursor:pointer;}
   .mega-act svg{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .mega-body.nocats .mega-panels{padding-left:0;}
+  .mega-body.nocats .mega-cards{grid-template-columns:repeat(3,1fr);}
   .menu-toggle{display:none;}
 
   /* ---------- Pages ---------- */
@@ -313,26 +315,14 @@
         <span class="has-dropdown">
           <span class="nav-top" data-target="credito">Crédito ▾</span>
           <div class="dropdown">
-            <div class="mega-head">Crédito e Previdência</div>
-            <div class="mega-body">
-              <div class="mega-cats">
-            <a class="mega-cat active" data-cat="cred-emp">Empréstimo</a>
-            <a class="mega-cat" data-cat="cred-prev">Previdência e Pecúlio</a>
-              </div>
+            <div class="mega-head">Crédito</div>
+            <div class="mega-body nocats">
               <div class="mega-panels">
-          <div class="mega-panel active" id="cred-emp">
-            <div class="mega-label">Empréstimo e crédito</div>
+          <div class="mega-panel active">
+            <div class="mega-label">Empréstimo, previdência e pecúlio</div>
             <div class="mega-cards">
-            <a class="mega-card" data-target="consig"><span class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="mega-txt"><h4>Crédito Consignado</h4><p>Desconto em folha com taxas reduzidas — forte para servidor público.</p><span class="mega-more">Saiba mais →</span></span></a>
-            <a class="mega-card" data-target="clt"><span class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span class="mega-txt"><h4>Crédito CLT</h4><p>Empréstimo consignado para quem tem carteira assinada.</p><span class="mega-more">Saiba mais →</span></span></a>
-            <a class="mega-card" data-target="inss"><span class="ico"><svg viewBox="0 0 24 24"><path d="M23 12a11 11 0 0 0-22 0z"/><path d="M12 12v7a3 3 0 0 0 6 0"/></svg></span><span class="mega-txt"><h4>Crédito INSS</h4><p>Para aposentados e pensionistas do INSS.</p><span class="mega-more">Saiba mais →</span></span></a>
-            <a class="mega-card" data-target="fgts"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="mega-txt"><h4>Antecipação de FGTS</h4><p>Antecipe o saque-aniversário do seu FGTS.</p><span class="mega-more">Saiba mais →</span></span></a>
-            </div>
-          </div>
-          <div class="mega-panel" id="cred-prev">
-            <div class="mega-label">Previdência e Pecúlio</div>
-            <div class="mega-cards">
-            <a class="mega-card" data-target="prev"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span><span class="mega-txt"><h4>Previdência (EQ Prev)</h4><p>Previdência voltada a estratégias de empréstimo.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="consig"><span class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="mega-txt"><h4>Empréstimo Consignado</h4><p>Desconto em folha com taxas reduzidas — consignado para servidor público, INSS e CLT.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="prev"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span><span class="mega-txt"><h4>EQ Prev (Previdência)</h4><p>Previdência voltada a estratégias de empréstimo.</p><span class="mega-more">Saiba mais →</span></span></a>
             <a class="mega-card" data-target="peculio"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><span class="mega-txt"><h4>Pecúlio</h4><p>Benefício financeiro pago aos beneficiários, com amparo para a família.</p><span class="mega-more">Saiba mais →</span></span></a>
             </div>
           </div>
@@ -411,10 +401,8 @@
                 <p>A linha financeira do Grupo EQ: empréstimo consignado, EQ Prev e pecúlio.</p>
                 <ul class="sol-list">
                   <li>Empréstimo Consignado</li>
-                  <li>Antecipação de FGTS</li>
                   <li>EQ Prev (Previdência)</li>
                   <li>Pecúlio</li>
-                  <li>Crédito CLT / INSS</li>
                 </ul>
                 <a class="sol-link">Conhecer crédito →</a>
               </div>
@@ -703,12 +691,9 @@
         <div class="wrap">
           <span class="kicker">Grid clicável · produtos</span>
           <h2>Soluções de crédito</h2>
-          <div class="grid g4" style="margin-top:24px;">
-            <div class="card clickable" data-target="consig"><div class="ph sq">Produto</div><h4>Crédito Consignado</h4></div>
-            <div class="card clickable" data-target="fgts"><div class="ph sq">Produto</div><h4>Antecipação de FGTS</h4></div>
-            <div class="card clickable" data-target="clt"><div class="ph sq">Produto</div><h4>Crédito CLT</h4></div>
-            <div class="card clickable" data-target="inss"><div class="ph sq">Produto</div><h4>Crédito INSS</h4></div>
-            <div class="card clickable" data-target="prev"><div class="ph sq">Produto</div><h4>Previdência (EQ Prev)</h4></div>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card clickable" data-target="consig"><div class="ph sq">Produto</div><h4>Empréstimo Consignado</h4></div>
+            <div class="card clickable" data-target="prev"><div class="ph sq">Produto</div><h4>EQ Prev (Previdência)</h4></div>
             <div class="card clickable" data-target="peculio"><div class="ph sq">Produto</div><h4>Pecúlio</h4></div>
           </div>
         </div>
@@ -1334,7 +1319,7 @@
         <div><div class="crumb"><b>Home</b> › Crédito › Crédito Consignado</div><span class="kicker">Hero do produto</span><h1>Crédito Consignado</h1><p class="lead">Crédito com desconto em folha, taxas reduzidas. Produto de alta demanda comercial.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
-      <div class="sec alt"><div class="wrap"><span class="kicker">Para quem é</span><h2>Modalidades</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><h4>INSS</h4><p>Descrição.</p></div><div class="card"><h4>Servidor público</h4><p>Descrição.</p></div><div class="card"><h4>CLT</h4><p>Descrição.</p></div></div></div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Para quem é</span><h2>Modalidades</h2><div class="grid g4" style="margin-top:24px;"><div class="card clickable" data-target="inss"><h4>INSS</h4><p>Aposentados e pensionistas.</p></div><div class="card"><h4>Servidor público</h4><p>Desconto em folha.</p></div><div class="card clickable" data-target="clt"><h4>CLT</h4><p>Carteira assinada.</p></div><div class="card clickable" data-target="fgts"><h4>Antecipação FGTS</h4><p>Saque-aniversário.</p></div></div></div></div>
       <div class="sec"><div class="wrap"><span class="kicker">Vantagens</span><h2>Diferenciais</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Vantagem 01</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 02</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 03</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 04</h4></div></div></div></div>
       <div class="sec dark"><div class="wrap split"><div><span class="kicker">Simulação</span><h2>Simule sua parcela</h2><p>Captura de lead.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Valor desejado</label><div class="input">R$ 0,00</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Simular agora</a></form></div></div>
       <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Quem pode contratar? <span class="pm">+</span></div><div class="q">Qual a taxa de juros? <span class="pm">+</span></div></div></div></div>
