@@ -273,7 +273,7 @@
   .line-body .tag{margin:0 6px 6px 0;}
   .line-body>p{font-size:.84rem;}
   .notice{margin-top:6px;margin-bottom:12px;border-left:3px solid var(--ink);background:var(--alt);padding:10px 12px;font-size:.78rem;color:var(--ink2);}
-  .line-cta{margin-top:auto;font-size:.82rem;font-weight:600;border-bottom:1px solid var(--ink);padding-bottom:3px;display:inline-block;}
+  .line-cta{margin-top:auto;font-size:.82rem;font-weight:600;border-bottom:1px solid var(--ink);padding-bottom:3px;display:inline-block;cursor:pointer;}
   .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;}
   .prod{border:1px solid var(--line);background:var(--alt);border-radius:6px;padding:18px;cursor:pointer;}
   .prod:hover{border-color:var(--ink);background:#fff;}
@@ -305,173 +305,1160 @@
 </style>
 </head>
 <body>
+<div class="app">
 
-  <!-- HEADER -->
-  <header class="wf-header">
-    <div class="wf-logo"><span class="mark">LOGO</span> EQ Seguros</div>
-    <nav class="wf-nav">
-      <span>Seguros</span>
-      <span>Empréstimo Consignado</span>
-      <span>Sobre</span>
-      <span>Contato</span>
-    </nav>
-    <a class="btn">Fale com um especialista</a>
-  </header>
+  <!-- ===================== SIDEBAR (SITEMAP NAVIGATOR) ===================== -->
 
-  <!-- CHANCELA -->
-  <div class="chancela">
-    <span>Empresas do grupo:</span>
-    <span class="badge">EQ Seguros S.A.</span>
-    <span class="sep">·</span>
-    <span class="badge">Equatorial Previdência</span>
-    <span class="reg">Regulado por SUSEP · CNSP</span>
-  </div>
+  <!-- ===================== MAIN ===================== -->
+  <div class="main">
 
-  <!-- HERO -->
-  <div class="sec">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="kicker">EQ Seguros S.A. — Goiânia, GO</span>
-        <h1>Proteção financeira feita para pessoas.</h1>
-        <p class="lead">Seguros embarcados via API e empréstimo consignado para servidores públicos — soluções integradas para quem precisa de segurança real no dia a dia.</p>
-        <div class="callout"><span class="pill">B2B2C</span> Distribuição ao consumidor final via parceiros e convênios institucionais.</div>
-        <div class="btn-row"><a class="btn">Conheça nossas soluções</a><a class="btn sec">Fale com um especialista</a></div>
+    <!-- Wireframe site header (moldura comum) -->
+    <header class="wf-header">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+        <div class="wf-logo" data-target="home" style="cursor:pointer;"><span class="mark">LOGO</span> EQ Seguros</div>
       </div>
-      <div class="ph hero">Imagem hero institucional</div>
-    </div>
-  </div>
+      <nav class="wf-nav" id="siteNav">
+        <span data-target="seguros">Seguros</span>
+        <span data-target="credito">Empréstimo Consignado</span>
+        <span data-target="aeq">Sobre</span>
+        <span data-target="contato">Contato</span>
+      </nav>
+      <a class="btn" data-target="contato">Fale com um especialista</a>
+    </header>
 
-  <!-- NÚMEROS -->
-  <div class="sec tight">
-    <div class="wrap">
-      <div class="numbers" style="margin-top:0;">
-        <div class="n"><div class="nv">+30 anos</div><div class="nl">De operação no Brasil</div></div>
-        <div class="n"><div class="nv">B2B2C</div><div class="nl">Modelo de distribuição</div></div>
-        <div class="n"><div class="nv">SUSEP</div><div class="nl">Regulado e autorizado</div></div>
-      </div>
+    <div class="chancela">
+      <span>Empresas do grupo:</span>
+      <span class="badge">EQ Seguros S.A.</span>
+      <span class="sep">·</span>
+      <span class="badge">Equatorial Previdência</span>
+      <span class="reg">Regulado por SUSEP · CNSP</span>
     </div>
-  </div>
 
-  <!-- DUAS LINHAS DE SOLUÇÕES -->
-  <div class="sec alt">
-    <div class="wrap">
-      <span class="kicker">O que fazemos</span>
-      <h2>Duas linhas de soluções, uma proteção completa</h2>
-      <p class="lead">A EQ Seguros atua com dois eixos complementares — proteção de vida via seguros e crédito consignado para servidores públicos conveniados.</p>
-      <div class="callout" style="margin-top:16px;"><span class="pill">B2B2C</span> Chegamos ao cliente final por parceiros, convênios e integração API — não por venda direta.</div>
-      <div class="line-grid">
-        <div class="line-card">
-          <div class="line-head">
-            <div class="line-num">Linha 01</div>
-            <h3>Seguros embarcados via API</h3>
-            <div class="line-sub">Embedded insurance · Jornada digital do cliente</div>
+    <!-- ============================================================ -->
+    <!-- HOME -->
+    <!-- ============================================================ -->
+    <section class="page active" id="page-home">
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">EQ Seguros S.A. — Goiânia, GO</span>
+            <h1>Proteção financeira feita para pessoas.</h1>
+            <p class="lead">Seguros embarcados via API e empréstimo consignado para servidores públicos — soluções integradas para quem precisa de segurança real no dia a dia.</p>
+            <div class="callout"><span class="pill">B2B2C</span> Distribuição ao consumidor final via parceiros e convênios institucionais.</div>
+            <div class="btn-row"><a class="btn" data-target="seguros">Conheça nossas soluções</a><a class="btn sec" data-target="contato">Fale com um especialista</a></div>
           </div>
-          <div class="line-body">
-            <div style="margin-bottom:12px;"><span class="tag">Vida Coletivo</span><span class="tag">Vida Individual</span><span class="tag">Prestamista</span><span class="tag">Viagem</span><span class="tag">Funeral</span><span class="tag">Acidentes Pessoais</span><span class="tag">Assistências</span></div>
-            <p>Seguros distribuídos na jornada digital do cliente via integração API com parceiros. Cobertura de vida, acidentes, prestamista e assistências — contratação simples, proteção imediata.</p>
-            <a class="line-cta">Ver coberturas disponíveis →</a>
-          </div>
+          <div class="ph hero">Imagem hero institucional</div>
         </div>
-        <div class="line-card">
-          <div class="line-head l2">
-            <div class="line-num">Linha 02</div>
-            <h3>Empréstimo Consignado</h3>
-            <div class="line-sub">Crédito consignado · Servidores públicos conveniados</div>
-          </div>
-          <div class="line-body">
-            <div style="margin-bottom:12px;"><span class="tag">Servidor Público</span><span class="tag">Órgãos conveniados</span><span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo Grupo EQ</span></div>
-            <p>Crédito consignado disponível <b>exclusivamente</b> para servidores públicos de órgãos com convênio ativo junto ao Grupo EQ, e apenas para participantes do plano de pecúlio.</p>
-            <div class="notice"><b>Não é um produto aberto ao público geral.</b> O acesso depende de vínculo institucional com órgão conveniado e participação ativa no plano de pecúlio do Grupo EQ.</div>
-            <a class="line-cta">Verifique se seu órgão é conveniado →</a>
+      </div>
+
+      <div class="sec tight">
+        <div class="wrap">
+          <div class="numbers" style="margin-top:0;">
+            <div class="n"><div class="nv">+30 anos</div><div class="nl">De operação no Brasil</div></div>
+            <div class="n"><div class="nv">B2B2C</div><div class="nl">Modelo de distribuição</div></div>
+            <div class="n"><div class="nv">SUSEP</div><div class="nl">Regulado e autorizado</div></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- PRODUTOS MAIS PROCURADOS -->
-  <div class="sec">
-    <div class="wrap">
-      <span class="kicker">Soluções mais procuradas</span>
-      <h2>Escolha a proteção certa para você</h2>
-      <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do Grupo EQ.</p>
-      <div class="prod-grid">
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h4>Seguro de Vida</h4><p>Coletivo e individual, coberturas flexíveis</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Seguro Prestamista</h4><p>Proteção para financiamentos e dívidas</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div><h4>Seguro Viagem</h4><p>Cobertura nacional e internacional</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div><h4>Seguro Funeral</h4><p>Assistência completa para a família</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>Acidentes Pessoais</h4><p>AP coletivo, escolar, eventos e passageiros</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="14.8" y1="9.2" x2="19.1" y2="4.9"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/></svg></div><h4>Assistências</h4><p>Residencial, auto, telemedicina e mais</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><h4>Pecúlio</h4><p>Plano de previdência e benefício acumulado</p></div>
-        <div class="prod"><div class="pico"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg></div><h4>Empréstimo Consignado</h4><p>Crédito para servidores conveniados</p><span class="badge2">Exclusivo conveniados</span></div>
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">O que fazemos</span>
+          <h2>Duas linhas de soluções, uma proteção completa</h2>
+          <p class="lead">A EQ Seguros atua com dois eixos complementares — proteção de vida via seguros e crédito consignado para servidores públicos conveniados.</p>
+          <div class="callout" style="margin-top:16px;"><span class="pill">B2B2C</span> Chegamos ao cliente final por parceiros, convênios e integração API — não por venda direta.</div>
+          <div class="line-grid">
+            <div class="line-card">
+              <div class="line-head" data-target="seguros" style="cursor:pointer;">
+                <div class="line-num">Linha 01</div>
+                <h3>Seguros embarcados via API</h3>
+                <div class="line-sub">Embedded insurance · Jornada digital do cliente</div>
+              </div>
+              <div class="line-body">
+                <div style="margin-bottom:12px;"><span class="tag">Vida Coletivo</span><span class="tag">Vida Individual</span><span class="tag">Prestamista</span><span class="tag">Viagem</span><span class="tag">Funeral</span><span class="tag">Acidentes Pessoais</span><span class="tag">Assistências</span></div>
+                <p>Seguros distribuídos na jornada digital do cliente via integração API com parceiros. Cobertura de vida, acidentes, prestamista e assistências — contratação simples, proteção imediata.</p>
+                <a class="line-cta" data-target="seguros">Ver coberturas disponíveis →</a>
+              </div>
+            </div>
+            <div class="line-card">
+              <div class="line-head l2" data-target="credito" style="cursor:pointer;">
+                <div class="line-num">Linha 02</div>
+                <h3>Empréstimo Consignado</h3>
+                <div class="line-sub">Crédito consignado · Servidores públicos conveniados</div>
+              </div>
+              <div class="line-body">
+                <div style="margin-bottom:12px;"><span class="tag">Servidor Público</span><span class="tag">Órgãos conveniados</span><span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo Grupo EQ</span></div>
+                <p>Crédito consignado disponível <b>exclusivamente</b> para servidores públicos de órgãos com convênio ativo junto ao Grupo EQ, e apenas para participantes do plano de pecúlio.</p>
+                <div class="notice"><b>Não é um produto aberto ao público geral.</b> O acesso depende de vínculo institucional com órgão conveniado e participação ativa no plano de pecúlio do Grupo EQ.</div>
+                <a class="line-cta" data-target="contato">Verifique se seu órgão é conveniado →</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- POR QUE O GRUPO EQ -->
-  <div class="sec dark">
-    <div class="wrap">
-      <span class="kicker">Por que o Grupo EQ</span>
-      <h2>Uma seguradora construída para o mercado brasileiro</h2>
-      <p class="lead">Operamos com foco em pessoas, com regulação SUSEP e modelo B2B2C para distribuição em escala.</p>
-      <div class="why-grid">
-        <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div><h4>Tecnologia API-first</h4><p>Integração nativa com parceiros via API para embedded insurance em qualquer jornada digital.</p></div></div>
-        <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h4>Foco em pessoas físicas</h4><p>Proteção financeira individual e coletiva, desenhada para a realidade do trabalhador e do servidor público.</p></div></div>
-        <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div><div><h4>Convênios institucionais</h4><p>Parcerias diretas com órgãos públicos para distribuição do consignado com exclusividade.</p></div></div>
-        <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div><div><h4>Regulação SUSEP / CNSP</h4><p>Autorização plena para operar seguros de pessoas, previdência complementar e produtos financeiros.</p></div></div>
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Soluções mais procuradas</span>
+          <h2>Escolha a proteção certa para você</h2>
+          <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do Grupo EQ.</p>
+          <div class="prod-grid">
+            <div class="prod" data-target="vida"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h4>Seguro de Vida</h4><p>Coletivo e individual, coberturas flexíveis</p></div>
+            <div class="prod" data-target="prestamista"><div class="pico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Seguro Prestamista</h4><p>Proteção para financiamentos e dívidas</p></div>
+            <div class="prod" data-target="viagem"><div class="pico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div><h4>Seguro Viagem</h4><p>Cobertura nacional e internacional</p></div>
+            <div class="prod" data-target="funeral"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></div><h4>Seguro Funeral</h4><p>Assistência completa para a família</p></div>
+            <div class="prod" data-target="acidentes"><div class="pico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>Acidentes Pessoais</h4><p>AP coletivo, escolar, eventos e passageiros</p></div>
+            <div class="prod" data-target="atendimento"><div class="pico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="14.8" y1="9.2" x2="19.1" y2="4.9"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/></svg></div><h4>Assistências</h4><p>Residencial, auto, telemedicina e mais</p></div>
+            <div class="prod" data-target="peculio"><div class="pico"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><h4>Pecúlio</h4><p>Plano de previdência e benefício acumulado</p></div>
+            <div class="prod" data-target="consig"><div class="pico"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg></div><h4>Empréstimo Consignado</h4><p>Crédito para servidores conveniados</p><span class="badge2">Exclusivo conveniados</span></div>
+          </div>
+        </div>
       </div>
-      <div class="hl">
-        <span class="pill">B2B2C</span>
-        <div><h4>Modelo de distribuição B2B2C</h4><p>O Grupo EQ não vende diretamente ao consumidor final. Chegamos às pessoas por parceiros comerciais, corretoras, convênios institucionais e integração API — escala com relacionamento próximo e produto adequado a cada canal.</p></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- CONSIGNADO EXCLUSIVO -->
-  <div class="sec alt">
-    <div class="wrap">
-      <span class="kicker">Empréstimo consignado</span>
-      <h2>Crédito exclusivo para servidores conveniados</h2>
-      <div class="excl-card">
-        <div class="excl-ico"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg></div>
+      <div class="sec dark">
+        <div class="wrap">
+          <span class="kicker">Por que o Grupo EQ</span>
+          <h2>Uma seguradora construída para o mercado brasileiro</h2>
+          <p class="lead">Operamos com foco em pessoas, com regulação SUSEP e modelo B2B2C para distribuição em escala.</p>
+          <div class="why-grid">
+            <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div><h4>Tecnologia API-first</h4><p>Integração nativa com parceiros via API para embedded insurance em qualquer jornada digital.</p></div></div>
+            <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h4>Foco em pessoas físicas</h4><p>Proteção financeira individual e coletiva, desenhada para a realidade do trabalhador e do servidor público.</p></div></div>
+            <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div><div><h4>Convênios institucionais</h4><p>Parcerias diretas com órgãos públicos para distribuição do consignado com exclusividade.</p></div></div>
+            <div class="why"><div class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div><div><h4>Regulação SUSEP / CNSP</h4><p>Autorização plena para operar seguros de pessoas, previdência complementar e produtos financeiros.</p></div></div>
+          </div>
+          <div class="hl">
+            <span class="pill">B2B2C</span>
+            <div><h4>Modelo de distribuição B2B2C</h4><p>O Grupo EQ não vende diretamente ao consumidor final. Chegamos às pessoas por parceiros comerciais, corretoras, convênios institucionais e integração API — escala com relacionamento próximo e produto adequado a cada canal.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Empréstimo consignado</span>
+          <h2>Crédito exclusivo para servidores conveniados</h2>
+          <div class="excl-card">
+            <div class="excl-ico"><svg viewBox="0 0 24 24"><line x1="3" y1="21" x2="21" y2="21"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="5 6 12 3 19 6"/><line x1="4" y1="10" x2="4" y2="21"/><line x1="20" y1="10" x2="20" y2="21"/><line x1="8" y1="14" x2="8" y2="17"/><line x1="12" y1="14" x2="12" y2="17"/><line x1="16" y1="14" x2="16" y2="17"/></svg></div>
+            <div>
+              <h3>Quem pode solicitar o empréstimo consignado?</h3>
+              <p>O empréstimo consignado do Grupo EQ é um produto exclusivo, não disponível ao público geral. O acesso está condicionado ao cumprimento simultâneo de dois requisitos:</p>
+              <div class="reqs">
+                <div class="req"><span class="ck">✓</span><span><b>Servidor público</b> vinculado a órgão com convênio ativo junto ao Grupo EQ (Equatorial Previdência ou EQ Seguros).</span></div>
+                <div class="req"><span class="ck">✓</span><span><b>Participante ativo</b> do plano de pecúlio do Grupo EQ, com vínculo vigente e adimplente.</span></div>
+              </div>
+              <div class="btn-row"><a class="btn" data-target="consig">Ver Empréstimo Consignado</a><a class="btn sec" data-target="contato">Falar com especialista</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap" style="text-align:center;">
+          <h2>Pronto para proteger o que mais importa?</h2>
+          <p class="lead" style="margin:0 auto;">Fale com um especialista da EQ Seguros e encontre a solução ideal para você.</p>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Falar com um especialista</a></div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================================ -->
+    <!-- SEGUROS -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-seguros">
+      <div class="page-flag">Nível 1 — Linha · <b>Seguros</b> · Portfólio de seguros para pessoas e empresas</div>
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Hero da linha</span>
+            <h1>Seguros para cada necessidade</h1>
+            <p class="lead">Seguro de pessoas do Grupo EQ, com integração via API (seguro embarcado) para parceiros e empresas.</p>
+            <div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="credito">Ver Crédito</a></div>
+          </div>
+          <div class="ph hero">Hero Seguros</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Grid clicável · produtos</span>
+          <h2>Escolha pela sua necessidade</h2>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card clickable" data-target="vida"><div class="ph sq">Produto</div><h4>Seguro de Vida</h4></div>
+            <div class="card clickable" data-target="prestamista"><div class="ph sq">Produto</div><h4>Seguro Prestamista</h4></div>
+            <div class="card clickable" data-target="viagem"><div class="ph sq">Produto</div><h4>Seguro Viagem</h4></div>
+            <div class="card clickable" data-target="funeral"><div class="ph sq">Produto</div><h4>Seguro Funeral</h4></div>
+            <div class="card clickable" data-target="acidentes"><div class="ph sq">Produto</div><h4>Seguro de Acidentes</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Pessoas e empresas</span>
+          <h2>Mesmo produto, para cada perfil</h2>
+          <div class="split" style="margin-top:20px;">
+            <div class="card"><h3>Para você</h3><p>Proteção individual e familiar.</p><ul class="feat-list"><li>Seguro de Vida</li><li>Seguro Viagem</li><li>Auxílio Funeral</li></ul></div>
+            <div class="card"><h3>Para empresas</h3><p>Estrutura corporativa de benefícios e proteção patrimonial.</p><ul class="feat-list"><li>Benefícios Corporativos</li><li>Seguro Empresarial</li><li>Vida em Grupo</li></ul></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Diferenciais</span>
+          <h2>Vantagens de contratar com o Grupo EQ</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 01</h4><p>Texto de apoio.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 02</h4><p>Texto de apoio.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 03</h4><p>Texto de apoio.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Prova social</span>
+          <h2>Quem é protegido pelo Grupo EQ</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph wide">Depoimento</div><p>“Citação.”</p><small>Nome · Cidade/Empresa</small></div>
+            <div class="card"><div class="ph wide">Depoimento</div><p>“Citação.”</p><small>Nome · Cidade/Empresa</small></div>
+            <div class="card"><div class="ph wide">Depoimento</div><p>“Citação.”</p><small>Nome · Cidade/Empresa</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">FAQ</span>
+          <h2>Dúvidas frequentes</h2>
+          <div class="faq" style="margin-top:16px;">
+            <div class="q">Como contrato um seguro? <span class="pm">+</span></div>
+            <div class="q">Quais documentos preciso? <span class="pm">+</span></div>
+            <div class="q">Como funciona o acionamento? <span class="pm">+</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap split">
+          <div><span class="kicker">CTA / formulário</span><h2>Encontre a proteção certa</h2><p class="lead">Conversão da linha de Seguros.</p></div>
+          <form class="form" onsubmit="return false;">
+            <div class="field"><label>Nome</label><div class="input">Seu nome</div></div>
+            <div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div>
+            <div class="field"><label>Seguro de interesse</label><div class="input">Selecione</div></div>
+            <a class="btn" style="width:100%;text-align:center;">Fazer cotação</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CRÉDITO -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-credito">
+      <div class="page-flag">Nível 1 — Linha · <b>Crédito</b> · Consignado, EQ Prev e pecúlio</div>
+
+      <div class="sec dark">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Hero da linha</span>
+            <h1>Crédito e previdência para o seu planejamento</h1>
+            <p class="lead">A linha financeira do Grupo EQ: empréstimo consignado, EQ Prev (previdência) e pecúlio — para organizar e planejar suas finanças.</p>
+            <div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a><a class="btn sec" data-target="seguros">Ver Seguros</a></div>
+          </div>
+          <div class="ph hero">Hero Crédito</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Grid clicável · produtos</span>
+          <h2>Soluções de crédito</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card clickable" data-target="consig"><div class="ph sq">Produto</div><h4>Empréstimo Consignado</h4></div>
+            <div class="card clickable" data-target="prev"><div class="ph sq">Produto</div><h4>EQ Prev (Previdência)</h4></div>
+            <div class="card clickable" data-target="peculio"><div class="ph sq">Produto</div><h4>Pecúlio</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Destaque · Previdência</span>
+          <div class="feat-row">
+            <div class="feat-content">
+              <span class="feat-tag">EQ Prev</span>
+              <h2>EQ Prev — previdência para planejar o futuro</h2>
+              <p>Solução de previdência do Grupo EQ dentro da linha de crédito: planejamento de longo prazo, aposentadoria e proteção financeira da família.</p>
+              <ul class="feat-list"><li>Acúmulo de longo prazo</li><li>Planejamento de aposentadoria</li><li>Benefício fiscal</li><li>Portabilidade</li></ul>
+              <a class="btn" data-target="contato">Falar sobre EQ Prev</a>
+            </div>
+            <div class="ph feat-img">Imagem lateral <span>EQ Prev / Previdência</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Como funciona</span>
+          <h2>Crédito em 3 passos</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">1</div><h4>Passo 01</h4><p>Simulação rápida.</p></div>
+            <div class="card"><div class="ph icon">2</div><h4>Passo 02</h4><p>Análise e proposta.</p></div>
+            <div class="card"><div class="ph icon">3</div><h4>Passo 03</h4><p>Liberação.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Diferenciais</span>
+          <h2>Por que contratar crédito com o Grupo EQ</h2>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Vantagem 01</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Vantagem 02</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Vantagem 03</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Vantagem 04</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap split">
+          <div><span class="kicker">Simulação</span><h2>Simule sua condição</h2><p>Bloco de simulação com captura de lead.</p></div>
+          <form class="form" onsubmit="return false;">
+            <div class="field"><label>Produto</label><div class="input">Consignado / FGTS / EQ Prev</div></div>
+            <div class="field"><label>Valor desejado</label><div class="input">R$ 0,00</div></div>
+            <div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div>
+            <a class="btn" style="width:100%;text-align:center;">Simular agora</a>
+          </form>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">FAQ</span>
+          <h2>Dúvidas frequentes</h2>
+          <div class="faq" style="margin-top:16px;">
+            <div class="q">Quem pode contratar crédito consignado? <span class="pm">+</span></div>
+            <div class="q">Como funciona a antecipação do FGTS? <span class="pm">+</span></div>
+            <div class="q">O que é o EQ Prev? <span class="pm">+</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TECNOLOGIA EQ -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-tech">
+      <div class="page-flag">Nível 1 — Linha · <b>Tecnologia EQ</b> · Plataforma própria, app, área do cliente e integrações</div>
+
+      <div class="sec dark">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Hero da linha</span>
+            <h1>Tecnologia EQ: operação digital e integrável</h1>
+            <p class="lead">Plataforma própria, app, área do cliente e <b>API de seguro embarcado</b> — a tecnologia que sustenta o Grupo EQ e conecta a linha de Seguros aos parceiros.</p>
+            <div class="btn-row"><a class="btn" data-target="api">Ver integrações / API</a><a class="btn sec" data-target="contato">Falar com time técnico</a></div>
+          </div>
+          <div class="ph hero">Print da plataforma / diagrama</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Recursos</span>
+          <h2>O que a Tecnologia EQ entrega</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Plataforma própria</h4><p>Gestão de apólices, contratos e clientes em um só lugar.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>App / Área do cliente</h4><p>Autoatendimento, 2ª via, sinistro e acompanhamento.</p></div>
+            <div class="card clickable" data-target="api"><div class="ph icon">ic</div><h4>Integrações / API</h4><p>Cotação, emissão e webhooks para parceiros e empresas.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">API · Seguro embarcado</span>
+          <h2>Seguro embarcado via API</h2>
+          <p class="lead">Distribua seguros de pessoas dentro da jornada dos seus produtos e parceiros, por integração via API — modelo escalável e de baixo custo de aquisição.</p>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Cotação</h4><p>Endpoint de cotação em tempo real.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Emissão</h4><p>Emissão de apólice/bilhete via API.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Sinistro</h4><p>Abertura e acompanhamento de sinistro.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Webhooks</h4><p>Eventos em tempo real para o seu sistema.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap split">
+          <div>
+            <span class="kicker">Para quem é</span>
+            <h2>Parceiros que vendem mais com seguro embarcado</h2>
+            <ul class="feat-list"><li>Fintechs e bancos</li><li>Varejo e e-commerce</li><li>RH e benefícios</li><li>Corretoras e correspondentes</li></ul>
+            <div class="btn-row"><a class="btn" data-target="api">Ver documentação da API</a></div>
+          </div>
+          <div class="ph tall">Exemplo de requisição / diagrama da API</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap split">
+          <div>
+            <span class="kicker">Para empresas e parceiros</span>
+            <h2>Integração com RH, folha e sistemas</h2>
+            <p>Camada técnica para grandes contas e corretores: APIs, automações e relatórios.</p>
+            <div class="btn-row"><a class="btn sec" data-target="api">Ver documentação</a></div>
+          </div>
+          <div class="ph tall">Diagrama de integração</div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Segurança</span>
+          <h2>Dados protegidos e em conformidade</h2>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card"><div class="ph sq">Selo</div><h4>LGPD</h4></div>
+            <div class="card"><div class="ph sq">Selo</div><h4>Criptografia</h4></div>
+            <div class="card"><div class="ph sq">Selo</div><h4>Monitoramento</h4></div>
+            <div class="card"><div class="ph sq">Selo</div><h4>Backups</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap" style="text-align:center;">
+          <span class="kicker">CTA</span>
+          <h2>Conheça a tecnologia por trás do Grupo EQ</h2>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Falar com especialista</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ATENDIMENTO -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-atendimento">
+      <div class="page-flag">Nível 1 — Atendimento · <b>Atendimento</b> · Como acionar, sorteio e assistência</div>
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Hero</span>
+            <h1>Atendimento Grupo EQ</h1>
+            <p class="lead">Tudo o que você precisa para acionar um sinistro, conferir sorteios e usar suas assistências.</p>
+            <div class="btn-row"><a class="btn" data-target="contato">Sinistro 24h</a><a class="btn sec" data-target="ajuda">Central de Ajuda</a></div>
+          </div>
+          <div class="ph hero">Imagem atendimento</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Como acionar</span>
+          <h2>Acione em 3 passos</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">1</div><h4>Comunique</h4><p>Abra a ocorrência pelo canal de sua preferência.</p></div>
+            <div class="card"><div class="ph icon">2</div><h4>Envie documentos</h4><p>Anexe os documentos solicitados.</p></div>
+            <div class="card"><div class="ph icon">3</div><h4>Acompanhe</h4><p>Acompanhe o status pela área do cliente.</p></div>
+          </div>
+          <div class="grid g4" style="margin-top:20px;">
+            <div class="card clickable" data-target="contato"><h4>Sinistro 24h</h4><p>Canal de emergência.</p></div>
+            <div class="card clickable" data-target="contato"><h4>WhatsApp</h4><p>Atendimento rápido.</p></div>
+            <div class="card clickable" data-target="contato"><h4>Telefone</h4><p>Central de relacionamento.</p></div>
+            <div class="card clickable" data-target="ajuda"><h4>Central de Ajuda</h4><p>FAQs e tutoriais.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap split">
+          <div>
+            <span class="kicker">Sorteio</span>
+            <h2>Sorteios e premiações</h2>
+            <p>Confira números da sorte, resultados e regulamento dos sorteios vinculados aos produtos.</p>
+            <ul class="feat-list"><li>Número da sorte</li><li>Resultados</li><li>Regulamento</li><li>Ganhadores</li></ul>
+            <div class="btn-row"><a class="btn sec" data-target="contato">Ver resultados</a></div>
+          </div>
+          <div class="ph tall">Imagem / tabela de sorteio</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Assistência</span>
+          <h2>Assistências disponíveis</h2>
+          <p>Serviços de apoio incluídos ou contratados junto aos produtos.</p>
+          <div class="grid g4" style="margin-top:20px;">
+            <div class="card"><div class="ph sq">Serviço</div><h4>Telemedicina</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Residencial</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>PET</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Funeral</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Cartão Alimentação</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Medicamentos</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Guincho</h4></div>
+            <div class="card"><div class="ph sq">Serviço</div><h4>Chaveiro</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">FAQ</span>
+          <h2>Dúvidas de atendimento</h2>
+          <div class="faq" style="margin-top:16px;">
+            <div class="q">Como aciono um sinistro? <span class="pm">+</span></div>
+            <div class="q">Como vejo se fui sorteado? <span class="pm">+</span></div>
+            <div class="q">Como uso minhas assistências? <span class="pm">+</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap" style="text-align:center;">
+          <span class="kicker">CTA</span>
+          <h2>Precisa de ajuda agora?</h2>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Falar com atendimento</a><a class="btn sec" data-target="ajuda">Central de Ajuda</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PRODUTOS FINAIS — SEGUROS E CRÉDITO -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-prestamista">
+      <div class="page-flag">Nível 2 — Produto · <b>Seguro Prestamista</b> · protege o saldo devedor</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Prestamista</div><span class="kicker">Hero do produto</span><h1>Seguro Prestamista</h1><p class="lead">Quita ou amortiza o saldo devedor do seu empréstimo em caso de morte, invalidez por acidente ou desemprego — a dívida não vira problema da família.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="credito">Ver linha de Crédito</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está protegido</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Morte</h4><p>Quitação do saldo devedor.</p></div><div class="card"><div class="ph icon">ic</div><h4>Invalidez por acidente</h4><p>Amortização da dívida.</p></div><div class="card"><div class="ph icon">ic</div><h4>Desemprego involuntário</h4><p>Pagamento de parcelas (CLT).</p></div></div></div></div>
+      <div class="sec"><div class="wrap split"><div><span class="kicker">Como funciona</span><h2>O capital acompanha a dívida</h2><p>O capital segurado é sempre igual ao saldo devedor e se ajusta a cada amortização. Contratado junto com o empréstimo.</p><div class="btn-row"><a class="btn sec" data-target="consig">Ver Crédito Consignado</a></div></div><div class="ph tall">Imagem de contexto</div></div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Quem pode contratar? <span class="pm">+</span></div><div class="q">O seguro cobre desemprego? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-viagem">
+      <div class="page-flag">Nível 2 — Produto · <b>Seguro Viagem</b></div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Viagem</div><span class="kicker">Hero do produto</span><h1>Seguro Viagem</h1><p class="lead">Proteção em viagens nacionais e internacionais: despesas médicas, bagagem, cancelamento e assistência 24h.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está incluído</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Despesas médicas</h4></div><div class="card"><div class="ph icon">ic</div><h4>Bagagem</h4></div><div class="card"><div class="ph icon">ic</div><h4>Cancelamento</h4></div><div class="card"><div class="ph icon">ic</div><h4>Assistência 24h</h4></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Cobre viagem internacional? <span class="pm">+</span></div><div class="q">Como aciono a assistência? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-funeral">
+      <div class="page-flag">Nível 2 — Produto · <b>Seguro Funeral</b></div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Funeral</div><span class="kicker">Hero do produto</span><h1>Seguro Funeral</h1><p class="lead">Auxílio funeral para o titular e a família, com livre escolha do prestador e reembolso até o capital contratado.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está incluído</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Funeral individual</h4></div><div class="card"><div class="ph icon">ic</div><h4>Funeral familiar</h4></div><div class="card"><div class="ph icon">ic</div><h4>Assistência 24h</h4></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Posso escolher a funerária? <span class="pm">+</span></div><div class="q">Quem pode ser incluído? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-acidentes">
+      <div class="page-flag">Nível 2 — Produto · <b>Seguro de Acidentes Pessoais</b> · complemento do Seguro de Vida</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Seguro de Acidentes</div><span class="kicker">Hero do produto</span><h1>Seguro de Acidentes Pessoais</h1><p class="lead">Indenização por morte ou invalidez por acidente e despesas médicas — complemento natural do Seguro de Vida (EQ Vida).</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="vida">Ver Seguro de Vida</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está protegido</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Morte acidental</h4></div><div class="card"><div class="ph icon">ic</div><h4>Invalidez por acidente</h4></div><div class="card"><div class="ph icon">ic</div><h4>Despesas médicas</h4></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Qual a diferença para o seguro de vida? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-clt">
+      <div class="page-flag">Nível 2 — Produto · <b>Crédito CLT</b></div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › Crédito CLT</div><span class="kicker">Hero do produto</span><h1>Crédito para trabalhador CLT</h1><p class="lead">Empréstimo com desconto em folha para trabalhadores com carteira assinada, com taxas reduzidas.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Vantagens</span><h2>Por que contratar</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Desconto em folha</h4></div><div class="card"><div class="ph icon">ic</div><h4>Taxas reduzidas</h4></div><div class="card"><div class="ph icon">ic</div><h4>Processo digital</h4></div><div class="card"><div class="ph icon">ic</div><h4>Rápido</h4></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Simulação</span><h2>Simule sua parcela</h2><p>Captura de lead.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Valor desejado</label><div class="input">R$ 0,00</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Simular agora</a></form></div></div>
+    </section>
+
+    <section class="page" id="page-inss">
+      <div class="page-flag">Nível 2 — Produto · <b>Crédito INSS</b></div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › Crédito INSS</div><span class="kicker">Hero do produto</span><h1>Crédito consignado INSS</h1><p class="lead">Empréstimo consignado para aposentados e pensionistas do INSS, com desconto direto no benefício.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Para quem é</span><h2>Aposentados e pensionistas</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><h4>Aposentados</h4></div><div class="card"><h4>Pensionistas</h4></div><div class="card"><h4>BPC / LOAS</h4></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Simulação</span><h2>Simule sua parcela</h2><p>Captura de lead.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Valor desejado</label><div class="input">R$ 0,00</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Simular agora</a></form></div></div>
+    </section>
+
+    <section class="page" id="page-prev">
+      <div class="page-flag">Nível 2 — Produto · <b>Previdência (EQ Prev)</b> · voltada a estratégias de empréstimo</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › Previdência (EQ Prev)</div><span class="kicker">Hero do produto</span><h1>EQ Prev — Previdência</h1><p class="lead">Previdência complementar do Grupo EQ, diferente dos planos tradicionais de acumulação: voltada a estratégias de crédito e proteção financeira.</p><div class="btn-row"><a class="btn" data-target="contato">Falar sobre EQ Prev</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Diferenciais</span><h2>Como o EQ Prev funciona</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Estratégia de empréstimo</h4><p>Integrada à linha de crédito.</p></div><div class="card"><div class="ph icon">ic</div><h4>Proteção financeira</h4><p>Planejamento de longo prazo.</p></div><div class="card"><div class="ph icon">ic</div><h4>Previdência complementar</h4><p>Regulada pela SUSEP.</p></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">O que é o EQ Prev? <span class="pm">+</span></div><div class="q">Qual a diferença para previdência tradicional? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-peculio">
+      <div class="page-flag">Nível 2 — Produto · <b>Pecúlio</b> · benefício financeiro aos beneficiários</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › Pecúlio</div><span class="kicker">Hero do produto</span><h1>Pecúlio</h1><p class="lead">Benefício financeiro pago aos beneficiários indicados em caso de falecimento do titular — amparo e tranquilidade para a família.</p><div class="btn-row"><a class="btn" data-target="contato">Falar sobre Pecúlio</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Como funciona</span><h2>Amparo planejado</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">1</div><h4>Contribuição</h4><p>Planos acessíveis.</p></div><div class="card"><div class="ph icon">2</div><h4>Beneficiários</h4><p>Você indica quem recebe.</p></div><div class="card"><div class="ph icon">3</div><h4>Benefício</h4><p>Pagamento ao(s) beneficiário(s).</p></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">O que é pecúlio? <span class="pm">+</span></div><div class="q">Quem pode ser beneficiário? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PARCEIROS (HUB) -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-parceiros">
+      <div class="page-flag">Nível 1 — Hub corretor · <b>Parceiros</b> · Jornada e linguagem distintas do cliente final · funil próprio</div>
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Proposta de valor corretor</span>
+            <h1>Cresça com o Grupo EQ como parceiro</h1>
+            <p class="lead">Hub para corretores, com jornada e linguagem próprias.</p>
+            <div class="btn-row"><a class="btn" data-target="seja-parceiro">Quero ser Parceiro</a></div>
+          </div>
+          <div class="ph hero">Hero corretor</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Soluções comissionáveis</span>
+          <h2>Portfólio para revender</h2>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card clickable" data-target="sol-corretores"><div class="ph sq">Produto</div><h4>Vida</h4></div>
+            <div class="card clickable" data-target="sol-corretores"><div class="ph sq">Produto</div><h4>FGTS</h4></div>
+            <div class="card clickable" data-target="sol-corretores"><div class="ph sq">Produto</div><h4>Consignado</h4></div>
+            <div class="card clickable" data-target="sol-corretores"><div class="ph sq">Produto</div><h4>Empresarial</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap split">
+          <div>
+            <span class="kicker">Suporte e materiais</span>
+            <h2>Você não vende sozinho</h2>
+            <p>Materiais de venda, suporte comercial e treinamento para o corretor parceiro.</p>
+            <div class="btn-row"><a class="btn sec" data-target="modelo-op">Ver modelo operacional</a></div>
+          </div>
+          <div class="ph tall">Kit de materiais / portal do corretor</div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap" style="text-align:center;">
+          <span class="kicker">CTA cadastro</span>
+          <h2>Seja um parceiro do Grupo EQ</h2>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="seja-parceiro">Quero ser Parceiro</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- GRUPO EQ -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-aeq">
+      <div class="page-flag">Nível 1 — Institucional · <b>Grupo EQ</b> · Página institucional única (quem somos, história, Equatorial, ESG)</div>
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="kicker">Quem somos</span>
+            <h1>Grupo EQ — solidez e confiança desde 1972</h1>
+            <p class="lead">Honestidade, confiabilidade e solidez são princípios intrínsecos do Grupo EQ. Desde 1972, transmitimos esses valores em cada seguro, plano de previdência e serviço financeiro.</p>
+            <div class="btn-row"><a class="btn" data-target="contato">Fale com o Grupo EQ</a></div>
+            <div class="stat">
+              <div class="item"><div class="big">1972</div><div class="lbl">Origem do grupo</div></div>
+              <div class="item"><div class="big">+50 anos</div><div class="lbl">De história</div></div>
+              <div class="item"><div class="big">SUSEP</div><div class="lbl">Empresas reguladas</div></div>
+            </div>
+          </div>
+          <div class="ph hero">Imagem institucional</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">O grupo</span>
+          <h2>Duas empresas, um só compromisso</h2>
+          <p class="lead">O Grupo EQ é formado por duas companhias reguladas que se complementam em seguros, previdência e crédito.</p>
+          <div class="grid g2" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h3>EQ Seguros S/A</h3><p>Seguradora de pessoas, microsseguros e previdência. Pioneira no Brasil a operar exclusivamente com microsseguros (2014).</p><small>SUSEP 01554 · CNPJ 21.242.451/0001-05</small></div>
+            <div class="card"><div class="ph icon">ic</div><h3>Equatorial Previdência Complementar</h3><p>Entidade aberta de previdência complementar: planos previdenciários, empréstimo consignado, pecúlio e seguros.</p><small>SUSEP 10120 · CNPJ 42.150.987/0001-70</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap">
+          <span class="kicker">Sobre a Equatorial</span>
+          <div class="feat-row">
+            <div class="feat-content">
+              <h2>Equatorial Previdência: tradição, solidez e confiança</h2>
+              <p>Entidade aberta de previdência complementar, a Equatorial atua com planos previdenciários, empréstimo consignado, pecúlio e seguros — autorizada a funcionar em todo o Brasil e regulada pela SUSEP. Ao lado da EQ Seguros, forma o Grupo EQ.</p>
+              <ul class="feat-list"><li>Previdência complementar</li><li>Empréstimo consignado</li><li>Pecúlio</li><li>Seguros e assistências</li></ul>
+              <div class="btn-row"><a class="btn" data-target="credito">Ver Crédito e Previdência</a></div>
+            </div>
+            <div class="ph feat-img">Imagem · Equatorial</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Propósito</span>
+          <h2>Missão, visão e valores</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><h4>Missão</h4><p>Atuar nos segmentos de seguros de pessoas, pecúlio e assistência financeira, de forma sustentável, transparente e digital, oferecendo soluções financeiras e securitárias.</p></div>
+            <div class="card"><h4>Visão</h4><p>Ser um grupo reconhecido e consolidado no mercado de seguros de pessoas e previdência, criando valor para clientes, colaboradores e acionistas.</p></div>
+            <div class="card"><h4>Valores</h4><p>Comprometimento, inovação, excelência, transparência, credibilidade e relacionamento ético.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Nossa história</span>
+          <h2>Uma trajetória desde 1972</h2>
+          <div class="timeline" style="margin-top:24px;">
+            <div class="pt"><h4>1972</h4><p>Origem do grupo (ASPE), no Rio de Janeiro — marco inicial da nossa trajetória.</p></div>
+            <div class="pt"><h4>2014</h4><p>Equatorial Microsseguros: primeira seguradora do Brasil a operar exclusivamente com microsseguros.</p></div>
+            <div class="pt"><h4>Hoje</h4><p>Grupo EQ — EQ Seguros + Equatorial Previdência: operação digital em seguros, crédito e previdência.</p></div>
+            <div class="pt"><h4>2026-2028</h4><p>Expansão de microsseguros e distribuição via parceiros e API (seguro embarcado).</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">O Grupo EQ em números</span>
+          <h2>Confiança que se traduz em números</h2>
+          <div class="stat" style="margin-top:16px;">
+            <div class="item"><div class="big">+50 anos</div><div class="lbl">De história</div></div>
+            <div class="item"><div class="big">+17 mil</div><div class="lbl">Clientes ativos</div></div>
+            <div class="item"><div class="big">4,3/5</div><div class="lbl">Satisfação do cliente</div></div>
+            <div class="item"><div class="big">55%</div><div class="lbl">Mulheres no time</div></div>
+          </div>
+          <p style="margin-top:14px;"><small>Indicadores do Relatório de Sustentabilidade 2025 do Grupo EQ — a validar com o cliente antes da arte final.</small></p>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Sustentabilidade (ESG)</span>
+          <h2>Compromisso ambiental, social e de governança</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Ambiental</h4><p>Digitalização e redução de papel (96% de contratos digitais), operação em nuvem.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Social</h4><p>Inclusão financeira, microsseguros de baixo custo, crédito responsável e diversidade.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Governança</h4><p>Código de Ética, canal de denúncias, LGPD e gestão de riscos.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">Parceiros</span>
+          <h2>Parceiros que fortalecem a operação</h2>
+          <p>Distribuição, tecnologia e serviços que ampliam o alcance do Grupo EQ.</p>
+          <div class="grid g6" style="margin-top:24px;">
+            <div class="ph logo">Logo parceiro</div><div class="ph logo">Logo parceiro</div><div class="ph logo">Logo parceiro</div>
+            <div class="ph logo">Logo parceiro</div><div class="ph logo">Logo parceiro</div><div class="ph logo">Logo parceiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap split">
+          <div><span class="kicker">Compliance e governança</span><h2>Segurança, ética e conformidade</h2><p>Regulação SUSEP, governança, LGPD e canal de denúncias — crítico no mercado financeiro.</p><div class="btn-row"><a class="btn sec" data-target="compliance">Ver Compliance</a></div></div>
+          <div class="grid g3"><div class="ph sq">Selo SUSEP</div><div class="ph sq">Selo LGPD</div><div class="ph sq">Ética</div></div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap" style="text-align:center;">
+          <span class="kicker">Contato</span>
+          <h2>Fale com o Grupo EQ</h2>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Ir para Contato</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PRODUTO: SEGURO DE VIDA (template completo de referência) -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-vida">
+      <div class="page-flag">Nível 2 — Página completa · <b>Seguro de Vida</b> · Template de produto (referência dos demais)</div>
+
+      <div class="sec">
+        <div class="wrap hero-grid">
+          <div>
+            <div class="crumb"><b>Home</b> › Seguros › Seguro de Vida</div>
+            <span class="kicker">Hero do produto</span>
+            <h1>Seguro de Vida</h1>
+            <p class="lead">Proposta de valor do produto, para quem é e principal benefício. CTA de cotação em destaque.</p>
+            <div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec">Simular valor</a></div>
+          </div>
+          <div class="ph hero">Imagem do produto</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Coberturas</span>
+          <h2>O que está incluído</h2>
+          <div class="grid g3" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 01</h4><p>Descrição da cobertura.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 02</h4><p>Descrição da cobertura.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 03</h4><p>Descrição da cobertura.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 04</h4><p>Descrição da cobertura.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 05</h4><p>Descrição da cobertura.</p></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Cobertura 06</h4><p>Descrição da cobertura.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap split">
+          <div><span class="kicker">Para quem é</span><h2>Indicado para você que...</h2>
+            <p>Lista de perfis e situações em que o produto se aplica.</p>
+            <span class="tag">Perfil 01</span><span class="tag">Perfil 02</span><span class="tag">Perfil 03</span>
+          </div>
+          <div class="ph tall">Imagem de contexto</div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap">
+          <span class="kicker">Diferenciais</span>
+          <h2>Por que contratar com o Grupo EQ</h2>
+          <div class="grid g4" style="margin-top:24px;">
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 01</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 02</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 03</h4></div>
+            <div class="card"><div class="ph icon">ic</div><h4>Diferencial 04</h4></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec dark">
+        <div class="wrap split">
+          <div><span class="kicker">Simulação / cotação</span><h2>Simule em 1 minuto</h2><p>Bloco de simulação rápida com captura de lead.</p></div>
+          <form class="form" onsubmit="return false;">
+            <div class="field"><label>Idade</label><div class="input">Sua idade</div></div>
+            <div class="field"><label>Valor de cobertura</label><div class="input">Selecione</div></div>
+            <div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div>
+            <a class="btn" style="width:100%;text-align:center;">Simular agora</a>
+          </form>
+        </div>
+      </div>
+
+      <div class="sec">
+        <div class="wrap">
+          <span class="kicker">FAQ</span>
+          <h2>Perguntas frequentes</h2>
+          <div class="faq" style="margin-top:16px;">
+            <div class="q">Como funciona o seguro de vida? <span class="pm">+</span></div>
+            <div class="q">Quais são as carências? <span class="pm">+</span></div>
+            <div class="q">Como aciono o sinistro? <span class="pm">+</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec alt">
+        <div class="wrap" style="text-align:center;">
+          <span class="kicker">CTA final</span>
+          <h2>Proteja quem você ama</h2>
+          <div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Fazer cotação</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PRODUTOS TEMPLATE: FGTS / CONSIGNADO / BENEFÍCIOS / EMPRESARIAL -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-fgts">
+      <div class="page-flag">Nível 2 — Página completa · <b>EQ FGTS</b> · Alta demanda comercial · usa o template de produto</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › EQ FGTS</div><span class="kicker">Hero do produto</span><h1>EQ FGTS</h1><p class="lead">Antecipação do saque-aniversário do FGTS. Produto de alta demanda comercial.</p><div class="btn-row"><a class="btn" data-target="contato">Simular antecipação</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Como funciona</span><h2>Em 3 passos</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">1</div><h4>Passo 01</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">2</div><h4>Passo 02</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">3</div><h4>Passo 03</h4><p>Descrição.</p></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Vantagens</span><h2>Por que antecipar com o Grupo EQ</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Vantagem 01</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 02</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 03</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 04</h4></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Simulação</span><h2>Veja quanto você pode antecipar</h2><p>Bloco de simulação com captura de lead.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Saldo FGTS</label><div class="input">R$ 0,00</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Simular agora</a></form></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">O que é saque-aniversário? <span class="pm">+</span></div><div class="q">Quais bancos são aceitos? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-consig">
+      <div class="page-flag">Nível 2 — Página completa · <b>Crédito Consignado</b> · Alta demanda comercial · usa o template de produto</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Crédito › Crédito Consignado</div><span class="kicker">Hero do produto</span><h1>Crédito Consignado</h1><p class="lead">Crédito com desconto em folha, taxas reduzidas. Produto de alta demanda comercial.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Para quem é</span><h2>Modalidades</h2><div class="grid g4" style="margin-top:24px;"><div class="card clickable" data-target="inss"><h4>INSS</h4><p>Aposentados e pensionistas.</p></div><div class="card"><h4>Servidor público</h4><p>Desconto em folha.</p></div><div class="card clickable" data-target="clt"><h4>CLT</h4><p>Carteira assinada.</p></div><div class="card clickable" data-target="fgts"><h4>Antecipação FGTS</h4><p>Saque-aniversário.</p></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Vantagens</span><h2>Diferenciais</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Vantagem 01</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 02</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 03</h4></div><div class="card"><div class="ph icon">ic</div><h4>Vantagem 04</h4></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Simulação</span><h2>Simule sua parcela</h2><p>Captura de lead.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Valor desejado</label><div class="input">R$ 0,00</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Simular agora</a></form></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">FAQ</span><h2>Perguntas frequentes</h2><div class="faq" style="margin-top:16px;"><div class="q">Quem pode contratar? <span class="pm">+</span></div><div class="q">Qual a taxa de juros? <span class="pm">+</span></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-beneficios">
+      <div class="page-flag">Nível 2 — Página completa · <b>Benefícios Corporativos</b> · Carro-chefe B2B · usa o template de produto</div>
+      <div class="sec dark"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Benefícios Corporativos</div><span class="kicker">Hero do produto</span><h1>Benefícios Corporativos</h1><p class="lead">Pacotes de benefícios para atrair e reter talentos. Carro-chefe do funil B2B.</p><div class="btn-row"><a class="btn" data-target="contato">Falar com Consultor</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Benefícios disponíveis</span><h2>Monte o pacote da sua empresa</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph sq">Benefício</div><h4>Saúde</h4></div><div class="card"><div class="ph sq">Benefício</div><h4>Odonto</h4></div><div class="card"><div class="ph sq">Benefício</div><h4>Vida em Grupo</h4></div><div class="card"><div class="ph sq">Benefício</div><h4>Alimentação</h4></div></div></div></div>
+      <div class="sec alt"><div class="wrap split"><div><span class="kicker">Para o RH</span><h2>Gestão simples e integrada</h2><p>Integração com folha e portal de gestão de benefícios.</p><div class="btn-row"><a class="btn sec" data-target="api">Ver integração</a></div></div><div class="ph tall">Print do portal de gestão</div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Cases</span><h2>Empresas que confiam</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph wide">Logo cliente</div><p>Resultado.</p></div><div class="card"><div class="ph wide">Logo cliente</div><p>Resultado.</p></div><div class="card"><div class="ph wide">Logo cliente</div><p>Resultado.</p></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Form comercial</span><h2>Solicite uma proposta</h2><p>Captura de lead B2B.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Empresa</label><div class="input">Razão social</div></div><div class="field"><label>Nº de colaboradores</label><div class="input">Selecione</div></div><div class="field"><label>E-mail corporativo</label><div class="input">voce@empresa.com</div></div><a class="btn" style="width:100%;text-align:center;">Solicitar proposta</a></form></div></div>
+    </section>
+
+    <section class="page" id="page-empresarial">
+      <div class="page-flag">Nível 2 — Página completa · <b>Seguro Empresarial</b> · Carro-chefe B2B · usa o template de produto</div>
+      <div class="sec dark"><div class="wrap hero-grid">
+        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Empresarial</div><span class="kicker">Hero do produto</span><h1>Seguro Empresarial</h1><p class="lead">Proteção patrimonial e de responsabilidade para o seu negócio. Carro-chefe B2B.</p><div class="btn-row"><a class="btn" data-target="contato">Falar com Consultor</a></div></div>
+        <div class="ph hero">Imagem do produto</div>
+      </div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está protegido</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Patrimônio</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">ic</div><h4>Responsabilidade civil</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">ic</div><h4>Lucros cessantes</h4><p>Descrição.</p></div></div></div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Segmentos</span><h2>Soluções por porte e setor</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><h4>Comércio</h4></div><div class="card"><h4>Indústria</h4></div><div class="card"><h4>Serviços</h4></div><div class="card"><h4>Condomínios</h4></div></div></div></div>
+      <div class="sec dark"><div class="wrap split"><div><span class="kicker">Form comercial</span><h2>Solicite uma cotação empresarial</h2><p>Captura de lead B2B.</p></div><form class="form" onsubmit="return false;"><div class="field"><label>Empresa</label><div class="input">Razão social</div></div><div class="field"><label>Segmento</label><div class="input">Selecione</div></div><div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div><a class="btn" style="width:100%;text-align:center;">Solicitar cotação</a></form></div></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PARCEIROS — SUBPÁGINAS -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-seja-parceiro">
+      <div class="page-flag">Parceiros — Subpágina · <b>Seja um Parceiro</b> · Conversão corretor: proposta de valor + cadastro</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><span class="kicker">Conversão corretor</span><h1>Seja um parceiro do Grupo EQ</h1><p class="lead">Proposta de valor para o corretor e formulário de cadastro.</p></div>
+        <div class="ph hero">Hero corretor</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Por que ser parceiro</span><h2>Vantagens da parceria</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Comissionamento</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">ic</div><h4>Suporte</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">ic</div><h4>Portfólio amplo</h4><p>Descrição.</p></div></div></div></div>
+      <div class="sec"><div class="wrap split"><div><span class="kicker">Formulário de cadastro</span><h2>Cadastre-se como parceiro</h2><p class="lead">Início do funil próprio do corretor.</p></div>
+        <form class="form" onsubmit="return false;">
+          <div class="field"><label>Nome</label><div class="input">Seu nome</div></div>
+          <div class="field"><label>CPF/CNPJ</label><div class="input">Documento</div></div>
+          <div class="field"><label>Possui SUSEP?</label><div class="input">Sim / Não</div></div>
+          <div class="field"><label>Telefone</label><div class="input">(00) 00000-0000</div></div>
+          <a class="btn" style="width:100%;text-align:center;">Quero ser Parceiro</a>
+        </form>
+      </div></div>
+    </section>
+
+    <section class="page" id="page-sol-corretores">
+      <div class="page-flag">Parceiros — Subpágina · <b>Soluções para Corretores</b> · Portfólio comissionável, suporte e materiais</div>
+      <div class="sec"><div class="wrap"><span class="kicker">Hero</span><h1>Portfólio comissionável</h1><p class="lead">Produtos que o corretor pode oferecer, com suporte e materiais.</p></div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Produtos comissionáveis</span><h2>O que você pode vender</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph sq">Produto</div><h4>Vida</h4><span class="tag">Comissão</span></div><div class="card"><div class="ph sq">Produto</div><h4>FGTS</h4><span class="tag">Comissão</span></div><div class="card"><div class="ph sq">Produto</div><h4>Consignado</h4><span class="tag">Comissão</span></div><div class="card"><div class="ph sq">Produto</div><h4>Empresarial</h4><span class="tag">Comissão</span></div></div></div></div>
+      <div class="sec"><div class="wrap split"><div><span class="kicker">Materiais</span><h2>Suporte de venda</h2><p>Materiais, treinamentos e apoio comercial.</p></div><div class="ph tall">Biblioteca de materiais</div></div></div>
+      <div class="sec dark"><div class="wrap" style="text-align:center;"><h2>Pronto para vender com o Grupo EQ?</h2><div class="btn-row" style="justify-content:center;"><a class="btn" data-target="seja-parceiro">Quero ser Parceiro</a></div></div></div>
+    </section>
+
+    <section class="page" id="page-api">
+      <div class="page-flag">Parceiros — Subpágina · <b>Integrações / API</b> · Documentação técnico-comercial das integrações</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><span class="kicker">Hero técnico</span><h1>Integrações e API</h1><p class="lead">Documentação técnico-comercial das integrações para parceiros e empresas.</p><div class="btn-row"><a class="btn">Ver documentação</a><a class="btn sec" data-target="contato">Falar com time técnico</a></div></div>
+        <div class="ph hero">Diagrama de arquitetura / API</div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Recursos</span><h2>O que a API oferece</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Cotação</h4><p>Endpoint de cotação.</p></div><div class="card"><div class="ph icon">ic</div><h4>Emissão</h4><p>Endpoint de emissão.</p></div><div class="card"><div class="ph icon">ic</div><h4>Webhooks</h4><p>Eventos em tempo real.</p></div></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Documentação</span><h2>Exemplo de requisição</h2><div class="ph wide">Bloco de código / referência da API</div></div></div>
+    </section>
+
+    <section class="page" id="page-modelo-op">
+      <div class="page-flag">Parceiros — Subpágina · <b>Modelo Operacional</b> · Fluxos, repasses e suporte da parceria</div>
+      <div class="sec"><div class="wrap"><span class="kicker">Hero</span><h1>Como funciona a parceria</h1><p class="lead">Fluxos, repasses e suporte do modelo de parceria.</p></div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Fluxo operacional</span><h2>Da venda ao repasse</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">1</div><h4>Venda</h4></div><div class="card"><div class="ph icon">2</div><h4>Emissão</h4></div><div class="card"><div class="ph icon">3</div><h4>Comissão</h4></div><div class="card"><div class="ph icon">4</div><h4>Repasse</h4></div></div></div></div>
+      <div class="sec"><div class="wrap split"><div><span class="kicker">Suporte</span><h2>Apoio em toda a jornada</h2><p>Estrutura de suporte ao parceiro.</p><div class="btn-row"><a class="btn" data-target="seja-parceiro">Quero ser Parceiro</a></div></div><div class="ph tall">Fluxograma da operação</div></div></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- GRUPO EQ — SUBPÁGINAS -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-compliance">
+      <div class="page-flag">Grupo EQ — Subpágina · <b>Compliance</b> · SUSEP, governança e segurança de dados. Crítico em financeiro</div>
+      <div class="sec"><div class="wrap hero-grid">
+        <div><span class="kicker">Confiança</span><h1>Compliance e governança</h1><p class="lead">SUSEP, governança e segurança de dados. Bloco crítico no mercado financeiro.</p></div>
+        <div class="grid g2"><div class="ph sq">Selo SUSEP</div><div class="ph sq">Selo LGPD</div></div>
+      </div></div>
+      <div class="sec alt"><div class="wrap"><span class="kicker">Pilares</span><h2>Como garantimos segurança</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Regulação SUSEP</h4><p>Descrição.</p></div><div class="card"><div class="ph icon">ic</div><h4>Segurança de dados</h4><p>LGPD.</p></div><div class="card"><div class="ph icon">ic</div><h4>Governança</h4><p>Descrição.</p></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-contato">
+      <div class="page-flag">Grupo EQ — Subpágina · <b>Contato</b> · Canais, endereço, mapa, Sinistro 24h, formulário</div>
+      <div class="sec"><div class="wrap"><span class="kicker">Hero</span><h1>Fale com o Grupo EQ</h1><p class="lead">Canais de atendimento, endereço, mapa, sinistro 24h e formulário.</p></div></div>
+      <div class="sec alt"><div class="wrap split">
         <div>
-          <h3>Quem pode solicitar o empréstimo consignado?</h3>
-          <p>O empréstimo consignado do Grupo EQ é um produto exclusivo, não disponível ao público geral. O acesso está condicionado ao cumprimento simultâneo de dois requisitos:</p>
-          <div class="reqs">
-            <div class="req"><span class="ck">✓</span><span><b>Servidor público</b> vinculado a órgão com convênio ativo junto ao Grupo EQ (Equatorial Previdência ou EQ Seguros).</span></div>
-            <div class="req"><span class="ck">✓</span><span><b>Participante ativo</b> do plano de pecúlio do Grupo EQ, com vínculo vigente e adimplente.</span></div>
+          <span class="kicker">Canais</span><h2>Como falar com a gente</h2>
+          <p><b>Atendimento:</b> telefone / e-mail / WhatsApp</p>
+          <p><b>Sinistro 24h:</b> canal dedicado</p>
+          <p><b>Endereço:</b> rua, número, cidade</p>
+          <div class="ph wide" style="margin-top:14px;">Mapa</div>
+        </div>
+        <form class="form" onsubmit="return false;">
+          <div class="field"><label>Nome</label><div class="input">Seu nome</div></div>
+          <div class="field"><label>E-mail</label><div class="input">voce@email.com</div></div>
+          <div class="field"><label>Assunto</label><div class="input">Selecione</div></div>
+          <div class="field"><label>Mensagem</label><div class="input area">Sua mensagem</div></div>
+          <a class="btn" style="width:100%;text-align:center;">Enviar mensagem</a>
+        </form>
+      </div></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTEÚDO / SEO -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-blog">
+      <div class="page-flag">Conteúdo / SEO · <b>Blog — Listagem</b> · Autoridade + SEO · filtros por categoria</div>
+      <div class="sec tight"><div class="wrap"><span class="kicker">Autoridade + SEO</span><h1>Blog do Grupo EQ</h1><p class="lead">Conteúdos de autoridade com filtros por categoria.</p>
+        <div class="filterbar" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
+          <span class="tag">Todos</span><span class="tag">Seguros</span><span class="tag">Crédito</span><span class="tag">Educação financeira</span>
+        </div>
+      </div></div>
+      <div class="sec"><div class="wrap"><div class="grid g3">
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><span class="tag">Seguros</span><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><span class="tag">Crédito</span><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><span class="tag">Educação financeira</span><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><span class="tag">Seguros</span><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+        <div class="card clickable" data-target="post"><div class="ph wide">Capa</div><span class="tag">Crédito</span><h4>Título do artigo</h4><small>Resumo curto · data</small></div>
+      </div>
+      <div class="btn-row" style="justify-content:center;margin-top:30px;"><a class="btn sec">Carregar mais</a></div>
+      </div></div>
+    </section>
+
+    <section class="page" id="page-post">
+      <div class="page-flag">Conteúdo / SEO · <b>Post Individual</b> · Template: breadcrumb, conteúdo, relacionados, CTA contextual</div>
+      <div class="sec"><div class="wrap" style="max-width:760px;">
+        <div class="crumb"><b>Blog</b> › Categoria › Título do artigo</div>
+        <span class="tag">Educação financeira</span>
+        <h1>Título do artigo individual</h1>
+        <small>Autor · data · tempo de leitura</small>
+        <div class="ph wide" style="margin:22px 0;">Imagem de capa do artigo</div>
+        <p>Parágrafo de abertura do conteúdo. Estrutura de leitura com títulos, parágrafos e listas.</p>
+        <h3>Subtítulo da seção</h3>
+        <p>Bloco de texto do corpo do artigo, em coluna estreita para leitura confortável.</p>
+        <p>Bloco de texto do corpo do artigo, em coluna estreita para leitura confortável.</p>
+      </div></div>
+      <div class="sec alt"><div class="wrap" style="max-width:760px;text-align:center;"><span class="kicker">CTA contextual</span><h2>Quer ajuda com este tema?</h2><div class="btn-row" style="justify-content:center;"><a class="btn" data-target="contato">Falar com especialista</a></div></div></div>
+      <div class="sec"><div class="wrap"><span class="kicker">Relacionados</span><h2>Leia também</h2><div class="grid g3" style="margin-top:24px;"><div class="card clickable" data-target="post"><div class="ph wide">Capa</div><h4>Artigo relacionado</h4></div><div class="card clickable" data-target="post"><div class="ph wide">Capa</div><h4>Artigo relacionado</h4></div><div class="card clickable" data-target="post"><div class="ph wide">Capa</div><h4>Artigo relacionado</h4></div></div></div></div>
+    </section>
+
+    <section class="page" id="page-ajuda">
+      <div class="page-flag">Conteúdo / SEO · <b>Central de Ajuda</b> · Suporte pré-venda · FAQs gerais · SEO cauda longa</div>
+      <div class="sec tight"><div class="wrap"><span class="kicker">Suporte pré-venda</span><h1>Central de Ajuda</h1><p class="lead">FAQs gerais, contratação, sinistro e área do cliente. SEO de cauda longa.</p>
+        <div class="ph" style="height:48px;margin-top:16px;max-width:520px;">Campo de busca</div>
+      </div></div>
+      <div class="sec"><div class="wrap">
+        <span class="kicker">Categorias</span>
+        <div class="grid g4" style="margin:18px 0 30px;"><div class="card clickable"><h4>Contratação</h4></div><div class="card clickable"><h4>Sinistro</h4></div><div class="card clickable"><h4>Área do cliente</h4></div><div class="card clickable"><h4>Pagamentos</h4></div></div>
+        <h2>Dúvidas frequentes</h2>
+        <div class="faq" style="margin-top:16px;">
+          <div class="q">Como contrato um seguro? <span class="pm">+</span></div>
+          <div class="q">Como aciono um sinistro? <span class="pm">+</span></div>
+          <div class="q">Como acesso a área do cliente? <span class="pm">+</span></div>
+          <div class="q">Como funciona o pagamento? <span class="pm">+</span></div>
+        </div>
+      </div></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- LEGAL — PRIVACIDADE E TERMOS -->
+    <!-- ============================================================ -->
+    <section class="page" id="page-privacidade">
+      <div class="page-flag">Legal · <b>Política de Privacidade</b></div>
+      <div class="sec"><div class="wrap" style="max-width:840px;">
+        <span class="kicker">Legal</span>
+        <h1>Política de Privacidade</h1>
+        <p class="lead">Como o Grupo EQ coleta, usa, armazena e protege seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+        <h3>1. Dados que coletamos</h3><p>Conteúdo a definir: dados cadastrais, de contratação e de navegação.</p>
+        <h3>2. Como utilizamos seus dados</h3><p>Conteúdo a definir: contratação, atendimento, prevenção a fraudes e obrigações regulatórias.</p>
+        <h3>3. Compartilhamento</h3><p>Conteúdo a definir: parceiros, seguradoras/resseguradoras e órgãos reguladores.</p>
+        <h3>4. Seus direitos (LGPD)</h3><p>Acesso, correção, portabilidade, eliminação e revogação de consentimento.</p>
+        <h3>5. Encarregado (DPO) e canais</h3><p>Canal do titular e Encarregado de Dados — contato a definir (ex.: denuncia@eqgrupo.com.br).</p>
+        <p style="margin-top:16px;"><small>Texto-base de wireframe — conteúdo jurídico final a ser fornecido/validado pelo cliente.</small></p>
+      </div></div>
+    </section>
+
+    <section class="page" id="page-termos">
+      <div class="page-flag">Legal · <b>Termos de Uso</b></div>
+      <div class="sec"><div class="wrap" style="max-width:840px;">
+        <span class="kicker">Legal</span>
+        <h1>Termos de Uso</h1>
+        <p class="lead">Condições de uso do site e dos canais digitais do Grupo EQ.</p>
+        <h3>1. Aceitação dos termos</h3><p>Conteúdo a definir.</p>
+        <h3>2. Uso do site e dos serviços</h3><p>Conteúdo a definir.</p>
+        <h3>3. Propriedade intelectual</h3><p>Conteúdo a definir.</p>
+        <h3>4. Limitação de responsabilidade</h3><p>Conteúdo a definir.</p>
+        <h3>5. Legislação aplicável e foro</h3><p>Conteúdo a definir.</p>
+        <p style="margin-top:16px;"><small>Texto-base de wireframe — conteúdo jurídico final a ser fornecido/validado pelo cliente.</small></p>
+      </div></div>
+    </section>
+
+    <!-- ===================== WIREFRAME SITE FOOTER (moldura comum) ===================== -->
+    <footer class="wf-footer">
+      <div class="cols">
+        <div>
+          <div class="cobrand">
+            <div class="wf-logo" style="color:#fff;"><span class="mark">LOGO</span> EQ Seguros</div>
+            <div class="wf-logo" style="color:#fff;"><span class="mark">LOGO</span> EQUATORIAL</div>
           </div>
+          <span class="cobrand-lbl">Empresas do Grupo EQ</span>
+          <p style="color:#bbb;">Descrição institucional curta. Grupo EQ desde 1972.</p>
         </div>
+        <div><h4>Soluções</h4><ul><li data-target="seguros">Seguros</li><li data-target="credito">Empréstimo Consignado</li><li data-target="beneficios">Benefícios Corporativos</li><li data-target="empresarial">Seguro Empresarial</li><li data-target="tech">Tecnologia EQ</li><li data-target="parceiros">Para Parceiros</li><li data-target="blog">Blog</li></ul></div>
+        <div><h4>Institucional</h4><ul><li data-target="aeq">Grupo EQ</li><li data-target="compliance">Compliance</li><li data-target="contato">Contato</li><li data-target="privacidade">Política de Privacidade</li><li data-target="termos">Termos de Uso</li></ul></div>
+        <div><h4>Atendimento</h4><ul><li data-target="contato">Sinistro 24h</li><li data-target="ajuda">Central de Ajuda</li><li data-target="contato">Telefone / E-mail</li></ul>
+          <div class="social"><a aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a><a aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div>
       </div>
-    </div>
+      <div class="sign">© 2026 EQ Seguros &amp; EQUATORIAL · Grupo EQ — Wireframe produzido por 3ADS (uso interno)</div>
+    </footer>
+
   </div>
+</div>
 
-  <!-- CTA FINAL -->
-  <div class="sec dark">
-    <div class="wrap" style="text-align:center;">
-      <h2>Pronto para proteger o que mais importa?</h2>
-      <p class="lead" style="margin:0 auto;">Fale com um especialista da EQ Seguros e encontre a solução ideal para você.</p>
-      <div class="btn-row" style="justify-content:center;"><a class="btn">Falar com um especialista</a></div>
-    </div>
-  </div>
+<script>
+  (function(){
+    var links = document.querySelectorAll('[data-target]');
+    var pages = document.querySelectorAll('.page');
+    var nav = document.getElementById('siteNav');
 
-  <!-- FOOTER -->
-  <footer class="wf-footer">
-    <div class="cols">
-      <div>
-        <div class="cobrand">
-          <div class="wf-logo" style="color:#fff;"><span class="mark">LOGO</span> EQ Seguros</div>
-          <div class="wf-logo" style="color:#fff;"><span class="mark">LOGO</span> EQUATORIAL</div>
-        </div>
-        <span class="cobrand-lbl">Empresas do Grupo EQ</span>
-        <p style="color:#bbb;">Proteção financeira para pessoas. Regulado por SUSEP · CNSP.</p>
-      </div>
-      <div><h4>Soluções</h4><ul><li>Seguros (via API)</li><li>Empréstimo Consignado</li><li>Pecúlio</li></ul></div>
-      <div><h4>Institucional</h4><ul><li>Sobre o Grupo EQ</li><li>Contato</li><li>Política de Privacidade</li><li>Termos de Uso</li></ul></div>
-      <div><h4>Atendimento</h4><ul><li>SAC</li><li>Central de Ajuda</li><li>Telefone / E-mail</li></ul></div>
-    </div>
-    <div class="sign">© 2026 EQ Seguros S.A. · SUSEP — Grupo EQ · Wireframe produzido por 3ADS (uso interno)</div>
-  </footer>
-
+    function show(id){
+      pages.forEach(function(p){ p.classList.toggle('active', p.id === 'page-' + id); });
+      if(nav){ nav.classList.remove('open'); }
+      window.scrollTo(0,0);
+    }
+    links.forEach(function(el){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        show(el.getAttribute('data-target'));
+      });
+    });
+    var mt = document.getElementById('menuToggle');
+    if(mt){ mt.addEventListener('click', function(){ if(nav){ nav.classList.toggle('open'); } }); }
+    document.querySelectorAll('.wf-nav .has-dropdown').forEach(function(hd){
+      var t;
+      hd.addEventListener('mouseenter', function(){ clearTimeout(t); hd.classList.add('open'); });
+      hd.addEventListener('mouseleave', function(){ t = setTimeout(function(){ hd.classList.remove('open'); }, 180); });
+    });
+    document.querySelectorAll('.mega-cat').forEach(function(cat){
+      function act(){
+        var m = cat.closest('.dropdown'); if(!m) return;
+        m.querySelectorAll('.mega-cat').forEach(function(x){ x.classList.toggle('active', x===cat); });
+        var id = cat.getAttribute('data-cat');
+        m.querySelectorAll('.mega-panel').forEach(function(pl){ pl.classList.toggle('active', pl.id===id); });
+      }
+      cat.addEventListener('mouseenter', act);
+      cat.addEventListener('click', function(e){ e.preventDefault(); act(); });
+    });
+  })();
+</script>
 </body>
 </html>
