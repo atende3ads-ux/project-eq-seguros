@@ -322,10 +322,74 @@
         <div class="wf-logo" data-target="home" style="cursor:pointer;"><span class="mark">LOGO</span> EQ Seguros</div>
       </div>
       <nav class="wf-nav" id="siteNav">
-        <span data-target="seguros">Seguros</span>
-        <span data-target="credito">Empréstimo Consignado</span>
-        <span data-target="aeq">Sobre</span>
-        <span data-target="contato">Contato</span>
+        <span data-target="aeq">Grupo EQ</span>
+        <span class="has-dropdown">
+          <span class="nav-top" data-target="seguros">Seguros ▾</span>
+          <div class="dropdown">
+            <div class="mega-head">Nossos Seguros</div>
+            <div class="mega-body">
+              <div class="mega-cats">
+            <a class="mega-cat active" data-cat="seg-pessoas">Para Pessoas</a>
+            <a class="mega-cat" data-cat="seg-servicos">Serviços</a>
+            <a class="mega-cat" data-cat="seg-api">Via API</a>
+              </div>
+              <div class="mega-panels">
+          <div class="mega-panel active" id="seg-pessoas">
+            <div class="mega-label">Seguros de pessoas</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="vida"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><span class="mega-txt"><h4>Seguro de Vida</h4><p>Morte, invalidez e proteção da família.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="prestamista"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="mega-txt"><h4>Seguro Prestamista</h4><p>Quita o saldo devedor em imprevistos.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="acidentes"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span class="mega-txt"><h4>Seguro de Acidentes</h4><p>Morte acidental e invalidez por acidente.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="funeral"><span class="ico"><svg viewBox="0 0 24 24"><path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></span><span class="mega-txt"><h4>Seguro Funeral</h4><p>Auxílio funeral para a família.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="viagem"><span class="ico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></span><span class="mega-txt"><h4>Seguro Viagem</h4><p>Cobertura nacional e internacional.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+          <div class="mega-panel" id="seg-servicos">
+            <div class="mega-label">Serviços agregados</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="atendimento"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="14.8" y1="9.2" x2="19.1" y2="4.9"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/></svg></span><span class="mega-txt"><h4>Assistências</h4><p>Telemedicina, residencial, pet e mais.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="atendimento"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span><span class="mega-txt"><h4>Sorteios</h4><p>Prêmios vinculados aos produtos.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+          <div class="mega-panel" id="seg-api">
+            <div class="mega-label">Distribuição via parceiros</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="tech"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><span class="mega-txt"><h4>Seguro embarcado</h4><p>Seguros de pessoas na jornada do parceiro, via API.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a class="mega-act" data-target="atendimento"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span>Acione seu seguro</span></a>
+              <a class="mega-act" data-target="contato"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg> <span>Fale Conosco</span></a>
+            </div>
+          </div>
+        </span>
+        <span class="has-dropdown">
+          <span class="nav-top" data-target="credito">Crédito ▾</span>
+          <div class="dropdown">
+            <div class="mega-head">Crédito</div>
+            <div class="mega-body nocats">
+              <div class="mega-panels">
+          <div class="mega-panel active">
+            <div class="mega-label">Consignado Público e Pecúlio</div>
+            <div class="mega-cards">
+            <a class="mega-card" data-target="consig"><span class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><span class="mega-txt"><h4>Empréstimo Consignado</h4><p>Consignado Público — conforme a margem consignável.</p><span class="mega-more">Saiba mais →</span></span></a>
+            <a class="mega-card" data-target="peculio"><span class="ico"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><span class="mega-txt"><h4>Pecúlio</h4><p>Indenização por morte de qualquer causa.</p><span class="mega-more">Saiba mais →</span></span></a>
+            </div>
+          </div>
+              </div>
+            </div>
+            <div class="mega-foot">
+              <a class="mega-act" data-target="atendimento"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span>Acione seu seguro</span></a>
+              <a class="mega-act" data-target="contato"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg> <span>Fale Conosco</span></a>
+            </div>
+          </div>
+        </span>
+        <span data-target="tech">Tecnologia EQ</span>
+        <span data-target="atendimento">Atendimento</span>
+        <span data-target="parceiros">Para Parceiros</span>
+        <span data-target="blog">Blog</span>
       </nav>
       <a class="btn" data-target="contato">Fale com um especialista</a>
     </header>
