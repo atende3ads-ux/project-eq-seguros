@@ -177,6 +177,9 @@
   .row-line{border-top:1px solid var(--line);margin:0;}
   .crumb{font-size:.78rem;color:var(--ink2);margin-bottom:14px;}
   .crumb b{color:var(--ink);}
+  .crumbbar{padding:16px 32px 0;}
+  .crumb .cl{cursor:pointer;color:var(--ink2);}
+  .crumb .cl:hover{color:var(--ink);text-decoration:underline;}
   .faq .q{border-top:1px solid var(--line);padding:16px 0;display:flex;justify-content:space-between;gap:16px;cursor:pointer;font-weight:500;}
   .faq .q:last-child{border-bottom:1px solid var(--line);}
   .faq .q .pm{color:var(--ink2);}
@@ -233,7 +236,7 @@
     .sec{padding:48px 20px;}
     .diff-cell{padding:26px 22px;}
     .sol-body,.feat-content,.card,.form{padding:22px;}
-    .page-flag,.wf-footer{padding-left:20px;padding-right:20px;}
+    .page-flag,.wf-footer,.crumbbar{padding-left:20px;padding-right:20px;}
     .ph.hero{min-height:200px;}
     h1{font-size:1.9rem;} h2{font-size:1.55rem;}
   }
@@ -490,6 +493,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-seguros">
       <div class="page-flag">Nível 1 — Linha · <b>Seguros</b> · Portfólio de seguros para pessoas e empresas</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Seguros</b></div></div></div>
 
       <div class="sec">
         <div class="wrap hero-grid">
@@ -584,6 +588,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-credito">
       <div class="page-flag">Nível 1 — Linha · <b>Crédito</b> · Empréstimo Consignado e Pecúlio · exclusivo servidores conveniados</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Crédito</b></div></div></div>
 
       <div class="sec dark">
         <div class="wrap hero-grid">
@@ -690,6 +695,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-tech">
       <div class="page-flag">Nível 1 — Linha · <b>Tecnologia EQ</b> · Plataforma própria, app, área do cliente e integrações</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Tecnologia EQ</b></div></div></div>
 
       <div class="sec dark">
         <div class="wrap hero-grid">
@@ -796,6 +802,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-atendimento">
       <div class="page-flag">Nível 1 — Atendimento · <b>Atendimento</b> · Como acionar, sorteio e assistência</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Atendimento</b></div></div></div>
 
       <div class="sec">
         <div class="wrap hero-grid">
@@ -884,8 +891,9 @@
     <!-- ============================================================ -->
     <section class="page" id="page-prestamista">
       <div class="page-flag">Nível 2 — Produto · <b>Seguro Prestamista</b> · protege o saldo devedor</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="seguros">Seguros</span> › <b>Seguro Prestamista</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Prestamista</div><span class="kicker">Hero do produto</span><h1>Seguro Prestamista</h1><p class="lead">Quita ou amortiza o saldo devedor do seu empréstimo em caso de morte, invalidez por acidente ou desemprego — a dívida não vira problema da família.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="credito">Ver linha de Crédito</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Seguro Prestamista</h1><p class="lead">Quita ou amortiza o saldo devedor do seu empréstimo em caso de morte, invalidez por acidente ou desemprego — a dívida não vira problema da família.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="credito">Ver linha de Crédito</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está protegido</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Morte</h4><p>Quitação do saldo devedor.</p></div><div class="card"><div class="ph icon">ic</div><h4>Invalidez por acidente</h4><p>Amortização da dívida.</p></div><div class="card"><div class="ph icon">ic</div><h4>Desemprego involuntário</h4><p>Pagamento de parcelas (CLT).</p></div></div></div></div>
@@ -895,8 +903,9 @@
 
     <section class="page" id="page-viagem">
       <div class="page-flag">Nível 2 — Produto · <b>Seguro Viagem</b></div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="seguros">Seguros</span> › <b>Seguro Viagem</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Viagem</div><span class="kicker">Hero do produto</span><h1>Seguro Viagem</h1><p class="lead">Proteção em viagens nacionais e internacionais: despesas médicas, bagagem, cancelamento e assistência 24h.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Seguro Viagem</h1><p class="lead">Proteção em viagens nacionais e internacionais: despesas médicas, bagagem, cancelamento e assistência 24h.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está incluído</h2><div class="grid g4" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Despesas médicas</h4></div><div class="card"><div class="ph icon">ic</div><h4>Bagagem</h4></div><div class="card"><div class="ph icon">ic</div><h4>Cancelamento</h4></div><div class="card"><div class="ph icon">ic</div><h4>Assistência 24h</h4></div></div></div></div>
@@ -905,8 +914,9 @@
 
     <section class="page" id="page-funeral">
       <div class="page-flag">Nível 2 — Produto · <b>Seguro Funeral</b></div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="seguros">Seguros</span> › <b>Seguro Funeral</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Seguros › Seguro Funeral</div><span class="kicker">Hero do produto</span><h1>Seguro Funeral</h1><p class="lead">Auxílio funeral para o titular e a família, com livre escolha do prestador e reembolso até o capital contratado.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Seguro Funeral</h1><p class="lead">Auxílio funeral para o titular e a família, com livre escolha do prestador e reembolso até o capital contratado.</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está incluído</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Funeral individual</h4></div><div class="card"><div class="ph icon">ic</div><h4>Funeral familiar</h4></div><div class="card"><div class="ph icon">ic</div><h4>Assistência 24h</h4></div></div></div></div>
@@ -915,8 +925,9 @@
 
     <section class="page" id="page-acidentes">
       <div class="page-flag">Nível 2 — Produto · <b>Seguro de Acidentes Pessoais</b> · complemento do Seguro de Vida</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="seguros">Seguros</span> › <b>Seguro de Acidentes</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Seguros › Seguro de Acidentes</div><span class="kicker">Hero do produto</span><h1>Seguro de Acidentes Pessoais</h1><p class="lead">Indenização por morte ou invalidez por acidente e despesas médicas — complemento natural do Seguro de Vida (EQ Vida).</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="vida">Ver Seguro de Vida</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Seguro de Acidentes Pessoais</h1><p class="lead">Indenização por morte ou invalidez por acidente e despesas médicas — complemento natural do Seguro de Vida (EQ Vida).</p><div class="btn-row"><a class="btn" data-target="contato">Fazer cotação</a><a class="btn sec" data-target="vida">Ver Seguro de Vida</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Coberturas</span><h2>O que está protegido</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">ic</div><h4>Morte acidental</h4></div><div class="card"><div class="ph icon">ic</div><h4>Invalidez por acidente</h4></div><div class="card"><div class="ph icon">ic</div><h4>Despesas médicas</h4></div></div></div></div>
@@ -925,8 +936,9 @@
 
     <section class="page" id="page-peculio">
       <div class="page-flag">Nível 2 — Produto · <b>Pecúlio</b> · benefício financeiro aos beneficiários</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="credito">Crédito</span> › <b>Pecúlio</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Crédito › Pecúlio</div><span class="kicker">Hero do produto</span><h1>Pecúlio</h1><p class="lead">Benefício financeiro pago aos beneficiários indicados em caso de falecimento do titular — amparo e tranquilidade para a família.</p><div class="btn-row"><a class="btn" data-target="contato">Falar sobre Pecúlio</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Pecúlio</h1><p class="lead">Benefício financeiro pago aos beneficiários indicados em caso de falecimento do titular — amparo e tranquilidade para a família.</p><div class="btn-row"><a class="btn" data-target="contato">Falar sobre Pecúlio</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Como funciona</span><h2>Amparo planejado</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><div class="ph icon">1</div><h4>Contribuição</h4><p>Planos acessíveis.</p></div><div class="card"><div class="ph icon">2</div><h4>Beneficiários</h4><p>Você indica quem recebe.</p></div><div class="card"><div class="ph icon">3</div><h4>Benefício</h4><p>Pagamento ao(s) beneficiário(s).</p></div></div></div></div>
@@ -938,6 +950,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-parceiros">
       <div class="page-flag">Nível 1 — Hub corretor · <b>Parceiros</b> · Jornada e linguagem distintas do cliente final · funil próprio</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Para Parceiros</b></div></div></div>
 
       <div class="sec">
         <div class="wrap hero-grid">
@@ -988,6 +1001,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-aeq">
       <div class="page-flag">Nível 1 — Institucional · <b>Grupo EQ</b> · Página institucional única (quem somos, história, Equatorial, ESG)</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Grupo EQ</b></div></div></div>
 
       <div class="sec">
         <div class="wrap hero-grid">
@@ -1117,11 +1131,12 @@
     <!-- ============================================================ -->
     <section class="page" id="page-vida">
       <div class="page-flag">Nível 2 — Página completa · <b>Seguro de Vida</b> · Template de produto (referência dos demais)</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="seguros">Seguros</span> › <b>Seguro de Vida</b></div></div></div>
 
       <div class="sec">
         <div class="wrap hero-grid">
           <div>
-            <div class="crumb"><b>Home</b> › Seguros › Seguro de Vida</div>
+            
             <span class="kicker">Hero do produto</span>
             <h1>Seguro de Vida</h1>
             <p class="lead">Proposta de valor do produto, para quem é e principal benefício. CTA de cotação em destaque.</p>
@@ -1207,8 +1222,9 @@
     <!-- ============================================================ -->
     <section class="page" id="page-consig">
       <div class="page-flag">Nível 2 — Página completa · <b>Crédito Consignado</b> · Alta demanda comercial · usa o template de produto</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="credito">Crédito</span> › <b>Consignado Público</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Crédito › Empréstimo Consignado</div><span class="kicker">Hero do produto</span><h1>Consignado Público</h1><p class="lead">Operamos <b>exclusivamente com o Consignado Público</b> — crédito com desconto em folha para servidores públicos de órgãos conveniados ao Grupo EQ.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
+        <div><span class="kicker">Hero do produto</span><h1>Consignado Público</h1><p class="lead">Operamos <b>exclusivamente com o Consignado Público</b> — crédito com desconto em folha para servidores públicos de órgãos conveniados ao Grupo EQ.</p><div class="btn-row"><a class="btn" data-target="contato">Simular crédito</a></div></div>
         <div class="ph hero">Imagem do produto</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">Para quem é</span><h2>Exclusivo para servidores conveniados</h2><div class="grid g3" style="margin-top:24px;"><div class="card"><h4>Servidor público</h4><p>Com vínculo ativo.</p></div><div class="card"><h4>Órgão conveniado</h4><p>Convênio ativo com o Grupo EQ.</p></div><div class="card"><h4>Participante do pecúlio</h4><p>Vínculo vigente e adimplente.</p></div></div><p class="secnote" style="margin-top:14px;">Crédito conforme a margem consignável do servidor.</p><p class="secnote" style="margin-top:8px;"><b>Operamos somente com o Consignado Público.</b> Não operamos as linhas de crédito FGTS, INSS ou CLT.</p></div></div>
@@ -1219,8 +1235,9 @@
 
     <section class="page" id="page-beneficios">
       <div class="page-flag">Nível 2 · <b>Combos e Produtos</b> · seguros + assistências + sorteios</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Combos e Produtos</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
-        <div><div class="crumb"><b>Home</b> › Combos e Produtos</div><span class="kicker">Combos</span><h1>Combos e produtos</h1><p class="lead">Pacotes que combinam seguros, assistências e sorteios em uma só oferta.</p><div class="btn-row"><a class="btn" data-target="contato">Falar com especialista</a></div></div>
+        <div><span class="kicker">Combos</span><h1>Combos e produtos</h1><p class="lead">Pacotes que combinam seguros, assistências e sorteios em uma só oferta.</p><div class="btn-row"><a class="btn" data-target="contato">Falar com especialista</a></div></div>
         <div class="ph hero">Imagem</div>
       </div></div>
       <div class="sec alt"><div class="wrap"><span class="kicker">O que entra nos combos</span><h2>Seguros + Assistências + Sorteios</h2><div class="grid g3" style="margin-top:24px;"><div class="card clickable" data-target="seguros"><div class="ph sq">Combo</div><h4>Seguros</h4><p>Vida, prestamista, viagem, funeral e acidentes.</p></div><div class="card clickable" data-target="atendimento"><div class="ph sq">Combo</div><h4>Assistências</h4><p>Telemedicina, residencial, pet e mais.</p></div><div class="card clickable" data-target="atendimento"><div class="ph sq">Combo</div><h4>Sorteios</h4><p>Prêmios vinculados aos produtos.</p></div></div></div></div>
@@ -1232,6 +1249,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-seja-parceiro">
       <div class="page-flag">Parceiros — Subpágina · <b>Seja um Parceiro</b> · Conversão corretor: proposta de valor + cadastro</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="parceiros">Para Parceiros</span> › <b>Seja um Parceiro</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
         <div><span class="kicker">Conversão corretor</span><h1>Seja um parceiro do Grupo EQ</h1><p class="lead">Proposta de valor para o corretor e formulário de cadastro.</p></div>
         <div class="ph hero">Hero corretor</div>
@@ -1251,6 +1269,7 @@
 
     <section class="page" id="page-api">
       <div class="page-flag">Parceiros — Subpágina · <b>Integrações / API</b> · Documentação técnico-comercial das integrações</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="tech">Tecnologia EQ</span> › <b>Integrações / API</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
         <div><span class="kicker">Hero técnico</span><h1>Integrações e API</h1><p class="lead">Documentação técnico-comercial das integrações para parceiros e empresas.</p><div class="btn-row"><a class="btn">Ver documentação</a><a class="btn sec" data-target="contato">Falar com time técnico</a></div></div>
         <div class="ph hero">Diagrama de arquitetura / API</div>
@@ -1264,6 +1283,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-compliance">
       <div class="page-flag">Grupo EQ — Subpágina · <b>Compliance</b> · SUSEP, governança e segurança de dados. Crítico em financeiro</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="aeq">Grupo EQ</span> › <b>Compliance</b></div></div></div>
       <div class="sec"><div class="wrap hero-grid">
         <div><span class="kicker">Confiança</span><h1>Compliance e governança</h1><p class="lead">SUSEP, governança e segurança de dados. Bloco crítico no mercado financeiro.</p></div>
         <div class="grid g2"><div class="ph sq">Selo SUSEP</div><div class="ph sq">Selo LGPD</div></div>
@@ -1276,6 +1296,7 @@
 
     <section class="page" id="page-contato">
       <div class="page-flag">Grupo EQ — Subpágina · <b>Contato</b> · Canais, endereço, mapa, Sinistro 24h, formulário</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Contato</b></div></div></div>
       <div class="sec"><div class="wrap"><span class="kicker">Hero</span><h1>Fale com o Grupo EQ</h1><p class="lead">Canais de atendimento, endereço, mapa, sinistro 24h e formulário.</p></div></div>
       <div class="sec alt"><div class="wrap split">
         <div>
@@ -1300,6 +1321,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-blog">
       <div class="page-flag">Conteúdo / SEO · <b>Blog — Listagem</b> · Autoridade + SEO · filtros por categoria</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Blog</b></div></div></div>
       <div class="sec tight"><div class="wrap"><span class="kicker">Autoridade + SEO</span><h1>Blog do Grupo EQ</h1><p class="lead">Conteúdos de autoridade com filtros por categoria.</p>
         <div class="filterbar" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;">
           <span class="tag">Todos</span><span class="tag">Seguros</span><span class="tag">Crédito</span><span class="tag">Educação financeira</span>
@@ -1319,6 +1341,7 @@
 
     <section class="page" id="page-post">
       <div class="page-flag">Conteúdo / SEO · <b>Post Individual</b> · Template: breadcrumb, conteúdo, relacionados, CTA contextual</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <span class="cl" data-target="blog">Blog</span> › <b>Artigo</b></div></div></div>
       <div class="sec"><div class="wrap" style="max-width:760px;">
         <div class="crumb"><b>Blog</b> › Categoria › Título do artigo</div>
         <span class="tag">Educação financeira</span>
@@ -1336,6 +1359,7 @@
 
     <section class="page" id="page-ajuda">
       <div class="page-flag">Conteúdo / SEO · <b>Central de Ajuda</b> · Suporte pré-venda · FAQs gerais · SEO cauda longa</div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Central de Ajuda</b></div></div></div>
       <div class="sec tight"><div class="wrap"><span class="kicker">Suporte pré-venda</span><h1>Central de Ajuda</h1><p class="lead">FAQs gerais, contratação, sinistro e área do cliente. SEO de cauda longa.</p>
         <div class="ph" style="height:48px;margin-top:16px;max-width:520px;">Campo de busca</div>
       </div></div>
@@ -1359,6 +1383,7 @@
     <!-- ============================================================ -->
     <section class="page" id="page-privacidade">
       <div class="page-flag">Legal · <b>Política de Privacidade</b></div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Política de Privacidade</b></div></div></div>
       <div class="sec"><div class="wrap" style="max-width:840px;">
         <span class="kicker">Legal</span>
         <h1>Política de Privacidade</h1>
@@ -1374,6 +1399,7 @@
 
     <section class="page" id="page-termos">
       <div class="page-flag">Legal · <b>Termos de Uso</b></div>
+      <div class="crumbbar"><div class="wrap"><div class="crumb"><span class="cl" data-target="home">Home</span> › <b>Termos de Uso</b></div></div></div>
       <div class="sec"><div class="wrap" style="max-width:840px;">
         <span class="kicker">Legal</span>
         <h1>Termos de Uso</h1>
