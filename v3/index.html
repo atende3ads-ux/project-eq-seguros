@@ -215,16 +215,18 @@
   @media(max-width:860px){
     body{font-size:14.5px;}
     .menu-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);background:#fff;padding:8px 12px;border-radius:3px;font-size:.8rem;cursor:pointer;}
-    .wf-nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:6px 18px;display:none;box-shadow:0 8px 20px rgba(0,0,0,.06);}
+    .wf-nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;flex-wrap:nowrap;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:6px 18px;display:none;box-shadow:0 8px 20px rgba(0,0,0,.06);max-height:calc(100vh - 59px);overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
     .wf-nav.open{display:flex;}
     .wf-nav .has-dropdown{width:100%;flex-direction:column;padding:0;border:none;}
     .wf-nav .nav-top{display:block;width:100%;padding:11px 0;border-bottom:1px solid var(--line2);}
     .wf-nav .dropdown{position:static;display:block;border:none;box-shadow:none;padding:2px 0 10px 12px;}
     .mega-head{padding:8px 0 6px;font-size:.85rem;max-width:none;}
     .mega-body{flex-direction:column;padding:0;max-width:none;}
-    .mega-cats{display:none;}
+    .mega-cats{flex:0 0 auto;display:flex;flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:6px;border-right:none;padding:0 0 10px;}
+    .mega-cats .mega-cat{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:.76rem;}
+    .mega-cats .mega-cat.active{background:var(--ink);color:#fff;}
     .mega-panels{padding-left:0;}
-    .mega-cards{grid-template-columns:1fr;gap:8px;}
+    .mega-cards,.mega-body.nocats .mega-cards{grid-template-columns:1fr;gap:8px;}
     .mega-card{padding:11px;}
     .mega-foot{display:none;}
     .wf-nav span{padding:11px 0;border-bottom:1px solid var(--line2);}
@@ -879,6 +881,7 @@
             <h1>Atendimento Grupo EQ</h1>
             <p class="lead">Tudo o que você precisa para acionar um sinistro, conferir sorteios e usar suas assistências.</p>
             <div class="btn-row"><a class="btn" data-target="contato">Sinistro 24h</a><a class="btn sec" data-target="ajuda">Central de Ajuda</a></div>
+            <div class="notice"><b>Sinistro 24h</b> é exclusivo para acionamento de assistências emergenciais e envio de documentos do sinistro — não é canal para análise ou pagamento de indenização.</div>
           </div>
           <div class="ph hero">Imagem atendimento</div>
         </div>
@@ -925,7 +928,7 @@
             <div class="card"><div class="ph icon">3</div><h4>Acompanhe</h4><p>Acompanhe o status pela área do cliente.</p></div>
           </div>
           <div class="grid g4" style="margin-top:20px;">
-            <div class="card clickable" data-target="contato"><h4>Sinistro 24h</h4><p>Canal de emergência.</p></div>
+            <div class="card clickable" data-target="contato"><h4>Sinistro 24h</h4><p>Assistências emergenciais e envio de documentos.</p></div>
             <div class="card clickable" data-target="contato"><h4>WhatsApp</h4><p>Atendimento rápido.</p></div>
             <div class="card clickable" data-target="contato"><h4>Telefone</h4><p>Central de relacionamento.</p></div>
             <div class="card clickable" data-target="ajuda"><h4>Central de Ajuda</h4><p>FAQs e tutoriais.</p></div>
@@ -1375,7 +1378,7 @@
         <div>
           <span class="kicker">Canais</span><h2>Como falar com a gente</h2>
           <p><b>Atendimento:</b> telefone / e-mail / WhatsApp</p>
-          <p><b>Sinistro 24h:</b> canal dedicado</p>
+          <p><b>Sinistro 24h:</b> canal dedicado, exclusivo para assistências emergenciais e envio de documentos</p>
           <p><b>Endereço:</b> rua, número, cidade</p>
           <div class="ph wide" style="margin-top:14px;">Mapa</div>
         </div>
