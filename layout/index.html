@@ -189,20 +189,12 @@ header.nav{
 }
 header.nav.scrolled{box-shadow:0 6px 24px -12px rgba(33,40,61,.16);}
 header.nav .wrap{display:flex;align-items:center;gap:28px;height:82px;}
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);font-size:1.16rem;letter-spacing:-.03em;flex-shrink:0;}
-.logo .mark{
-  width:42px;height:42px;border-radius:13px;background:var(--grad-navy);
-  display:flex;align-items:center;justify-content:center;color:#fff;
-  font-size:.82rem;font-weight:800;letter-spacing:-.02em;position:relative;overflow:hidden;
-}
-.logo .mark::after{
-  content:'';position:absolute;width:24px;height:24px;right:-9px;bottom:-9px;
-  border-radius:50%;background:var(--grad-orange);
-}
+.logo{display:flex;align-items:center;flex-shrink:0;}
+.logo img{height:34px;width:auto;}
 .menu{display:flex;align-items:center;gap:5px;margin-left:auto;}
 .menu > a{
-  padding:10px 15px;border-radius:10px;font-size:.9rem;font-weight:500;color:var(--gray);
-  transition:color .25s,background .25s;position:relative;
+  padding:10px 13px;border-radius:10px;font-size:.88rem;font-weight:500;color:var(--gray);
+  transition:color .25s,background .25s;position:relative;white-space:nowrap;
 }
 .menu > a:hover{color:var(--navy);background:var(--blue-bg);}
 .nav-cta{flex-shrink:0;}
@@ -433,8 +425,11 @@ footer.ft h4{
   margin-bottom:18px;font-weight:700;
 }
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding-bottom:52px;}
-.ft-brand .logo{color:#fff;margin-bottom:8px;}
-.ft-brand .logo .mark{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);}
+.ft-brand .logo{margin-bottom:8px;}
+/* Versão negativa provisória: aplicar os arquivos oficiais em branco quando disponíveis */
+.ft-brand .logo img{filter:brightness(0) invert(1);opacity:.92;}
+.ft-brand .logo img.eq-mark{height:38px;}
+.ft-brand .logo img.eqt-mark{height:26px;}
 .ft-brand p{font-size:.86rem;color:#8E9AAD;margin-top:18px;line-height:1.7;max-width:290px;}
 .ft-cobrand{display:flex;flex-direction:column;gap:12px;}
 .ft-lbl{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#68738A;margin-top:20px;}
@@ -538,7 +533,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 <!-- ============ HEADER ============ -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <div class="logo"><span class="mark">EQ</span> EQ Seguros</div>
+    <div class="logo"><img src="img/logo-eq-seguros-2.png" alt="EQ Seguros"></div>
     <nav class="menu" id="menu">
       <a href="#">Grupo EQ</a>
       <a href="#">Seguros</a>
@@ -808,8 +803,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     <div class="ft-top">
       <div class="ft-brand">
         <div class="ft-cobrand">
-          <div class="logo"><span class="mark">EQ</span> EQ Seguros</div>
-          <div class="logo"><span class="mark">EP</span> EQUATORIAL</div>
+          <div class="logo"><img class="eq-mark" src="img/logo-eq-seguros-2.png" alt="EQ Seguros"></div>
+          <div class="logo"><img class="eqt-mark" src="img/logo-equatorial.png" alt="Equatorial Previdência"></div>
         </div>
         <div class="ft-lbl">Empresas do Grupo EQ</div>
         <p>Proteção financeira para pessoas, via parceiros e convênios. Grupo EQ — regulado pela SUSEP.</p>
