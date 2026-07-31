@@ -262,11 +262,8 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .marquee-track{display:flex;gap:20px;width:max-content;animation:marquee 38s linear infinite;}
 .marquee:hover .marquee-track{animation-play-state:paused;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-.logo-slot{
-  flex:0 0 auto;width:206px;height:90px;background:#fff;border:1px solid var(--line);
-  border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;padding:14px 24px;
-}
-.logo-slot img{max-height:56px;width:auto;max-width:100%;object-fit:contain;}
+.logo-slot{flex:0 0 auto;display:flex;align-items:center;justify-content:center;}
+.logo-slot img{height:92px;width:auto;display:block;}
 
 /* ===================== CONSIGNADO (dark) ===================== */
 .consig-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center;}
