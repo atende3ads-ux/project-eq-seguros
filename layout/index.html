@@ -232,15 +232,24 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .sec.dark.has-div-top{padding-top:180px;}
 .sec.dark.has-div-bot{padding-bottom:200px;}
 
-/* POR QUE — duas colunas, cards empilhados à direita */
+/* POR QUE — duas colunas; cards com empilhamento no scroll (sticky stack) */
 .why-cols{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.why-stack{display:flex;flex-direction:column;gap:22px;}
+.why-cols > .why-intro{position:sticky;top:150px;}
+.why-stack{display:flex;flex-direction:column;gap:28px;}
 .why{
-  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  background:#272F46;border:1px solid rgba(255,255,255,.09);
   border-radius:16px;padding:30px 32px;
-  transition:background .4s var(--ease),border-color .4s,transform .45s var(--ease);
+  position:sticky;
+  box-shadow:0 -18px 40px -18px rgba(10,14,24,.55);
+  transition:background .4s var(--ease),border-color .4s;
 }
-.why:hover{background:rgba(255,255,255,.08);border-color:rgba(243,144,50,.4);transform:translateY(-4px);}
+/* deslocamentos progressivos: bordas dos cards anteriores ficam visíveis atrás */
+.why:nth-child(1){top:140px;}
+.why:nth-child(2){top:158px;background:#2B334C;}
+.why:nth-child(3){top:176px;background:#2F3752;}
+.why:nth-child(4){top:194px;background:#333C58;}
+.why:hover{border-color:rgba(243,144,50,.4);}
+.why{min-height:210px;}
 .why .wico{position:relative;width:40px;height:40px;margin-bottom:20px;}
 .why .wico::before{
   content:'';position:absolute;left:0;top:0;width:26px;height:26px;
@@ -383,6 +392,12 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   .numbers .n:last-child{border-bottom:none;}
   .numbers .n::before{left:30px;}
   .line-grid,.post-grid{grid-template-columns:1fr;}
+  .why-cols > .why-intro{position:static;}
+  .why{min-height:0;}
+  .why:nth-child(1){top:88px;}
+  .why:nth-child(2){top:102px;}
+  .why:nth-child(3){top:116px;}
+  .why:nth-child(4){top:130px;}
   .line-card{padding:28px;}
   .line-illus{min-height:220px;}
   .line-illus img{max-height:220px;}
@@ -533,7 +548,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="divider top"><svg viewBox="0 0 1920 66" preserveAspectRatio="none"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
   <div class="wrap">
     <div class="why-cols">
-      <div class="rv-init">
+      <div class="why-intro rv-init">
         <span class="kicker">Por que o Grupo EQ</span>
         <h2>Uma seguradora construída <span class="accent">para o mercado brasileiro</span></h2>
         <p class="lead" style="margin-top:18px;">Operamos com foco em pessoas, com regulação SUSEP e modelo B2B2C para distribuição em escala.</p>
