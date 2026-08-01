@@ -174,10 +174,14 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .numbers-wrap{position:relative;z-index:5;margin-top:-96px;}
 .numbers{
   display:grid;grid-template-columns:repeat(3,1fr);
-  background:var(--navy-dark);border-radius:var(--r-lg);
-  box-shadow:0 28px 60px -18px rgba(7,25,41,.45);overflow:hidden;
+  background:rgba(11,35,71,.6);border-radius:var(--r-lg);
+  -webkit-backdrop-filter:blur(22px) saturate(150%);
+  backdrop-filter:blur(22px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 28px 60px -18px rgba(7,25,41,.5),inset 0 1px 0 rgba(255,255,255,.14);
+  overflow:hidden;
 }
-.numbers .n{padding:46px 44px 42px;border-right:1px solid rgba(255,255,255,.1);position:relative;}
+.numbers .n{padding:46px 44px 42px;border-right:1px solid rgba(255,255,255,.12);position:relative;}
 .numbers .n:last-child{border-right:none;}
 .numbers .n::before{
   content:'';position:absolute;left:44px;top:0;width:40px;height:6px;
