@@ -37,6 +37,9 @@
   --gray:#475569;
   --gray-soft:#64748B;
   --line:#BFD0E8;          /* borda navy clara */
+  --graphite:#3B444E;      /* cinza nobre — mesma matiz do azul institucional, dessaturado */
+  --graphite-hi:#454F5C;   /* cinza claro (topo do degrade) */
+  --graphite-lo:#333B46;   /* cinza escuro (base do degrade) */
 
   --grad-orange:linear-gradient(135deg,#E8AC3A 0%,#C9922A 100%);
   --grad-navy:linear-gradient(155deg,#12356B 0%,#0D2B55 55%,#0B2347 100%);
@@ -174,11 +177,10 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .numbers-wrap{position:relative;z-index:5;margin-top:-158px;}
 .numbers{
   display:grid;grid-template-columns:repeat(3,1fr);
-  background:rgba(11,35,71,.6);border-radius:var(--r-lg);
-  -webkit-backdrop-filter:blur(22px) saturate(150%);
-  backdrop-filter:blur(22px) saturate(150%);
-  border:1px solid rgba(255,255,255,.16);
-  box-shadow:0 28px 60px -18px rgba(7,25,41,.5),inset 0 1px 0 rgba(255,255,255,.14);
+  background:linear-gradient(160deg,var(--graphite-hi) 0%,var(--graphite) 55%,var(--graphite-lo) 100%);
+  border-radius:var(--r-lg);
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 30px 64px -20px rgba(7,25,41,.5),inset 0 1px 0 rgba(255,255,255,.12);
   overflow:hidden;
 }
 .numbers .n{padding:46px 44px 42px;border-right:1px solid rgba(255,255,255,.12);position:relative;}
