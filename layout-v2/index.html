@@ -199,9 +199,10 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 }
 .line-card:hover{transform:translateY(-8px);box-shadow:var(--sh-lg);}
 .line-illus{
-  display:flex;align-items:center;justify-content:center;min-height:300px;margin-bottom:38px;
+  aspect-ratio:463/300;border-radius:14px;overflow:hidden;margin-bottom:38px;
 }
-.line-illus img{max-height:300px;width:auto;max-width:100%;}
+.line-illus img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.line-card:hover .line-illus img{transform:scale(1.04);}
 .line-num{
   font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
   color:var(--orange);margin-bottom:10px;
@@ -413,8 +414,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   .why:nth-child(3){top:116px;}
   .why:nth-child(4){top:130px;}
   .line-card{padding:28px;}
-  .line-illus{min-height:220px;}
-  .line-illus img{max-height:220px;}
+  .line-illus{margin-bottom:26px;}
   .prod-grid{grid-template-columns:1fr 1fr;gap:16px;}
   .chancela .right{margin-left:0;width:100%;}
   .ft-top,.ft-mid{grid-template-columns:1fr;gap:32px;}
@@ -511,7 +511,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     </div>
     <div class="line-grid">
       <div class="line-card rv-init">
-        <div class="line-illus"><img src="../layout/assets/illus-linha01.png" alt="Ilustração — crédito aprovado na jornada digital"></div>
+        <div class="line-illus"><img src="assets/image01.jpg" alt="Família reunida usando notebook — proteção para quem importa"></div>
         <div class="line-num">Linha 01</div>
         <h3>Seguros embarcados via API</h3>
         <div class="line-sub">Embedded insurance · Jornada digital do cliente</div>
@@ -522,7 +522,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
         <a class="line-cta">Ver coberturas disponíveis <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div class="line-card rv-init">
-        <div class="line-illus"><img src="../layout/assets/illus-linha02.png" alt="Ilustração — aplicativo de proteção e benefícios"></div>
+        <div class="line-illus"><img src="assets/image02.jpg" alt="Servidora pública consultando o notebook — crédito consignado"></div>
         <div class="line-num">Linha 02</div>
         <h3>Empréstimo Consignado</h3>
         <div class="line-sub">Crédito consignado · Servidores públicos conveniados</div>
