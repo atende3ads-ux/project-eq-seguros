@@ -314,15 +314,10 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 /* ===================== FOOTER ===================== */
 footer.ft{background:var(--navy-deep);color:#8E9AAD;padding:96px 0 0;font-size:.87rem;}
 .ft-brands{
-  display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;
+  display:flex;align-items:center;justify-content:center;
   padding-bottom:60px;margin-bottom:56px;border-bottom:1px solid rgba(255,255,255,.09);
 }
-/* Versão negativa provisória via filtro; substituir pelos arquivos oficiais em branco */
-.ft-brands img{filter:brightness(0) invert(1);opacity:.95;}
-.ft-brands .b-grupo{height:56px;}
-.ft-brands .b-eq{height:38px;}
-.ft-brands .b-eqt{height:40px;filter:none;opacity:1;}
-.ft-brands .bsep{width:1px;height:48px;background:rgba(255,255,255,.18);}
+.ft-brands .b-lockup{width:100%;max-width:660px;height:auto;}
 footer.ft h4{color:#fff;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px;font-weight:700;}
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding-bottom:52px;}
 .ft-desc{font-size:.86rem;color:#8E9AAD;line-height:1.7;max-width:290px;}
@@ -404,11 +399,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   .prod-grid{grid-template-columns:1fr 1fr;gap:16px;}
   .chancela .right{margin-left:0;width:100%;}
   .ft-top,.ft-mid{grid-template-columns:1fr;gap:32px;}
-  .ft-brands{gap:22px;}
-  .ft-brands .b-grupo{height:40px;}
-  .ft-brands .b-eq{height:28px;}
-  .ft-brands .b-eqt{height:30px;}
-  .ft-brands .bsep{height:34px;}
+  .ft-brands .b-lockup{max-width:100%;}
 }
 @media(max-width:520px){
   .prod-grid{grid-template-columns:1fr;}
@@ -442,7 +433,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="wrap">
     <div class="logo"><img src="assets/logo-eq-seguros-2.png" alt="EQ Seguros"></div>
     <nav class="menu" id="menu">
-      <a href="#">Grupo EQ</a>
+      <a href="#">EQ Grupo</a>
       <a href="#">Seguros</a>
       <a href="#">Crédito</a>
       <a href="#">Tecnologia EQ</a>
@@ -514,7 +505,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
         <div class="line-sub">Crédito consignado · Servidores públicos conveniados</div>
         <div class="taglist">
           <span class="tag">Servidor Público</span><span class="tag">Órgãos conveniados</span>
-          <span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo Grupo EQ</span>
+          <span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo EQ Grupo</span>
         </div>
         <a class="line-cta">Verifique se seu órgão é conveniado <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
@@ -528,7 +519,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     <div class="sechead rv-init">
       <span class="kicker">Soluções mais procuradas</span>
       <h2>Escolha a <span class="accent">proteção certa</span> para você</h2>
-      <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do Grupo EQ.</p>
+      <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do EQ Grupo.</p>
     </div>
     <div class="prod-grid">
       <div class="prod rv-init"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h4>Seguro de Vida</h4><p>Coletivo e individual, coberturas flexíveis</p></div>
@@ -549,7 +540,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="wrap">
     <div class="why-cols">
       <div class="why-intro rv-init">
-        <span class="kicker">Por que o Grupo EQ</span>
+        <span class="kicker">Por que o EQ Grupo</span>
         <h2>Uma seguradora construída <span class="accent">para o mercado brasileiro</span></h2>
         <p class="lead" style="margin-top:18px;">Operamos com foco em pessoas, com regulação SUSEP e modelo B2B2C para distribuição em escala.</p>
       </div>
@@ -585,7 +576,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="wrap">
     <div class="sechead rv-init">
       <span class="kicker">Quem confia</span>
-      <h2>Parceiros que distribuem<br>com o <span class="accent">Grupo EQ</span></h2>
+      <h2>Parceiros que distribuem<br>com o <span class="accent">EQ Grupo</span></h2>
       <p class="lead">Chegamos ao consumidor final por meio de fintechs e canais de venda de passagens: o motor do nosso modelo B2B2C.</p>
     </div>
   </div>
@@ -635,7 +626,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
         <div class="req-card rv-init">
           <div class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <h4>Servidor Público</h4>
-          <p>Conheça os órgãos públicos conveniados com o Grupo EQ e solicite seu empréstimo consignado.</p>
+          <p>Conheça os órgãos públicos conveniados com o EQ Grupo e solicite seu empréstimo consignado.</p>
         </div>
         <div class="req-card rv-init">
           <div class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -692,14 +683,11 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 <footer class="ft">
   <div class="wrap">
     <div class="ft-brands">
-      <img class="b-grupo" src="assets/logo-grupo-eq.png" alt="Grupo EQ">
-      <span class="bsep"></span>
-      <img class="b-eq" src="assets/logo-eq-seguros-2.png" alt="EQ Seguros">
-      <img class="b-eqt" src="assets/logo-equatorial.png" alt="Equatorial Previdência">
+      <img class="b-lockup" src="assets/logos-footer.png" alt="EQ Grupo · EQ Seguros · Equatorial Previdência">
     </div>
     <div class="ft-top">
       <div>
-        <p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. Grupo EQ — regulado pela SUSEP.</p>
+        <p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo — regulado pela SUSEP.</p>
         <div class="social">
           <a aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
           <a aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -717,7 +705,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
       <div>
         <h4>Institucional</h4>
         <ul>
-          <li data-nav>Grupo EQ</li><li data-nav>Compliance</li><li data-nav>Contato</li>
+          <li data-nav>EQ Grupo</li><li data-nav>Compliance</li><li data-nav>Contato</li>
           <li data-nav>Política de Privacidade</li><li data-nav>Termos de Uso</li>
         </ul>
       </div>
@@ -771,7 +759,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   </div>
   <div class="ft-bar">
     <div class="wrap">
-      <span>© 2026 EQ Seguros &amp; EQUATORIAL · Grupo EQ</span>
+      <span>© 2026 EQ Seguros &amp; EQUATORIAL · EQ Grupo</span>
       <span>Desenvolvido com <span class="heart">♥</span> por <b>3ADS</b></span>
     </div>
   </div>
