@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EQ Seguros — Layout Home v3 · Azul institucional + Prata</title>
+<title>EQ Seguros — Layout Home v3 · Azul institucional + Prata</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,7 +72,8 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
 
-h1,h2,h3,h4{color:var(--navy);font-weight:700;line-height:1.18;letter-spacing:-.02em;}
+h1,h2,h3,h4{color:var(--navy);font-weight:700;line-height:1.18;letter-spacing:-.02em;text-wrap:balance;}
+p,.lead,.line-sub,.ft-desc{text-wrap:pretty;}
 h1{font-size:clamp(2.4rem,4.4vw,3.7rem);font-weight:700;letter-spacing:-.03em;}
 h2{font-size:clamp(1.85rem,3vw,2.6rem);letter-spacing:-.026em;}
 h3{font-size:1.32rem;}
@@ -84,10 +85,11 @@ h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;}
 .sec{padding:118px 0;position:relative;}
 
 /* ---------- Divisores de seção (formas do Figma) ---------- */
-.divider{position:absolute;left:0;right:0;width:100%;pointer-events:none;display:block;z-index:3;}
-.divider svg{display:block;width:100%;height:100%;}
-.divider.top{top:-1px;height:66px;}
-.divider.bottom{bottom:-1px;height:102px;}
+/* Divisores escalam proporcionalmente (altura acompanha a largura), sem deformar */
+.divider{position:absolute;left:0;right:0;width:100%;pointer-events:none;display:block;z-index:3;line-height:0;}
+.divider svg{display:block;width:100%;height:auto;}
+.divider.top{top:-1px;}
+.divider.bottom{bottom:-1px;}
 .div-white{fill:var(--paper);}
 .div-deep{fill:var(--navy-deep);}
 
@@ -254,18 +256,19 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .why-cols > .why-intro{position:sticky;top:150px;}
 .why-stack{display:flex;flex-direction:column;gap:28px;}
 .why{
-  background:#2C3548;border:1px solid rgba(255,255,255,.1);
+  background:#414D54;border:1px solid rgba(255,255,255,.14);
   border-radius:16px;padding:30px 32px;
   position:sticky;
   box-shadow:0 -18px 40px -18px rgba(4,12,24,.6);
   transition:background .4s var(--ease),border-color .4s;
 }
 /* deslocamentos progressivos: bordas dos cards anteriores ficam visíveis atrás */
+/* pilha em tons de prata, derivados do #617178 */
 .why:nth-child(1){top:140px;}
-.why:nth-child(2){top:158px;background:#313B50;}
-.why:nth-child(3){top:176px;background:#374158;}
-.why:nth-child(4){top:194px;background:#3D4761;}
-.why:hover{border-color:rgba(249,169,78,.45);}
+.why:nth-child(2){top:158px;background:#495660;}
+.why:nth-child(3){top:176px;background:#505E67;}
+.why:nth-child(4){top:194px;background:#58676F;}
+.why:hover{border-color:rgba(249,169,78,.5);}
 .why{min-height:210px;}
 .why .wico{position:relative;width:40px;height:40px;margin-bottom:20px;}
 .why .wico::before{
@@ -277,7 +280,7 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
   fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;
 }
 .why h4{color:#fff;margin-bottom:7px;}
-.why p{font-size:.95rem;color:rgba(255,255,255,.68);line-height:1.6;}
+.why p{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.6;}
 
 /* ===================== PARCEIROS (marquee) ===================== */
 .marquee{
@@ -434,7 +437,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 <div class="chancela">
   <div class="wrap">
     <span>Empresas do grupo:</span>
-    <span class="badge">EQ Seguros S.A.</span>
+    <span class="badge">EQ Seguros S.A.</span>
     <span class="badge">Equatorial Previdência</span>
     <div class="right">
       <span class="fone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0800 201 1838</span>
@@ -449,7 +452,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="wrap">
     <div class="logo"><img src="../layout/assets/logo-eq-seguros-2.png" alt="EQ Seguros"></div>
     <nav class="menu" id="menu">
-      <a href="#">EQ Grupo</a>
+      <a href="#">EQ Grupo</a>
       <a href="#">Seguros</a>
       <a href="#">Crédito</a>
       <a href="#">Tecnologia EQ</a>
@@ -482,7 +485,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
       </div>
     </div>
   </div>
-  <div class="divider bottom"><svg viewBox="0 0 1920 102" preserveAspectRatio="none"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
+  <div class="divider bottom"><svg viewBox="0 0 1920 102"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
 </section>
 
 <!-- ============ NÚMEROS ============ -->
@@ -500,7 +503,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     <div class="sechead rv-init">
       <span class="kicker">O que fazemos</span>
       <h2>Duas linhas de soluções,<br>uma <span class="accent">proteção completa</span></h2>
-      <p class="lead">A EQ Seguros atua com dois eixos complementares: proteção de vida via seguros e crédito consignado para servidores públicos conveniados.</p>
+      <p class="lead">A EQ Seguros atua com dois eixos complementares: proteção de vida via seguros e crédito consignado para servidores públicos conveniados.</p>
     </div>
     <div class="line-grid">
       <div class="line-card rv-init">
@@ -521,7 +524,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
         <div class="line-sub">Crédito consignado · Servidores públicos conveniados</div>
         <div class="taglist">
           <span class="tag">Servidor Público</span><span class="tag">Órgãos conveniados</span>
-          <span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo EQ Grupo</span>
+          <span class="tag">Participantes do Pecúlio</span><span class="tag">Exclusivo EQ Grupo</span>
         </div>
         <a class="line-cta">Verifique se seu órgão é conveniado <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
@@ -535,7 +538,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     <div class="sechead rv-init">
       <span class="kicker">Soluções mais procuradas</span>
       <h2>Escolha a <span class="accent">proteção certa</span> para você</h2>
-      <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do EQ Grupo.</p>
+      <p class="lead">Produtos para pessoas físicas distribuídos via parceiros e convênios do EQ Grupo.</p>
     </div>
     <div class="prod-grid">
       <div class="prod rv-init"><div class="pico"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h4>Seguro de Vida</h4><p>Coletivo e individual, coberturas flexíveis</p></div>
@@ -552,11 +555,11 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 
 <!-- ============ POR QUE O GRUPO EQ ============ -->
 <section class="sec dark has-div-top has-div-bot">
-  <div class="divider top"><svg viewBox="0 0 1920 66" preserveAspectRatio="none"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
+  <div class="divider top"><svg viewBox="0 0 1920 66"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
   <div class="wrap">
     <div class="why-cols">
       <div class="why-intro rv-init">
-        <span class="kicker">Por que o EQ Grupo</span>
+        <span class="kicker">Por que o EQ Grupo</span>
         <h2>Uma seguradora construída <span class="accent">para o mercado brasileiro</span></h2>
         <p class="lead" style="margin-top:18px;">Operamos com foco em pessoas, com regulação SUSEP e modelo B2B2C para distribuição em escala.</p>
       </div>
@@ -584,7 +587,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
       </div>
     </div>
   </div>
-  <div class="divider bottom"><svg viewBox="0 0 1920 102" preserveAspectRatio="none"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
+  <div class="divider bottom"><svg viewBox="0 0 1920 102"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
 </section>
 
 <!-- ============ PARCEIROS ============ -->
@@ -592,7 +595,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   <div class="wrap">
     <div class="sechead rv-init">
       <span class="kicker">Quem confia</span>
-      <h2>Parceiros que distribuem<br>com o <span class="accent">EQ Grupo</span></h2>
+      <h2>Parceiros que distribuem<br>com o <span class="accent">EQ Grupo</span></h2>
       <p class="lead">Chegamos ao consumidor final por meio de fintechs e canais de venda de passagens: o motor do nosso modelo B2B2C.</p>
     </div>
   </div>
@@ -626,7 +629,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 
 <!-- ============ CONSIGNADO ============ -->
 <section class="sec dark has-div-top has-div-bot">
-  <div class="divider top"><svg viewBox="0 0 1920 66" preserveAspectRatio="none"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
+  <div class="divider top"><svg viewBox="0 0 1920 66"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
   <div class="wrap">
     <div class="consig-cols">
       <div class="rv-init">
@@ -642,17 +645,17 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
         <div class="req-card rv-init">
           <div class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <h4>Servidor Público</h4>
-          <p>Conheça os órgãos públicos conveniados com o EQ Grupo e solicite seu empréstimo consignado.</p>
+          <p>Conheça os órgãos públicos conveniados com o EQ Grupo e solicite seu empréstimo consignado.</p>
         </div>
         <div class="req-card rv-init">
           <div class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <h4>EQ Pecúlio</h4>
+          <h4>EQ Pecúlio</h4>
           <p>Seja participante do plano de benefícios EQ e garanta já o seu empréstimo.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="divider bottom"><svg viewBox="0 0 1920 102" preserveAspectRatio="none"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
+  <div class="divider bottom"><svg viewBox="0 0 1920 102"><path class="div-white" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
 </section>
 
 <!-- ============ CONTEÚDOS ============ -->
@@ -682,17 +685,17 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 
 <!-- ============ CTA FINAL ============ -->
 <section class="sec dark cta-final has-div-top" style="padding-bottom:200px;">
-  <div class="divider top"><svg viewBox="0 0 1920 66" preserveAspectRatio="none"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
+  <div class="divider top"><svg viewBox="0 0 1920 66"><path class="div-white" d="M306.991 4.92188H-6V-36.5781H1927V4.92188H1613.62C1597.38 4.92188 1583.15 15.7949 1578.88 31.4644L1576.73 39.3793C1572.46 55.0488 1558.23 65.9219 1541.99 65.9219H378.617C362.377 65.9219 348.148 55.0488 343.882 39.3793L341.727 31.4644C337.46 15.7949 323.231 4.92188 306.991 4.92188Z"/></svg></div>
   <div class="wrap">
     <div class="sechead center rv-init" style="margin-bottom:0;">
       <h2>Pronto para proteger<br>o que mais importa?</h2>
-      <p class="lead">Fale com um especialista da EQ Seguros e encontre a solução ideal para você.</p>
+      <p class="lead">Fale com um especialista da EQ Seguros e encontre a solução ideal para você.</p>
       <div class="btn-row">
         <a class="btn btn-primary">Falar com um especialista <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
   </div>
-  <div class="divider bottom"><svg viewBox="0 0 1920 102" preserveAspectRatio="none"><path class="div-deep" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
+  <div class="divider bottom"><svg viewBox="0 0 1920 102"><path class="div-deep" d="M306.991 61H-6V102.5H1927V61H1613.62C1597.38 61 1583.15 50.127 1578.88 34.4575L1576.73 26.5425C1572.46 10.873 1558.23 0 1541.99 0H378.617C362.377 0 348.148 10.873 343.882 26.5425L341.727 34.4575C337.46 50.127 323.231 61 306.991 61Z"/></svg></div>
 </section>
 
 <!-- ============ FOOTER ============ -->
@@ -703,7 +706,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     </div>
     <div class="ft-top">
       <div>
-        <p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo — regulado pela SUSEP.</p>
+        <p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo — regulado pela SUSEP.</p>
         <div class="social">
           <a aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
           <a aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -721,7 +724,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
       <div>
         <h4>Institucional</h4>
         <ul>
-          <li data-nav>EQ Grupo</li><li data-nav>Compliance</li><li data-nav>Contato</li>
+          <li data-nav>EQ Grupo</li><li data-nav>Compliance</li><li data-nav>Contato</li>
           <li data-nav>Política de Privacidade</li><li data-nav>Termos de Uso</li>
         </ul>
       </div>
@@ -769,13 +772,13 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
     </div>
 
     <div class="ft-legal">
-      <div><b>EQ Seguros S/A</b> — CNPJ 21.242.451/0001-05 · Cód. SUSEP 01554</div>
+      <div><b>EQ Seguros S/A</b> — CNPJ 21.242.451/0001-05 · Cód. SUSEP 01554</div>
       <div><b>Equatorial Previdência Complementar</b> — CNPJ 42.150.987/0001-70 · Cód. SUSEP 10120</div>
     </div>
   </div>
   <div class="ft-bar">
     <div class="wrap">
-      <span>© 2026 EQ Seguros &amp; EQUATORIAL · EQ Grupo</span>
+      <span>© 2026 EQ Seguros &amp; EQUATORIAL · EQ Grupo</span>
       <span>Desenvolvido com <span class="heart">♥</span> por <b>3ADS</b></span>
     </div>
   </div>
