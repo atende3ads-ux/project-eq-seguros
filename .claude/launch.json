@@ -2,10 +2,15 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "v3-static",
-      "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "cd v3 && python3 -m http.server 8811"],
-      "port": 8811
+      "name": "eq-layouts",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-I",
+        "-c",
+        "import os;os.chdir('/Users/jpedrojunqueira/Desktop/Projetos/project-eq-seguros');import http.server as h,socketserver as s;s.TCPServer.allow_reuse_address=True;s.TCPServer(('',8812),h.SimpleHTTPRequestHandler).serve_forever()"
+      ],
+      "port": 8812,
+      "url": "http://localhost:8812"
     }
   ]
 }
