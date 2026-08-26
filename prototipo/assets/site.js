@@ -4,14 +4,57 @@
    então um ajuste de menu ou rodapé propaga para o site inteiro.
    =================================================================== */
 (function () {
+  var DI = {
+    heart:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>',
+    shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    pulse:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+    leaf:'<path d="M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/>',
+    plane:'<path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/>',
+    life:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="14.8" y1="9.2" x2="19.1" y2="4.9"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/>',
+    gift:'<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>',
+    api:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+    doc:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
+    bolt:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+    chat:'<path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/>'
+  };
+  function di(k){ return '<svg viewBox="0 0 24 24">' + (DI[k]||DI.doc) + '</svg>'; }
+
+  var FOOT = [
+    { t:'Acione seu seguro', h:'atendimento.html', i:'bolt' },
+    { t:'Fale Conosco',      h:'contato.html',     i:'chat' }
+  ];
+
   var NAV = [
-    { t: 'EQ Grupo',    h: 'grupo-eq.html',   m: ['grupo-eq'] },
-    { t: 'Seguros',          h: 'seguros.html',    m: ['seguros','seguro-vida','seguro-prestamista','seguro-viagem','seguro-funeral','seguro-acidentes'] },
-    { t: 'Crédito',          h: 'credito.html',    m: ['credito','consignado','peculio'] },
-    { t: 'Tecnologia EQ',    h: 'tecnologia.html', m: ['tecnologia','api'] },
-    { t: 'Atendimento',      h: 'atendimento.html',m: ['atendimento','ajuda'] },
-    { t: 'Para Parceiros',   h: 'parceiros.html',  m: ['parceiros','seja-parceiro'] },
-    { t: 'Blog',             h: 'blog.html',       m: ['blog','post'] }
+    { t:'EQ Grupo', h:'grupo-eq.html', m:['grupo-eq'] },
+    { t:'Seguros', h:'seguros.html',
+      m:['seguros','seguro-vida','seguro-prestamista','seguro-viagem','seguro-funeral','seguro-acidentes'],
+      dd:{ head:'Nossos Seguros', foot:FOOT, cats:[
+        { id:'seg-pessoas', t:'Para Pessoas', label:'Seguros de pessoas', items:[
+          { t:'Seguro de Vida',       d:'Morte, invalidez e proteção da família.',   h:'seguro-vida.html',        i:'heart'  },
+          { t:'Seguro Prestamista',   d:'Quita o saldo devedor em imprevistos.',     h:'seguro-prestamista.html', i:'shield' },
+          { t:'Seguro de Acidentes',  d:'Morte acidental e invalidez por acidente.', h:'seguro-acidentes.html',   i:'pulse'  },
+          { t:'Seguro Funeral',       d:'Auxílio funeral para a família.',           h:'seguro-funeral.html',     i:'leaf'   },
+          { t:'Seguro Viagem',        d:'Cobertura nacional e internacional.',       h:'seguro-viagem.html',      i:'plane'  }
+        ]},
+        { id:'seg-servicos', t:'Serviços', label:'Serviços agregados', items:[
+          { t:'Assistências', d:'Telemedicina, residencial, pet e mais.', h:'atendimento.html', i:'life' },
+          { t:'Sorteios',     d:'Prêmios vinculados aos produtos.',       h:'atendimento.html', i:'gift' }
+        ]},
+        { id:'seg-api', t:'Via API', label:'Distribuição via parceiros', items:[
+          { t:'Seguro embarcado', d:'Seguros de pessoas na jornada do parceiro, via API.', h:'tecnologia.html', i:'api' }
+        ]}
+      ]}},
+    { t:'Crédito', h:'credito.html', m:['credito','consignado','peculio'],
+      dd:{ head:'Crédito', foot:FOOT, nocats:true, cats:[
+        { id:'cred', t:'Crédito', label:'Consignado Público e Pecúlio', items:[
+          { t:'Empréstimo Consignado', d:'Consignado Público — conforme a margem consignável.', h:'consignado.html', i:'doc'  },
+          { t:'Pecúlio',               d:'Indenização por morte de qualquer causa.',            h:'peculio.html',    i:'gift' }
+        ]}
+      ]}},
+    { t:'Tecnologia EQ',  h:'tecnologia.html', m:['tecnologia','api'] },
+    { t:'Atendimento',    h:'atendimento.html',m:['atendimento','ajuda'] },
+    { t:'Para Parceiros', h:'parceiros.html',  m:['parceiros','seja-parceiro'] },
+    { t:'Blog',           h:'blog.html',       m:['blog','post'] }
   ];
 
   var page = (location.pathname.split('/').pop() || 'index.html').replace('.html', '');
@@ -33,10 +76,7 @@
     '<header class="nav" id="nav"><div class="wrap">' +
       '<a class="logo" href="index.html"><img src="assets/logo-eq-seguros-2.png" alt="EQ Seguros"></a>' +
       '<nav class="menu" id="menu">' +
-        NAV.map(function (i) {
-          var on = i.m.indexOf(page) > -1 ? ' class="on"' : '';
-          return '<a href="' + i.h + '"' + on + '>' + i.t + '</a>';
-        }).join('') +
+        NAV.map(navItem).join('') +
         '<a class="btn btn-primary" href="contato.html" style="display:none;">Fale com um especialista</a>' +
       '</nav>' +
       '<div class="nav-cta"><a class="btn btn-primary" href="contato.html">Fale com um especialista</a></div>' +
@@ -111,11 +151,87 @@
       '<span>Desenvolvido com <span class="heart">♥</span> por <b>3ADS</b></span>' +
     '</div></div></footer>';
 
+
+  function ddCard(it) {
+    return '<a class="dd-card" href="' + it.h + '">' +
+      '<span class="dd-ic">' + di(it.i) + '</span>' +
+      '<span class="dd-tx"><h4>' + it.t + '</h4><p>' + it.d + '</p>' +
+      '<span class="dd-more">Saiba mais →</span></span></a>';
+  }
+
+  function navItem(i) {
+    var on = i.m.indexOf(page) > -1;
+    if (!i.dd) return '<a href="' + i.h + '"' + (on ? ' class="on"' : '') + '>' + i.t + '</a>';
+    var cats = i.dd.cats;
+    var catList = cats.map(function (c, n) {
+      return '<a class="dd-cat' + (n === 0 ? ' on' : '') + '" data-cat="' + c.id + '">' + c.t + '</a>';
+    }).join('');
+    var panels = cats.map(function (c, n) {
+      return '<div class="dd-panel' + (n === 0 ? ' on' : '') + '" id="' + c.id + '">' +
+        '<div class="dd-label">' + c.label + '</div>' +
+        '<div class="dd-cards">' + c.items.map(ddCard).join('') + '</div></div>';
+    }).join('');
+    var foot = i.dd.foot.map(function (f) {
+      return '<a class="dd-act" href="' + f.h + '">' + di(f.i) + '<span>' + f.t + '</span></a>';
+    }).join('');
+    return '<span class="has-dd' + (on ? ' on' : '') + '">' +
+      '<a class="nav-top" href="' + i.h + '">' + i.t + '<span class="caret"></span></a>' +
+      '<div class="dd">' +
+        '<div class="dd-head">' + i.dd.head + '</div>' +
+        '<div class="dd-body' + (i.dd.nocats ? ' nocats' : '') + '">' +
+          '<div class="dd-cats">' + catList + '</div>' +
+          '<div class="dd-panels">' + panels + '</div>' +
+        '</div>' +
+        '<div class="dd-foot"><div class="wrap">' + foot + '</div></div>' +
+      '</div></span>';
+  }
+
+  function wireDropdowns() {
+    function mob(){ return window.matchMedia('(max-width:860px)').matches; }
+
+    document.querySelectorAll('.has-dd').forEach(function (hd) {
+      var t;
+      hd.addEventListener('mouseenter', function () {
+        if (mob()) return;
+        clearTimeout(t); hd.classList.add('open');
+      });
+      hd.addEventListener('mouseleave', function () {
+        if (mob()) return;
+        t = setTimeout(function () { hd.classList.remove('open'); }, 180);
+      });
+      hd.querySelector('.nav-top').addEventListener('click', function (e) {
+        if (!mob()) return;
+        e.preventDefault();
+        hd.classList.toggle('open');
+      });
+    });
+
+    document.querySelectorAll('.dd-cat').forEach(function (cat) {
+      function activate() {
+        var box = cat.closest('.dd');
+        if (!box) return;
+        box.querySelectorAll('.dd-cat').forEach(function (x) { x.classList.toggle('on', x === cat); });
+        var id = cat.getAttribute('data-cat');
+        box.querySelectorAll('.dd-panel').forEach(function (p) { p.classList.toggle('on', p.id === id); });
+      }
+      cat.addEventListener('mouseenter', function () { if (!mob()) activate(); });
+      cat.addEventListener('click', function (e) { e.preventDefault(); activate(); });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (mob()) return;
+      if (e.target.closest('.has-dd')) return;
+      document.querySelectorAll('.has-dd.open').forEach(function (h) { h.classList.remove('open'); });
+    });
+  }
+
   function mount() {
     var h = document.getElementById('site-header');
     var f = document.getElementById('site-footer');
     if (h) h.outerHTML = header;
     if (f) f.outerHTML = footer;
+
+    wireDropdowns();
 
     var nav = document.getElementById('nav');
     if (nav) {
