@@ -78,6 +78,7 @@
           '<li><a href="contato.html">Contato</a></li>' +
           '<li><a href="privacidade.html">Política de Privacidade</a></li>' +
           '<li><a href="termos.html">Termos de Uso</a></li>' +
+          '<li><a href="https://grupoequatorial.vagas.solides.com.br/" target="_blank" rel="noopener">Trabalhe Conosco</a></li>' +
         '</ul></div>' +
         '<div><h4>Atendimento</h4><ul>' +
           '<li><a href="https://wa.me/556235726000">WhatsApp — (62) 3572-6000</a></li>' +
