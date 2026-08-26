@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integrações e API — EQ Seguros</title>
+<meta name="description" content="Documentação técnico-comercial das integrações para parceiros e empresas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="crumbbar"><div class="wrap"><div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><a href="tecnologia.html">Tecnologia EQ</a><span class="sep">›</span><b>Integrações / API</b></div></div></div>
+<section class="phero dark"><div class="wrap"><div class="phero-grid"><div class="rv-init"><span class="kicker">Hero técnico</span><h1>Integrações e API</h1><p class="lead">Documentação técnico-comercial das integrações para parceiros e empresas.</p><div class="btn-row rv-init"><a class="btn btn-primary" href="#">Ver documentação</a><a class="btn btn-ghost-light" href="contato.html">Falar com time técnico</a></div></div><div class="rv-init"><div class="imgbox rv-init"><span class="lbl">Diagrama de arquitetura</span></div></div></div></div></section>
+<section class="sec alt"><div class="wrap"><div class="sechead rv-init"><span class="kicker">Recursos</span><h2>O que a API oferece</h2></div><div class="grid g3"><div class="card rv-init"><div class="cico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h4>Cotação</h4><p>Endpoint de cotação em tempo real.</p></div><div class="card rv-init"><div class="cico"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><h4>Emissão</h4><p>Emissão de apólice ou bilhete.</p></div><div class="card rv-init"><div class="cico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h4>Webhooks</h4><p>Eventos em tempo real para o seu sistema.</p></div></div></div></section>
+<section class="sec "><div class="wrap"><div class="sechead rv-init"><span class="kicker">Documentação</span><h2>Exemplo de requisição</h2></div><div class="imgbox rv-init" style="aspect-ratio:auto;padding:34px;align-items:flex-start;"><pre style="color:#DDE1E5;font-size:.86rem;line-height:1.8;overflow-x:auto;width:100%;">POST /v1/cotacoes
+Authorization: Bearer &lt;token&gt;
+Content-Type: application/json
+
+{
+  "produto": "vida",
+  "segurado": { "nascimento": "1985-04-12" },
+  "capital": 50000
+}</pre></div></div></section>
+<section class="sec dark"><div class="wrap"><div class="sechead center rv-init"><h2>Vamos integrar?</h2><p class="lead">Fale com o time técnico da EQ e receba as credenciais de sandbox.</p></div><div class="btn-row rv-init" style="justify-content:center;"><a class="btn btn-primary" href="contato.html">Falar com time técnico</a></div></div></section>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
