@@ -527,14 +527,41 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .sec.dark .stat .big{color:#fff;}
 .sec.dark .stat .lbl{color:rgba(255,255,255,.7);}
 
-/* linha do tempo */
-.timeline{display:grid;gap:0;margin-top:30px;border-left:2px solid var(--line);padding-left:0;}
-.timeline .pt{position:relative;padding:0 0 30px 34px;}
-.timeline .pt::before{content:'';position:absolute;left:-8px;top:6px;width:14px;height:14px;
-  border-radius:50%;background:var(--orange);border:3px solid var(--paper);}
-.timeline .pt:last-child{padding-bottom:0;}
-.timeline .pt h4{color:var(--orange);font-size:1.05rem;margin-bottom:6px;letter-spacing:.02em;}
-.timeline .pt p{font-size:.95rem;color:var(--gray);line-height:1.6;}
+/* linha do tempo — trilho central com cards alternados */
+.tl{position:relative;margin-top:46px;}
+.tl::before{
+  content:'';position:absolute;left:50%;top:6px;bottom:6px;width:2px;transform:translateX(-50%);
+  background:linear-gradient(180deg,transparent,var(--line) 4%,var(--line) 96%,transparent);
+}
+.tl-item{position:relative;width:50%;padding-right:58px;margin-bottom:38px;}
+.tl-item:nth-child(even){margin-left:50%;padding-right:0;padding-left:58px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-item::after{
+  content:'';position:absolute;right:-8px;top:38px;width:16px;height:16px;border-radius:50%;
+  background:var(--orange);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--orange);
+}
+.tl-item:nth-child(even)::after{right:auto;left:-8px;}
+.tl-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;
+  box-shadow:var(--sh-sm);transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+}
+.tl-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);}
+.tl-img{aspect-ratio:16/7;overflow:hidden;background:var(--navy);}
+.tl-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.tl-card:hover .tl-img img{transform:scale(1.04);}
+.tl-body{padding:24px 26px 26px;}
+.tl-year{
+  display:block;font-size:1.7rem;font-weight:700;color:var(--orange);
+  letter-spacing:-.03em;line-height:1;margin-bottom:11px;
+}
+.tl-body p{font-size:.95rem;color:var(--gray);line-height:1.65;}
+@media(max-width:860px){
+  .tl::before{left:8px;transform:none;}
+  .tl-item,.tl-item:nth-child(even){width:100%;margin-left:0;padding-left:36px;padding-right:0;}
+  .tl-item::after,.tl-item:nth-child(even)::after{left:1px;right:auto;top:30px;}
+  .tl-body{padding:20px 22px 22px;}
+  .tl-year{font-size:1.45rem;}
+}
 
 /* FAQ */
 .faq{display:grid;gap:12px;margin-top:22px;max-width:900px;}
