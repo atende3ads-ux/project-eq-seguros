@@ -102,6 +102,21 @@ h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;}
 .btn-ghost:hover{border-color:var(--navy);background:var(--navy);color:#fff;transform:translateY(-3px);}
 .btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35);}
 .btn-ghost-light:hover{background:#fff;color:var(--navy);border-color:#fff;transform:translateY(-3px);}
+/* em qualquer contexto escuro o botao vazado vira claro sozinho —
+   evita texto navy sobre fundo navy em paginas futuras */
+.sec.dark .btn-ghost,.phero.dark .btn-ghost,.hero .btn-ghost-light{
+  color:#fff;border-color:rgba(255,255,255,.35);background:transparent;
+}
+.sec.dark .btn-ghost:hover,.phero.dark .btn-ghost:hover{
+  background:#fff;color:var(--navy);border-color:#fff;
+}
+/* e o inverso: botao claro sobre fundo claro volta a ser navy */
+.phero:not(.dark) .btn-ghost-light,.sec:not(.dark) .btn-ghost-light{
+  color:var(--navy);border-color:#C9D6E5;
+}
+.phero:not(.dark) .btn-ghost-light:hover,.sec:not(.dark) .btn-ghost-light:hover{
+  background:var(--navy);color:#fff;border-color:var(--navy);
+}
 .btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease);}
 .btn:hover svg{transform:translateX(4px);}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px;}
