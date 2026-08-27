@@ -559,8 +559,15 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .card .cnum{width:44px;height:44px;border-radius:50%;background:var(--orange);color:#fff;
   display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:18px;}
 .sec.dark .card{background:#fff;}
-.sec.dark .card h3,.sec.dark .card h4{color:var(--navy);}
-.sec.dark .card p{color:var(--gray);}
+/* superficie branca dentro de secao escura: o texto volta ao contexto claro.
+   Sem isso as regras .sec.dark herdam branco e o conteudo do card some. */
+.sec.dark .card h2,.sec.dark .card h3,.sec.dark .card h4{color:var(--navy);}
+.sec.dark .card p,.sec.dark .card li,.sec.dark .card .lead,.sec.dark .card .feat-list li{color:var(--gray);}
+.sec.dark .card small{color:var(--gray-soft);}
+.sec.dark .card .link-arrow{color:var(--navy);}
+.sec.dark .card .link-arrow:hover{color:var(--orange);}
+.sec.dark .card .btn-ghost{color:var(--navy);border-color:#C9D6E5;}
+.sec.dark .card .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
 /* destaque lateral (texto + imagem) */
 .feat-row{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
@@ -689,6 +696,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .imgbox{border-radius:var(--r-md);overflow:hidden;background:var(--navy);aspect-ratio:16/10;
   display:flex;align-items:center;justify-content:center;}
 .imgbox img{width:100%;height:100%;object-fit:cover;}
+/* dentro de secao escura o placeholder navy sumiria: clareia e ganha fio */
+.sec.dark .imgbox{background:var(--navy-soft);box-shadow:inset 0 0 0 1px rgba(255,255,255,.10);}
 .imgbox .lbl{color:rgba(255,255,255,.5);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;}
 
 /* aviso */
