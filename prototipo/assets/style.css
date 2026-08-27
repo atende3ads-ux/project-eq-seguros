@@ -396,7 +396,9 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .ft-note{color:#68738A;font-size:.78rem;}
 .ft-mid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;padding:44px 0;border-top:1px solid rgba(255,255,255,.09);}
 .ft-mid p{font-size:.78rem;color:#68738A;margin-top:8px;line-height:1.6;}
-.ft-legal{padding:32px 0;border-top:1px solid rgba(255,255,255,.09);font-size:.79rem;color:#68738A;line-height:1.9;}
+.ft-legal{padding:32px 0;border-top:1px solid rgba(255,255,255,.09);font-size:.79rem;color:#68738A;line-height:1.9;
+  display:flex;flex-wrap:wrap;gap:8px 44px;}
+/* as duas razoes sociais lado a lado; empilham sozinhas quando nao cabem */
 .ft-legal b{color:#A9B4C6;font-weight:600;}
 .social{display:flex;gap:11px;margin-top:24px;}
 .social a{
@@ -410,7 +412,6 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   border-top:1px solid rgba(255,255,255,.09);padding:24px 0;font-size:.78rem;color:#5C6678;
 }
 .ft-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-.ft-bar .heart{color:#E5484D;}
 .ft-bar b{color:#A9B4C6;}
 
 /* ===================== REVEAL ===================== */
