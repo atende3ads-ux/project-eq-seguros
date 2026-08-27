@@ -102,6 +102,7 @@
       '<div class="ft-top">' +
         '<div>' +
           '<p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo — regulado pela SUSEP.</p>' +
+          '<p class="ft-addr"><b>EQ Seguros S.A.</b><br>Av. Dep. Jamel Cecílio, 2690<br>Ed. Metropolitan Business, Torre Tokyo — Sl. 2008/2012<br>Jardim Goiás · Goiânia - GO · 74810-100</p>' +
           '<div class="social">' + soc('ig','Instagram') + soc('fb','Facebook') + soc('yt','YouTube') + soc('li','LinkedIn') + '</div>' +
         '</div>' +
         '<div><h4>Soluções</h4><ul>' +
