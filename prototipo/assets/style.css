@@ -544,19 +544,21 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .card small{display:block;margin-top:12px;font-size:.8rem;color:var(--gray-soft);}
 .card.clickable{cursor:pointer;transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s;}
 .card.clickable:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--orange);}
-/* card clicavel sinaliza o destino com a mesma seta diagonal do .link-arrow,
+/* card que leva a algum lugar sinaliza com a mesma seta diagonal do .link-arrow,
    alinhada ao icone; mask-image para a seta herdar cor no hover */
-.card.clickable{position:relative;}
-.card.clickable::after{
-  content:'';position:absolute;top:45px;right:28px;width:16px;height:16px;
+.card.clickable,.prod{position:relative;}
+.card.clickable::after,.prod::after{
+  content:'';position:absolute;right:28px;width:16px;height:16px;
   background-color:var(--gray-soft);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") no-repeat center/contain;
           mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='7' y1='17' x2='17' y2='7'/%3E%3Cpolyline points='7 7 17 7 17 17'/%3E%3C/svg%3E") no-repeat center/contain;
   transition:transform .35s var(--ease),background-color .3s;
 }
-.card.clickable:hover::after{background-color:var(--orange);transform:translate(3px,-3px);}
+.card.clickable::after{top:45px;}   /* icone de 46px */
+.prod::after{top:51px;}             /* icone de 52px + borda superior de 3px */
+.card.clickable:hover::after,.prod:hover::after{background-color:var(--orange);transform:translate(3px,-3px);}
 /* o titulo nao passa por baixo da seta */
-.card.clickable h4{padding-right:26px;}
+.card.clickable h4,.prod h4{padding-right:26px;}
 .card .cico{width:46px;height:46px;border-radius:12px;background:var(--navy);
   display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
 .card .cico svg{width:22px;height:22px;fill:none;stroke:var(--orange);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
