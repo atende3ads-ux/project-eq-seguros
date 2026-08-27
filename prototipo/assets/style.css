@@ -81,6 +81,9 @@ h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;}
 .div-deep{fill:var(--navy-deep);}
 /* divisor do hero usa a cor da secao seguinte, para dar continuidade */
 .div-next{fill:var(--paper-2);}
+/* cada divisor recebe a cor da secao clara vizinha */
+.div-paper{fill:var(--paper);}
+.div-alt{fill:var(--paper-2);}
 
 /* ---------- Elementos base ---------- */
 .kicker{
@@ -848,4 +851,26 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 }
 @media(max-width:860px){
   .eqprev{padding:36px 26px;background-size:cover;border-radius:var(--r-lg);}
+}
+
+
+/* ===================================================================
+   CARD COM ILUSTRAÇÃO (Tecnologia EQ)
+   =================================================================== */
+.techcard{padding:26px 26px 30px;}
+.tc-media{position:relative;margin:6px 0 24px;}
+.tc-media img{width:100%;height:auto;display:block;border-radius:14px;}
+.tc-badge{
+  position:absolute;left:-6px;top:-14px;z-index:2;
+  width:46px;height:46px;border-radius:12px;background:var(--orange);
+  display:flex;align-items:center;justify-content:center;
+}
+.tc-badge svg{
+  width:22px;height:22px;fill:none;stroke:#fff;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+}
+.techcard h4{margin-bottom:6px;}
+.techcard p{font-size:.94rem;color:var(--gray-soft);}
+@media(max-width:860px){
+  .techcard{padding:22px 22px 26px;}
 }
