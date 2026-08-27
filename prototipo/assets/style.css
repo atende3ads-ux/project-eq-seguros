@@ -24,8 +24,8 @@
   --orange-dark:#CE8412;   /* laranja no hover */
   --orange-light:#F2AE4A;  /* laranja claro — destaque sobre fundo escuro */
   --amber-tint:#FBEBD2;    /* tint quente (badges) */
-  --paper:#E4E6E8;         /* PRATA — fundo das páginas (substitui o branco) */
-  --paper-2:#EDEFF0;       /* prata claro — alternância de seções */
+  --paper:#EAECEE;         /* PRATA — fundo das páginas (substitui o branco) */
+  --paper-2:#F2F3F4;       /* prata claro — alternância de seções */
   --white:#FFFFFF;         /* superfície dos cards */
   --blue-bg:#DDE1E5;       /* neutro para tags */
   --gray:#4A5464;
@@ -79,6 +79,8 @@ h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;}
 .divider.bottom{bottom:-1px;}
 .div-white{fill:var(--paper);}
 .div-deep{fill:var(--navy-deep);}
+/* divisor do hero usa a cor da secao seguinte, para dar continuidade */
+.div-next{fill:var(--paper-2);}
 
 /* ---------- Elementos base ---------- */
 .kicker{
@@ -481,11 +483,25 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   -webkit-mask-image:radial-gradient(125% 115% at 6% -12%,#000 0%,rgba(0,0,0,.4) 40%,transparent 74%);
   mask-image:radial-gradient(125% 115% at 6% -12%,#000 0%,rgba(0,0,0,.4) 40%,transparent 74%);}
 .phero .wrap{position:relative;z-index:2;}
+/* hero com divisor estilizado no rodape: reserva espaco para a forma e para os cards */
+.phero.has-div{padding-bottom:150px;}
+.phero .divider{z-index:3;}
 .phero h1{margin-bottom:18px;max-width:900px;}
 .phero .lead{max-width:720px;}
 .phero.dark{background:var(--grad-navy);border-top-color:var(--orange);}
 .phero.dark::before{background-image:radial-gradient(circle,rgba(255,255,255,.09) 1.6px,transparent 1.7px);}
 .phero.dark h1,.phero.dark h2{color:#fff;}
+/* foto de fundo mesclada ao navy da secao */
+.phero.bg-photo::after{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url('bg-image-eqgrupo.png');
+  background-size:cover;background-position:center;
+  opacity:.12;
+}
+/* variante com conteudo centralizado */
+.phero.center-content .wrap > div{text-align:center;}
+.phero.center-content h1{margin-left:auto;margin-right:auto;}
+.phero.center-content .lead{margin-left:auto;margin-right:auto;}
 .phero.dark .lead{color:rgba(255,255,255,.75);}
 .phero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
 
@@ -535,6 +551,18 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 
 /* números / estatísticas */
 .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px;}
+/* variante sobreposta ao hero */
+/* display:flow-root impede que a margem negativa dos cards colapse e
+   arraste o fundo da faixa para cima, cobrindo o divisor do hero */
+.stat-wrap{position:relative;z-index:6;padding-bottom:64px;background:var(--paper-2);display:flow-root;}
+.stat.over{margin-top:-104px;}
+.stat.over .item{
+  background:var(--navy-deep);border:1px solid rgba(255,255,255,.09);border-top:none;
+  border-left:2px solid var(--orange);
+  box-shadow:0 26px 54px -20px rgba(10,16,28,.55);
+}
+.stat.over .big{color:var(--orange);}
+.stat.over .lbl{color:rgba(255,255,255,.78);}
 .stat .item{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:30px 28px;border-top:3px solid var(--orange);}
 .stat .big{font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.1;}
 .stat .lbl{font-size:.88rem;color:var(--gray-soft);margin-top:6px;}
@@ -663,6 +691,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 }
 @media(max-width:860px){
   .g2,.g3,.g4,.stat{grid-template-columns:1fr;}
+  .phero.has-div{padding-bottom:110px;}
+  .stat.over{margin-top:-70px;}
   .logo-row{grid-template-columns:repeat(2,1fr);}
   .phero{padding:56px 0 62px;}
   .card,.form{padding:24px 22px;}
