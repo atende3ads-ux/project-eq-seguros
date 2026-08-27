@@ -568,6 +568,11 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .sec.dark .card .link-arrow:hover{color:var(--orange);}
 .sec.dark .card .btn-ghost{color:var(--navy);border-color:#C9D6E5;}
 .sec.dark .card .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+/* mesma logica para as outras superficies brancas: formulario e lista de canais */
+.sec.dark .form h2,.sec.dark .form h3,.sec.dark .form h4,.sec.dark .chan .c h4{color:var(--navy);}
+.sec.dark .form p,.sec.dark .form label,.sec.dark .form li{color:var(--gray);}
+.sec.dark .chan .cv{color:var(--navy);}
+.sec.dark .chan .ct,.sec.dark .chan .cn{color:var(--gray-soft);}
 
 /* destaque lateral (texto + imagem) */
 .feat-row{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
