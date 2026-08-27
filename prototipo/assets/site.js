@@ -1,5 +1,5 @@
 /* ===================================================================
-   EQ Seguros — protótipo · cabeçalho e rodapé compartilhados
+   EQ Seguros · protótipo · cabeçalho e rodapé compartilhados
    Cada página traz apenas o seu conteúdo; a moldura é injetada aqui,
    então um ajuste de menu ou rodapé propaga para o site inteiro.
    =================================================================== */
@@ -47,7 +47,7 @@
     { t:'Crédito', h:'credito.html', m:['credito','consignado','peculio'],
       dd:{ head:'Crédito', foot:FOOT, nocats:true, cats:[
         { id:'cred', t:'Crédito', label:'Consignado Público e Pecúlio', items:[
-          { t:'Empréstimo Consignado', d:'Consignado Público — conforme a margem consignável.', h:'consignado.html', i:'doc'  },
+          { t:'Empréstimo Consignado', d:'Consignado Público, conforme a margem consignável.', h:'consignado.html', i:'doc'  },
           { t:'Pecúlio',               d:'Indenização por morte de qualquer causa.',            h:'peculio.html',    i:'gift' }
         ]}
       ]}},
@@ -101,8 +101,8 @@
       '</div>' +
       '<div class="ft-top">' +
         '<div>' +
-          '<p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo — regulado pela SUSEP.</p>' +
-          '<p class="ft-addr"><b>EQ Seguros S.A.</b><br>Av. Dep. Jamel Cecílio, 2690<br>Ed. Metropolitan Business, Torre Tokyo — Sl. 2008/2012<br>Jardim Goiás · Goiânia - GO · 74810-100</p>' +
+          '<p class="ft-desc">Proteção financeira para pessoas, via parceiros e convênios. EQ Grupo, regulado pela SUSEP.</p>' +
+          '<p class="ft-addr"><b>EQ Seguros S.A.</b><br>Av. Dep. Jamel Cecílio, 2690<br>Ed. Metropolitan Business, Torre Tokyo, Sl. 2008/2012<br>Jardim Goiás · Goiânia - GO · 74810-100</p>' +
           '<div class="social">' + soc('ig','Instagram') + soc('fb','Facebook') + soc('yt','YouTube') + soc('li','LinkedIn') + '</div>' +
         '</div>' +
         '<div><h4>Soluções</h4><ul>' +
@@ -122,9 +122,9 @@
           '<li><a href="https://grupoequatorial.vagas.solides.com.br/" target="_blank" rel="noopener">Trabalhe Conosco</a></li>' +
         '</ul></div>' +
         '<div><h4>Atendimento</h4><ul>' +
-          '<li><a href="https://wa.me/556235726000">WhatsApp — (62) 3572-6000</a></li>' +
-          '<li>SAC — 0800 644 0144 <span class="ft-note">(2ª a 6ª, 8h30–17h30)</span></li>' +
-          '<li>Telefone — (62) 3572-6000 <span class="ft-note">(2ª a 6ª, 8h30–17h30)</span></li>' +
+          '<li><a href="https://wa.me/556235726000">WhatsApp: (62) 3572-6000</a></li>' +
+          '<li>SAC: 0800 644 0144 <span class="ft-note">(2ª a 6ª, 8h30 às 17h30)</span></li>' +
+          '<li>Telefone: (62) 3572-6000 <span class="ft-note">(2ª a 6ª, 8h30 às 17h30)</span></li>' +
           '<li><a href="mailto:atendimento@eqseguros.com.br">atendimento@eqseguros.com.br</a></li>' +
           '<li><a href="atendimento.html">Sinistro 24h</a></li>' +
           '<li><a href="ajuda.html">Central de Ajuda</a></li>' +
@@ -132,19 +132,19 @@
       '</div>' +
       '<div class="ft-mid">' +
         '<div><h4>SAC Serviços (Assistências)</h4><ul><li>0800 721 3210</li><li>(11) 2853-0348</li></ul>' +
-          '<p>Assistências 24h — funeral, pet, residencial, entre outros.</p></div>' +
+          '<p>Assistências 24h: funeral, pet, residencial, entre outros.</p></div>' +
         '<div><h4>Ouvidoria</h4><ul><li>0800 703 1989</li>' +
           '<li><a href="mailto:ouvidoria@sinapp.org.br">ouvidoria@sinapp.org.br</a></li>' +
           '<li><a href="https://sisgo.sinapp.net.br/solicitacao" target="_blank" rel="noopener">Abrir solicitação</a></li></ul></div>' +
-        '<div><h4>Ouvidoria — Def. Auditiva/Fala</h4><ul>' +
+        '<div><h4>Ouvidoria para Def. Auditiva/Fala</h4><ul>' +
           '<li>0800 201 1838 <span class="ft-note">(telefone fixo TDD)</span></li>' +
           '<li><a href="mailto:ouvidoria.auditivo.fala@sinapp.org.br">ouvidoria.auditivo.fala@sinapp.org.br</a></li></ul></div>' +
-        '<div><h4>Ouvidoria — Def. Visual</h4><ul><li>0800 703 1989</li>' +
+        '<div><h4>Ouvidoria para Def. Visual</h4><ul><li>0800 703 1989</li>' +
           '<li><a href="mailto:ouvidoria.visual@sinapp.org.br">ouvidoria.visual@sinapp.org.br</a></li></ul></div>' +
       '</div>' +
       '<div class="ft-legal">' +
-        '<div><b>EQ Seguros S/A</b> — CNPJ 21.242.451/0001-05 · Cód. SUSEP 01554</div>' +
-        '<div><b>Equatorial Previdência Complementar</b> — CNPJ 42.150.987/0001-70 · Cód. SUSEP 10120</div>' +
+        '<div><b>EQ Seguros S/A</b> · CNPJ 21.242.451/0001-05 · Cód. SUSEP 01554</div>' +
+        '<div><b>Equatorial Previdência Complementar</b> · CNPJ 42.150.987/0001-70 · Cód. SUSEP 10120</div>' +
       '</div>' +
     '</div>' +
     '<div class="ft-bar"><div class="wrap">' +
