@@ -728,6 +728,10 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .pimg.ph,.line-illus.ph{background:var(--navy);display:flex;align-items:center;justify-content:center;}
 .pimg.ph .lbl,.line-illus.ph .lbl{color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.12em;
   text-transform:uppercase;text-align:center;padding:0 16px;line-height:1.5;}
+/* mapa real: mesma moldura do .imgbox, iframe preenchendo o bloco */
+.mapbox{border-radius:var(--r-md);overflow:hidden;aspect-ratio:21/7;background:var(--navy);}
+.mapbox iframe{display:block;width:100%;height:100%;border:0;}
+@media(max-width:760px){.mapbox{aspect-ratio:4/3;}}
 .imgbox{border-radius:var(--r-md);overflow:hidden;background:var(--navy);aspect-ratio:16/10;
   display:flex;align-items:center;justify-content:center;}
 .imgbox img{width:100%;height:100%;object-fit:cover;}
