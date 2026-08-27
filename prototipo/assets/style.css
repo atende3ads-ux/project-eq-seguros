@@ -562,6 +562,26 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 }
 .tl-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);}
 .tl-img{aspect-ratio:16/7;overflow:hidden;background:var(--navy);}
+/* marcador para marcos sem foto: bloco navy com textura, ano fantasma e etiqueta */
+.tl-img.ph{position:relative;display:flex;align-items:flex-end;justify-content:flex-start;padding:18px;}
+.tl-img.ph::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.10) 1.4px,transparent 1.5px);
+  background-size:15px 15px;
+}
+.tl-img.ph .yr{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:clamp(2.8rem,6vw,4rem);font-weight:800;letter-spacing:-.04em;
+  color:rgba(255,255,255,.13);line-height:1;user-select:none;
+}
+.tl-img.ph .lb{
+  position:relative;display:inline-flex;align-items:center;gap:9px;
+  font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);padding:8px 15px;border-radius:999px;
+  backdrop-filter:blur(4px);
+}
+.tl-img.ph .lb svg{width:14px;height:14px;flex:0 0 14px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
 .tl-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
 .tl-card:hover .tl-img img{transform:scale(1.04);}
 .tl-body{padding:24px 26px 26px;}
@@ -579,7 +599,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 }
 
 /* FAQ */
-.faq{display:grid;gap:12px;margin-top:22px;max-width:900px;}
+.faq{display:grid;gap:12px;margin-top:22px;max-width:900px;margin-left:auto;margin-right:auto;text-align:left;}
 .faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;}
 .faq summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:600;color:var(--navy);
   display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:1rem;}
