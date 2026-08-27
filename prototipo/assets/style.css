@@ -123,6 +123,23 @@ h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;}
 .btn:hover svg{transform:translateX(4px);}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px;}
 
+/* link de apoio: sem pilula, texto sublinhado + seta para cima/direita */
+.link-arrow{
+  display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+  font-size:1rem;font-weight:600;color:var(--navy);
+  transition:color .3s var(--ease);
+}
+.link-arrow span{border-bottom:1.5px solid currentColor;padding-bottom:3px;}
+.link-arrow svg{
+  width:15px;height:15px;flex:0 0 15px;fill:none;stroke:currentColor;
+  stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .35s var(--ease);
+}
+.link-arrow:hover{color:var(--orange);}
+.link-arrow:hover svg{transform:translate(3px,-3px);}
+.sec.dark .link-arrow,.phero.dark .link-arrow{color:#fff;}
+.sec.dark .link-arrow:hover,.phero.dark .link-arrow:hover{color:var(--orange-light);}
+
 .tag{
   display:inline-flex;padding:5px 12px;border-radius:999px;background:var(--blue-bg);
   color:var(--navy);font-size:.78rem;font-weight:600;
