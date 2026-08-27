@@ -525,6 +525,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .phero.center-content h1{margin-left:auto;margin-right:auto;}
 .phero.center-content .lead{margin-left:auto;margin-right:auto;}
 .phero.dark .lead{color:rgba(255,255,255,.75);}
+/* arte do hero ja vem com cantos, moldura e forma laranja embutidos: sem frame extra */
+.phero-art{display:block;width:100%;max-width:465px;height:auto;margin-left:auto;}
 .phero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
 
 /* grids genéricos */
@@ -718,6 +720,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 /* responsivo das internas */
 @media(max-width:1080px){
   .phero-grid,.feat-row{grid-template-columns:1fr;gap:40px;}
+  .phero-art{margin-left:auto;margin-right:auto;}
   .g4{grid-template-columns:repeat(2,1fr);}
   .logo-row{grid-template-columns:repeat(3,1fr);}
 }
