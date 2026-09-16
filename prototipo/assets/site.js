@@ -15,6 +15,9 @@
     api:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
     doc:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
     bolt:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+    users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    handshake:'<path d="M11 17l2 2a1 1 0 1 0 3-3"/><path d="M14 14l2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="M21 3l1 11h-2"/><path d="M3 3L2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/>',
+    award:'<circle cx="12" cy="8" r="6"/><polyline points="15.5 13 17 22 12 19 7 22 8.5 13"/>',
     chat:'<path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/>'
   };
   function di(k){ return '<svg viewBox="0 0 24 24">' + (DI[k]||DI.doc) + '</svg>'; }
@@ -34,7 +37,7 @@
           { t:'Seguro Prestamista',   d:'Quita o saldo devedor em imprevistos.',     h:'seguro-prestamista.html', i:'shield' },
           { t:'Seguro de Acidentes',  d:'Morte acidental e invalidez por acidente.', h:'seguro-acidentes.html',   i:'pulse'  },
           { t:'Seguro Funeral',       d:'Auxílio funeral para a família.',           h:'seguro-funeral.html',     i:'leaf'   },
-          { t:'Seguro Viagem',        d:'Cobertura nacional e internacional.',       h:'seguro-viagem.html',      i:'plane'  }
+          { t:'Seguro Viagem Nacional', d:'Viagens pelo Brasil, inclusive de ônibus.',       h:'seguro-viagem.html',      i:'plane'  }
         ]},
         { id:'seg-servicos', t:'Serviços', label:'Serviços agregados', items:[
           { t:'Assistências', d:'Telemedicina, residencial, pet e mais.', h:'atendimento.html', i:'life' },
@@ -53,7 +56,17 @@
       ]}},
     { t:'Tecnologia EQ',  h:'tecnologia.html', m:['tecnologia','api'] },
     { t:'Atendimento',    h:'atendimento.html',m:['atendimento','ajuda'] },
-    { t:'Para Parceiros', h:'parceiros.html',  m:['parceiros','seja-parceiro'] },
+    { t:'Para Parceiros', h:'parceiros.html', m:['parceiros','seja-parceiro','cases','case'],
+      dd:{ head:'Para Parceiros', nocats:true, foot:[
+          { t:'Central de Ajuda', h:'ajuda.html',   i:'doc'  },
+          { t:'Fale Conosco',     h:'contato.html', i:'chat' }
+        ], cats:[
+        { id:'parc', t:'Para Parceiros', label:'Hub do parceiro', items:[
+          { t:'Para Parceiros',   d:'Seguros e crédito para corretores e representantes.', h:'parceiros.html',     i:'users'     },
+          { t:'Seja um Parceiro', d:'Cadastro e etapas para começar a vender com a EQ.',   h:'seja-parceiro.html', i:'handshake' },
+          { t:'Cases de sucesso', d:'Como parceiros embarcaram os seguros da EQ.',          h:'cases.html',         i:'award'     }
+        ]}
+      ]}},
     { t:'Blog',           h:'blog.html',       m:['blog','post'] }
   ];
 
@@ -111,6 +124,7 @@
           '<li><a href="combos.html">Combos e Produtos</a></li>' +
           '<li><a href="tecnologia.html">Tecnologia EQ</a></li>' +
           '<li><a href="parceiros.html">Para Parceiros</a></li>' +
+          '<li><a href="cases.html">Cases de sucesso</a></li>' +
           '<li><a href="blog.html">Blog</a></li>' +
         '</ul></div>' +
         '<div><h4>Institucional</h4><ul>' +
