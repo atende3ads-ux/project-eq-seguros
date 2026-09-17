@@ -1,0 +1,25 @@
+{
+  "name": "eq-seguros", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1 --port 3000",
+    "build": "next build --webpack", "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit", "payload": "payload",
+    "generate:types": "payload generate:types", "generate:importmap": "payload generate:importmap",
+    "import:prototype": "node scripts/import-prototype.mjs", "test": "node --test tests/*.test.mjs",
+    "test:visual": "node scripts/verify-visual.mjs", "test:cms": "node scripts/verify-cms.mjs",
+    "test:password": "node scripts/verify-password-toggle.mjs"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "3.89.0", "@payloadcms/next": "3.89.0",
+    "@payloadcms/richtext-lexical": "3.89.0", "@payloadcms/translations": "3.89.0",
+    "graphql": "^16.11.0", "next": "16.3.5", "payload": "3.89.0",
+    "react": "^19.2.0", "react-dom": "^19.2.0", "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0", "@types/react": "^19.2.0", "@types/react-dom": "^19.2.0",
+    "cheerio": "^1.2.0", "playwright": "^1.55.0", "pixelmatch": "^7.1.0", "pngjs": "^7.0.0",
+    "typescript": "^5.9.0", "tsx": "^4.20.0"
+  },
+  "overrides": { "dompurify": "^3.4.13" },
+  "engines": { "node": ">=22.0.0" }
+}
