@@ -2,9 +2,10 @@ import fs from 'node:fs'
 import path from 'node:path'
 import vm from 'node:vm'
 import { load } from 'cheerio'
+import { prototypeSource } from './prototype-source.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
-const source = path.resolve(root, '../project-eq-seguros-main/prototipo')
+const source = prototypeSource
 const output = path.join(root, 'src/generated/prototype.json')
 const siteScript = fs.readFileSync(path.join(source, 'assets/site.js'), 'utf8')
 const prefix = siteScript.slice(0, siteScript.indexOf('  function wireDropdowns()'))

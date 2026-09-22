@@ -3,10 +3,11 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
+import { prototypeSource } from '../scripts/prototype-source.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const data = JSON.parse(fs.readFileSync(path.join(root, 'src/generated/prototype.json')))
-const source = path.resolve(root, '../project-eq-seguros-main/prototipo')
+const source = prototypeSource
 
 test('should preserve all prototype pages', () => {
   const slugs = fs.readdirSync(source).filter((x) => x.endsWith('.html')).map((x) => x.replace('.html', '')).sort()
