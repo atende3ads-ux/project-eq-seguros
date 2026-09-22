@@ -1,10 +1,40 @@
 .eq-row {
+  position: relative;
   display: flex;
   align-items: baseline;
   gap: 0.625rem;
   min-width: 0;
   width: 100%;
   text-align: left;
+}
+
+/*
+ * O divisor de seção precisa aparecer ACIMA da linha, mas o único ponto em que
+ * o Payload deixa injetar conteúdo é o rótulo, dentro da linha. Daí o título
+ * sair posicionado para fora, e o espaço para ele ser aberto na própria linha.
+ */
+.eq-row__section {
+  position: absolute;
+  bottom: calc(100% + 0.9rem);
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--eq-section-text, var(--theme-elevation-600));
+  pointer-events: none;
+}
+
+.eq-row__section::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--theme-elevation-200);
 }
 
 .eq-row__number {

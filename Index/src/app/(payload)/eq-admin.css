@@ -93,6 +93,27 @@
   min-height: 2.5rem;
 }
 
+/* Abre espaço acima da primeira linha de cada seção para o divisor caber. */
+.array-field__row:has(.eq-row--section-start) {
+  margin-top: 2.6rem;
+  overflow: visible;
+}
+
+/* O divisor fica fora dos limites da linha, então toda a cadeia até ele precisa
+   deixar transbordar — incluindo o header-wrap, que corta por padrão. */
+.array-field__row:has(.eq-row--section-start) .collapsible,
+.array-field__row:has(.eq-row--section-start) .collapsible__header,
+.array-field__row:has(.eq-row--section-start) .collapsible__header-wrap,
+.array-field__row:has(.eq-row--section-start) .collapsible__toggle-wrap,
+.array-field__row:has(.eq-row--section-start) .array-field__draggable-bar {
+  overflow: visible;
+}
+
+/* A primeira seção da lista não precisa de respiro extra. */
+.array-field__rows > .array-field__row:first-child:has(.eq-row--section-start) {
+  margin-top: 1.9rem;
+}
+
 .array-field__draggable-bar .collapsible__toggle-wrap {
   min-width: 0;
 }
