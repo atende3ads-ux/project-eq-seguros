@@ -1,0 +1,98 @@
+/*
+ * Identidade da EQ Seguros no painel.
+ * Fica fora das cascade layers do Payload (`@layer payload-default, payload`),
+ * então estas regras prevalecem sem precisar de `!important`.
+ */
+
+:root {
+  --eq-navy: #212a3e;
+  --eq-navy-deep: #171e2c;
+  --eq-orange: #e8981c;
+  --eq-orange-dark: #ce8412;
+  --eq-hint-bg: rgba(33, 42, 62, 0.08);
+  --eq-hint-text: #4a5464;
+}
+
+[data-theme='dark'] {
+  --eq-hint-bg: rgba(255, 255, 255, 0.1);
+  --eq-hint-text: #b6bcc6;
+}
+
+/* ---------- Marca ---------- */
+
+.eq-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.eq-brand__mark {
+  width: 230px;
+  height: auto;
+}
+
+.eq-brand__caption {
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  color: var(--theme-elevation-500);
+}
+
+/* O slot do ícone é pequeno e quadrado: acompanha o tamanho que o Payload reservar. */
+.eq-brand__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* O logo é navy sobre transparente: no tema escuro precisa virar claro. */
+[data-theme='dark'] .eq-brand__mark,
+[data-theme='dark'] .eq-brand__icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- Login ---------- */
+
+.template-minimal .eq-brand {
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Ações primárias ---------- */
+
+.btn--style-primary .btn__content,
+.btn--style-primary {
+  --color: var(--eq-navy);
+}
+
+[data-theme='light'] .btn--style-primary {
+  background-color: var(--eq-navy);
+  border-color: var(--eq-navy);
+  color: #fff;
+}
+
+[data-theme='light'] .btn--style-primary:not(.btn--disabled):hover {
+  background-color: var(--eq-navy-deep);
+  border-color: var(--eq-navy-deep);
+}
+
+/* Foco visível na cor de destaque da marca, preservando o contorno de acessibilidade. */
+.template-minimal input:focus-visible,
+.template-minimal button:focus-visible,
+.field-type input:focus-visible,
+.field-type textarea:focus-visible {
+  outline: 2px solid var(--eq-orange);
+  outline-offset: 2px;
+}
+
+/* ---------- Listas de conteúdo ---------- */
+
+/* Deixa a linha do array respirar, já que agora ela carrega o texto real. */
+.array-field__row-header,
+.collapsible__header {
+  min-height: 2.5rem;
+}
+
+.array-field__draggable-bar .collapsible__toggle-wrap {
+  min-width: 0;
+}

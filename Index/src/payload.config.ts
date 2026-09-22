@@ -20,7 +20,10 @@ export default buildConfig({
   admin: {
     user: 'users',
     importMap: { baseDir: path.resolve('src') },
-    components: { beforeLogin: ['/components/admin/PasswordVisibility'] },
+    components: {
+      beforeLogin: ['/components/admin/PasswordVisibility'],
+      graphics: { Logo: '/components/admin/Logo', Icon: '/components/admin/Icon' },
+    },
     meta: { titleSuffix: ' | EQ Seguros' },
   },
   collections: [Users, Media, Pages, Cases], globals: [Site],

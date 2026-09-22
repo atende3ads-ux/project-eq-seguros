@@ -179,20 +179,28 @@ export interface Media {
  */
 export interface Page {
   id: number;
-  title: string;
-  slug: string;
-  description?: string | null;
-  status?: ('published' | 'draft') | null;
+  /**
+   * Cada linha é um texto da página. Abra a linha para editar.
+   */
   copy?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         value: string;
         id?: string | null;
       }[]
     | null;
+  /**
+   * Troque a imagem pela biblioteca e mantenha a descrição acessível preenchida.
+   */
   images?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         src: string;
@@ -201,14 +209,27 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Destino de cada link e botão da página.
+   */
   links?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         href: string;
         id?: string | null;
       }[]
     | null;
+  title: string;
+  description?: string | null;
+  status?: ('published' | 'draft') | null;
+  /**
+   * Define o endereço da página. Não editável.
+   */
+  slug: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -218,13 +239,16 @@ export interface Page {
  */
 export interface Case {
   id: number;
-  slug: string;
+  titulo: string;
   parceiro: string;
   segmento: 'fintechs' | 'varejo' | 'rh' | 'corretoras';
-  titulo: string;
   resumo: string;
-  imagem: string;
-  media?: (number | null) | Media;
+  /**
+   * Define o endereço do case.
+   */
+  slug: string;
+  desafio: string;
+  solucao: string;
   produtos?:
     | {
         nome: string;
@@ -238,13 +262,16 @@ export interface Case {
         id?: string | null;
       }[]
     | null;
-  desafio: string;
-  solucao: string;
   depoimento?: {
     texto?: string | null;
     autor?: string | null;
     cargo?: string | null;
   };
+  media?: (number | null) | Media;
+  /**
+   * Usada quando não há imagem da biblioteca.
+   */
+  imagem: string;
   destaque?: boolean | null;
   aprovado?: boolean | null;
   updatedAt: string;
@@ -379,10 +406,6 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  description?: T;
-  status?: T;
   copy?:
     | T
     | {
@@ -409,6 +432,10 @@ export interface PagesSelect<T extends boolean = true> {
         href?: T;
         id?: T;
       };
+  title?: T;
+  description?: T;
+  status?: T;
+  slug?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -417,13 +444,13 @@ export interface PagesSelect<T extends boolean = true> {
  * via the `definition` "cases_select".
  */
 export interface CasesSelect<T extends boolean = true> {
-  slug?: T;
+  titulo?: T;
   parceiro?: T;
   segmento?: T;
-  titulo?: T;
   resumo?: T;
-  imagem?: T;
-  media?: T;
+  slug?: T;
+  desafio?: T;
+  solucao?: T;
   produtos?:
     | T
     | {
@@ -437,8 +464,6 @@ export interface CasesSelect<T extends boolean = true> {
         rotulo?: T;
         id?: T;
       };
-  desafio?: T;
-  solucao?: T;
   depoimento?:
     | T
     | {
@@ -446,6 +471,8 @@ export interface CasesSelect<T extends boolean = true> {
         autor?: T;
         cargo?: T;
       };
+  media?: T;
+  imagem?: T;
   destaque?: T;
   aprovado?: T;
   updatedAt?: T;
@@ -497,16 +524,28 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Site {
   id: number;
+  /**
+   * Cada linha é um texto da página. Abra a linha para editar.
+   */
   copy?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         value: string;
         id?: string | null;
       }[]
     | null;
+  /**
+   * Troque a imagem pela biblioteca e mantenha a descrição acessível preenchida.
+   */
   images?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         src: string;
@@ -515,8 +554,14 @@ export interface Site {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Destino de cada link e botão da página.
+   */
   links?:
     | {
+        /**
+         * Identificador interno. Não editável.
+         */
         key: string;
         label?: string | null;
         href: string;
