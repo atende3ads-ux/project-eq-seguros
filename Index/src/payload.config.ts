@@ -22,6 +22,7 @@ export default buildConfig({
     importMap: { baseDir: path.resolve('src') },
     components: {
       beforeLogin: ['/components/admin/PasswordVisibility'],
+      beforeNavLinks: ['/components/admin/PagesNav'],
       graphics: { Logo: '/components/admin/Logo', Icon: '/components/admin/Icon' },
     },
     meta: { titleSuffix: ' | EQ Seguros' },
