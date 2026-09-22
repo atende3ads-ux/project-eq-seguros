@@ -21,6 +21,17 @@ const server = http.createServer((req, res) => {
 })
 await new Promise((resolve) => server.listen(4173, '127.0.0.1', resolve))
 const browser = await chromium.launch({ headless: true })
+
+// A comparação é contra o protótipo original, que traz os cases. Com CASES_VISIBLE
+// diferente de true o site esconde a área inteira e toda página passa a divergir —
+// falha real, mas por um motivo que não é regressão visual.
+const casesProbe = await fetch('http://127.0.0.1:3000/cases').catch(() => null)
+if (casesProbe?.status === 404) {
+  console.error('Os cases estão ocultos no servidor em :3000, então o site não bate com o protótipo.')
+  console.error('Suba o servidor com CASES_VISIBLE=true antes de rodar este teste.')
+  process.exit(1)
+}
+
 const results = []
 const slugs = process.env.VISUAL_SLUGS?.split(',') || data.pages.map((p) => p.slug)
 try {

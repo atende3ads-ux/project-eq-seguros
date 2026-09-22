@@ -2,7 +2,7 @@ import { createElement, Fragment } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import type { Content, TemplateNode, CaseRecord } from '@/lib/types'
 import { CaseCards, CasesListing } from '../Cases'
-import { segments, imageURL } from '@/lib/cases'
+import { segments, imageURL, casesVisible, casesSectionIds, isCasesHref } from '@/lib/cases'
 
 const names: Record<string, string> = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', viewbox: 'viewBox', preserveaspectratio: 'preserveAspectRatio', crossorigin: 'crossOrigin', colspan: 'colSpan', rowspan: 'rowSpan', readonly: 'readOnly', maxlength: 'maxLength', srcset: 'srcSet', 'xlink:href': 'xlinkHref', 'xmlns:xlink': 'xmlnsXlink', frameborder: 'frameBorder', allowfullscreen: 'allowFullScreen', referrerpolicy: 'referrerPolicy', contenteditable: 'contentEditable', autocomplete: 'autoComplete', spellcheck: 'spellCheck' }
 const safeURL = (value: string) => /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) ? value : '#'
@@ -19,6 +19,23 @@ export function Template({ nodes, content, records = [], selectedCase }: Args) {
   const images = new Map(content.images?.map((entry) => [entry.key, entry]))
   const links = new Map(content.links?.map((entry) => [entry.key, entry.href]))
   const hasCaseListing = nodes.some(function contains(node): boolean { return node.attrs?.id === 'cases-filtro' || Boolean(node.children?.some(contains)) })
+
+  function subtree(node: TemplateNode, test: (node: TemplateNode) => boolean): boolean {
+    return test(node) || Boolean(node.children?.some((child) => subtree(child, test)))
+  }
+  /**
+   * Com os cases ocultos, remove a seção inteira que os exibiria e os itens de
+   * menu e rodapé que levam até eles. Some o `li` inteiro, não só a âncora,
+   * para não sobrar marcador de lista vazio.
+   */
+  function hide(node: TemplateNode): boolean {
+    if (casesVisible) return false
+    if (subtree(node, (n) => Boolean(n.attrs?.id && casesSectionIds.has(n.attrs.id)))) return true
+    if (node.tag !== 'a' && node.tag !== 'li') return false
+    return subtree(node, (n) => isCasesHref(n.linkKey ? links.get(n.linkKey) : n.attrs?.href))
+  }
+  const visible = (list?: TemplateNode[]) => list?.filter((node) => !hide(node))
+
   function render(node: TemplateNode, key: string): ReactNode {
     if (!node.tag) return node.textKey && texts.has(node.textKey) ? texts.get(node.textKey) : node.text
     const id = node.attrs?.id
@@ -40,7 +57,7 @@ export function Template({ nodes, content, records = [], selectedCase }: Args) {
     if (node.linkKey && links.has(node.linkKey)) attrs.href = safeURL(links.get(node.linkKey)!)
     let children: ReactNode = node.tag === 'title' || node.tag === 'textarea'
       ? node.children?.map((child) => child.textKey && texts.has(child.textKey) ? texts.get(child.textKey) : child.text || '').join('')
-      : node.children?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`)}</Fragment>)
+      : visible(node.children)?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`)}</Fragment>)
     if (id === 'cases-destaque') children = <CaseCards records={records.filter((r) => r.destaque).slice(0, 3)}/>
     if (selectedCase) {
       const record = selectedCase
@@ -55,5 +72,5 @@ export function Template({ nodes, content, records = [], selectedCase }: Args) {
     if (node.tag === 'img' || node.tag === 'input' || node.tag === 'br' || node.tag === 'hr') return createElement(node.tag, attrs)
     return createElement(node.tag, attrs, children)
   }
-  return nodes.map((node, index) => <Fragment key={index}>{render(node, String(index))}</Fragment>)
+  return visible(nodes)?.map((node, index) => <Fragment key={index}>{render(node, String(index))}</Fragment>)
 }

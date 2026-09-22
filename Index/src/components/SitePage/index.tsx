@@ -2,10 +2,12 @@ import { notFound } from 'next/navigation'
 import prototype from '@/generated/prototype.json'
 import { getPageContent, getSiteContent, getCases, templates } from '@/lib/content'
 import type { TemplateNode } from '@/lib/types'
+import { casesVisible, casesSlugs } from '@/lib/cases'
 import { Template } from '../Template'
 import { Interactions } from '../Interactions'
 
 export async function SitePage({ slug, caseSlug }: { slug: string; caseSlug?: string }) {
+  if (!casesVisible && casesSlugs.has(slug)) notFound()
   const template = templates.find((page) => page.slug === slug)
   if (!template) notFound()
   const [page, site, records] = await Promise.all([getPageContent(slug), getSiteContent(), getCases()])
