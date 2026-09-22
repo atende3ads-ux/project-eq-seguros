@@ -11,6 +11,18 @@
       ],
       "port": 8812,
       "url": "http://localhost:8812"
+    },
+    {
+      "name": "eq-seguros-cms",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "Index",
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "url": "http://127.0.0.1:3000"
     }
   ]
 }

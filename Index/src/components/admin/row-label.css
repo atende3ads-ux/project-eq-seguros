@@ -1,0 +1,50 @@
+.eq-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  min-width: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.eq-row__number {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--theme-elevation-400);
+}
+
+.eq-row__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  color: var(--theme-elevation-800);
+}
+
+.eq-row__hint {
+  flex: none;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: var(--eq-hint-text, var(--theme-elevation-600));
+  background: var(--eq-hint-bg, var(--theme-elevation-100));
+}
+
+/* A chave e o seletor CSS são referência técnica: continuam acessíveis, sem competir com o conteúdo. */
+.eq-technical-field label,
+.eq-technical-field .field-description {
+  opacity: 0.75;
+}
+
+.eq-technical-field input:read-only {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 0.8125rem;
+  opacity: 0.75;
+}
