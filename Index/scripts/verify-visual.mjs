@@ -4,9 +4,10 @@ import http from 'node:http'
 import { chromium } from 'playwright'
 import { PNG } from 'pngjs'
 import pixelmatch from 'pixelmatch'
+import { prototypeSource } from './prototype-source.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
-const source = path.resolve(root, '../project-eq-seguros-main/prototipo')
+const source = prototypeSource
 const data = JSON.parse(fs.readFileSync(path.join(root, 'src/generated/prototype.json')))
 const output = path.join(root, 'test-results/visual')
 fs.mkdirSync(output, { recursive: true })
