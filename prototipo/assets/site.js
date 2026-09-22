@@ -140,7 +140,7 @@
           '<li>SAC: 0800 644 0144 <span class="ft-note">(2ª a 6ª, 8h30 às 17h30)</span></li>' +
           '<li>Telefone: (62) 3572-6000 <span class="ft-note">(2ª a 6ª, 8h30 às 17h30)</span></li>' +
           '<li><a href="mailto:atendimento@eqseguros.com.br">atendimento@eqseguros.com.br</a></li>' +
-          '<li><a href="atendimento.html">Sinistro 24h</a></li>' +
+          '<li><a href="atendimento.html">Aviso de Sinistro</a></li>' +
           '<li><a href="ajuda.html">Central de Ajuda</a></li>' +
         '</ul></div>' +
       '</div>' +
