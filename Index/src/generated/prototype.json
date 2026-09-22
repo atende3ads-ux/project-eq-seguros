@@ -632,7 +632,7 @@
                           },
                           "children": [
                             {
-                              "text": "Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para comunicar a ocorrência e enviar os documentos.",
+                              "text": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura.",
                               "textKey": "page-t18"
                             }
                           ]
@@ -3443,8 +3443,8 @@
           },
           {
             "key": "page-t18",
-            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para comunicar ",
-            "value": "Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para comunicar a ocorrência e enviar os documentos."
+            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Aviso de Sinistro, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para comunicar ",
+            "value": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura."
           },
           {
             "key": "page-t19",
@@ -7360,7 +7360,7 @@
                           "linkKey": "page-l2",
                           "children": [
                             {
-                              "text": "Sinistro 24h",
+                              "text": "Aviso de Sinistro",
                               "textKey": "page-t7"
                             }
                           ]
@@ -7423,13 +7423,13 @@
                           "attrs": {},
                           "children": [
                             {
-                              "text": "Sinistro 24h",
+                              "text": "Aviso de Sinistro",
                               "textKey": "page-t9"
                             }
                           ]
                         },
                         {
-                          "text": " é exclusivo para acionamento de Seguros e envio de documentos do sinistro. Hoje esse acionamento é feito pelos canais de atendimento: WhatsApp (62) 3572-6000, SAC 0800 644 0144, telefone (62) 3572-6000 (2ª a 6ª, 8h30 às 17h30) ou atendimento@eqseguros.com.br.",
+                          "text": " é o canal para comunicar o sinistro e enviar a documentação das coberturas do seu seguro. A regulação é feita pela EQ Seguros. Atendimento: WhatsApp (62) 3572-6000, SAC 0800 644 0144, telefone (62) 3572-6000 (2ª a 6ª, 8h30 às 17h30) ou atendimento@eqseguros.com.br.",
                           "textKey": "page-t10"
                         }
                       ]
@@ -7514,7 +7514,7 @@
                       },
                       "children": [
                         {
-                          "text": "Conjunto de assistências incluídas ou contratadas junto aos produtos de Seguros. ",
+                          "text": "Serviços de assistência disponíveis em alguns produtos, conforme a contratação. Não substituem o sinistro: são acionados direto no parceiro responsável. ",
                           "textKey": "page-t13"
                         },
                         {
@@ -8259,7 +8259,7 @@
                           "attrs": {},
                           "children": [
                             {
-                              "text": "Sinistro 24h",
+                              "text": "Aviso de Sinistro",
                               "textKey": "page-t35"
                             }
                           ]
@@ -8770,7 +8770,7 @@
                           },
                           "children": [
                             {
-                              "text": "Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para o acionamento do seguro e o envio dos documentos.",
+                              "text": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura.",
                               "textKey": "page-t55"
                             }
                           ]
@@ -11175,8 +11175,8 @@
           },
           {
             "key": "page-t7",
-            "label": "section.phero > div.wrap > div.rv-init > div.btn-row > a.btn · Sinistro 24h",
-            "value": "Sinistro 24h"
+            "label": "section.phero > div.wrap > div.rv-init > div.btn-row > a.btn · Aviso de Sinistro",
+            "value": "Aviso de Sinistro"
           },
           {
             "key": "page-t8",
@@ -11185,13 +11185,13 @@
           },
           {
             "key": "page-t9",
-            "label": "section.phero > div.wrap > div.rv-init > div.notice > b · Sinistro 24h",
-            "value": "Sinistro 24h"
+            "label": "section.phero > div.wrap > div.rv-init > div.notice > b · Aviso de Sinistro",
+            "value": "Aviso de Sinistro"
           },
           {
             "key": "page-t10",
             "label": "section.phero > div.wrap > div.rv-init > div.notice · é exclusivo para acionamento de Seguros e envio de documentos do sinistro. Hoje esse acion",
-            "value": " é exclusivo para acionamento de Seguros e envio de documentos do sinistro. Hoje esse acionamento é feito pelos canais de atendimento: WhatsApp (62) 3572-6000, SAC 0800 644 0144, telefone (62) 3572-6000 (2ª a 6ª, 8h30 às 17h30) ou atendimento@eqseguros.com.br."
+            "value": " é o canal para comunicar o sinistro e enviar a documentação das coberturas do seu seguro. A regulação é feita pela EQ Seguros. Atendimento: WhatsApp (62) 3572-6000, SAC 0800 644 0144, telefone (62) 3572-6000 (2ª a 6ª, 8h30 às 17h30) ou atendimento@eqseguros.com.br."
           },
           {
             "key": "page-t11",
@@ -11206,7 +11206,7 @@
           {
             "key": "page-t13",
             "label": "section.sec > div.wrap > div.sechead > p.lead · Conjunto de assistências incluídas ou contratadas junto aos produtos de Seguros.",
-            "value": "Conjunto de assistências incluídas ou contratadas junto aos produtos de Seguros. "
+            "value": "Serviços de assistência disponíveis em alguns produtos, conforme a contratação. Não substituem o sinistro: são acionados direto no parceiro responsável. "
           },
           {
             "key": "page-t14",
@@ -11315,8 +11315,8 @@
           },
           {
             "key": "page-t35",
-            "label": "section.sec > div.wrap > div.grid > a.card > h4 · Sinistro 24h",
-            "value": "Sinistro 24h"
+            "label": "section.sec > div.wrap > div.grid > a.card > h4 · Aviso de Sinistro",
+            "value": "Aviso de Sinistro"
           },
           {
             "key": "page-t36",
@@ -11415,8 +11415,8 @@
           },
           {
             "key": "page-t55",
-            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para o acioname",
-            "value": "Pelo Sinistro 24h, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para o acionamento do seguro e o envio dos documentos."
+            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Aviso de Sinistro, via WhatsApp, SAC, telefone ou e-mail. Esse canal serve para o acioname",
+            "value": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura."
           },
           {
             "key": "page-t56",
@@ -11463,7 +11463,7 @@
           },
           {
             "key": "page-l2",
-            "label": "Sinistro 24h",
+            "label": "Aviso de Sinistro",
             "href": "/contato"
           },
           {
@@ -11473,7 +11473,7 @@
           },
           {
             "key": "page-l4",
-            "label": "Sinistro 24hAcionamento de seguros e envio de documentos.",
+            "label": "Aviso de SinistroAcionamento de seguros e envio de documentos.",
             "href": "/contato"
           },
           {
@@ -31507,7 +31507,7 @@
     {
       "slug": "contato",
       "title": "Contato | EQ Seguros",
-      "description": "Canais de atendimento, Sinistro 24h, Ouvidoria e formulário de contato do EQ Grupo.",
+      "description": "Canais de atendimento, Aviso de Sinistro, Ouvidoria e formulário de contato do EQ Grupo.",
       "body": [
         {
           "text": "\n"
@@ -31624,7 +31624,7 @@
                       },
                       "children": [
                         {
-                          "text": "Canais de atendimento, Sinistro 24h, assistências e formulário. Escolha o canal mais adequado ao seu caso.",
+                          "text": "Canais de atendimento, Aviso de Sinistro, assistências e formulário. Escolha o canal mais adequado ao seu caso.",
                           "textKey": "page-t6"
                         }
                       ]
@@ -32023,7 +32023,7 @@
                                       },
                                       "children": [
                                         {
-                                          "text": "Sinistro 24h",
+                                          "text": "Aviso de Sinistro",
                                           "textKey": "page-t20"
                                         }
                                       ]
@@ -32047,7 +32047,7 @@
                                       },
                                       "children": [
                                         {
-                                          "text": "Exclusivo para acionamento de Seguros e envio de documentos do sinistro",
+                                          "text": "Comunicação de sinistro e envio de documentos das coberturas",
                                           "textKey": "page-t22"
                                         }
                                       ]
@@ -34897,8 +34897,8 @@
           },
           {
             "key": "page-t6",
-            "label": "section.phero > div.wrap > div.rv-init > p.lead · Canais de atendimento, Sinistro 24h, assistências e formulário. Escolha o canal mais adequ",
-            "value": "Canais de atendimento, Sinistro 24h, assistências e formulário. Escolha o canal mais adequado ao seu caso."
+            "label": "section.phero > div.wrap > div.rv-init > p.lead · Canais de atendimento, Aviso de Sinistro, assistências e formulário. Escolha o canal mais adequ",
+            "value": "Canais de atendimento, Aviso de Sinistro, assistências e formulário. Escolha o canal mais adequado ao seu caso."
           },
           {
             "key": "page-t7",
@@ -34967,8 +34967,8 @@
           },
           {
             "key": "page-t20",
-            "label": "section.sec > div.wrap > div.feat-row > div.rv-init > div.chan > div.c > div > div.ct · Sinistro 24h",
-            "value": "Sinistro 24h"
+            "label": "section.sec > div.wrap > div.feat-row > div.rv-init > div.chan > div.c > div > div.ct · Aviso de Sinistro",
+            "value": "Aviso de Sinistro"
           },
           {
             "key": "page-t21",
@@ -34978,7 +34978,7 @@
           {
             "key": "page-t22",
             "label": "section.sec > div.wrap > div.feat-row > div.rv-init > div.chan > div.c > div > div.cn · Exclusivo para acionamento de Seguros e envio de documentos do sinistro",
-            "value": "Exclusivo para acionamento de Seguros e envio de documentos do sinistro"
+            "value": "Comunicação de sinistro e envio de documentos das coberturas"
           },
           {
             "key": "page-t23",
@@ -81501,7 +81501,7 @@
                           },
                           "children": [
                             {
-                              "text": "Pelo Sinistro 24h: WhatsApp, SAC, telefone ou e-mail. É por esse canal que você comunica a ocorrência e envia os documentos.",
+                              "text": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura.",
                               "textKey": "page-t59"
                             }
                           ]
@@ -84105,8 +84105,8 @@
           },
           {
             "key": "page-t59",
-            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Sinistro 24h: WhatsApp, SAC, telefone ou e-mail. É por esse canal que você comunica a",
-            "value": "Pelo Sinistro 24h: WhatsApp, SAC, telefone ou e-mail. É por esse canal que você comunica a ocorrência e envia os documentos."
+            "label": "section.sec > div.wrap > div.faq > details.rv-init > div.fa-body · Pelo Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por esse canal que você comunica a",
+            "value": "Pelo canal de Aviso de Sinistro: WhatsApp, SAC, telefone ou e-mail. É por ele que você comunica a ocorrência e envia os documentos da cobertura."
           },
           {
             "key": "page-t60",
@@ -100509,7 +100509,7 @@
                                 "linkKey": "footer-l20",
                                 "children": [
                                   {
-                                    "text": "Sinistro 24h",
+                                    "text": "Aviso de Sinistro",
                                     "textKey": "footer-t28"
                                   }
                                 ]
@@ -101385,8 +101385,8 @@
         },
         {
           "key": "footer-t28",
-          "label": "footer.ft > div.wrap > div.ft-top > div > ul > li > a · Sinistro 24h",
-          "value": "Sinistro 24h"
+          "label": "footer.ft > div.wrap > div.ft-top > div > ul > li > a · Aviso de Sinistro",
+          "value": "Aviso de Sinistro"
         },
         {
           "key": "footer-t29",
@@ -101767,7 +101767,7 @@
         },
         {
           "key": "footer-l20",
-          "label": "Sinistro 24h",
+          "label": "Aviso de Sinistro",
           "href": "/atendimento"
         },
         {
