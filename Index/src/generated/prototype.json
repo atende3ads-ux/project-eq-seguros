@@ -39305,6 +39305,16 @@
                   ]
                 },
                 {
+                  "tag": "input",
+                  "attrs": {
+                    "type": "checkbox",
+                    "id": "tl-mais",
+                    "class": "tl-toggle",
+                    "hidden": ""
+                  },
+                  "children": []
+                },
+                {
                   "tag": "div",
                   "attrs": {
                     "class": "tl"
@@ -39704,7 +39714,7 @@
                                   "attrs": {},
                                   "children": [
                                     {
-                                      "text": "Já sob nova razão social (desde 1993), Equatorial Previdência Privada, a família Faleiro assume o Conselho Deliberativo e a nova Diretoria.",
+                                      "text": "Já sob nova razão social (desde 1993), Equatorial Previdência Privada, a família Faleiro assume o Conselho Deliberativo e a nova Diretoria. A companhia consolida a atuação em pecúlio, empréstimo consignado e assistência financeira a servidores públicos, trabalho que segue até hoje.",
                                       "textKey": "page-t43"
                                     }
                                   ]
@@ -39740,7 +39750,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2014",
+                                      "text": "2009",
                                       "textKey": "page-t44"
                                     }
                                   ]
@@ -39760,7 +39770,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2014",
+                                      "text": "2009",
                                       "textKey": "page-t45"
                                     }
                                   ]
@@ -39770,7 +39780,7 @@
                                   "attrs": {},
                                   "children": [
                                     {
-                                      "text": "Fundação da Equatorial Microsseguros, primeira seguradora do Brasil a operar exclusivamente com microsseguros (Portaria SUSEP nº 6.036/2014).",
+                                      "text": "Conquista do Governo do Acre como parceiro, marco na atuação com servidores públicos. O atendimento permanece ativo até hoje.",
                                       "textKey": "page-t46"
                                     }
                                   ]
@@ -39806,7 +39816,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2021",
+                                      "text": "2014",
                                       "textKey": "page-t47"
                                     }
                                   ]
@@ -39826,7 +39836,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2021",
+                                      "text": "2014",
                                       "textKey": "page-t48"
                                     }
                                   ]
@@ -39836,7 +39846,7 @@
                                   "attrs": {},
                                   "children": [
                                     {
-                                      "text": "Reestruturação societária: passa a atuar como EQ Seguros S/A, Seguradora de Vida e Previdência, operando ramos de Microsseguros, Vida e Prestamista, com soluções tecnológicas agregadas.",
+                                      "text": "Fundação da Equatorial Microsseguros, primeira seguradora do Brasil a operar exclusivamente com microsseguros (Portaria SUSEP nº 6.036/2014).",
                                       "textKey": "page-t49"
                                     }
                                   ]
@@ -39872,7 +39882,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2025",
+                                      "text": "2021",
                                       "textKey": "page-t50"
                                     }
                                   ]
@@ -39892,7 +39902,7 @@
                                   },
                                   "children": [
                                     {
-                                      "text": "2025",
+                                      "text": "2021",
                                       "textKey": "page-t51"
                                     }
                                   ]
@@ -39902,7 +39912,7 @@
                                   "attrs": {},
                                   "children": [
                                     {
-                                      "text": "Exercício recorde: EQ Seguros com lucro de R$ 9,4 MM e crescimento de 34,8%; Equatorial Previdência com PL de R$ 150,8 MM e superávit de R$ 19,1 MM.",
+                                      "text": "Reestruturação societária: passa a atuar como EQ Seguros S/A, Seguradora de Vida e Previdência, operando ramos de Microsseguros, Vida e Prestamista, com soluções tecnológicas agregadas.",
                                       "textKey": "page-t52"
                                     }
                                   ]
@@ -39910,6 +39920,93 @@
                               ]
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tl-item rv-init"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "tl-card"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "tl-img ph"
+                              },
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "yr"
+                                  },
+                                  "children": [
+                                    {
+                                      "text": "2025",
+                                      "textKey": "page-t53"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "tl-body"
+                              },
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "tl-year"
+                                  },
+                                  "children": [
+                                    {
+                                      "text": "2025",
+                                      "textKey": "page-t54"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "p",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "text": "Exercício recorde: EQ Seguros com lucro de R$ 9,4 MM e crescimento de 34,8%; Equatorial Previdência com PL de R$ 150,8 MM e superávit de R$ 19,1 MM.",
+                                      "textKey": "page-t55"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "tl-mais"
+                  },
+                  "children": [
+                    {
+                      "tag": "label",
+                      "attrs": {
+                        "class": "btn btn-ghost",
+                        "for": "tl-mais"
+                      },
+                      "children": [
+                        {
+                          "text": "Ver mais",
+                          "textKey": "page-t56"
                         }
                       ]
                     }
@@ -39972,7 +40069,7 @@
                       "children": [
                         {
                           "text": "O EQ Grupo em números",
-                          "textKey": "page-t53"
+                          "textKey": "page-t57"
                         }
                       ]
                     },
@@ -39982,7 +40079,7 @@
                       "children": [
                         {
                           "text": "Confiança que se traduz em números",
-                          "textKey": "page-t54"
+                          "textKey": "page-t58"
                         }
                       ]
                     }
@@ -40008,7 +40105,7 @@
                           "children": [
                             {
                               "text": "+50 anos",
-                              "textKey": "page-t55"
+                              "textKey": "page-t59"
                             }
                           ]
                         },
@@ -40020,7 +40117,7 @@
                           "children": [
                             {
                               "text": "De história",
-                              "textKey": "page-t56"
+                              "textKey": "page-t60"
                             }
                           ]
                         }
@@ -40040,7 +40137,7 @@
                           "children": [
                             {
                               "text": "+20 mil",
-                              "textKey": "page-t57"
+                              "textKey": "page-t61"
                             }
                           ]
                         },
@@ -40052,7 +40149,7 @@
                           "children": [
                             {
                               "text": "Clientes ativos",
-                              "textKey": "page-t58"
+                              "textKey": "page-t62"
                             }
                           ]
                         }
@@ -40072,7 +40169,7 @@
                           "children": [
                             {
                               "text": "+2 milhões",
-                              "textKey": "page-t59"
+                              "textKey": "page-t63"
                             }
                           ]
                         },
@@ -40084,7 +40181,7 @@
                           "children": [
                             {
                               "text": "Bilhetes vendidos (2024/2025)",
-                              "textKey": "page-t60"
+                              "textKey": "page-t64"
                             }
                           ]
                         }
@@ -40149,7 +40246,7 @@
                       "children": [
                         {
                           "text": "Sustentabilidade (ESG)",
-                          "textKey": "page-t61"
+                          "textKey": "page-t65"
                         }
                       ]
                     },
@@ -40159,7 +40256,7 @@
                       "children": [
                         {
                           "text": "Compromisso ambiental, social e de governança",
-                          "textKey": "page-t62"
+                          "textKey": "page-t66"
                         }
                       ]
                     }
@@ -40226,7 +40323,7 @@
                           "children": [
                             {
                               "text": "Ambiental",
-                              "textKey": "page-t63"
+                              "textKey": "page-t67"
                             }
                           ]
                         },
@@ -40236,7 +40333,7 @@
                           "children": [
                             {
                               "text": "Digitalização e redução de papel (96% de contratos digitais), operação em nuvem.",
-                              "textKey": "page-t64"
+                              "textKey": "page-t68"
                             }
                           ]
                         }
@@ -40300,7 +40397,7 @@
                           "children": [
                             {
                               "text": "Social",
-                              "textKey": "page-t65"
+                              "textKey": "page-t69"
                             }
                           ]
                         },
@@ -40310,7 +40407,7 @@
                           "children": [
                             {
                               "text": "Inclusão financeira, microsseguros de baixo custo, crédito responsável e diversidade.",
-                              "textKey": "page-t66"
+                              "textKey": "page-t70"
                             }
                           ]
                         }
@@ -40360,7 +40457,7 @@
                           "children": [
                             {
                               "text": "Governança",
-                              "textKey": "page-t67"
+                              "textKey": "page-t71"
                             }
                           ]
                         },
@@ -40370,7 +40467,7 @@
                           "children": [
                             {
                               "text": "Código de Ética, canal de denúncias, LGPD e gestão de riscos.",
-                              "textKey": "page-t68"
+                              "textKey": "page-t72"
                             }
                           ]
                         }
@@ -40437,7 +40534,7 @@
                           "children": [
                             {
                               "text": "Compliance",
-                              "textKey": "page-t69"
+                              "textKey": "page-t73"
                             }
                           ]
                         },
@@ -40447,7 +40544,7 @@
                           "children": [
                             {
                               "text": "Segurança, ética e conformidade",
-                              "textKey": "page-t70"
+                              "textKey": "page-t74"
                             }
                           ]
                         },
@@ -40457,7 +40554,7 @@
                           "children": [
                             {
                               "text": "Regulação SUSEP, governança, LGPD e a nossa ",
-                              "textKey": "page-t71"
+                              "textKey": "page-t75"
                             },
                             {
                               "tag": "b",
@@ -40465,13 +40562,13 @@
                               "children": [
                                 {
                                   "text": "Ouvidoria / canal de denúncias",
-                                  "textKey": "page-t72"
+                                  "textKey": "page-t76"
                                 }
                               ]
                             },
                             {
                               "text": ". Tudo o que é crítico no mercado financeiro.",
-                              "textKey": "page-t73"
+                              "textKey": "page-t77"
                             }
                           ]
                         },
@@ -40489,7 +40586,7 @@
                               "children": [
                                 {
                                   "text": "Ver Compliance",
-                                  "textKey": "page-t74"
+                                  "textKey": "page-t78"
                                 }
                               ]
                             },
@@ -40563,7 +40660,7 @@
                           "children": [
                             {
                               "text": "Equatorial",
-                              "textKey": "page-t75"
+                              "textKey": "page-t79"
                             }
                           ]
                         },
@@ -40573,7 +40670,7 @@
                           "children": [
                             {
                               "text": "Equatorial Previdência Complementar",
-                              "textKey": "page-t76"
+                              "textKey": "page-t80"
                             }
                           ]
                         },
@@ -40583,7 +40680,7 @@
                           "children": [
                             {
                               "text": "Entidade aberta de previdência complementar, a Equatorial atua com planos previdenciários, empréstimo consignado e pecúlio, autorizada a funcionar em todo o Brasil e regulada pela SUSEP. Ao lado da EQ Seguros, forma o EQ Grupo.",
-                              "textKey": "page-t77"
+                              "textKey": "page-t81"
                             }
                           ]
                         },
@@ -40603,7 +40700,7 @@
                               "children": [
                                 {
                                   "text": "Conhecer a Equatorial Previdência",
-                                  "textKey": "page-t78"
+                                  "textKey": "page-t82"
                                 }
                               ]
                             },
@@ -40710,7 +40807,7 @@
                       "children": [
                         {
                           "text": "Fale com o EQ Grupo",
-                          "textKey": "page-t79"
+                          "textKey": "page-t83"
                         }
                       ]
                     },
@@ -40722,7 +40819,7 @@
                       "children": [
                         {
                           "text": "Converse com a nossa equipe e entenda como podemos ajudar.",
-                          "textKey": "page-t80"
+                          "textKey": "page-t84"
                         }
                       ]
                     }
@@ -40745,7 +40842,7 @@
                       "children": [
                         {
                           "text": "Ir para Contato",
-                          "textKey": "page-t81"
+                          "textKey": "page-t85"
                         }
                       ]
                     }
@@ -43172,195 +43269,215 @@
           {
             "key": "page-t43",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > p · Já sob nova razão social (desde 1993), Equatorial Previdência Privada, a família Faleiro a",
-            "value": "Já sob nova razão social (desde 1993), Equatorial Previdência Privada, a família Faleiro assume o Conselho Deliberativo e a nova Diretoria."
+            "value": "Já sob nova razão social (desde 1993), Equatorial Previdência Privada, a família Faleiro assume o Conselho Deliberativo e a nova Diretoria. A companhia consolida a atuação em pecúlio, empréstimo consignado e assistência financeira a servidores públicos, trabalho que segue até hoje."
           },
           {
             "key": "page-t44",
+            "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-img > span.yr · 2009",
+            "value": "2009"
+          },
+          {
+            "key": "page-t45",
+            "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > span.tl-year · 2009",
+            "value": "2009"
+          },
+          {
+            "key": "page-t46",
+            "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > p · Conquista do Governo do Acre como parceiro, marco na atuação com servidores públicos. O at",
+            "value": "Conquista do Governo do Acre como parceiro, marco na atuação com servidores públicos. O atendimento permanece ativo até hoje."
+          },
+          {
+            "key": "page-t47",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-img > span.yr · 2014",
             "value": "2014"
           },
           {
-            "key": "page-t45",
+            "key": "page-t48",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > span.tl-year · 2014",
             "value": "2014"
           },
           {
-            "key": "page-t46",
+            "key": "page-t49",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > p · Fundação da Equatorial Microsseguros, primeira seguradora do Brasil a operar exclusivament",
             "value": "Fundação da Equatorial Microsseguros, primeira seguradora do Brasil a operar exclusivamente com microsseguros (Portaria SUSEP nº 6.036/2014)."
           },
           {
-            "key": "page-t47",
+            "key": "page-t50",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-img > span.yr · 2021",
             "value": "2021"
           },
           {
-            "key": "page-t48",
+            "key": "page-t51",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > span.tl-year · 2021",
             "value": "2021"
           },
           {
-            "key": "page-t49",
+            "key": "page-t52",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > p · Reestruturação societária: passa a atuar como EQ Seguros S/A, Seguradora de Vida e Previdê",
             "value": "Reestruturação societária: passa a atuar como EQ Seguros S/A, Seguradora de Vida e Previdência, operando ramos de Microsseguros, Vida e Prestamista, com soluções tecnológicas agregadas."
           },
           {
-            "key": "page-t50",
+            "key": "page-t53",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-img > span.yr · 2025",
             "value": "2025"
           },
           {
-            "key": "page-t51",
+            "key": "page-t54",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > span.tl-year · 2025",
             "value": "2025"
           },
           {
-            "key": "page-t52",
+            "key": "page-t55",
             "label": "section.sec > div.wrap > div.tl > div.tl-item > div.tl-card > div.tl-body > p · Exercício recorde: EQ Seguros com lucro de R$ 9,4 MM e crescimento de 34,8%; Equatorial Pr",
             "value": "Exercício recorde: EQ Seguros com lucro de R$ 9,4 MM e crescimento de 34,8%; Equatorial Previdência com PL de R$ 150,8 MM e superávit de R$ 19,1 MM."
           },
           {
-            "key": "page-t53",
+            "key": "page-t56",
+            "label": "section.sec > div.wrap > div.tl-mais > label.btn · Ver mais",
+            "value": "Ver mais"
+          },
+          {
+            "key": "page-t57",
             "label": "section.sec > div.wrap > div.sechead > span.kicker · O EQ Grupo em números",
             "value": "O EQ Grupo em números"
           },
           {
-            "key": "page-t54",
+            "key": "page-t58",
             "label": "section.sec > div.wrap > div.sechead > h2 · Confiança que se traduz em números",
             "value": "Confiança que se traduz em números"
           },
           {
-            "key": "page-t55",
+            "key": "page-t59",
             "label": "section.sec > div.wrap > div.stat > div.item > div.big · +50 anos",
             "value": "+50 anos"
           },
           {
-            "key": "page-t56",
+            "key": "page-t60",
             "label": "section.sec > div.wrap > div.stat > div.item > div.lbl · De história",
             "value": "De história"
           },
           {
-            "key": "page-t57",
+            "key": "page-t61",
             "label": "section.sec > div.wrap > div.stat > div.item > div.big · +20 mil",
             "value": "+20 mil"
           },
           {
-            "key": "page-t58",
+            "key": "page-t62",
             "label": "section.sec > div.wrap > div.stat > div.item > div.lbl · Clientes ativos",
             "value": "Clientes ativos"
           },
           {
-            "key": "page-t59",
+            "key": "page-t63",
             "label": "section.sec > div.wrap > div.stat > div.item > div.big · +2 milhões",
             "value": "+2 milhões"
           },
           {
-            "key": "page-t60",
+            "key": "page-t64",
             "label": "section.sec > div.wrap > div.stat > div.item > div.lbl · Bilhetes vendidos (2024/2025)",
             "value": "Bilhetes vendidos (2024/2025)"
           },
           {
-            "key": "page-t61",
+            "key": "page-t65",
             "label": "section.sec > div.wrap > div.sechead > span.kicker · Sustentabilidade (ESG)",
             "value": "Sustentabilidade (ESG)"
           },
           {
-            "key": "page-t62",
+            "key": "page-t66",
             "label": "section.sec > div.wrap > div.sechead > h2 · Compromisso ambiental, social e de governança",
             "value": "Compromisso ambiental, social e de governança"
           },
           {
-            "key": "page-t63",
+            "key": "page-t67",
             "label": "section.sec > div.wrap > div.grid > div.card > h4 · Ambiental",
             "value": "Ambiental"
           },
           {
-            "key": "page-t64",
+            "key": "page-t68",
             "label": "section.sec > div.wrap > div.grid > div.card > p · Digitalização e redução de papel (96% de contratos digitais), operação em nuvem.",
             "value": "Digitalização e redução de papel (96% de contratos digitais), operação em nuvem."
           },
           {
-            "key": "page-t65",
+            "key": "page-t69",
             "label": "section.sec > div.wrap > div.grid > div.card > h4 · Social",
             "value": "Social"
           },
           {
-            "key": "page-t66",
+            "key": "page-t70",
             "label": "section.sec > div.wrap > div.grid > div.card > p · Inclusão financeira, microsseguros de baixo custo, crédito responsável e diversidade.",
             "value": "Inclusão financeira, microsseguros de baixo custo, crédito responsável e diversidade."
           },
           {
-            "key": "page-t67",
+            "key": "page-t71",
             "label": "section.sec > div.wrap > div.grid > div.card > h4 · Governança",
             "value": "Governança"
           },
           {
-            "key": "page-t68",
+            "key": "page-t72",
             "label": "section.sec > div.wrap > div.grid > div.card > p · Código de Ética, canal de denúncias, LGPD e gestão de riscos.",
             "value": "Código de Ética, canal de denúncias, LGPD e gestão de riscos."
           },
           {
-            "key": "page-t69",
+            "key": "page-t73",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > span.feat-tag · Compliance",
             "value": "Compliance"
           },
           {
-            "key": "page-t70",
+            "key": "page-t74",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > h2 · Segurança, ética e conformidade",
             "value": "Segurança, ética e conformidade"
           },
           {
-            "key": "page-t71",
+            "key": "page-t75",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > p · Regulação SUSEP, governança, LGPD e a nossa",
             "value": "Regulação SUSEP, governança, LGPD e a nossa "
           },
           {
-            "key": "page-t72",
+            "key": "page-t76",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > p > b · Ouvidoria / canal de denúncias",
             "value": "Ouvidoria / canal de denúncias"
           },
           {
-            "key": "page-t73",
+            "key": "page-t77",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > p · . Tudo o que é crítico no mercado financeiro.",
             "value": ". Tudo o que é crítico no mercado financeiro."
           },
           {
-            "key": "page-t74",
+            "key": "page-t78",
             "label": "section.sec > div.wrap > div.compbox > div.compbox-content > a.link-arrow > span · Ver Compliance",
             "value": "Ver Compliance"
           },
           {
-            "key": "page-t75",
+            "key": "page-t79",
             "label": "section.sec > div.wrap > div.eqprev > div.eqprev-txt > span.kicker · Equatorial",
             "value": "Equatorial"
           },
           {
-            "key": "page-t76",
+            "key": "page-t80",
             "label": "section.sec > div.wrap > div.eqprev > div.eqprev-txt > h2 · Equatorial Previdência Complementar",
             "value": "Equatorial Previdência Complementar"
           },
           {
-            "key": "page-t77",
+            "key": "page-t81",
             "label": "section.sec > div.wrap > div.eqprev > div.eqprev-txt > p · Entidade aberta de previdência complementar, a Equatorial atua com planos previdenciários,",
             "value": "Entidade aberta de previdência complementar, a Equatorial atua com planos previdenciários, empréstimo consignado e pecúlio, autorizada a funcionar em todo o Brasil e regulada pela SUSEP. Ao lado da EQ Seguros, forma o EQ Grupo."
           },
           {
-            "key": "page-t78",
+            "key": "page-t82",
             "label": "section.sec > div.wrap > div.eqprev > div.eqprev-txt > a.link-arrow > span · Conhecer a Equatorial Previdência",
             "value": "Conhecer a Equatorial Previdência"
           },
           {
-            "key": "page-t79",
+            "key": "page-t83",
             "label": "section.sec > div.wrap > div.sechead > h2 · Fale com o EQ Grupo",
             "value": "Fale com o EQ Grupo"
           },
           {
-            "key": "page-t80",
+            "key": "page-t84",
             "label": "section.sec > div.wrap > div.sechead > p.lead · Converse com a nossa equipe e entenda como podemos ajudar.",
             "value": "Converse com a nossa equipe e entenda como podemos ajudar."
           },
           {
-            "key": "page-t81",
+            "key": "page-t85",
             "label": "section.sec > div.wrap > div.btn-row > a.btn · Ir para Contato",
             "value": "Ir para Contato"
           }
