@@ -618,7 +618,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 /* variante sobreposta ao hero */
 /* display:flow-root impede que a margem negativa dos cards colapse e
    arraste o fundo da faixa para cima, cobrindo o divisor do hero */
-.stat-wrap{position:relative;z-index:6;padding-bottom:64px;background:var(--paper-2);display:flow-root;}
+.stat-wrap{position:relative;z-index:6;padding-bottom:64px;background:var(--paper);display:flow-root;}
 .stat.over{margin-top:-104px;}
 .stat.over .item{
   background:var(--navy-deep);border:1px solid rgba(255,255,255,.09);border-top:none;
