@@ -2228,24 +2228,24 @@
         "inicio": false
       },
       "page-t53": {
-        "secao": "O EQ Grupo em números",
-        "inicio": true
+        "secao": "Nossa história",
+        "inicio": false
       },
       "page-t54": {
-        "secao": "O EQ Grupo em números",
+        "secao": "Nossa história",
         "inicio": false
       },
       "page-t55": {
-        "secao": "O EQ Grupo em números",
+        "secao": "Nossa história",
         "inicio": false
       },
       "page-t56": {
-        "secao": "O EQ Grupo em números",
+        "secao": "Nossa história",
         "inicio": false
       },
       "page-t57": {
         "secao": "O EQ Grupo em números",
-        "inicio": false
+        "inicio": true
       },
       "page-t58": {
         "secao": "O EQ Grupo em números",
@@ -2260,24 +2260,24 @@
         "inicio": false
       },
       "page-t61": {
-        "secao": "Sustentabilidade (ESG)",
-        "inicio": true
+        "secao": "O EQ Grupo em números",
+        "inicio": false
       },
       "page-t62": {
-        "secao": "Sustentabilidade (ESG)",
+        "secao": "O EQ Grupo em números",
         "inicio": false
       },
       "page-t63": {
-        "secao": "Sustentabilidade (ESG)",
+        "secao": "O EQ Grupo em números",
         "inicio": false
       },
       "page-t64": {
-        "secao": "Sustentabilidade (ESG)",
+        "secao": "O EQ Grupo em números",
         "inicio": false
       },
       "page-t65": {
         "secao": "Sustentabilidade (ESG)",
-        "inicio": false
+        "inicio": true
       },
       "page-t66": {
         "secao": "Sustentabilidade (ESG)",
@@ -2291,31 +2291,27 @@
         "secao": "Sustentabilidade (ESG)",
         "inicio": false
       },
+      "page-t69": {
+        "secao": "Sustentabilidade (ESG)",
+        "inicio": false
+      },
+      "page-t70": {
+        "secao": "Sustentabilidade (ESG)",
+        "inicio": false
+      },
+      "page-t71": {
+        "secao": "Sustentabilidade (ESG)",
+        "inicio": false
+      },
+      "page-t72": {
+        "secao": "Sustentabilidade (ESG)",
+        "inicio": false
+      },
       "page-i3": {
         "secao": "Compliance",
         "inicio": true
       },
-      "page-t69": {
-        "secao": "Compliance",
-        "inicio": true
-      },
-      "page-t70": {
-        "secao": "Compliance",
-        "inicio": false
-      },
-      "page-t71": {
-        "secao": "Compliance",
-        "inicio": false
-      },
-      "page-t72": {
-        "secao": "Compliance",
-        "inicio": false
-      },
       "page-t73": {
-        "secao": "Compliance",
-        "inicio": false
-      },
-      "page-l2": {
         "secao": "Compliance",
         "inicio": true
       },
@@ -2324,14 +2320,34 @@
         "inicio": false
       },
       "page-t75": {
-        "secao": "Equatorial",
-        "inicio": true
+        "secao": "Compliance",
+        "inicio": false
       },
       "page-t76": {
-        "secao": "Equatorial",
+        "secao": "Compliance",
         "inicio": false
       },
       "page-t77": {
+        "secao": "Compliance",
+        "inicio": false
+      },
+      "page-l2": {
+        "secao": "Compliance",
+        "inicio": true
+      },
+      "page-t78": {
+        "secao": "Compliance",
+        "inicio": false
+      },
+      "page-t79": {
+        "secao": "Equatorial",
+        "inicio": true
+      },
+      "page-t80": {
+        "secao": "Equatorial",
+        "inicio": false
+      },
+      "page-t81": {
         "secao": "Equatorial",
         "inicio": false
       },
@@ -2339,7 +2355,7 @@
         "secao": "Equatorial",
         "inicio": true
       },
-      "page-t78": {
+      "page-t82": {
         "secao": "Equatorial",
         "inicio": false
       },
@@ -2347,11 +2363,11 @@
         "secao": "Equatorial",
         "inicio": true
       },
-      "page-t79": {
+      "page-t83": {
         "secao": "Fale com o EQ Grupo",
         "inicio": true
       },
-      "page-t80": {
+      "page-t84": {
         "secao": "Fale com o EQ Grupo",
         "inicio": false
       },
@@ -2359,7 +2375,7 @@
         "secao": "Fale com o EQ Grupo",
         "inicio": true
       },
-      "page-t81": {
+      "page-t85": {
         "secao": "Fale com o EQ Grupo",
         "inicio": false
       }

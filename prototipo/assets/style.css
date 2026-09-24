@@ -988,3 +988,12 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 @media(max-width:760px){.case-cols{grid-template-columns:1fr;gap:38px;}}
 @media(max-width:640px){.casegrid{grid-template-columns:1fr;}}
 .case-strip{margin-top:56px;}
+
+/* Linha do tempo: mostra os três primeiros marcos e guarda o resto atrás do
+   "Ver mais". Só CSS, para o protótipo estático e o site se comportarem igual. */
+.tl-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;}
+.tl-toggle:not(:checked) ~ .tl .tl-item:nth-child(n+4){display:none;}
+.tl-toggle:not(:checked) ~ .tl{margin-bottom:0;}
+.tl-mais{display:flex;justify-content:center;margin-top:34px;}
+.tl-mais label{cursor:pointer;}
+.tl-toggle:checked ~ .tl-mais{display:none;}
