@@ -14,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: settings.defaultDescription || undefined,
     icons: { icon: uploadURL(settings.favicon) || '/assets/eq-simbolo.png' },
     openGraph: openGraph(settings),
+    twitter: { card: 'summary_large_image' },
   }
 }
 export default function Layout({ children }: { children: ReactNode }) {

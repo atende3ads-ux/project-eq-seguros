@@ -208,10 +208,18 @@ export interface Page {
       }[]
     | null;
   /**
+   * O termo principal que alguém digitaria no Google para encontrar esta página, como "seguro de vida". Não aparece no site: serve para a análise abaixo.
+   */
+  focusKeyphrase?: string | null;
+  /**
    * Sem o nome do site: ele é acrescentado automaticamente, conforme "Configurações do site".
    */
   title: string;
   description?: string | null;
+  /**
+   * Prévia desta página ao compartilhar o link no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px. Sem seleção, usa a imagem padrão de "Configurações do site".
+   */
+  featuredImage?: (number | null) | Media;
   status?: ('published' | 'draft') | null;
   slug: string;
   updatedAt: string;
@@ -416,8 +424,10 @@ export interface PagesSelect<T extends boolean = true> {
         href?: T;
         id?: T;
       };
+  focusKeyphrase?: T;
   title?: T;
   description?: T;
+  featuredImage?: T;
   status?: T;
   slug?: T;
   updatedAt?: T;

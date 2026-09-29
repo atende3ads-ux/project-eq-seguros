@@ -39,9 +39,14 @@ export const Pages: CollectionConfig = {
     { type: 'tabs', tabs: [
       { label: 'Conteúdo da página', description: 'O que aparece para quem visita o site.', fields: contentFields },
       { label: 'SEO e publicação', description: 'Como a página aparece na busca e se está visível.', fields: [
+        { name: 'focusKeyphrase', label: 'Frase-chave foco', type: 'text',
+          admin: { description: 'O termo principal que alguém digitaria no Google para encontrar esta página, como "seguro de vida". Não aparece no site: serve para a análise abaixo.' } },
         { name: 'title', label: 'Título SEO', type: 'text', required: true,
           admin: { description: 'Sem o nome do site: ele é acrescentado automaticamente, conforme "Configurações do site".' } },
         { name: 'description', label: 'Descrição SEO', type: 'textarea' },
+        { name: 'featuredImage', label: 'Imagem de destaque', type: 'upload', relationTo: 'media',
+          admin: { description: 'Prévia desta página ao compartilhar o link no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px. Sem seleção, usa a imagem padrão de "Configurações do site".' } },
+        { name: 'seoAnalysis', type: 'ui', admin: { components: { Field: '/components/admin/SeoAnalysis' } } },
         { name: 'status', label: 'Visibilidade', type: 'select', defaultValue: 'published', options: [{ label: 'Publicada', value: 'published' }, { label: 'Rascunho', value: 'draft' }] },
         { name: 'slug', label: 'Identificador da página', type: 'text', required: true, unique: true, admin: { hidden: true, readOnly: true } },
       ] },

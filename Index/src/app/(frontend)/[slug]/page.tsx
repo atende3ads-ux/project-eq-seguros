@@ -15,11 +15,11 @@ export async function generateMetadata({ params, searchParams }: Args) {
     const record = records.find((r) => r.slug === c) || (!c ? records[0] : undefined)
     const title = pageTitle(record ? `${record.titulo} | Cases` : page?.title, siteName, slug)
     const description = record?.resumo || page?.description || fallback
-    return { title, description, openGraph: openGraph(settings, { title, description }) }
+    return { title, description, openGraph: openGraph(settings, { title, description, image: page?.featuredImage }) }
   }
   const title = pageTitle(page?.title, siteName, slug)
   const description = page?.description || fallback
-  return { title, description, openGraph: openGraph(settings, { title, description, url: `/${slug}` }), alternates: { canonical: `/${slug}` } }
+  return { title, description, openGraph: openGraph(settings, { title, description, url: `/${slug}`, image: page?.featuredImage }), alternates: { canonical: `/${slug}` } }
 }
 export default async function Page({ params, searchParams }: Args) {
   const { slug } = await params

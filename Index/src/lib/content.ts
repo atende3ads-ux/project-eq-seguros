@@ -12,7 +12,7 @@ export const templates = prototype.pages as unknown as PageTemplate[]
 export const getPageContent = cache(async (slug: string) => {
   const payload = await getCMS()
   const result = await payload.find({ collection: 'pages', where: { slug: { equals: slug } }, limit: 1, depth: 1, overrideAccess: false })
-  return result.docs[0] as unknown as (Content & { title: string; description?: string }) | undefined
+  return result.docs[0] as unknown as (Content & { title: string; description?: string; featuredImage?: Upload }) | undefined
 })
 export const getSiteContent = cache(async () => {
   const payload = await getCMS()

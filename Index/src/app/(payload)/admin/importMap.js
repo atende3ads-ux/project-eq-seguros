@@ -1,4 +1,5 @@
 import { default as default_79aa9ab158dd045fc61368fff7d061cb } from '../../../components/admin/SectionsEditor'
+import { default as default_00363dae7a4e558969fc283e74f0d381 } from '../../../components/admin/SeoAnalysis'
 import { default as default_dfe4008080d895d460898c3a6155e9ba } from '../../../components/admin/Icon'
 import { default as default_91a09b539d3c86b0aebf520e7564ce08 } from '../../../components/admin/Logo'
 import { default as default_cb7984f573641b76de8e002f97c0e2ef } from '../../../components/admin/PasswordVisibility'
@@ -8,6 +9,7 @@ import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } f
 /** @type import('payload').ImportMap */
 export const importMap = {
   "/components/admin/SectionsEditor#default": default_79aa9ab158dd045fc61368fff7d061cb,
+  "/components/admin/SeoAnalysis#default": default_00363dae7a4e558969fc283e74f0d381,
   "/components/admin/Icon#default": default_dfe4008080d895d460898c3a6155e9ba,
   "/components/admin/Logo#default": default_91a09b539d3c86b0aebf520e7564ce08,
   "/components/admin/PasswordVisibility#default": default_cb7984f573641b76de8e002f97c0e2ef,
