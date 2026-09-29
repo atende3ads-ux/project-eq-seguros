@@ -3,11 +3,15 @@
     "ajuda": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -39,35 +43,51 @@
       },
       "page-l2": {
         "secao": "Categorias",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t11"
+        ]
       },
       "page-t11": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t12"
+        ]
       },
       "page-t12": {
         "secao": "Categorias",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t13": {
         "secao": "FAQ",
@@ -127,61 +147,89 @@
       },
       "page-l6": {
         "secao": "Acesso do parceiro",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t27",
+          "page-t28"
+        ]
       },
       "page-t27": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t28": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t29",
+          "page-t30"
+        ]
       },
       "page-t29": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t30": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-l8": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t31",
+          "page-t32"
+        ]
       },
       "page-t31": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-t32": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-l9": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t33",
+          "page-t34"
+        ]
       },
       "page-t33": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-t34": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       }
     },
     "api": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -189,11 +237,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -217,19 +269,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t11": {
         "secao": "Hero",
@@ -361,21 +421,29 @@
       },
       "page-l5": {
         "secao": "Vamos integrar?",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t43"
+        ]
       },
       "page-t43": {
         "secao": "Vamos integrar?",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "atendimento": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -399,19 +467,27 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t7"
+        ]
       },
       "page-t7": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t8"
+        ]
       },
       "page-t8": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t9": {
         "secao": "Hero",
@@ -519,51 +595,75 @@
       },
       "page-l4": {
         "secao": "Sinistros",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t35",
+          "page-t36"
+        ]
       },
       "page-t35": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t36": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t37",
+          "page-t38"
+        ]
       },
       "page-t37": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t38": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-l6": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t39",
+          "page-t40"
+        ]
       },
       "page-t39": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t40": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t41",
+          "page-t42"
+        ]
       },
       "page-t41": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t42": {
         "secao": "Sinistros",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t43": {
         "secao": "Sorteio",
@@ -595,11 +695,15 @@
       },
       "page-l8": {
         "secao": "Sorteio",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t50"
+        ]
       },
       "page-t50": {
         "secao": "Sorteio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-t51": {
         "secao": "Sorteio",
@@ -647,21 +751,29 @@
       },
       "page-l9": {
         "secao": "Precisa de ajuda agora?",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Precisa de ajuda agora?",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       }
     },
     "blog": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -705,7 +817,11 @@
       },
       "page-l2": {
         "secao": "Seção 5",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t12",
+          "page-t13"
+        ]
       },
       "page-i1": {
         "secao": "Seção 5",
@@ -713,15 +829,21 @@
       },
       "page-t12": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t13": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t14",
+          "page-t15"
+        ]
       },
       "page-i2": {
         "secao": "Seção 5",
@@ -729,15 +851,21 @@
       },
       "page-t14": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t15": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t16",
+          "page-t17"
+        ]
       },
       "page-i3": {
         "secao": "Seção 5",
@@ -745,15 +873,21 @@
       },
       "page-t16": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t17": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t18",
+          "page-t19"
+        ]
       },
       "page-i4": {
         "secao": "Seção 5",
@@ -761,15 +895,21 @@
       },
       "page-t18": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t19": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-l6": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t20",
+          "page-t21"
+        ]
       },
       "page-i5": {
         "secao": "Seção 5",
@@ -777,15 +917,21 @@
       },
       "page-t20": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t21": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t22",
+          "page-t23"
+        ]
       },
       "page-i6": {
         "secao": "Seção 5",
@@ -793,29 +939,39 @@
       },
       "page-t22": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t23": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-l8": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t24"
+        ]
       },
       "page-t24": {
         "secao": "Seção 5",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       }
     },
     "case": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -823,11 +979,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -835,11 +995,15 @@
       },
       "page-l3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t5"
+        ]
       },
       "page-t5": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t6": {
         "secao": "Trilha de navegação",
@@ -887,11 +1051,15 @@
       },
       "page-l4": {
         "secao": "Mais cases",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t17"
+        ]
       },
       "page-t17": {
         "secao": "Mais cases",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t18": {
         "secao": "Quer um resultado como esse?",
@@ -903,21 +1071,29 @@
       },
       "page-l5": {
         "secao": "Quer um resultado como esse?",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t20"
+        ]
       },
       "page-t20": {
         "secao": "Quer um resultado como esse?",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "cases": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -925,11 +1101,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -969,39 +1149,57 @@
       },
       "page-l3": {
         "secao": "Por que a EQ",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t13",
+          "page-t14"
+        ]
       },
       "page-t13": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t14": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t15",
+          "page-t16"
+        ]
       },
       "page-t15": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t16": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t17",
+          "page-t18"
+        ]
       },
       "page-t17": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t18": {
         "secao": "Por que a EQ",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t19": {
         "secao": "Seu negócio pode ser o próximo case",
@@ -1013,29 +1211,41 @@
       },
       "page-l6": {
         "secao": "Seu negócio pode ser o próximo case",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t21"
+        ]
       },
       "page-t21": {
         "secao": "Seu negócio pode ser o próximo case",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Seu negócio pode ser o próximo case",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t22"
+        ]
       },
       "page-t22": {
         "secao": "Seu negócio pode ser o próximo case",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       }
     },
     "combos": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -1059,11 +1269,15 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t7"
+        ]
       },
       "page-t7": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-i1": {
         "secao": "Hero",
@@ -1079,39 +1293,57 @@
       },
       "page-l3": {
         "secao": "O que entra nos combos",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t10",
+          "page-t11"
+        ]
       },
       "page-t10": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t11": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t12",
+          "page-t13"
+        ]
       },
       "page-t12": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t13": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t14",
+          "page-t15"
+        ]
       },
       "page-t14": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t15": {
         "secao": "O que entra nos combos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t16": {
         "secao": "Exemplos de combo",
@@ -1155,21 +1387,29 @@
       },
       "page-l6": {
         "secao": "Monte o combo ideal para o seu canal",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t26"
+        ]
       },
       "page-t26": {
         "secao": "Monte o combo ideal para o seu canal",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       }
     },
     "compliance": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -1177,11 +1417,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -1253,39 +1497,57 @@
       },
       "page-l3": {
         "secao": "Documentos e conformidade",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t21",
+          "page-t22"
+        ]
       },
       "page-t21": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t22": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t23",
+          "page-t24"
+        ]
       },
       "page-t23": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t24": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t25",
+          "page-t26"
+        ]
       },
       "page-t25": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t26": {
         "secao": "Documentos e conformidade",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t27": {
         "secao": "Autorizações SUSEP",
@@ -1383,11 +1645,15 @@
     "consignado": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -1395,11 +1661,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -1431,19 +1701,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t11"
+        ]
       },
       "page-t11": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t12"
+        ]
       },
       "page-t12": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -1619,21 +1897,29 @@
       },
       "page-l5": {
         "secao": "Verifique se o seu órgão é conveniado",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t55"
+        ]
       },
       "page-t55": {
         "secao": "Verifique se o seu órgão é conveniado",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "contato": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -1805,21 +2091,29 @@
       },
       "page-l2": {
         "secao": "Onde estamos",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t44"
+        ]
       },
       "page-t44": {
         "secao": "Onde estamos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       }
     },
     "credito": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -1843,19 +2137,27 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t7"
+        ]
       },
       "page-t7": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t8"
+        ]
       },
       "page-t8": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t9": {
         "secao": "Atendimento exclusivo",
@@ -1903,27 +2205,39 @@
       },
       "page-l4": {
         "secao": "Soluções de crédito",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t20",
+          "page-t21"
+        ]
       },
       "page-t20": {
         "secao": "Soluções de crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t21": {
         "secao": "Soluções de crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Soluções de crédito",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t22",
+          "page-t23"
+        ]
       },
       "page-t22": {
         "secao": "Soluções de crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t23": {
         "secao": "Soluções de crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t24": {
         "secao": "Pecúlio",
@@ -1955,11 +2269,15 @@
       },
       "page-l6": {
         "secao": "Pecúlio",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t31"
+        ]
       },
       "page-t31": {
         "secao": "Pecúlio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-i1": {
         "secao": "Pecúlio",
@@ -1999,21 +2317,29 @@
       },
       "page-l7": {
         "secao": "Fale com um especialista em crédito",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t40"
+        ]
       },
       "page-t40": {
         "secao": "Fale com um especialista em crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       }
     },
     "grupo-eq": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -2333,11 +2659,15 @@
       },
       "page-l2": {
         "secao": "Compliance",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t78"
+        ]
       },
       "page-t78": {
         "secao": "Compliance",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t79": {
         "secao": "Equatorial",
@@ -2353,11 +2683,15 @@
       },
       "page-l3": {
         "secao": "Equatorial",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t82"
+        ]
       },
       "page-t82": {
         "secao": "Equatorial",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-i4": {
         "secao": "Equatorial",
@@ -2373,11 +2707,15 @@
       },
       "page-l4": {
         "secao": "Fale com o EQ Grupo",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t85"
+        ]
       },
       "page-t85": {
         "secao": "Fale com o EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       }
     },
     "index": {
@@ -2395,19 +2733,27 @@
       },
       "page-l1": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t4"
+        ]
       },
       "page-t4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l1"
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t5"
+        ]
       },
       "page-t5": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-i1": {
         "secao": "Hero",
@@ -2503,11 +2849,15 @@
       },
       "page-l3": {
         "secao": "O que fazemos",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t27"
+        ]
       },
       "page-t27": {
         "secao": "O que fazemos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-i3": {
         "secao": "O que fazemos",
@@ -2543,11 +2893,15 @@
       },
       "page-l4": {
         "secao": "O que fazemos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t35"
+        ]
       },
       "page-t35": {
         "secao": "O que fazemos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t36": {
         "secao": "Soluções mais procuradas",
@@ -2571,103 +2925,153 @@
       },
       "page-l5": {
         "secao": "Soluções mais procuradas",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t41",
+          "page-t42"
+        ]
       },
       "page-t41": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t42": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-l6": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t43",
+          "page-t44"
+        ]
       },
       "page-t43": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t44": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t45",
+          "page-t46"
+        ]
       },
       "page-t45": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t46": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-l8": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t47",
+          "page-t48"
+        ]
       },
       "page-t47": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-t48": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-l9": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t49",
+          "page-t50"
+        ]
       },
       "page-t49": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-t50": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-l10": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t51",
+          "page-t52"
+        ]
       },
       "page-t51": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l10"
       },
       "page-t52": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l10"
       },
       "page-l11": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t53",
+          "page-t54"
+        ]
       },
       "page-t53": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l11"
       },
       "page-t54": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l11"
       },
       "page-l12": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t55",
+          "page-t56",
+          "page-t57"
+        ]
       },
       "page-t55": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l12"
       },
       "page-t56": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l12"
       },
       "page-t57": {
         "secao": "Soluções mais procuradas",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l12"
       },
       "page-t58": {
         "secao": "Por que o EQ Grupo",
@@ -2843,19 +3247,27 @@
       },
       "page-l13": {
         "secao": "Empréstimo consignado",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t79"
+        ]
       },
       "page-t79": {
         "secao": "Empréstimo consignado",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l13"
       },
       "page-l14": {
         "secao": "Empréstimo consignado",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t80"
+        ]
       },
       "page-t80": {
         "secao": "Empréstimo consignado",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l14"
       },
       "page-t81": {
         "secao": "Empréstimo consignado",
@@ -2887,7 +3299,11 @@
       },
       "page-l15": {
         "secao": "Conteúdos",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t88",
+          "page-t89"
+        ]
       },
       "page-i26": {
         "secao": "Conteúdos",
@@ -2895,15 +3311,21 @@
       },
       "page-t88": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l15"
       },
       "page-t89": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l15"
       },
       "page-l16": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t90",
+          "page-t91"
+        ]
       },
       "page-i27": {
         "secao": "Conteúdos",
@@ -2911,15 +3333,21 @@
       },
       "page-t90": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l16"
       },
       "page-t91": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l16"
       },
       "page-l17": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t92",
+          "page-t93"
+        ]
       },
       "page-i28": {
         "secao": "Conteúdos",
@@ -2927,19 +3355,25 @@
       },
       "page-t92": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l17"
       },
       "page-t93": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l17"
       },
       "page-l18": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t94"
+        ]
       },
       "page-t94": {
         "secao": "Conteúdos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l18"
       },
       "page-t95": {
         "secao": "Pronto para proteger o que mais importa?",
@@ -2955,21 +3389,29 @@
       },
       "page-l19": {
         "secao": "Pronto para proteger o que mais importa?",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t98"
+        ]
       },
       "page-t98": {
         "secao": "Pronto para proteger o que mais importa?",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l19"
       }
     },
     "parceiros": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -2993,11 +3435,15 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t7"
+        ]
       },
       "page-t7": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-i1": {
         "secao": "Hero",
@@ -3029,11 +3475,15 @@
       },
       "page-l3": {
         "secao": "Cresça com o EQ Grupo",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t14"
+        ]
       },
       "page-t14": {
         "secao": "Cresça com o EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t15": {
         "secao": "Cresça com o EQ Grupo",
@@ -3049,11 +3499,15 @@
       },
       "page-l4": {
         "secao": "Cresça com o EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t18"
+        ]
       },
       "page-t18": {
         "secao": "Cresça com o EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t19": {
         "secao": "Suporte",
@@ -3069,11 +3523,15 @@
       },
       "page-l5": {
         "secao": "Suporte",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t22"
+        ]
       },
       "page-t22": {
         "secao": "Suporte",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t23": {
         "secao": "Suporte",
@@ -3089,51 +3547,75 @@
       },
       "page-l6": {
         "secao": "Acesso do parceiro",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t26",
+          "page-t27"
+        ]
       },
       "page-t26": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t27": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t28",
+          "page-t29"
+        ]
       },
       "page-t28": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t29": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-l8": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t30",
+          "page-t31"
+        ]
       },
       "page-t30": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-t31": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-l9": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t32",
+          "page-t33"
+        ]
       },
       "page-t32": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-t33": {
         "secao": "Acesso do parceiro",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-t34": {
         "secao": "Seja um parceiro do EQ Grupo",
@@ -3145,21 +3627,29 @@
       },
       "page-l10": {
         "secao": "Seja um parceiro do EQ Grupo",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t36"
+        ]
       },
       "page-t36": {
         "secao": "Seja um parceiro do EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l10"
       }
     },
     "peculio": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -3167,11 +3657,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -3195,11 +3689,15 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-i1": {
         "secao": "Hero",
@@ -3323,21 +3821,29 @@
       },
       "page-l4": {
         "secao": "Garanta o amparo da sua família",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t39"
+        ]
       },
       "page-t39": {
         "secao": "Garanta o amparo da sua família",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       }
     },
     "post": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -3345,11 +3851,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -3437,11 +3947,15 @@
       },
       "page-l3": {
         "secao": "Quer ajuda com este tema?",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t24"
+        ]
       },
       "page-t24": {
         "secao": "Quer ajuda com este tema?",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t25": {
         "secao": "Relacionados",
@@ -3453,7 +3967,11 @@
       },
       "page-l4": {
         "secao": "Relacionados",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t27",
+          "page-t28"
+        ]
       },
       "page-i2": {
         "secao": "Relacionados",
@@ -3461,15 +3979,21 @@
       },
       "page-t27": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t28": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t29",
+          "page-t30"
+        ]
       },
       "page-i3": {
         "secao": "Relacionados",
@@ -3477,15 +4001,21 @@
       },
       "page-t29": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t30": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-l6": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t31",
+          "page-t32"
+        ]
       },
       "page-i4": {
         "secao": "Relacionados",
@@ -3493,21 +4023,27 @@
       },
       "page-t31": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t32": {
         "secao": "Relacionados",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       }
     },
     "privacidade": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -3577,11 +4113,15 @@
     "seguro-acidentes": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -3589,11 +4129,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -3617,19 +4161,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -3845,21 +4397,29 @@
       },
       "page-l5": {
         "secao": "Proteção contra imprevistos",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Proteção contra imprevistos",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "seguro-funeral": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -3867,11 +4427,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -3895,19 +4459,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -4123,21 +4695,29 @@
       },
       "page-l5": {
         "secao": "Poupe a sua família nesse momento",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Poupe a sua família nesse momento",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "seguro-prestamista": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -4145,11 +4725,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -4173,19 +4757,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -4401,21 +4993,29 @@
       },
       "page-l5": {
         "secao": "Proteja a sua carteira de crédito",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Proteja a sua carteira de crédito",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "seguro-viagem": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -4423,11 +5023,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -4451,19 +5055,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -4679,21 +5291,29 @@
       },
       "page-l5": {
         "secao": "Viaje protegido",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Viaje protegido",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "seguro-vida": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -4701,11 +5321,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -4729,19 +5353,27 @@
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-l4": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-i1": {
         "secao": "Hero",
@@ -4957,21 +5589,29 @@
       },
       "page-l5": {
         "secao": "Proteja quem você ama",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t62"
+        ]
       },
       "page-t62": {
         "secao": "Proteja quem você ama",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       }
     },
     "seguros": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -4995,19 +5635,27 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t7"
+        ]
       },
       "page-t7": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t8"
+        ]
       },
       "page-t8": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-t9": {
         "secao": "Portfólio",
@@ -5019,7 +5667,11 @@
       },
       "page-l4": {
         "secao": "Portfólio",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t11",
+          "page-t12"
+        ]
       },
       "page-i1": {
         "secao": "Portfólio",
@@ -5027,15 +5679,21 @@
       },
       "page-t11": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t12": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-l5": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t13",
+          "page-t14"
+        ]
       },
       "page-i2": {
         "secao": "Portfólio",
@@ -5043,15 +5701,21 @@
       },
       "page-t13": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t14": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-l6": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t15",
+          "page-t16"
+        ]
       },
       "page-i3": {
         "secao": "Portfólio",
@@ -5059,15 +5723,21 @@
       },
       "page-t15": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t16": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-l7": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t17",
+          "page-t18"
+        ]
       },
       "page-i4": {
         "secao": "Portfólio",
@@ -5075,15 +5745,21 @@
       },
       "page-t17": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-t18": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       },
       "page-l8": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t19",
+          "page-t20"
+        ]
       },
       "page-i5": {
         "secao": "Portfólio",
@@ -5091,15 +5767,21 @@
       },
       "page-t19": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-t20": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l8"
       },
       "page-l9": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t21",
+          "page-t22"
+        ]
       },
       "page-i6": {
         "secao": "Portfólio",
@@ -5107,15 +5789,21 @@
       },
       "page-t21": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-t22": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l9"
       },
       "page-l10": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t23",
+          "page-t24"
+        ]
       },
       "page-i7": {
         "secao": "Portfólio",
@@ -5123,15 +5811,21 @@
       },
       "page-t23": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l10"
       },
       "page-t24": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l10"
       },
       "page-l11": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t25",
+          "page-t26"
+        ]
       },
       "page-i8": {
         "secao": "Portfólio",
@@ -5139,11 +5833,13 @@
       },
       "page-t25": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l11"
       },
       "page-t26": {
         "secao": "Portfólio",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l11"
       },
       "page-t27": {
         "secao": "Produto × canal",
@@ -5301,11 +5997,15 @@
     "seja-parceiro": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -5313,11 +6013,15 @@
       },
       "page-l2": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t3"
+        ]
       },
       "page-t3": {
         "secao": "Trilha de navegação",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
@@ -5495,11 +6199,15 @@
     "tecnologia": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -5531,19 +6239,27 @@
       },
       "page-l2": {
         "secao": "Hero",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t9"
+        ]
       },
       "page-t9": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l2"
       },
       "page-l3": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "textos": [
+          "page-t10"
+        ]
       },
       "page-t10": {
         "secao": "Hero",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l3"
       },
       "page-i1": {
         "secao": "Hero",
@@ -5599,11 +6315,15 @@
       },
       "page-l4": {
         "secao": "Integração simples",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t20"
+        ]
       },
       "page-t20": {
         "secao": "Integração simples",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l4"
       },
       "page-t21": {
         "secao": "API · Seguro embarcado",
@@ -5687,11 +6407,15 @@
       },
       "page-l5": {
         "secao": "Para quem é",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t41"
+        ]
       },
       "page-t41": {
         "secao": "Para quem é",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l5"
       },
       "page-t42": {
         "secao": "Para quem é",
@@ -5859,11 +6583,15 @@
       },
       "page-l6": {
         "secao": "Cases · Quem já integra",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t61"
+        ]
       },
       "page-t61": {
         "secao": "Cases · Quem já integra",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l6"
       },
       "page-t62": {
         "secao": "Segurança",
@@ -5915,21 +6643,29 @@
       },
       "page-l7": {
         "secao": "Conheça a tecnologia por trás do EQ Grupo",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t74"
+        ]
       },
       "page-t74": {
         "secao": "Conheça a tecnologia por trás do EQ Grupo",
-        "inicio": false
+        "inicio": false,
+        "link": "page-l7"
       }
     },
     "termos": {
       "page-l1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "textos": [
+          "page-t1"
+        ]
       },
       "page-t1": {
         "secao": "Trilha de navegação",
-        "inicio": true
+        "inicio": true,
+        "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
@@ -6028,19 +6764,27 @@
     },
     "header-l2": {
       "secao": "Menu principal",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t6"
+      ]
     },
     "header-t6": {
       "secao": "Menu principal",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l2"
     },
     "header-l3": {
       "secao": "Seguros",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t7"
+      ]
     },
     "header-t7": {
       "secao": "Seguros",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l3"
     },
     "header-t8": {
       "secao": "Seguros",
@@ -6064,83 +6808,123 @@
     },
     "header-l4": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t13",
+        "header-t14",
+        "header-t15"
+      ]
     },
     "header-t13": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l4"
     },
     "header-t14": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l4"
     },
     "header-t15": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l4"
     },
     "header-l5": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t16",
+        "header-t17",
+        "header-t18"
+      ]
     },
     "header-t16": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l5"
     },
     "header-t17": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l5"
     },
     "header-t18": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l5"
     },
     "header-l6": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t19",
+        "header-t20",
+        "header-t21"
+      ]
     },
     "header-t19": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l6"
     },
     "header-t20": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l6"
     },
     "header-t21": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l6"
     },
     "header-l7": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t22",
+        "header-t23",
+        "header-t24"
+      ]
     },
     "header-t22": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l7"
     },
     "header-t23": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l7"
     },
     "header-t24": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l7"
     },
     "header-l8": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t25",
+        "header-t26",
+        "header-t27"
+      ]
     },
     "header-t25": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l8"
     },
     "header-t26": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l8"
     },
     "header-t27": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l8"
     },
     "header-t28": {
       "secao": "Seguros",
@@ -6148,35 +6932,51 @@
     },
     "header-l9": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t29",
+        "header-t30",
+        "header-t31"
+      ]
     },
     "header-t29": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l9"
     },
     "header-t30": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l9"
     },
     "header-t31": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l9"
     },
     "header-l10": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t32",
+        "header-t33",
+        "header-t34"
+      ]
     },
     "header-t32": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l10"
     },
     "header-t33": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l10"
     },
     "header-t34": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l10"
     },
     "header-t35": {
       "secao": "Seguros",
@@ -6184,43 +6984,63 @@
     },
     "header-l11": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t36",
+        "header-t37",
+        "header-t38"
+      ]
     },
     "header-t36": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l11"
     },
     "header-t37": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l11"
     },
     "header-t38": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l11"
     },
     "header-l12": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t39"
+      ]
     },
     "header-t39": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l12"
     },
     "header-l13": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t40"
+      ]
     },
     "header-t40": {
       "secao": "Seguros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l13"
     },
     "header-l14": {
       "secao": "Crédito",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t41"
+      ]
     },
     "header-t41": {
       "secao": "Crédito",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l14"
     },
     "header-t42": {
       "secao": "Crédito",
@@ -6236,75 +7056,111 @@
     },
     "header-l15": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t45",
+        "header-t46",
+        "header-t47"
+      ]
     },
     "header-t45": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l15"
     },
     "header-t46": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l15"
     },
     "header-t47": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l15"
     },
     "header-l16": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t48",
+        "header-t49",
+        "header-t50"
+      ]
     },
     "header-t48": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l16"
     },
     "header-t49": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l16"
     },
     "header-t50": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l16"
     },
     "header-l17": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t51"
+      ]
     },
     "header-t51": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l17"
     },
     "header-l18": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t52"
+      ]
     },
     "header-t52": {
       "secao": "Crédito",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l18"
     },
     "header-l19": {
       "secao": "Menu principal",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t53"
+      ]
     },
     "header-t53": {
       "secao": "Menu principal",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l19"
     },
     "header-l20": {
       "secao": "Menu principal",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t54"
+      ]
     },
     "header-t54": {
       "secao": "Menu principal",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l20"
     },
     "header-l21": {
       "secao": "Para Parceiros",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t55"
+      ]
     },
     "header-t55": {
       "secao": "Para Parceiros",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l21"
     },
     "header-t56": {
       "secao": "Para Parceiros",
@@ -6320,91 +7176,135 @@
     },
     "header-l22": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t59",
+        "header-t60",
+        "header-t61"
+      ]
     },
     "header-t59": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l22"
     },
     "header-t60": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l22"
     },
     "header-t61": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l22"
     },
     "header-l23": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t62",
+        "header-t63",
+        "header-t64"
+      ]
     },
     "header-t62": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l23"
     },
     "header-t63": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l23"
     },
     "header-t64": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l23"
     },
     "header-l24": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t65",
+        "header-t66",
+        "header-t67"
+      ]
     },
     "header-t65": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l24"
     },
     "header-t66": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l24"
     },
     "header-t67": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l24"
     },
     "header-l25": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t68"
+      ]
     },
     "header-t68": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l25"
     },
     "header-l26": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t69"
+      ]
     },
     "header-t69": {
       "secao": "Para Parceiros",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l26"
     },
     "header-l27": {
       "secao": "Menu principal",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t70"
+      ]
     },
     "header-t70": {
       "secao": "Menu principal",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l27"
     },
     "header-l28": {
       "secao": "Menu principal",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "header-t71"
+      ]
     },
     "header-t71": {
       "secao": "Menu principal",
-      "inicio": false
+      "inicio": false,
+      "link": "header-l28"
     },
     "header-l29": {
       "secao": "Botão do topo",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "header-t72"
+      ]
     },
     "header-t72": {
       "secao": "Botão do topo",
-      "inicio": true
+      "inicio": true,
+      "link": "header-l29"
     },
     "footer-i1": {
       "secao": "Marcas do rodapé",
@@ -6456,59 +7356,87 @@
     },
     "footer-l5": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t7"
+      ]
     },
     "footer-t7": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l5"
     },
     "footer-l6": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t8"
+      ]
     },
     "footer-t8": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l6"
     },
     "footer-l7": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t9"
+      ]
     },
     "footer-t9": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l7"
     },
     "footer-l8": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t10"
+      ]
     },
     "footer-t10": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l8"
     },
     "footer-l9": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t11"
+      ]
     },
     "footer-t11": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l9"
     },
     "footer-l10": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t12"
+      ]
     },
     "footer-t12": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l10"
     },
     "footer-l11": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t13"
+      ]
     },
     "footer-t13": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l11"
     },
     "footer-t14": {
       "secao": "Colunas de links",
@@ -6516,51 +7444,75 @@
     },
     "footer-l12": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t15"
+      ]
     },
     "footer-t15": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l12"
     },
     "footer-l13": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t16"
+      ]
     },
     "footer-t16": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l13"
     },
     "footer-l14": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t17"
+      ]
     },
     "footer-t17": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l14"
     },
     "footer-l15": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t18"
+      ]
     },
     "footer-t18": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l15"
     },
     "footer-l16": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t19"
+      ]
     },
     "footer-t19": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l16"
     },
     "footer-l17": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t20"
+      ]
     },
     "footer-t20": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l17"
     },
     "footer-t21": {
       "secao": "Colunas de links",
@@ -6568,11 +7520,15 @@
     },
     "footer-l18": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t22"
+      ]
     },
     "footer-t22": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l18"
     },
     "footer-t23": {
       "secao": "Colunas de links",
@@ -6592,27 +7548,39 @@
     },
     "footer-l19": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t27"
+      ]
     },
     "footer-t27": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l19"
     },
     "footer-l20": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t28"
+      ]
     },
     "footer-t28": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l20"
     },
     "footer-l21": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t29"
+      ]
     },
     "footer-t29": {
       "secao": "Colunas de links",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l21"
     },
     "footer-t30": {
       "secao": "Contatos e ouvidoria",
@@ -6640,19 +7608,27 @@
     },
     "footer-l22": {
       "secao": "Contatos e ouvidoria",
-      "inicio": true
+      "inicio": true,
+      "textos": [
+        "footer-t36"
+      ]
     },
     "footer-t36": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l22"
     },
     "footer-l23": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t37"
+      ]
     },
     "footer-t37": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l23"
     },
     "footer-t38": {
       "secao": "Contatos e ouvidoria",
@@ -6668,11 +7644,15 @@
     },
     "footer-l24": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t41"
+      ]
     },
     "footer-t41": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l24"
     },
     "footer-t42": {
       "secao": "Contatos e ouvidoria",
@@ -6684,11 +7664,15 @@
     },
     "footer-l25": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "textos": [
+        "footer-t44"
+      ]
     },
     "footer-t44": {
       "secao": "Contatos e ouvidoria",
-      "inicio": false
+      "inicio": false,
+      "link": "footer-l25"
     },
     "footer-t45": {
       "secao": "Aviso legal",

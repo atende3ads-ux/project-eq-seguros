@@ -1,4 +1,5 @@
 import type { Field } from 'payload'
+import { validateHref } from '../lib/href'
 
 /**
  * `key` liga cada entrada à posição dela no layout: se mudar, o conteúdo some da página.
@@ -9,6 +10,10 @@ const reference: Field[] = [
   { name: 'label', label: 'Onde aparece no site', type: 'text', admin: { hidden: true, readOnly: true } },
 ]
 
+/** Texto e destino de um mesmo link aparecem juntos, nas duas listas. */
+const linkDestination: Field = { name: 'linkDestination', type: 'ui', admin: { components: { Field: '/components/admin/LinkDestination' } } }
+const linkText: Field = { name: 'linkText', type: 'ui', admin: { components: { Field: '/components/admin/LinkText' } } }
+
 /** Mostra o conteúdo real na linha fechada, no lugar de "Copy 01", "Copy 02"… */
 const rowLabel = { components: { RowLabel: '/components/admin/RowLabel' } }
 
@@ -17,7 +22,8 @@ export const contentFields: Field[] = [
     admin: { initCollapsed: true, description: 'Cada linha é um texto da página. Abra a linha para editar.', ...rowLabel },
     fields: [
       ...reference,
-      { name: 'value', label: 'Conteúdo', type: 'textarea', required: true },
+      { name: 'value', label: 'Texto', type: 'textarea', required: true },
+      linkDestination,
     ] },
   { name: 'images', label: 'Imagens', type: 'array',
     admin: { initCollapsed: true, description: 'Troque a imagem pela biblioteca e mantenha a descrição acessível preenchida.', ...rowLabel },
@@ -31,7 +37,7 @@ export const contentFields: Field[] = [
     admin: { initCollapsed: true, description: 'Destino de cada link e botão da página.', ...rowLabel },
     fields: [
       ...reference,
-      { name: 'href', label: 'Destino', type: 'text', required: true, validate: (value: string | null | undefined) =>
-        !value || /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) || 'Use um caminho /pagina ou um endereço HTTP, e-mail ou telefone válido.' },
+      linkText,
+      { name: 'href', label: 'Link (destino)', type: 'text', required: true, validate: validateHref },
     ] },
 ]

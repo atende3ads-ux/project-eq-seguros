@@ -85,7 +85,7 @@ function mapSections(nodes, texts, { deep = false } = {}) {
   const last = {}
   let generic = 0
 
-  function walk(node, current, top) {
+  function walk(node, current, top, link) {
     const className = node.attrs?.class || ''
     let name = current
 
@@ -102,10 +102,16 @@ function mapSections(nodes, texts, { deep = false } = {}) {
       result[key] = { secao: trim(name || 'Conteúdo'), inicio: last[field] !== name }
       last[field] = name
     }
-    for (const child of node.children || []) walk(child, name, false)
+    // Liga o texto ao link que o envolve, para o painel editar os dois juntos.
+    if (node.textKey && link && result[link]) {
+      result[node.textKey].link ??= link
+      result[link].textos ??= []
+      if (!result[link].textos.includes(node.textKey)) result[link].textos.push(node.textKey)
+    }
+    for (const child of node.children || []) walk(child, name, false, node.linkKey || link)
   }
 
-  for (const node of nodes || []) walk(node, null, true)
+  for (const node of nodes || []) walk(node, null, true, null)
   return result
 }
 

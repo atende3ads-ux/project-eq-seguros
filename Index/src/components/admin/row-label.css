@@ -78,3 +78,18 @@
   font-size: 0.8125rem;
   opacity: 0.75;
 }
+
+/* Destino abaixo do texto (e texto acima do destino): o mesmo link editado num lugar só. */
+.eq-link-pair {
+  margin: 0.75rem 0 1rem;
+}
+
+.eq-link-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--theme-elevation-600);
+}
+
+.eq-link-pair > * + * {
+  margin-top: 1rem;
+}

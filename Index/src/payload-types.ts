@@ -184,9 +184,6 @@ export interface Page {
    */
   copy?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         value: string;
@@ -198,9 +195,6 @@ export interface Page {
    */
   images?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         src: string;
@@ -214,9 +208,6 @@ export interface Page {
    */
   links?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         href: string;
@@ -226,9 +217,6 @@ export interface Page {
   title: string;
   description?: string | null;
   status?: ('published' | 'draft') | null;
-  /**
-   * Define o endereço da página. Não editável.
-   */
   slug: string;
   updatedAt: string;
   createdAt: string;
@@ -529,9 +517,6 @@ export interface Site {
    */
   copy?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         value: string;
@@ -543,9 +528,6 @@ export interface Site {
    */
   images?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         src: string;
@@ -559,9 +541,6 @@ export interface Site {
    */
   links?:
     | {
-        /**
-         * Identificador interno. Não editável.
-         */
         key: string;
         label?: string | null;
         href: string;
