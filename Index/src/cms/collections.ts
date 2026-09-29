@@ -42,7 +42,7 @@ export const Pages: CollectionConfig = {
         { name: 'title', label: 'Título SEO', type: 'text', required: true },
         { name: 'description', label: 'Descrição SEO', type: 'textarea' },
         { name: 'status', label: 'Visibilidade', type: 'select', defaultValue: 'published', options: [{ label: 'Publicada', value: 'published' }, { label: 'Rascunho', value: 'draft' }] },
-        { name: 'slug', label: 'Identificador da página', type: 'text', required: true, unique: true, admin: { readOnly: true, className: 'eq-technical-field', description: 'Define o endereço da página. Não editável.' } },
+        { name: 'slug', label: 'Identificador da página', type: 'text', required: true, unique: true, admin: { hidden: true, readOnly: true } },
       ] },
     ] },
   ],

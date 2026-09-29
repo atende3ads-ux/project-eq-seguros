@@ -2,13 +2,11 @@ import type { Field } from 'payload'
 
 /**
  * `key` liga cada entrada à posição dela no layout: se mudar, o conteúdo some da página.
- * Por isso continua visível e somente-leitura, apenas com menos peso visual.
+ * Fica oculto no painel, mas continua no formulário e é salvo junto com a linha.
  */
 const reference: Field[] = [
-  { name: 'key', label: 'Chave', type: 'text', required: true,
-    admin: { readOnly: true, className: 'eq-technical-field', description: 'Identificador interno. Não editável.' } },
-  { name: 'label', label: 'Onde aparece no site', type: 'text',
-    admin: { readOnly: true, className: 'eq-technical-field' } },
+  { name: 'key', label: 'Chave', type: 'text', required: true, admin: { hidden: true, readOnly: true } },
+  { name: 'label', label: 'Onde aparece no site', type: 'text', admin: { hidden: true, readOnly: true } },
 ]
 
 /** Mostra o conteúdo real na linha fechada, no lugar de "Copy 01", "Copy 02"… */
