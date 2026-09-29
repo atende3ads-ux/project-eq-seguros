@@ -1289,37 +1289,43 @@
         "papel": "Subtítulo"
       },
       "page-t7": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": true,
+        "gerenciado": "posts",
         "papel": "Tag"
       },
       "page-t8": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Tag"
       },
       "page-t9": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Tag"
       },
       "page-t10": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Tag"
       },
       "page-t11": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Tag"
       },
       "page-l2": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": true,
         "grupo": {
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t12",
@@ -1327,40 +1333,44 @@
         ]
       },
       "page-i1": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": true,
         "grupo": {
           "id": "g1",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t12": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l2"
       },
       "page-t13": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l2"
       },
       "page-l3": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t14",
@@ -1368,40 +1378,44 @@
         ]
       },
       "page-i2": {
-        "secao": "Seção 5",
-        "inicio": false,
-        "grupo": {
-          "id": "g2",
-          "tipo": "Item"
-        }
-      },
-      "page-t14": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts"
+      },
+      "page-t14": {
+        "secao": "Lista de posts",
+        "inicio": false,
+        "grupo": {
+          "id": "g2",
+          "tipo": "Item"
+        },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l3"
       },
       "page-t15": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l3"
       },
       "page-l4": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t16",
@@ -1409,40 +1423,44 @@
         ]
       },
       "page-i3": {
-        "secao": "Seção 5",
-        "inicio": false,
-        "grupo": {
-          "id": "g3",
-          "tipo": "Item"
-        }
-      },
-      "page-t16": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts"
+      },
+      "page-t16": {
+        "secao": "Lista de posts",
+        "inicio": false,
+        "grupo": {
+          "id": "g3",
+          "tipo": "Item"
+        },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l4"
       },
       "page-t17": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l4"
       },
       "page-l5": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t18",
@@ -1450,40 +1468,44 @@
         ]
       },
       "page-i4": {
-        "secao": "Seção 5",
-        "inicio": false,
-        "grupo": {
-          "id": "g4",
-          "tipo": "Item"
-        }
-      },
-      "page-t18": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts"
+      },
+      "page-t18": {
+        "secao": "Lista de posts",
+        "inicio": false,
+        "grupo": {
+          "id": "g4",
+          "tipo": "Item"
+        },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l5"
       },
       "page-t19": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l5"
       },
       "page-l6": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g5",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t20",
@@ -1491,40 +1513,44 @@
         ]
       },
       "page-i5": {
-        "secao": "Seção 5",
-        "inicio": false,
-        "grupo": {
-          "id": "g5",
-          "tipo": "Item"
-        }
-      },
-      "page-t20": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g5",
           "tipo": "Item"
         },
+        "gerenciado": "posts"
+      },
+      "page-t20": {
+        "secao": "Lista de posts",
+        "inicio": false,
+        "grupo": {
+          "id": "g5",
+          "tipo": "Item"
+        },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l6"
       },
       "page-t21": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g5",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l6"
       },
       "page-l7": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g6",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t22",
@@ -1532,44 +1558,49 @@
         ]
       },
       "page-i6": {
-        "secao": "Seção 5",
-        "inicio": false,
-        "grupo": {
-          "id": "g6",
-          "tipo": "Item"
-        }
-      },
-      "page-t22": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g6",
           "tipo": "Item"
         },
+        "gerenciado": "posts"
+      },
+      "page-t22": {
+        "secao": "Lista de posts",
+        "inicio": false,
+        "grupo": {
+          "id": "g6",
+          "tipo": "Item"
+        },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l7"
       },
       "page-t23": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
         "grupo": {
           "id": "g6",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l7"
       },
       "page-l8": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t24"
         ]
       },
       "page-t24": {
-        "secao": "Seção 5",
+        "secao": "Lista de posts",
         "inicio": false,
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l8"
       }
@@ -5531,6 +5562,7 @@
           "id": "g20",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t88",
@@ -5543,7 +5575,8 @@
         "grupo": {
           "id": "g20",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t88": {
         "secao": "Conteúdos",
@@ -5552,6 +5585,7 @@
           "id": "g20",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l15"
       },
@@ -5562,6 +5596,7 @@
           "id": "g20",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l15"
       },
@@ -5572,6 +5607,7 @@
           "id": "g21",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t90",
@@ -5584,7 +5620,8 @@
         "grupo": {
           "id": "g21",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t90": {
         "secao": "Conteúdos",
@@ -5593,6 +5630,7 @@
           "id": "g21",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l16"
       },
@@ -5603,6 +5641,7 @@
           "id": "g21",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l16"
       },
@@ -5613,6 +5652,7 @@
           "id": "g22",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t92",
@@ -5625,7 +5665,8 @@
         "grupo": {
           "id": "g22",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t92": {
         "secao": "Conteúdos",
@@ -5634,6 +5675,7 @@
           "id": "g22",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l17"
       },
@@ -5644,6 +5686,7 @@
           "id": "g22",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l17"
       },
@@ -6436,6 +6479,7 @@
       "page-l1": {
         "secao": "Trilha de navegação",
         "inicio": true,
+        "gerenciado": "artigo",
         "papel": "Link",
         "textos": [
           "page-t1"
@@ -6444,17 +6488,20 @@
       "page-t1": {
         "secao": "Trilha de navegação",
         "inicio": true,
+        "gerenciado": "artigo",
         "papel": "Texto do link",
         "link": "page-l1"
       },
       "page-t2": {
         "secao": "Trilha de navegação",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-l2": {
         "secao": "Trilha de navegação",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Link",
         "textos": [
           "page-t3"
@@ -6463,37 +6510,44 @@
       "page-t3": {
         "secao": "Trilha de navegação",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto do link",
         "link": "page-l2"
       },
       "page-t4": {
         "secao": "Trilha de navegação",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t5": {
         "secao": "Trilha de navegação",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t6": {
         "secao": "Hero",
         "inicio": true,
+        "gerenciado": "artigo",
         "papel": "Etiqueta"
       },
       "page-t7": {
         "secao": "Hero",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Título principal"
       },
       "page-t8": {
         "secao": "Hero",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Subtítulo"
       },
       "page-i1": {
         "secao": "Por que isso importa para o parceiro",
-        "inicio": true
+        "inicio": true,
+        "gerenciado": "artigo"
       },
       "page-t9": {
         "secao": "Por que isso importa para o parceiro",
@@ -6502,6 +6556,7 @@
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t10": {
@@ -6511,6 +6566,7 @@
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t11": {
@@ -6520,56 +6576,67 @@
           "id": "g1",
           "tipo": "Item"
         },
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t12": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Título"
       },
       "page-t13": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t14": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Item da lista"
       },
       "page-t15": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Item da lista"
       },
       "page-t16": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Item da lista"
       },
       "page-t17": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Item da lista"
       },
       "page-t18": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Título"
       },
       "page-t19": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t20": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Título"
       },
       "page-t21": {
         "secao": "Por que isso importa para o parceiro",
         "inicio": false,
+        "gerenciado": "artigo",
         "papel": "Texto"
       },
       "page-t22": {
@@ -6613,6 +6680,7 @@
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t27",
@@ -6625,7 +6693,8 @@
         "grupo": {
           "id": "g2",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t27": {
         "secao": "Relacionados",
@@ -6634,6 +6703,7 @@
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l4"
       },
@@ -6644,6 +6714,7 @@
           "id": "g2",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l4"
       },
@@ -6654,6 +6725,7 @@
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t29",
@@ -6666,7 +6738,8 @@
         "grupo": {
           "id": "g3",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t29": {
         "secao": "Relacionados",
@@ -6675,6 +6748,7 @@
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l5"
       },
@@ -6685,6 +6759,7 @@
           "id": "g3",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l5"
       },
@@ -6695,6 +6770,7 @@
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Link",
         "textos": [
           "page-t31",
@@ -6707,7 +6783,8 @@
         "grupo": {
           "id": "g4",
           "tipo": "Item"
-        }
+        },
+        "gerenciado": "posts"
       },
       "page-t31": {
         "secao": "Relacionados",
@@ -6716,6 +6793,7 @@
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Texto do link",
         "link": "page-l6"
       },
@@ -6726,6 +6804,7 @@
           "id": "g4",
           "tipo": "Item"
         },
+        "gerenciado": "posts",
         "papel": "Título",
         "link": "page-l6"
       }

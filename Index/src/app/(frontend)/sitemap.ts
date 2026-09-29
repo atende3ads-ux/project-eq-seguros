@@ -7,6 +7,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const payload = await getCMS()
   const pages = await payload.find({ collection: 'pages', limit: 100, overrideAccess: false })
   const url = process.env.SERVER_URL || 'http://localhost:3000'
-  const hidden = (slug: string) => slug === 'case' || (!casesVisible && casesSlugs.has(slug))
-  return pages.docs.filter((p) => !hidden(p.slug)).map((p) => ({ url: `${url}${p.slug === 'index' ? '/' : '/' + p.slug}`, lastModified: new Date(p.updatedAt) }))
+  // `post` é só o modelo dos artigos; cada post publicado entra com o próprio endereço.
+  const hidden = (slug: string) => slug === 'case' || slug === 'post' || (!casesVisible && casesSlugs.has(slug))
+  const posts = await payload.find({ collection: 'posts', limit: 500, depth: 0, overrideAccess: false, pagination: false })
+  return [
+    ...pages.docs.filter((p) => !hidden(p.slug)).map((p) => ({ url: `${url}${p.slug === 'index' ? '/' : '/' + p.slug}`, lastModified: new Date(p.updatedAt) })),
+    ...posts.docs.map((p) => ({ url: `${url}/blog/${p.slug}`, lastModified: new Date(p.updatedAt) })),
+  ]
 }

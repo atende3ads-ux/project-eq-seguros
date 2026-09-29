@@ -70,6 +70,7 @@ function contentName(node, texts) {
   const heading = findNode(node, (tag) => tag === 'h1' || tag === 'h2')
   return (kicker && textOf(kicker, texts).join(' ').trim())
     || (heading && textOf(heading, texts).join(' ').trim())
+    || (findNode(node, (tag, css) => /\bpost-grid\b/.test(css)) && 'Lista de posts')
     || null
 }
 
@@ -80,7 +81,7 @@ const trim = (name) => (name.length > 48 ? `${name.slice(0, 47)}…` : name)
  * O divisor nasce onde a seção muda — por lista, já que textos, imagens e
  * links são três listas separadas no painel.
  */
-function mapSections(nodes, texts, { deep = false } = {}) {
+function mapSections(nodes, texts, { deep = false, slug } = {}) {
   const result = {}
   const last = {}
   let generic = 0
@@ -104,6 +105,8 @@ function mapSections(nodes, texts, { deep = false } = {}) {
       if (!key || result[key]) continue
       result[key] = { secao: trim(name || 'Conteúdo'), inicio: last[field] !== name }
       if (group) result[key].grupo = group
+      const managed = managedBy(slug, [node, ...ancestors])
+      if (managed) result[key].gerenciado = managed
       last[field] = name
     }
     if (node.linkKey && result[node.linkKey]) {
@@ -143,6 +146,19 @@ function mapSections(nodes, texts, { deep = false } = {}) {
   for (const node of nodes || []) walk(node, null, true, null, [], undefined)
   for (const [key, part] of Object.entries(partOf)) Object.assign(result[key], part)
   return result
+}
+
+const hasClass = (node, name) => (node.attrs?.class || '').split(/\s+/).includes(name)
+/**
+ * Conteúdo que o painel não edita pela página porque vem dos posts:
+ * - 'posts': cards (`.post-grid`) e, no blog, filtros e "carregar mais" ao lado deles;
+ * - 'artigo': na página modelo do post, trilha, topo e texto, que são de cada post.
+ */
+function managedBy(slug, chain) {
+  if (chain.some((node) => hasClass(node, 'post-grid'))) return 'posts'
+  if (slug === 'blog' && chain.some((node) => hasClass(node, 'wrap') && (node.children || []).some((child) => hasClass(child, 'post-grid')))) return 'posts'
+  if (slug === 'post' && chain.some((node) => hasClass(node, 'crumbbar') || hasClass(node, 'phero') || hasClass(node, 'prose'))) return 'artigo'
+  return undefined
 }
 
 const keysOf = (node, field, out = []) => {
@@ -197,7 +213,7 @@ function linkRole(node) {
 const output = { pages: {}, site: {} }
 for (const page of data.pages) {
   const texts = new Map((page.content.copy || []).map((entry) => [entry.key, entry.value]))
-  output.pages[page.slug] = mapSections(page.body, texts)
+  output.pages[page.slug] = mapSections(page.body, texts, { slug: page.slug })
 }
 {
   const texts = new Map((data.site.content.copy || []).map((entry) => [entry.key, entry.value]))

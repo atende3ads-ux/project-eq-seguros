@@ -1,0 +1,58 @@
+/* Filtros e "carregar mais" do blog: botões com o visual das tags do layout. */
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.blog-filter {
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+
+.blog-filter.is-active {
+  background: var(--orange);
+  color: #fff;
+}
+
+.blog-filter:focus-visible,
+.blog-more .link-arrow:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.blog-more {
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.blog-more .link-arrow {
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.blog-empty {
+  margin: 10px 0 0;
+  color: var(--muted, #5b6472);
+}
+
+/* Imagens inseridas no meio do texto do post. */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.blog-preview-bar {
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--orange);
+}

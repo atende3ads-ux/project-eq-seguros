@@ -9,7 +9,7 @@ import './sections-editor.css'
 
 type Item = { key: string; list: List; index: number; entry: Entry; withLink?: boolean }
 type Block = { grupo?: Entry['grupo']; items: Item[] }
-type Section = { name: string; blocks: Block[]; size: number }
+type Section = { name: string; blocks: Block[]; size: number; posts?: boolean }
 type Indexes = Record<List, Map<string, number>>
 
 const LISTS: List[] = ['copy', 'images', 'links']
@@ -35,9 +35,16 @@ export default function SectionsEditor() {
     return buildSections(scopeFor(slug), indexes)
   }, [signature, slug])
 
+  const isModel = Object.values(scopeFor(slug)).some((entry) => entry.gerenciado === 'artigo')
   if (!sections.length) return null
   return (
     <div className="eq-sections">
+      {isModel && (
+        <p className="eq-managed">
+          Este é o modelo usado por todos os posts. Título, imagem e texto vêm de cada post em <a href="/admin/collections/posts">Posts</a>;
+          aqui você edita só o que se repete em todos: a chamada no fim do artigo e o título de &quot;Leia também&quot;.
+        </p>
+      )}
       {sections.map((section, number) => <SectionBlock key={`${number}-${section.name}`} section={section} number={number + 1} />)}
     </div>
   )
@@ -47,13 +54,17 @@ function buildSections(scope: Record<string, Entry>, indexes: Indexes): Section[
   const sections: Section[] = []
   const byName = new Map<string, Section>()
   const used = new Set<string>()
-  const add = (name: string, item: Item) => {
+  const sectionFor = (name: string) => {
     // Os menus suspensos ficam no meio do menu principal no layout; aqui ele continua um bloco só.
     let section = byName.get(name)
     if (!section) {
       sections.push(section = { name, blocks: [], size: 0 })
       byName.set(name, section)
     }
+    return section
+  }
+  const add = (name: string, item: Item) => {
+    const section = sectionFor(name)
     let block = section.blocks.at(-1)
     if (!block || block.grupo?.id !== item.entry.grupo?.id) section.blocks.push(block = { grupo: item.entry.grupo, items: [] })
     // Texto que fecha um link (botão, card) traz o campo do destino junto.
@@ -67,6 +78,12 @@ function buildSections(scope: Record<string, Entry>, indexes: Indexes): Section[
     const list = listOf(key)
     const index = list ? indexes[list].get(key) : undefined
     if (!list || index === undefined) continue
+    // Cards de posts e o modelo do artigo vêm da coleção Posts: saem da edição da página.
+    if (entry.gerenciado) {
+      if (entry.gerenciado === 'posts') sectionFor(entry.secao).posts = true
+      used.add(`${list}:${key}`)
+      continue
+    }
     // Link com texto aparece junto do texto, não como campo solto; link de imagem vem depois dela.
     if (list === 'links' && entry.textos?.some((text) => indexes.copy.has(text))) continue
     if (list === 'links' && entry.imagem && indexes.images.has(entry.imagem)) continue
@@ -99,12 +116,18 @@ function SectionBlock({ section, number }: { section: Section; number: number })
           <span className="eq-section__number">{String(number).padStart(2, '0')}</span>
           <span className="eq-section__name">{section.name}</span>
           <SectionPreview section={section} />
-          <span className="eq-section__count">{section.size} {section.size === 1 ? 'campo' : 'campos'}</span>
+          <span className="eq-section__count">{section.size ? `${section.size} ${section.size === 1 ? 'campo' : 'campos'}` : 'posts do blog'}</span>
         </span>
       }
     >
       {open && (
         <div className="eq-section__body">
+          {section.posts && (
+            <p className="eq-managed">
+              Os cards desta seção mostram os posts publicados, do mais recente para o mais antigo.
+              Para criar ou editar um post, vá em <a href="/admin/collections/posts">Posts</a>.
+            </p>
+          )}
           {section.blocks.map((block, index) => {
             const fields = block.items.map((item) => <ItemFields key={`${item.list}:${item.key}`} item={item} />)
             if (!block.grupo) return fields

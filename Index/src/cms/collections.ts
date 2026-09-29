@@ -101,7 +101,11 @@ export const Cases: CollectionConfig = {
 
 export const Site: GlobalConfig = {
   slug: 'site', label: 'Cabeçalho e rodapé', access: { read: () => true, update: signedIn }, admin: { group: 'Configurações' },
-  fields: [...contentFields, { name: 'bootstrapComplete', type: 'checkbox', defaultValue: false, admin: { hidden: true }, access: { update: () => false } }],
+  fields: [
+    ...contentFields,
+    { name: 'bootstrapComplete', type: 'checkbox', defaultValue: false, admin: { hidden: true }, access: { update: () => false } },
+    { name: 'blogBootstrapComplete', type: 'checkbox', defaultValue: false, admin: { hidden: true }, access: { update: () => false } },
+  ],
 }
 
 /** Informações gerais do site, como em Configurações → Geral do WordPress. */

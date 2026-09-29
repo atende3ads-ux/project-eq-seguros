@@ -7,6 +7,8 @@ import sections from '@/generated/sections.json'
 export type Entry = {
   secao: string; inicio: boolean; papel?: string; parte?: number; partes?: number
   grupo?: { id: string; tipo: string }; link?: string; textos?: string[]; imagem?: string
+  /** Vem dos posts do blog, não da página: 'posts' (cards) ou 'artigo' (modelo do post). */
+  gerenciado?: 'posts' | 'artigo'
 }
 export type Scope = Record<string, Entry>
 

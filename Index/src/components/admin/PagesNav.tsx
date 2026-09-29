@@ -30,7 +30,7 @@ const NAMES: Record<string, string> = {
   cases: 'Cases (listagem)', case: 'Case (detalhe)',
   atendimento: 'Atendimento', ajuda: 'Central de Ajuda', contato: 'Contato',
   'grupo-eq': 'EQ Grupo', compliance: 'Compliance', privacidade: 'Política de Privacidade', termos: 'Termos de Uso',
-  blog: 'Blog (listagem)', post: 'Post (detalhe)',
+  blog: 'Blog (página)', post: 'Modelo do post',
 }
 
 export default async function PagesNav() {

@@ -2,6 +2,8 @@ import { createElement, Fragment } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import type { Content, TemplateNode, CaseRecord } from '@/lib/types'
 import { CaseCards, CasesListing } from '../Cases'
+import { BlogListing, PostCards } from '../Blog'
+import type { PostCard } from '@/lib/blog'
 import { segments, imageURL, casesVisible, casesSectionIds, isCasesHref } from '@/lib/cases'
 
 const names: Record<string, string> = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', viewbox: 'viewBox', preserveaspectratio: 'preserveAspectRatio', crossorigin: 'crossOrigin', colspan: 'colSpan', rowspan: 'rowSpan', readonly: 'readOnly', maxlength: 'maxLength', srcset: 'srcSet', 'xlink:href': 'xlinkHref', 'xmlns:xlink': 'xmlnsXlink', frameborder: 'frameBorder', allowfullscreen: 'allowFullScreen', referrerpolicy: 'referrerPolicy', contenteditable: 'contentEditable', autocomplete: 'autoComplete', spellcheck: 'spellCheck' }
@@ -13,8 +15,12 @@ function style(value: string): CSSProperties {
     return [key.startsWith('--') ? key : key.replace(/-([a-z])/g, (_, c) => c.toUpperCase()), part.slice(index + 1).trim()]
   }))
 }
-type Args = { nodes: TemplateNode[]; content: Content; records?: CaseRecord[]; selectedCase?: CaseRecord }
-export function Template({ nodes, content, records = [], selectedCase }: Args) {
+/**
+ * `posts`: os cards fixos do layout (`.post-grid`) passam a mostrar posts publicados.
+ * `blogListing`: na página do blog, filtros, grade e "carregar mais" viram a listagem com filtro.
+ */
+type Args = { nodes: TemplateNode[]; content: Content; records?: CaseRecord[]; selectedCase?: CaseRecord; posts?: PostCard[]; blogListing?: boolean }
+export function Template({ nodes, content, records = [], selectedCase, posts, blogListing }: Args) {
   const texts = new Map(content.copy?.map((entry) => [entry.key, entry.value]))
   const images = new Map(content.images?.map((entry) => [entry.key, entry]))
   const links = new Map(content.links?.map((entry) => [entry.key, entry.href]))
@@ -28,7 +34,11 @@ export function Template({ nodes, content, records = [], selectedCase }: Args) {
    * menu e rodapé que levam até eles. Some o `li` inteiro, não só a âncora,
    * para não sobrar marcador de lista vazio.
    */
+  const classOf = (node: TemplateNode) => (node.attrs?.class || '').split(' ')
+  const hasPostGrid = (node: TemplateNode) => subtree(node, (n) => classOf(n).includes('post-grid'))
   function hide(node: TemplateNode): boolean {
+    // Sem posts publicados para mostrar, some a seção de cards inteira (não fica um título sem nada embaixo).
+    if (posts && !posts.length && !blogListing && node.tag === 'section' && hasPostGrid(node)) return true
     if (casesVisible) return false
     if (subtree(node, (n) => Boolean(n.attrs?.id && casesSectionIds.has(n.attrs.id)))) return true
     if (node.tag !== 'a' && node.tag !== 'li') return false
@@ -41,6 +51,12 @@ export function Template({ nodes, content, records = [], selectedCase }: Args) {
     const id = node.attrs?.id
     if (hasCaseListing && id === 'cases-filtro') return <CasesListing key={key} records={records}/>
     if (hasCaseListing && id === 'cases-grid') return null
+    if (posts && blogListing && classOf(node).includes('wrap') && node.children?.some((child) => classOf(child).includes('post-grid'))) {
+      return <div className="wrap" key={key}><BlogListing posts={posts}/></div>
+    }
+    if (posts && classOf(node).includes('post-grid')) {
+      return <div className="post-grid" key={key}><PostCards posts={posts.slice(0, node.children?.filter((child) => child.tag).length || 3)}/></div>
+    }
     const attrs: Record<string, unknown> = { key }
     for (const [name, value] of Object.entries(node.attrs || {})) {
       if (/^on/i.test(name)) continue

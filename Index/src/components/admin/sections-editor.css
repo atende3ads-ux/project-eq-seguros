@@ -115,3 +115,19 @@
   .eq-section__preview { display: none; }
   .eq-group { padding: 0.75rem; }
 }
+
+/* Aviso de conteúdo que vem dos posts do blog, com o caminho para editá-lo. */
+.eq-managed {
+  margin: 0;
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-left: 3px solid var(--eq-orange, #e09a3e);
+  border-radius: var(--style-radius-s, 3px);
+  background: var(--theme-elevation-50);
+}
+
+.eq-managed a {
+  font-weight: 600;
+  text-decoration: underline;
+}

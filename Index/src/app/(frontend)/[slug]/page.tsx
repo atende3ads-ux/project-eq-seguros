@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import { SitePage } from '@/components/SitePage'
 import { getPageContent, getCases, getSettings } from '@/lib/content'
 import { pageTitle } from '@/lib/site-title'
@@ -23,6 +24,8 @@ export async function generateMetadata({ params, searchParams }: Args) {
 }
 export default async function Page({ params, searchParams }: Args) {
   const { slug } = await params
+  // A antiga página fixa de artigo virou o modelo dos posts; cada post tem seu endereço em /blog/…
+  if (slug === 'post') redirect('/blog')
   const { c } = await searchParams
   return <SitePage slug={slug} caseSlug={c}/>
 }

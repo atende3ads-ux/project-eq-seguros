@@ -3,13 +3,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useDocumentInfo, useFormFields } from '@payloadcms/ui'
 import { pageTitle } from '@/lib/site-title'
+import { plainText } from '@/lib/blog'
 import { scopeFor } from './content-map'
 import './seo-analysis.css'
 
 type Status = 'good' | 'ok' | 'bad'
 type Check = { status: Status; text: string }
 type Snapshot = {
-  keyphrase: string; title: string; description: string; slug: string; featured: boolean
+  post: boolean; keyphrase: string; title: string; description: string; slug: string; featured: boolean
   headings: string[]; opening: string[]; texts: string[]; alts: string[]
 }
 type SiteSettings = { siteName?: string; defaultDescription?: string | null; shareImage?: unknown }
@@ -34,10 +35,20 @@ function mentions(text: string, phrase: string) {
  * da frase-chave e dos tamanhos. Só orienta; nada aqui impede de salvar.
  */
 export default function SeoAnalysis() {
-  const { id } = useDocumentInfo()
+  const { id, collectionSlug } = useDocumentInfo()
+  const post = collectionSlug === 'posts'
   const raw = useFormFields(([fields]) => {
     const value = (path: string) => String(fields[path]?.value ?? '')
     const slug = value('slug')
+    if (post) {
+      // Post: título e resumo valem quando os campos de SEO estão vazios; o texto vem do editor.
+      const blocks = ((fields.content?.value as { root?: { children?: unknown[] } } | undefined)?.root?.children || []).map(plainText).filter((text) => text.trim())
+      const snapshot: Snapshot = {
+        post, keyphrase: value('focusKeyphrase').trim(), title: value('seoTitle') || value('title'), description: value('seoDescription') || value('excerpt'), slug,
+        featured: Boolean(fields.featuredImage?.value), headings: [value('title')], opening: blocks.slice(0, 1), texts: blocks, alts: [],
+      }
+      return JSON.stringify(snapshot)
+    }
     const scope = scopeFor(slug)
     const copy: { key: string; value: string }[] = []
     for (let i = 0; fields[`copy.${i}.key`]; i += 1) copy.push({ key: value(`copy.${i}.key`), value: value(`copy.${i}.value`) })
@@ -45,7 +56,7 @@ export default function SeoAnalysis() {
     for (let i = 0; fields[`images.${i}.key`]; i += 1) alts.push(value(`images.${i}.alt`))
     const firstSection = copy.length ? scope[copy[0].key]?.secao : undefined
     const snapshot: Snapshot = {
-      keyphrase: value('focusKeyphrase').trim(), title: value('title'), description: value('description'), slug,
+      post, keyphrase: value('focusKeyphrase').trim(), title: value('title'), description: value('description'), slug,
       featured: Boolean(fields.featuredImage?.value),
       headings: copy.filter((item) => scope[item.key]?.papel === 'Título principal').map((item) => item.value),
       opening: copy.filter((item) => scope[item.key]?.secao === firstSection).map((item) => item.value),
@@ -68,13 +79,13 @@ export default function SeoAnalysis() {
     const timer = setTimeout(() => {
       const query = new URLSearchParams({ 'where[focusKeyphrase][equals]': data.keyphrase, depth: '0', limit: '5' })
       if (id) query.set('where[id][not_equals]', String(id))
-      fetch(`/api/pages?${query}`, { credentials: 'include' }).then((r) => r.json())
+      fetch(`/api/${post ? 'posts' : 'pages'}?${query}`, { credentials: 'include' }).then((r) => r.json())
         .then((result) => setUsedIn((result.docs || []).map((doc: { title: string }) => doc.title))).catch(() => {})
     }, 600)
     return () => clearTimeout(timer)
-  }, [data.keyphrase, id])
+  }, [data.keyphrase, id, post])
 
-  const fullTitle = pageTitle(data.title, settings.siteName || '', data.slug)
+  const fullTitle = pageTitle(data.title, settings.siteName || '', post ? 'post' : data.slug)
   const description = data.description.trim()
   const checks = analyse(data, fullTitle, description, Boolean(settings.shareImage), usedIn)
   const score: Status = checks.some((check) => check.status === 'bad') ? 'bad' : checks.some((check) => check.status === 'ok') ? 'ok' : 'good'
@@ -89,7 +100,7 @@ export default function SeoAnalysis() {
       </div>
 
       <div className="eq-seo__snippet" aria-label="Prévia no Google">
-        <span className="eq-seo__snippet-url">{host} {data.slug && data.slug !== 'index' ? `› ${data.slug}` : ''}</span>
+        <span className="eq-seo__snippet-url">{host} {post ? `› blog › ${data.slug}` : data.slug && data.slug !== 'index' ? `› ${data.slug}` : ''}</span>
         <span className="eq-seo__snippet-title">{fullTitle.length > 60 ? `${fullTitle.slice(0, 59)}…` : fullTitle}</span>
         <span className="eq-seo__snippet-description">
           {shownDescription ? (shownDescription.length > 156 ? `${shownDescription.slice(0, 155)}…` : shownDescription) : 'Sem descrição: o Google escolhe um trecho da página.'}
@@ -120,16 +131,22 @@ function analyse(data: Snapshot, fullTitle: string, description: string, hasDefa
     if (size > 4) checks.push({ status: 'ok', text: `A frase-chave tem ${size} palavras importantes. Frases curtas, de até 4, são mais buscadas.` })
     check(mentions(data.title, phrase), 'A frase-chave aparece no título SEO.', 'Inclua a frase-chave no título SEO.')
     check(Boolean(description) && mentions(description, phrase), 'A frase-chave aparece na descrição SEO.', 'Inclua a frase-chave na descrição SEO.')
-    check(mentions(data.headings.join(' '), phrase), 'A frase-chave aparece no título principal da página.', 'O título principal da página (aba Conteúdo) não cita a frase-chave.', 'ok')
-    check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece logo na primeira seção da página.', 'A primeira seção da página não cita a frase-chave.', 'ok')
+    if (data.post) {
+      check(mentions(data.headings.join(' '), phrase), 'A frase-chave aparece no título do post.', 'O título do post não cita a frase-chave.', 'ok')
+      check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece no primeiro parágrafo.', 'O primeiro parágrafo do post não cita a frase-chave.', 'ok')
+    } else {
+      check(mentions(data.headings.join(' '), phrase), 'A frase-chave aparece no título principal da página.', 'O título principal da página (aba Conteúdo) não cita a frase-chave.', 'ok')
+      check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece logo na primeira seção da página.', 'A primeira seção da página não cita a frase-chave.', 'ok')
+    }
     const count = data.texts.filter((text) => mentions(text, phrase)).length
+    const where = data.post ? 'parágrafos do post' : 'textos da página'
     checks.push(count >= 2
-      ? { status: 'good', text: `A frase-chave aparece em ${count} textos da página.` }
+      ? { status: 'good', text: `A frase-chave aparece em ${count} ${where}.` }
       : count === 1
-        ? { status: 'ok', text: 'A frase-chave aparece em só 1 texto da página. Use-a mais vezes, de forma natural.' }
-        : { status: 'bad', text: 'A frase-chave não aparece nos textos da página.' })
+        ? { status: 'ok', text: `A frase-chave aparece em só 1 dos ${where}. Use-a mais vezes, de forma natural.` }
+        : { status: 'bad', text: `A frase-chave não aparece nos ${where}.` })
     if (data.alts.length) check(data.alts.some((alt) => mentions(alt, phrase)), 'Uma imagem cita a frase-chave na descrição.', 'Nenhuma imagem cita a frase-chave na descrição da imagem.', 'ok')
-    check(!usedIn.length, 'A frase-chave não é usada em outra página.', `A mesma frase-chave já é usada em: ${usedIn.join(', ')}. As páginas vão disputar a mesma busca.`, 'ok')
+    check(!usedIn.length, `A frase-chave não é usada em outro${data.post ? ' post' : 'a página'}.`, `A mesma frase-chave já é usada em: ${usedIn.join(', ')}. Os dois vão disputar a mesma busca.`, 'ok')
   }
 
   const length = fullTitle.length
@@ -139,14 +156,14 @@ function analyse(data: Snapshot, fullTitle: string, description: string, hasDefa
       ? { status: 'good', text: `O título tem ${length} caracteres, dentro do ideal (até 60).` }
       : { status: 'ok', text: `O título tem ${length} caracteres e pode ser cortado no Google (ideal: até 60).` })
   checks.push(!description
-    ? { status: 'bad', text: 'Escreva uma descrição SEO: sem ela, o Google escolhe um trecho qualquer da página.' }
+    ? { status: 'bad', text: data.post ? 'Escreva um resumo ou uma descrição SEO: sem eles, o Google escolhe um trecho qualquer do post.' : 'Escreva uma descrição SEO: sem ela, o Google escolhe um trecho qualquer da página.' }
     : description.length < 120
       ? { status: 'ok', text: `A descrição tem ${description.length} caracteres. O ideal é entre 120 e 156.` }
       : description.length <= 156
         ? { status: 'good', text: `A descrição tem ${description.length} caracteres, dentro do ideal.` }
         : { status: 'ok', text: `A descrição tem ${description.length} caracteres e será cortada no Google (ideal: até 156).` })
   checks.push(data.featured
-    ? { status: 'good', text: 'A página tem imagem de destaque para compartilhamento.' }
+    ? { status: 'good', text: `${data.post ? 'O post' : 'A página'} tem imagem de destaque para compartilhamento.` }
     : hasDefaultImage
       ? { status: 'ok', text: 'Sem imagem de destaque: ao compartilhar, aparece a imagem padrão do site.' }
       : { status: 'bad', text: 'Sem imagem de destaque: o link compartilhado aparece sem imagem.' })
