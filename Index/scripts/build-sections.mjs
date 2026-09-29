@@ -84,8 +84,9 @@ function mapSections(nodes, texts, { deep = false } = {}) {
   const result = {}
   const last = {}
   let generic = 0
+  let groups = 0
 
-  function walk(node, current, top, link) {
+  function walk(node, current, top, link, ancestors, group) {
     const className = node.attrs?.class || ''
     let name = current
 
@@ -95,24 +96,102 @@ function mapSections(nodes, texts, { deep = false } = {}) {
     else if (!deep && top) name = contentName(node, texts) || `Seção ${(generic += 1)}`
     else if (deep && node.tag === 'footer') name = 'Rodapé'
     else if (deep && (node.tag === 'header' || node.tag === 'nav')) name = 'Menu principal'
+    // Uma seção nova começa sem grupo aberto.
+    if (name !== current) group = undefined
 
     for (const field of FIELDS) {
       const key = node[field]
       if (!key || result[key]) continue
       result[key] = { secao: trim(name || 'Conteúdo'), inicio: last[field] !== name }
+      if (group) result[key].grupo = group
       last[field] = name
     }
+    if (node.linkKey && result[node.linkKey]) {
+      result[node.linkKey].papel = linkRole(node)
+      // Link que só envolve uma imagem (logo, banner): o painel mostra o destino logo depois dela.
+      const image = keysOf(node, 'textKey').length ? undefined : keysOf(node, 'imageKey')[0]
+      if (image) result[node.linkKey].imagem = image
+    }
+    if (node.textKey) result[node.textKey].papel = textRole(ancestors)
     // Liga o texto ao link que o envolve, para o painel editar os dois juntos.
     if (node.textKey && link && result[link]) {
       result[node.textKey].link ??= link
       result[link].textos ??= []
       if (!result[link].textos.includes(node.textKey)) result[link].textos.push(node.textKey)
     }
-    for (const child of node.children || []) walk(child, name, false, node.linkKey || link)
+    // Títulos com trecho colorido são quebrados em partes: numera cada uma.
+    if (/^h[1-6]$/.test(node.tag || '')) {
+      const parts = keysOf(node, 'textKey')
+      if (parts.length > 1) parts.forEach((key, index) => { partOf[key] = { parte: index + 1, partes: parts.length } })
+    }
+
+    const children = node.children || []
+    const signature = (child) => child.tag ? `${child.tag}.${(child.attrs?.class || '').split(/\s+/)[0]}` : ''
+    const counts = new Map()
+    for (const child of children) counts.set(signature(child), (counts.get(signature(child)) || 0) + 1)
+    for (const child of children) {
+      let childGroup = group
+      // Blocos repetidos lado a lado (cards, itens de FAQ…) viram um grupo, se tiverem mais de um conteúdo.
+      if (!group && child.tag && counts.get(signature(child)) > 1 && editable(child) > 1) {
+        childGroup = { id: `g${(groups += 1)}`, tipo: groupType(child) }
+      }
+      walk(child, name, false, node.linkKey || link, [node, ...ancestors], childGroup)
+    }
   }
 
-  for (const node of nodes || []) walk(node, null, true, null)
+  const partOf = {}
+  for (const node of nodes || []) walk(node, null, true, null, [], undefined)
+  for (const [key, part] of Object.entries(partOf)) Object.assign(result[key], part)
   return result
+}
+
+const keysOf = (node, field, out = []) => {
+  if (node[field]) out.push(node[field])
+  for (const child of node.children || []) keysOf(child, field, out)
+  return out
+}
+/** Quantos campos o bloco teria no painel: textos, imagens e links sem texto próprio. */
+function editable(node) {
+  const texts = keysOf(node, 'textKey').length
+  const images = keysOf(node, 'imageKey').length
+  const bare = (function count(n, inLink) {
+    let total = n.linkKey && !keysOf(n, 'textKey').length ? 1 : 0
+    for (const child of n.children || []) total += count(child, inLink || Boolean(n.linkKey))
+    return total
+  })(node, false)
+  return texts + images + bare
+}
+const is = (node, tag, css) => node.tag === tag && (!css || new RegExp(`\\b${css}\\b`).test(node.attrs?.class || ''))
+
+function groupType(node) {
+  const css = node.attrs?.class || ''
+  if (node.tag === 'details' || /\b(faq|fa)\b/.test(css)) return 'Pergunta'
+  if (/card/.test(css)) return 'Card'
+  if (/\b(step|etapa)\b/.test(css)) return 'Etapa'
+  return 'Item'
+}
+
+/** Nome do campo para quem edita, lido dos elementos em volta do texto (do mais próximo ao mais distante). */
+function textRole(ancestors) {
+  const find = (test) => ancestors.find(test)
+  if (find((n) => is(n, 'a', 'dd-cat'))) return 'Aba do menu'
+  const heading = find((n) => /^h[1-6]$/.test(n.tag || ''))
+  if (heading) return heading.tag === 'h1' ? 'Título principal' : 'Título'
+  if (find((n) => n.tag === 'summary')) return 'Pergunta'
+  if (find((n) => n.tag === 'details' || is(n, 'div', 'fa-body'))) return 'Resposta'
+  if (find((n) => is(n, 'a', 'btn') || n.tag === 'button')) return 'Botão'
+  if (find((n) => n.tag === 'a')) return 'Texto do link'
+  if (find((n) => is(n, 'p', 'lead'))) return 'Subtítulo'
+  if (find((n) => is(n, 'span', 'kicker'))) return 'Etiqueta'
+  if (find((n) => is(n, 'span', 'tag'))) return 'Tag'
+  if (find((n) => n.tag === 'label' || n.tag === 'option' || n.tag === 'select')) return 'Campo do formulário'
+  if (find((n) => n.tag === 'li')) return 'Item da lista'
+  return 'Texto'
+}
+
+function linkRole(node) {
+  if (!keysOf(node, 'textKey').length) return node.attrs?.['aria-label'] ? `Link do ícone (${node.attrs['aria-label']})` : 'Link ao clicar na imagem'
+  return is(node, 'a', 'btn') ? 'Link do botão' : 'Link'
 }
 
 const output = { pages: {}, site: {} }

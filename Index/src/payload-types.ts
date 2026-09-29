@@ -174,16 +174,13 @@ export interface Media {
   focalY?: number | null;
 }
 /**
- * Edite os textos e imagens sem alterar a estrutura visual. As chaves identificam a posição de cada conteúdo.
+ * Cada linha é uma seção da página, na ordem do site. Abra a seção para editar títulos, textos, botões, links e imagens.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
   id: number;
-  /**
-   * Cada linha é um texto da página. Abra a linha para editar.
-   */
   copy?:
     | {
         key: string;
@@ -192,9 +189,6 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Troque a imagem pela biblioteca e mantenha a descrição acessível preenchida.
-   */
   images?:
     | {
         key: string;
@@ -205,9 +199,6 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Destino de cada link e botão da página.
-   */
   links?:
     | {
         key: string;
@@ -548,9 +539,6 @@ export interface Setting {
  */
 export interface Site {
   id: number;
-  /**
-   * Cada linha é um texto da página. Abra a linha para editar.
-   */
   copy?:
     | {
         key: string;
@@ -559,9 +547,6 @@ export interface Site {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Troque a imagem pela biblioteca e mantenha a descrição acessível preenchida.
-   */
   images?:
     | {
         key: string;
@@ -572,9 +557,6 @@ export interface Site {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Destino de cada link e botão da página.
-   */
   links?:
     | {
         key: string;

@@ -1,0 +1,117 @@
+/* Uma linha por seção da página; ao abrir, todos os campos da seção juntos. */
+.eq-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.eq-section__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  min-width: 0;
+  width: 100%;
+}
+
+.eq-section__number {
+  flex: none;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--theme-elevation-500);
+}
+
+.eq-section__name {
+  flex: none;
+  font-weight: 600;
+}
+
+.eq-section__preview {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--theme-elevation-600);
+}
+
+.eq-section__count {
+  flex: none;
+  margin-left: auto;
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  color: var(--theme-elevation-600);
+  background: var(--theme-elevation-100);
+}
+
+.eq-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eq-section__body .field-type {
+  margin: 0;
+}
+
+/* Card, item ou pergunta repetidos: os campos de cada um ficam juntos numa moldura. */
+.eq-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: var(--style-radius-m, 4px);
+}
+
+.eq-group legend {
+  padding: 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.eq-group__preview {
+  font-weight: 400;
+  color: var(--theme-elevation-600);
+}
+
+.eq-image {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eq-image__current {
+  margin: 0;
+}
+
+.eq-image__current img {
+  display: block;
+  max-width: 240px;
+  max-height: 160px;
+  object-fit: contain;
+  object-position: left;
+  border-radius: var(--style-radius-s, 3px);
+  background: var(--theme-elevation-50);
+}
+
+.eq-image__current figcaption {
+  margin-bottom: 0.5rem;
+}
+
+/* Texto do botão e o destino dele, lidos como um par. */
+.eq-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--theme-elevation-150);
+}
+
+@media (max-width: 700px) {
+  .eq-section__preview { display: none; }
+  .eq-group { padding: 0.75rem; }
+}

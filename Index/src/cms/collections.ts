@@ -32,7 +32,7 @@ export const Media: CollectionConfig = {
 
 export const Pages: CollectionConfig = {
   slug: 'pages', labels: { singular: 'Página', plural: 'Páginas do site' },
-  admin: { useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'], description: 'Edite os textos e imagens sem alterar a estrutura visual. As chaves identificam a posição de cada conteúdo.' },
+  admin: { useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'], description: 'Cada linha é uma seção da página, na ordem do site. Abra a seção para editar títulos, textos, botões, links e imagens.' },
   access: { read: ({ req }) => req.user ? true : { status: { equals: 'published' } }, create: adminOnly, update: signedIn, delete: adminOnly },
   // Abas sem `name` são apenas visuais: os campos continuam na raiz do documento.
   fields: [
