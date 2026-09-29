@@ -92,9 +92,11 @@ export interface Config {
   };
   fallbackLocale: null;
   globals: {
+    settings: Setting;
     site: Site;
   };
   globalsSelect: {
+    settings: SettingsSelect<false> | SettingsSelect<true>;
     site: SiteSelect<false> | SiteSelect<true>;
   };
   locale: null;
@@ -214,6 +216,9 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Sem o nome do site: ele é acrescentado automaticamente, conforme "Configurações do site".
+   */
   title: string;
   description?: string | null;
   status?: ('published' | 'draft') | null;
@@ -507,6 +512,37 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
+ * Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "settings".
+ */
+export interface Setting {
+  id: number;
+  /**
+   * Entra no título de todas as páginas: "Blog | EQ Seguros". Na página inicial vem primeiro: "EQ Seguros | …".
+   */
+  siteName: string;
+  /**
+   * PNG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".
+   */
+  logo?: (number | null) | Media;
+  /**
+   * Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada em PNG, de preferência 512 × 512 px. Sem seleção, fica o símbolo da EQ.
+   */
+  favicon?: (number | null) | Media;
+  /**
+   * Usada no Google e nas redes quando a página não tem descrição própria. Cada página tem a sua em "SEO e publicação".
+   */
+  defaultDescription?: string | null;
+  /**
+   * Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px.
+   */
+  shareImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site".
  */
@@ -550,6 +586,20 @@ export interface Site {
   bootstrapComplete?: boolean | null;
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "settings_select".
+ */
+export interface SettingsSelect<T extends boolean = true> {
+  siteName?: T;
+  logo?: T;
+  favicon?: T;
+  defaultDescription?: T;
+  shareImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

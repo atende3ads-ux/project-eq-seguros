@@ -1,17 +1,25 @@
 import { SitePage } from '@/components/SitePage'
-import { getPageContent, getCases } from '@/lib/content'
+import { getPageContent, getCases, getSettings } from '@/lib/content'
+import { pageTitle } from '@/lib/site-title'
+import { openGraph } from '@/lib/share'
 export const dynamic = 'force-dynamic'
 type Args = { params: Promise<{ slug: string }>; searchParams: Promise<{ c?: string }> }
 export async function generateMetadata({ params, searchParams }: Args) {
   const { slug } = await params
-  const page = await getPageContent(slug)
+  const [page, settings] = await Promise.all([getPageContent(slug), getSettings()])
+  const siteName = settings.siteName || ''
+  const fallback = settings.defaultDescription || undefined
   if (slug === 'case') {
     const { c } = await searchParams
     const records = await getCases()
     const record = records.find((r) => r.slug === c) || (!c ? records[0] : undefined)
-    return { title: record ? `${record.titulo} | Cases | EQ Seguros` : page?.title, description: record?.resumo || page?.description }
+    const title = pageTitle(record ? `${record.titulo} | Cases` : page?.title, siteName, slug)
+    const description = record?.resumo || page?.description || fallback
+    return { title, description, openGraph: openGraph(settings, { title, description }) }
   }
-  return { title: page?.title, description: page?.description, alternates: { canonical: `/${slug}` } }
+  const title = pageTitle(page?.title, siteName, slug)
+  const description = page?.description || fallback
+  return { title, description, openGraph: openGraph(settings, { title, description, url: `/${slug}` }), alternates: { canonical: `/${slug}` } }
 }
 export default async function Page({ params, searchParams }: Args) {
   const { slug } = await params

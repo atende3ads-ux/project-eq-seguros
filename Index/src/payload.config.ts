@@ -5,7 +5,7 @@ import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { pt } from '@payloadcms/translations/languages/pt'
 import sharp from 'sharp'
-import { Users, Media, Pages, Cases, Site } from './cms/collections'
+import { Users, Media, Pages, Cases, Site, Settings } from './cms/collections'
 import { seedPrototype } from './cms/seed'
 import { migrations } from './migrations'
 
@@ -27,7 +27,7 @@ export default buildConfig({
     },
     meta: { titleSuffix: ' | EQ Seguros' },
   },
-  collections: [Users, Media, Pages, Cases], globals: [Site],
+  collections: [Users, Media, Pages, Cases], globals: [Settings, Site],
   editor: lexicalEditor(), sharp,
   db: sqliteAdapter({ client: { url: process.env.DATABASE_URL || 'file:./.data/eq-seguros.db' }, prodMigrations: migrations }),
   i18n: { supportedLanguages: { pt }, fallbackLanguage: 'pt' },

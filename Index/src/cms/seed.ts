@@ -1,6 +1,7 @@
 import type { Payload } from 'payload'
 import data from '../generated/prototype.json'
 import type { Case } from '../payload-types'
+import { stripSiteName } from '../lib/site-title'
 
 export async function seedPrototype(payload: Payload) {
   // One-time import of source content, never a reset of an existing client's data.
@@ -10,7 +11,7 @@ export async function seedPrototype(payload: Payload) {
     const found = await payload.count({ collection: 'pages', where: { slug: { equals: page.slug } }, overrideAccess: true })
     if (found.totalDocs) continue
     await payload.create({ collection: 'pages', overrideAccess: true, data: {
-      slug: page.slug, title: page.title, description: page.description,
+      slug: page.slug, title: stripSiteName(page.title, page.slug), description: page.description,
       status: 'published', ...page.content,
     } })
   }

@@ -1,9 +1,20 @@
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
+import { getSettings, uploadURL } from '@/lib/content'
+import { DEFAULT_SITE_NAME } from '@/lib/site-title'
+import { openGraph } from '@/lib/share'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SERVER_URL || 'http://localhost:3000'),
-  robots: process.env.SITE_ENV === 'production' ? { index: true, follow: true } : { index: false, follow: false },
+/** Padrões do site inteiro; cada página sobrescreve título e descrição. */
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = await getSettings()
+  return {
+    metadataBase: new URL(process.env.SERVER_URL || 'http://localhost:3000'),
+    robots: process.env.SITE_ENV === 'production' ? { index: true, follow: true } : { index: false, follow: false },
+    title: settings.siteName?.trim() || DEFAULT_SITE_NAME,
+    description: settings.defaultDescription || undefined,
+    icons: { icon: uploadURL(settings.favicon) || '/assets/eq-simbolo.png' },
+    openGraph: openGraph(settings),
+  }
 }
 export default function Layout({ children }: { children: ReactNode }) {
   return <html lang="pt-BR"><head>

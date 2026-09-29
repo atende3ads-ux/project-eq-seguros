@@ -39,7 +39,8 @@ export const Pages: CollectionConfig = {
     { type: 'tabs', tabs: [
       { label: 'Conteúdo da página', description: 'O que aparece para quem visita o site.', fields: contentFields },
       { label: 'SEO e publicação', description: 'Como a página aparece na busca e se está visível.', fields: [
-        { name: 'title', label: 'Título SEO', type: 'text', required: true },
+        { name: 'title', label: 'Título SEO', type: 'text', required: true,
+          admin: { description: 'Sem o nome do site: ele é acrescentado automaticamente, conforme "Configurações do site".' } },
         { name: 'description', label: 'Descrição SEO', type: 'textarea' },
         { name: 'status', label: 'Visibilidade', type: 'select', defaultValue: 'published', options: [{ label: 'Publicada', value: 'published' }, { label: 'Rascunho', value: 'draft' }] },
         { name: 'slug', label: 'Identificador da página', type: 'text', required: true, unique: true, admin: { hidden: true, readOnly: true } },
@@ -94,6 +95,30 @@ export const Cases: CollectionConfig = {
 }
 
 export const Site: GlobalConfig = {
-  slug: 'site', label: 'Cabeçalho e rodapé', access: { read: () => true, update: signedIn },
+  slug: 'site', label: 'Cabeçalho e rodapé', access: { read: () => true, update: signedIn }, admin: { group: 'Configurações' },
   fields: [...contentFields, { name: 'bootstrapComplete', type: 'checkbox', defaultValue: false, admin: { hidden: true }, access: { update: () => false } }],
+}
+
+/** Informações gerais do site, como em Configurações → Geral do WordPress. */
+export const Settings: GlobalConfig = {
+  slug: 'settings', label: 'Configurações do site', access: { read: () => true, update: signedIn },
+  admin: { group: 'Configurações', description: 'Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.' },
+  fields: [
+    { type: 'tabs', tabs: [
+      { label: 'Identidade', fields: [
+        { name: 'siteName', label: 'Nome do site', type: 'text', required: true, defaultValue: 'EQ Seguros',
+          admin: { description: 'Entra no título de todas as páginas: "Blog | EQ Seguros". Na página inicial vem primeiro: "EQ Seguros | …".' } },
+        { name: 'logo', label: 'Logo do cabeçalho', type: 'upload', relationTo: 'media',
+          admin: { description: 'PNG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".' } },
+        { name: 'favicon', label: 'Ícone do site (favicon)', type: 'upload', relationTo: 'media',
+          admin: { description: 'Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada em PNG, de preferência 512 × 512 px. Sem seleção, fica o símbolo da EQ.' } },
+      ] },
+      { label: 'Busca e compartilhamento', fields: [
+        { name: 'defaultDescription', label: 'Descrição padrão', type: 'textarea',
+          admin: { description: 'Usada no Google e nas redes quando a página não tem descrição própria. Cada página tem a sua em "SEO e publicação".' } },
+        { name: 'shareImage', label: 'Imagem de compartilhamento', type: 'upload', relationTo: 'media',
+          admin: { description: 'Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px.' } },
+      ] },
+    ] },
+  ],
 }
