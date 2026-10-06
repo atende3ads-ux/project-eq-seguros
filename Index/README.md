@@ -23,6 +23,8 @@ Neste computador já foi criado o administrador com o e-mail solicitado pelo usu
 - **Cabeçalho e rodapé:** textos, logos, endereços, contatos e links compartilhados.
 - **Biblioteca de imagens:** upload de imagens e substituição das originais sem mudar as classes do layout.
 - **Cases de sucesso:** parceiro, segmento, título, resumo, produtos, resultados, depoimento e imagem. O filtro e a página de detalhe são componentes React.
+- **Posts e categorias:** artigos independentes com rascunho, agendamento, prévia, imagem de destaque e SEO.
+- **Configurações do site:** nome, logo, favicon, descrição e imagem padrão de compartilhamento.
 
 Os conteúdos originais são importados no primeiro início. A marca de importação fica no banco: reiniciar ou atualizar a aplicação não redefine textos já editados. Rascunhos de páginas não ficam acessíveis publicamente.
 
@@ -34,16 +36,15 @@ Esta versão usa **SQLite local**, adequado ao desenvolvimento e às prévias pe
 
 Há migração inicial versionada. No modo de produção, o Payload executa as migrações incluídas antes da importação inicial. Para futuras mudanças de schema, gere, revise e teste uma nova migração antes da publicação.
 
-## Publicação futura no Coolify (não realizada)
+## Atualização no Coolify
 
-1. Enviar esta pasta a um repositório apropriado da agência. Não versionar `.env`, `.data`, `media`, dependências ou relatórios de teste. Se mantiver o repositório atual, definir esta pasta como diretório base da aplicação.
-2. Criar a aplicação no projeto **EQ Seguros**, na **VPS nova**, a partir do repositório. Usar o `Dockerfile` desta pasta e porta interna **3000**.
-3. Definir variáveis de execução: `PAYLOAD_SECRET` novo e privado, `DATABASE_URL=file:/app/.data/eq-seguros.db`, `SERVER_URL=https://eqseguros.3adsux.com.br`, `SITE_ENV=preview`.
-4. Configurar domínio `https://eqseguros.3adsux.com.br` e armazenamento persistente em `/app/.data` e `/app/media`. Confirmar permissões de gravação do usuário do container. Não expor a porta 3000 diretamente para a internet.
-5. Antes de aceitar conteúdo real, configurar e testar backups externos do banco e dos uploads. Fazer backup consistente do SQLite (API de backup do banco ou aplicação parada), não copiar o arquivo durante gravações. Volume persistente não é backup. A restauração precisa ser testada.
-6. Publicar e conferir HTTPS, navegação, login, edição e permanência das imagens após reinício. O Dockerfile foi preparado, mas só um teste de build/execução em Docker valida o container Linux.
+O site de aprovação está hospedado em `https://eqseguros.3adsux.com.br`. Alterações de código são enviadas à branch `main`; como o deploy automático está desligado, o push não atualiza sozinho a aplicação em execução.
 
-Nada nesta etapa modifica o DNS, o Coolify ou a VPS do Flowagent. Nenhuma aplicação foi publicada remotamente.
+1. Testar as alterações e enviá-las ao repositório oficial. Não versionar `.env`, `.data`, `media`, dependências ou relatórios de teste.
+2. Antes de uma atualização com migrações, fazer backup consistente do banco e dos uploads e confirmar que os volumes continuam montados em `/app/.data` e `/app/media`.
+3. No Coolify, executar o redeploy da aplicação existente. Não criar outra aplicação, não trocar `PAYLOAD_SECRET` e não substituir os volumes.
+4. Manter `DATABASE_URL=file:/app/.data/eq-seguros.db`, `SERVER_URL=https://eqseguros.3adsux.com.br`, `SITE_ENV=preview` enquanto o endereço for de aprovação e `CASES_VISIBLE=false` até o material definitivo ser autorizado.
+5. Após o redeploy, conferir `/health`, HTTPS, navegação, login, edição e permanência das imagens e do conteúdo após reinício.
 
 ## Prévia e migração para o cliente
 
@@ -56,10 +57,12 @@ Na migração, levar código, backup consistente do banco e uploads; criar uma c
 ## Limites herdados do protótipo
 
 - Formulários são demonstrações visuais, sem campos e sem envio no protótipo. Esta migração não simula mensagens enviadas nem configura e-mail/CRM. Isso exige implementação e definição de destino e proteção contra abuso.
-- O blog preserva as páginas e cards existentes, editáveis na coleção de páginas. Os cards originais apontam para o mesmo artigo. Criar posts independentes, paginação e categorias dinâmicas exige ampliar o modelo editorial; não está sendo apresentado como funcionalidade pronta.
+- O blog usa posts independentes e categorias. A listagem tem busca, filtro e carregamento em lotes de seis. Os modelos importados permanecem demonstrativos até revisão editorial.
 - As fontes licenciadas Neulis não foram fornecidas no protótipo. O CSS original mantém o fallback Urbanist; não foram baixadas fontes licenciadas nem inventadas versões.
 - SMTP/recuperação de senha e backups não estão configurados. Definir antes do uso em produção.
 - A auditoria de dependências não encontrou alertas altos ou críticos após as correções aplicadas. Ainda há alertas moderados transitivos ligados à ferramenta de migração do adaptador SQLite, sem correção compatível indicada pelo gerenciador. Reavaliar antes de publicar.
+
+O container possui uma verificação de saúde em `/health`, que confirma a resposta da aplicação e uma consulta simples ao banco. Ela não substitui monitoramento externo do domínio nem testes de jornada do usuário.
 
 ## Verificação
 
