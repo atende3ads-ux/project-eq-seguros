@@ -13030,6 +13030,18 @@
       },
       "papel": "Texto"
     },
+    "footer-l26": {
+      "secao": "Rodapé inferior",
+      "inicio": true,
+      "grupo": {
+        "id": "g11",
+        "tipo": "Item"
+      },
+      "papel": "Link",
+      "textos": [
+        "footer-t51"
+      ]
+    },
     "footer-t51": {
       "secao": "Rodapé inferior",
       "inicio": false,
@@ -13037,7 +13049,8 @@
         "id": "g11",
         "tipo": "Item"
       },
-      "papel": "Texto"
+      "papel": "Texto do link",
+      "link": "footer-l26"
     }
   }
 }

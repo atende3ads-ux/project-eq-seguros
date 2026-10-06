@@ -100985,12 +100985,23 @@
                         "textKey": "footer-t50"
                       },
                       {
-                        "tag": "b",
-                        "attrs": {},
+                        "tag": "a",
+                        "attrs": {
+                          "href": "https://3ads.com.br",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer"
+                        },
+                        "linkKey": "footer-l26",
                         "children": [
                           {
-                            "text": "3ADS",
-                            "textKey": "footer-t51"
+                            "tag": "b",
+                            "attrs": {},
+                            "children": [
+                              {
+                                "text": "3ADS",
+                                "textKey": "footer-t51"
+                              }
+                            ]
                           }
                         ]
                       }
@@ -101617,7 +101628,7 @@
         },
         {
           "key": "footer-t51",
-          "label": "footer.ft > div.ft-bar > div.wrap > span > b · 3ADS",
+          "label": "footer.ft > div.ft-bar > div.wrap > span > a > b · 3ADS",
           "value": "3ADS"
         }
       ],
@@ -101911,6 +101922,11 @@
           "key": "footer-l25",
           "label": "ouvidoria.visual@sinapp.org.br",
           "href": "mailto:ouvidoria.visual@sinapp.org.br"
+        },
+        {
+          "key": "footer-l26",
+          "label": "3ADS",
+          "href": "https://3ads.com.br"
         }
       ]
     }

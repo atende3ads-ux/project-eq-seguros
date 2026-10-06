@@ -414,7 +414,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   border-top:1px solid rgba(255,255,255,.09);padding:24px 0;font-size:.78rem;color:#5C6678;
 }
 .ft-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
-.ft-bar b{color:#A9B4C6;}
+.ft-bar b{color:#A9B4C6;transition:color .2s;}
+.ft-bar a:hover b,.ft-bar a:focus-visible b{color:#fff;}
 
 /* ===================== REVEAL ===================== */
 .rv-init{opacity:0;transform:translateY(28px);}
