@@ -8,6 +8,13 @@ updates:
     schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
     open-pull-requests-limit: 5
     labels: [dependencias]
+    # Saltos de versão maior que sabemos que quebram o projeto e pedem decisão manual:
+    # graphql 17 conflita com o Payload (exige 16); TypeScript 7 removeu opções que usamos;
+    # @types/node precisa acompanhar o Node do Docker (24).
+    ignore:
+      - { dependency-name: graphql, update-types: ["version-update:semver-major"] }
+      - { dependency-name: typescript, update-types: ["version-update:semver-major"] }
+      - { dependency-name: "@types/node", update-types: ["version-update:semver-major"] }
     groups:
       payload: { patterns: [payload, "@payloadcms/*"] }
       next-react: { patterns: [next, react, react-dom, "@types/react", "@types/react-dom"] }
@@ -16,6 +23,9 @@ updates:
     directory: /Index
     schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
     labels: [dependencias]
+    # Só as versões LTS (pares) do Node em produção; a troca de versão maior é decisão manual.
+    ignore:
+      - { dependency-name: node, update-types: ["version-update:semver-major"] }
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
