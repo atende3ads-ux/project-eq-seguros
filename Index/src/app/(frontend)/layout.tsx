@@ -6,6 +6,15 @@ import { openGraph, twitter } from '@/lib/share'
 import { organizationLd } from '@/lib/structured-data'
 import { JsonLd } from '@/components/JsonLd'
 
+const FALLBACK_ICON = '/assets/eq-simbolo.png'
+/**
+ * SVG vai por último, com o PNG antes: quem entende SVG usa o SVG, quem não entende
+ * (o Safari, por exemplo) fica com o símbolo em PNG.
+ */
+const favicon = (url?: string) => url && /\.svg(\?|$)/i.test(url)
+  ? [{ url: FALLBACK_ICON, type: 'image/png' }, { url, type: 'image/svg+xml', sizes: 'any' }]
+  : url || FALLBACK_ICON
+
 /** Padrões do site inteiro; cada página sobrescreve título e descrição. */
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings()
@@ -16,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       : { index: false, follow: false },
     title: settings.siteName?.trim() || DEFAULT_SITE_NAME,
     description: settings.defaultDescription || undefined,
-    icons: { icon: uploadURL(settings.favicon) || '/assets/eq-simbolo.png' },
+    icons: { icon: favicon(uploadURL(settings.favicon)) },
     openGraph: openGraph(settings),
     twitter: twitter(settings),
   }

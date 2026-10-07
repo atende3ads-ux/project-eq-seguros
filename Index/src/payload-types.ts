@@ -649,11 +649,11 @@ export interface Setting {
    */
   siteName: string;
   /**
-   * PNG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".
+   * PNG ou SVG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".
    */
   logo?: (number | null) | Media;
   /**
-   * Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada em PNG, de preferência 512 × 512 px. Sem seleção, fica o símbolo da EQ.
+   * Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada, em SVG ou PNG de preferência 512 × 512 px. Com SVG, os navegadores que não o aceitam usam o símbolo da EQ. Sem seleção, fica o símbolo da EQ.
    */
   favicon?: (number | null) | Media;
   /**
@@ -661,7 +661,7 @@ export interface Setting {
    */
   defaultDescription?: string | null;
   /**
-   * Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px.
+   * Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Use JPG ou PNG de 1200 × 630 px: as redes não mostram SVG.
    */
   shareImage?: (number | null) | Media;
   updatedAt?: string | null;

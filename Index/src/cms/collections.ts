@@ -26,7 +26,9 @@ export const Users: CollectionConfig = {
 export const Media: CollectionConfig = {
   slug: 'media', labels: { singular: 'Imagem', plural: 'Biblioteca de imagens' },
   access: { read: () => true, create: signedIn, update: signedIn, delete: adminOnly },
-  upload: { staticDir: 'media', mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif'] },
+  // SVG serve para ícones e logos. O Payload recusa SVG com script, eventos ou outro conteúdo
+  // perigoso, e o servidor entrega todo SVG com uma política que impede scripts (next.config.mjs).
+  upload: { staticDir: 'media', mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif', 'image/svg+xml'] },
   fields: [{ name: 'alt', label: 'Descrição acessível', type: 'text', required: true }],
 }
 
@@ -118,15 +120,15 @@ export const Settings: GlobalConfig = {
         { name: 'siteName', label: 'Nome do site', type: 'text', required: true, defaultValue: 'EQ Seguros',
           admin: { description: 'Entra no título de todas as páginas: "Blog | EQ Seguros". Na página inicial vem primeiro: "EQ Seguros | …".' } },
         { name: 'logo', label: 'Logo do cabeçalho', type: 'upload', relationTo: 'media',
-          admin: { description: 'PNG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".' } },
+          admin: { description: 'PNG ou SVG com fundo transparente. Sem seleção, fica o logo atual. Tem prioridade sobre a imagem do logo em "Cabeçalho e rodapé".' } },
         { name: 'favicon', label: 'Ícone do site (favicon)', type: 'upload', relationTo: 'media',
-          admin: { description: 'Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada em PNG, de preferência 512 × 512 px. Sem seleção, fica o símbolo da EQ.' } },
+          admin: { description: 'Aparece na aba do navegador e nos favoritos. Use uma imagem quadrada, em SVG ou PNG de preferência 512 × 512 px. Com SVG, os navegadores que não o aceitam usam o símbolo da EQ. Sem seleção, fica o símbolo da EQ.' } },
       ] },
       { label: 'Busca e compartilhamento', fields: [
         { name: 'defaultDescription', label: 'Descrição padrão', type: 'textarea',
           admin: { description: 'Usada no Google e nas redes quando a página não tem descrição própria. Cada página tem a sua em "SEO e publicação".' } },
         { name: 'shareImage', label: 'Imagem de compartilhamento', type: 'upload', relationTo: 'media',
-          admin: { description: 'Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Tamanho ideal: 1200 × 630 px.' } },
+          admin: { description: 'Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Use JPG ou PNG de 1200 × 630 px: as redes não mostram SVG.' } },
       ] },
     ] },
   ],
