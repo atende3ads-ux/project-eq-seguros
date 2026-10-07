@@ -5,6 +5,8 @@ import type { Content, PageTemplate, TemplateNode } from '@/lib/types'
 import { categoryName, coverAlt, coverURL, formatDate, readingTime, toCard } from '@/lib/blog'
 import { Template } from '../Template'
 import { Interactions } from '../Interactions'
+import { JsonLd } from '../JsonLd'
+import { articleLd } from '@/lib/structured-data'
 
 const safeURL = (value: unknown) => typeof value === 'string' && /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) ? value : '#'
 const classes = (node: TemplateNode) => (node.attrs?.class || '').split(' ')
@@ -44,6 +46,7 @@ export function Article({ post, related, template, page, site, preview }: Args) 
     </div></section>
     <Template nodes={(template.body as TemplateNode[]).filter((node) => !isArticle(node))} content={page} posts={related.map(toCard)} />
     <Template nodes={prototype.site.footer as TemplateNode[]} content={site} />
+    {articleLd({ title: post.title, description: post.seoDescription || post.excerpt || undefined, url: `/blog/${post.slug}`, image, published: post.publishedAt, modified: post.updatedAt, author: post.authorName, category: categoryName(post) }).map((data, index) => <JsonLd key={index} data={data} />)}
     <Interactions slug="post" />
   </>
 }

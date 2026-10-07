@@ -5,6 +5,7 @@ import prototype from '../generated/prototype.json'
 import type { TemplateNode } from '../lib/types'
 import type { Post } from '../payload-types'
 import { toSlug } from './blog'
+import { applySeo } from './seo-apply'
 
 type Lexical = Post['content']
 const base = { direction: null, format: '', indent: 0, version: 1 }
@@ -85,4 +86,6 @@ export async function seedBlog(payload: Payload) {
   }
   await payload.updateGlobal({ slug: 'site', overrideAccess: true, data: { blogBootstrapComplete: true } })
   payload.logger.info('Blog importado: 1 post publicado e os demais como rascunho para a equipe escrever.')
+  // Banco novo: páginas e post já existem, então o SEO completo entra junto da importação.
+  await applySeo(payload)
 }

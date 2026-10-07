@@ -6,6 +6,8 @@ import type { TemplateNode } from '@/lib/types'
 import { casesVisible, casesSlugs } from '@/lib/cases'
 import { Template } from '../Template'
 import { Interactions } from '../Interactions'
+import { JsonLd } from '../JsonLd'
+import { breadcrumbLd } from '@/lib/structured-data'
 
 /** Imagem do logo no cabeçalho; "Configurações do site" pode trocá-la. */
 const LOGO_KEY = 'header-i1'
@@ -26,6 +28,7 @@ export async function SitePage({ slug, caseSlug }: { slug: string; caseSlug?: st
     <Template nodes={template.header} content={site}/>
     <Template nodes={template.body} content={page} records={records} selectedCase={selectedCase} posts={posts?.map(toCard)} blogListing={slug === 'blog'}/>
     <Template nodes={prototype.site.footer as TemplateNode[]} content={site}/>
+    <JsonLd data={breadcrumbLd(template.body as TemplateNode[], page)}/>
     <Interactions slug={slug}/>
   </>
 }

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useDocumentInfo, useFormFields } from '@payloadcms/ui'
 import { pageTitle } from '@/lib/site-title'
 import { plainText } from '@/lib/blog'
+import { mentions, STOPWORDS, words } from '@/lib/keyphrase'
 import { scopeFor } from './content-map'
 import './seo-analysis.css'
 
@@ -14,21 +15,6 @@ type Snapshot = {
   headings: string[]; opening: string[]; texts: string[]; alts: string[]
 }
 type SiteSettings = { siteName?: string; defaultDescription?: string | null; shareImage?: unknown }
-
-const STOPWORDS = new Set(['a', 'o', 'as', 'os', 'de', 'da', 'do', 'das', 'dos', 'e', 'em', 'no', 'na', 'nos', 'nas', 'para', 'por', 'com', 'um', 'uma', 'ao', 'que'])
-const normalize = (value: string) => value.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
-const words = (value: string) => normalize(value).split(' ').filter(Boolean)
-/** Mesma palavra ou variação curta de singular/plural ("seguro" e "seguros"). */
-const sameWord = (a: string, b: string) => a === b || (a.length >= 4 && b.length >= 4 && (a.startsWith(b) || b.startsWith(a)) && Math.abs(a.length - b.length) <= 2)
-
-/** A frase aparece inteira ou com todas as palavras importantes, em qualquer ordem. */
-function mentions(text: string, phrase: string) {
-  const key = words(phrase).filter((word) => !STOPWORDS.has(word))
-  if (!key.length) return false
-  if (normalize(text).includes(normalize(phrase))) return true
-  const found = words(text)
-  return key.every((word) => found.some((candidate) => sameWord(candidate, word)))
-}
 
 /**
  * Análise no estilo do Yoast SEO: prévia do resultado no Google e verificações
@@ -54,11 +40,12 @@ export default function SeoAnalysis() {
     for (let i = 0; fields[`copy.${i}.key`]; i += 1) copy.push({ key: value(`copy.${i}.key`), value: value(`copy.${i}.value`) })
     const alts: string[] = []
     for (let i = 0; fields[`images.${i}.key`]; i += 1) alts.push(value(`images.${i}.alt`))
-    const firstSection = copy.length ? scope[copy[0].key]?.secao : undefined
+    // A abertura é a primeira seção de conteúdo, não a trilha de navegação (Home › Blog).
+    const firstSection = copy.map((item) => scope[item.key]?.secao).find((name) => name && name !== 'Trilha de navegação')
     const snapshot: Snapshot = {
       post, keyphrase: value('focusKeyphrase').trim(), title: value('title'), description: value('description'), slug,
       featured: Boolean(fields.featuredImage?.value),
-      headings: copy.filter((item) => scope[item.key]?.papel === 'Título principal').map((item) => item.value),
+      headings: copy.filter((item) => scope[item.key]?.papel?.startsWith('Título')).map((item) => item.value),
       opening: copy.filter((item) => scope[item.key]?.secao === firstSection).map((item) => item.value),
       texts: copy.map((item) => item.value), alts,
     }
@@ -135,8 +122,8 @@ function analyse(data: Snapshot, fullTitle: string, description: string, hasDefa
       check(mentions(data.headings.join(' '), phrase), 'A frase-chave aparece no título do post.', 'O título do post não cita a frase-chave.', 'ok')
       check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece no primeiro parágrafo.', 'O primeiro parágrafo do post não cita a frase-chave.', 'ok')
     } else {
-      check(mentions(data.headings.join(' '), phrase), 'A frase-chave aparece no título principal da página.', 'O título principal da página (aba Conteúdo) não cita a frase-chave.', 'ok')
-      check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece logo na primeira seção da página.', 'A primeira seção da página não cita a frase-chave.', 'ok')
+      check(data.headings.some((heading) => mentions(heading, phrase)), 'A frase-chave aparece em um título da página.', 'Nenhum título da página (aba Conteúdo) cita a frase-chave.', 'ok')
+      check(mentions(data.opening.join(' '), phrase), 'A frase-chave aparece logo na abertura da página.', 'A primeira seção de conteúdo da página não cita a frase-chave.', 'ok')
     }
     const count = data.texts.filter((text) => mentions(text, phrase)).length
     const where = data.post ? 'parágrafos do post' : 'textos da página'
@@ -146,7 +133,7 @@ function analyse(data: Snapshot, fullTitle: string, description: string, hasDefa
         ? { status: 'ok', text: `A frase-chave aparece em só 1 dos ${where}. Use-a mais vezes, de forma natural.` }
         : { status: 'bad', text: `A frase-chave não aparece nos ${where}.` })
     if (data.alts.length) check(data.alts.some((alt) => mentions(alt, phrase)), 'Uma imagem cita a frase-chave na descrição.', 'Nenhuma imagem cita a frase-chave na descrição da imagem.', 'ok')
-    check(!usedIn.length, `A frase-chave não é usada em outro${data.post ? ' post' : 'a página'}.`, `A mesma frase-chave já é usada em: ${usedIn.join(', ')}. Os dois vão disputar a mesma busca.`, 'ok')
+    check(!usedIn.length, `A frase-chave não é usada em outr${data.post ? 'o post' : 'a página'}.`, `A mesma frase-chave já é usada em: ${usedIn.join(', ')}. Os dois vão disputar a mesma busca.`, 'ok')
   }
 
   const length = fullTitle.length
@@ -166,7 +153,7 @@ function analyse(data: Snapshot, fullTitle: string, description: string, hasDefa
     ? { status: 'good', text: `${data.post ? 'O post' : 'A página'} tem imagem de destaque para compartilhamento.` }
     : hasDefaultImage
       ? { status: 'ok', text: 'Sem imagem de destaque: ao compartilhar, aparece a imagem padrão do site.' }
-      : { status: 'bad', text: 'Sem imagem de destaque: o link compartilhado aparece sem imagem.' })
+      : { status: 'ok', text: 'Sem imagem de destaque nem imagem padrão: o link aparece só com o símbolo da EQ, pequeno. Envie uma de 1200 × 630 px para o cartão completo.' })
 
   // Problemas primeiro, depois o que pode melhorar, por fim o que já está bom.
   const order: Record<Status, number> = { bad: 0, ok: 1, good: 2 }

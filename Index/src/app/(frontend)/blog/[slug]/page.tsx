@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { Article } from '@/components/Blog/Article'
 import { getCMS, getPageContent, getPost, getPosts, getSettings, getSiteContent, templates } from '@/lib/content'
 import { coverURL, plainText } from '@/lib/blog'
-import { openGraph } from '@/lib/share'
+import { openGraph, twitter } from '@/lib/share'
 import { pageTitle } from '@/lib/site-title'
 
 export const dynamic = 'force-dynamic'
@@ -26,6 +26,7 @@ export async function generateMetadata(args: Args) {
   const image = coverURL(post)
   return {
     title, description, alternates: { canonical: url },
+    twitter: twitter(settings, { title, description, image: post.featuredImage }),
     ...(preview ? { robots: { index: false, follow: false } } : {}),
     openGraph: { ...openGraph(settings, { title, description, url }), type: 'article' as const,
       ...(image ? { images: [image] } : {}), publishedTime: post.publishedAt, modifiedTime: post.updatedAt, authors: post.authorName ? [post.authorName] : undefined },
