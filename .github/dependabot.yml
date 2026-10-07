@@ -1,0 +1,22 @@
+# Atualizações de dependências e correções de segurança, toda segunda de manhã.
+# O Payload e o Next.js sobem em grupos, porque os pacotes de cada um precisam andar juntos.
+# Atualização do Payload costuma pedir migração de banco: o CI avisa se faltar (ver ci.yml).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /Index
+    schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
+    open-pull-requests-limit: 5
+    labels: [dependencias]
+    groups:
+      payload: { patterns: [payload, "@payloadcms/*"] }
+      next-react: { patterns: [next, react, react-dom, "@types/react", "@types/react-dom"] }
+      outras: { update-types: [minor, patch], exclude-patterns: [payload, "@payloadcms/*", next, react, react-dom, "@types/react", "@types/react-dom"] }
+  - package-ecosystem: docker
+    directory: /Index
+    schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
+    labels: [dependencias]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly, day: monday, time: "06:00", timezone: America/Sao_Paulo }
+    labels: [dependencias]

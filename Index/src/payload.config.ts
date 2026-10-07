@@ -21,6 +21,8 @@ export default buildConfig({
   serverURL: process.env.SERVER_URL || 'http://localhost:3000',
   admin: {
     user: 'users',
+    // Sem Gravatar: o painel não manda o hash do e-mail de quem está logado a um serviço externo.
+    avatar: 'default',
     importMap: { baseDir: path.resolve('src') },
     components: {
       beforeLogin: ['/components/admin/PasswordVisibility'],

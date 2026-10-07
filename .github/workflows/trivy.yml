@@ -1,0 +1,33 @@
+# Varredura semanal de vulnerabilidades conhecidas nas dependências e na imagem Docker.
+name: Trivy
+on:
+  schedule: [{ cron: "0 8 * * 1" }]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["Index/package-lock.json", "Index/Dockerfile"]
+permissions: { contents: read }
+
+jobs:
+  varrer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - name: Dependências e configuração
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: Index
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          scanners: vuln,secret,misconfig
+          exit-code: "1"
+      - name: Imagem Docker
+        run: docker build -t eq-seguros:varredura Index
+      - uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: eq-seguros:varredura
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"

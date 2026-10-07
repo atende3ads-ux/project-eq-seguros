@@ -1,0 +1,39 @@
+# Verificação a cada push e pull request: tipos, testes, migrações, dependências e build.
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+permissions: { contents: read }
+concurrency: { group: "ci-${{ github.ref }}", cancel-in-progress: true }
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults: { run: { working-directory: Index } }
+    env:
+      PAYLOAD_SECRET: ci-somente-para-testes-nao-e-um-segredo
+      DATABASE_URL: file:./.data/ci.db
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: { node-version: 24, cache: npm, cache-dependency-path: Index/package-lock.json }
+      - run: npm ci --no-audit --no-fund
+      - name: Tipos
+        run: npm run typecheck
+      - name: Testes
+        run: npm test
+      - name: Migrações cobrem o schema
+        # Se uma coleção mudou (campo novo, atualização do Payload) sem migração, o comando cria o arquivo e o CI falha.
+        run: |
+          NODE_ENV=production npx payload migrate
+          npx payload migrate:create ci_verificacao --skip-empty
+          if [ -n "$(git status --porcelain -- src/migrations)" ]; then
+            echo "::error::O schema mudou e falta uma migração. Gere com: npx payload migrate:create nome"
+            git status --short -- src/migrations
+            exit 1
+          fi
+      - name: Dependências sem falha alta ou crítica
+        run: npm audit --omit=dev --audit-level=high
+      - name: Build de produção
+        run: npm run build
