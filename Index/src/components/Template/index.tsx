@@ -5,6 +5,7 @@ import { CaseCards, CasesListing } from '../Cases'
 import { BlogListing, PostCards } from '../Blog'
 import type { PostCard } from '@/lib/blog'
 import { segments, imageURL, casesVisible, casesSectionIds, isCasesHref } from '@/lib/cases'
+import { withYear } from '@/lib/year'
 
 const names: Record<string, string> = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', viewbox: 'viewBox', preserveaspectratio: 'preserveAspectRatio', crossorigin: 'crossOrigin', colspan: 'colSpan', rowspan: 'rowSpan', readonly: 'readOnly', maxlength: 'maxLength', srcset: 'srcSet', 'xlink:href': 'xlinkHref', 'xmlns:xlink': 'xmlnsXlink', frameborder: 'frameBorder', allowfullscreen: 'allowFullScreen', referrerpolicy: 'referrerPolicy', contenteditable: 'contentEditable', autocomplete: 'autoComplete', spellcheck: 'spellCheck' }
 const safeURL = (value: string) => /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) ? value : '#'
@@ -47,7 +48,7 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
   const visible = (list?: TemplateNode[]) => list?.filter((node) => !hide(node))
 
   function render(node: TemplateNode, key: string): ReactNode {
-    if (!node.tag) return node.textKey && texts.has(node.textKey) ? texts.get(node.textKey) : node.text
+    if (!node.tag) return withYear((node.textKey && texts.has(node.textKey) ? texts.get(node.textKey) : node.text) ?? '')
     const id = node.attrs?.id
     if (hasCaseListing && id === 'cases-filtro') return <CasesListing key={key} records={records}/>
     if (hasCaseListing && id === 'cases-grid') return null
@@ -72,7 +73,7 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
     }
     if (node.linkKey && links.has(node.linkKey)) attrs.href = safeURL(links.get(node.linkKey)!)
     let children: ReactNode = node.tag === 'title' || node.tag === 'textarea'
-      ? node.children?.map((child) => child.textKey && texts.has(child.textKey) ? texts.get(child.textKey) : child.text || '').join('')
+      ? node.children?.map((child) => withYear((child.textKey && texts.has(child.textKey) ? texts.get(child.textKey) : child.text) || '')).join('')
       : visible(node.children)?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`)}</Fragment>)
     if (id === 'cases-destaque') children = <CaseCards records={records.filter((r) => r.destaque).slice(0, 3)}/>
     if (selectedCase) {

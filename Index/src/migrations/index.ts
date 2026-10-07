@@ -4,6 +4,7 @@ import * as migration_20260929_190814_seo from './20260929_190814_seo';
 import * as migration_20260929_194554_blog from './20260929_194554_blog';
 import * as migration_20261006_222019_users_reset_password_requested_at from './20261006_222019_users_reset_password_requested_at';
 import * as migration_20261006_230000_rodape_link_3ads from './20261006_230000_rodape_link_3ads';
+import * as migration_20261007_120000_ano_automatico from './20261007_120000_ano_automatico';
 
 export const migrations = [
   {
@@ -35,5 +36,10 @@ export const migrations = [
     up: migration_20261006_230000_rodape_link_3ads.up,
     down: migration_20261006_230000_rodape_link_3ads.down,
     name: '20261006_230000_rodape_link_3ads'
+  },
+  {
+    up: migration_20261007_120000_ano_automatico.up,
+    down: migration_20261007_120000_ano_automatico.down,
+    name: '20261007_120000_ano_automatico'
   },
 ];

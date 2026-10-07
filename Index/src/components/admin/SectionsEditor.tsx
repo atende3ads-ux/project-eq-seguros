@@ -179,13 +179,15 @@ function ItemFields({ item }: { item: Item }) {
 function TextFields({ item }: { item: Item }) {
   const { papel = 'Texto', parte, partes } = item.entry
   const path = `copy.${item.index}.value`
+  const hasYear = useFormFields(([fields]) => /\{ano\}/i.test(String(fields[path]?.value ?? '')))
+  const hints = [
+    parte === 1 ? 'O título é dividido em partes para manter o trecho colorido do layout. Edite cada parte no seu campo.' : '',
+    hasYear ? '{ano} é trocado pelo ano atual e muda sozinho na virada do ano. Para fixar um ano, escreva-o no lugar de {ano}.' : '',
+  ].filter(Boolean).join(' ')
   const field: TextareaFieldClient = {
     name: 'value', type: 'textarea', required: true,
     label: parte && partes ? `${papel} (parte ${parte} de ${partes})` : papel,
-    admin: {
-      rows: 1,
-      description: parte === 1 ? 'O título é dividido em partes para manter o trecho colorido do layout. Edite cada parte no seu campo.' : undefined,
-    },
+    admin: { rows: 1, description: hints || undefined },
   }
   return <FieldPathContext value={path}><TextareaField path={path} field={field} /></FieldPathContext>
 }

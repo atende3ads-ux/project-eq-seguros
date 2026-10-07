@@ -27,8 +27,10 @@ function convert(html, scope) {
     if (node.type === 'text') {
       if (!node.data.trim()) return { text: node.data }
       const key = `${scope}-t${++textIndex}`
-      content.copy.push({ key, label: `${trail} · ${node.data.trim().slice(0, 90)}`, value: node.data })
-      return { text: node.data, textKey: key }
+      // "© 2026" vira "© {ano}": o site troca pelo ano atual (ver src/lib/year.ts).
+      const data = node.data.replace(/(©\s*)20\d{2}(?![\d\-–])/g, '$1{ano}')
+      content.copy.push({ key, label: `${trail} · ${data.trim().slice(0, 90)}`, value: data })
+      return { text: data, textKey: key }
     }
     if (!node.name || ['script', 'style'].includes(node.name)) return null
     const attrs = { ...node.attribs }

@@ -100971,7 +100971,7 @@
                     "attrs": {},
                     "children": [
                       {
-                        "text": "© 2026 EQ Seguros & EQUATORIAL · EQ Grupo",
+                        "text": "© {ano} EQ Seguros & EQUATORIAL · EQ Grupo",
                         "textKey": "footer-t49"
                       }
                     ]
@@ -101618,8 +101618,8 @@
         },
         {
           "key": "footer-t49",
-          "label": "footer.ft > div.ft-bar > div.wrap > span · © 2026 EQ Seguros & EQUATORIAL · EQ Grupo",
-          "value": "© 2026 EQ Seguros & EQUATORIAL · EQ Grupo"
+          "label": "footer.ft > div.ft-bar > div.wrap > span · © {ano} EQ Seguros & EQUATORIAL · EQ Grupo",
+          "value": "© {ano} EQ Seguros & EQUATORIAL · EQ Grupo"
         },
         {
           "key": "footer-t50",
