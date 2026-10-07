@@ -13,7 +13,11 @@
  * o que a equipe já editou no painel não é sobrescrito (ver seo-apply.ts).
  * O teste tests/seo.test.mjs confere estas regras para todas as páginas.
  */
-export type PageSeo = { title: string; description: string; focusKeyphrase: string; alts?: Record<string, string> }
+export type PageSeo = {
+  title: string; description: string; focusKeyphrase: string; alts?: Record<string, string>
+  /** Valores que este SEO já teve em algum ambiente: se o campo ainda tiver um deles, a equipe não editou e pode ser trocado. */
+  replaces?: { title?: string[]; description?: string[] }
+}
 
 const PARTNER_LOGOS = ['icred', 'Lecca', 'btw', 'Sotran Logística', 'Vanto Bank', 'Grupo 3RN', 'Fintech do Corban', 'Quero Passagem', 'BusCo', 'rodoviariaonline', 'GoPass']
 /** Logos de parceiros em sequência de chaves (page-i15 a page-i25 na home, por exemplo). */
@@ -145,13 +149,18 @@ export const pageSeo: Record<string, PageSeo> = {
   },
   privacidade: {
     title: 'Política de Privacidade e proteção de dados',
-    description: 'Política de privacidade do EQ Grupo: como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).',
+    description: 'Política de privacidade do Grupo Equatorial (Equatorial Previdência e EQ Seguros): finalidade do tratamento dos dados, orientações gerais e contato do DPO.',
     focusKeyphrase: 'política de privacidade',
+    replaces: { description: ['Política de privacidade do EQ Grupo: como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).'] },
   },
   termos: {
-    title: 'Termos de Uso do site e dos canais digitais',
-    description: 'Termos de uso do site e dos canais digitais do EQ Grupo: aceitação, uso dos serviços, propriedade intelectual, responsabilidade e foro em Goiânia.',
+    title: 'Termos de Uso do site e dos aplicativos',
+    description: 'Termos de uso do site e dos aplicativos do Grupo Equatorial: comunicação, garantias e responsabilidades, confidencialidade e direitos de autor.',
     focusKeyphrase: 'termos de uso',
+    replaces: {
+      title: ['Termos de Uso do site e dos canais digitais'],
+      description: ['Termos de uso do site e dos canais digitais do EQ Grupo: aceitação, uso dos serviços, propriedade intelectual, responsabilidade e foro em Goiânia.'],
+    },
   },
   cases: {
     title: 'Cases de sucesso: parceiros que vendem mais',

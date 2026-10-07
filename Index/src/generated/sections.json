@@ -6850,59 +6850,78 @@
         "papel": "Subtítulo"
       },
       "page-t7": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": true,
         "papel": "Título"
       },
       "page-t8": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t9": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Título"
       },
       "page-t10": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t11": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Título"
       },
       "page-t12": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t13": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Título"
       },
       "page-t14": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t15": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Título"
       },
       "page-t16": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t17": {
-        "secao": "1. Dados que coletamos",
+        "secao": "1. Política de Privacidade",
+        "inicio": false,
+        "papel": "Título"
+      },
+      "page-t18": {
+        "secao": "1. Política de Privacidade",
         "inicio": false,
         "papel": "Texto"
+      },
+      "page-l2": {
+        "secao": "1. Política de Privacidade",
+        "inicio": true,
+        "papel": "Link",
+        "textos": [
+          "page-t19"
+        ]
+      },
+      "page-t19": {
+        "secao": "1. Política de Privacidade",
+        "inicio": false,
+        "papel": "Texto do link",
+        "link": "page-l2"
       }
     },
     "seguro-acidentes": {
@@ -11316,59 +11335,103 @@
         "papel": "Subtítulo"
       },
       "page-t7": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": true,
-        "papel": "Título"
+        "papel": "Texto"
       },
       "page-t8": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
-        "papel": "Texto"
+        "papel": "Título"
       },
       "page-t9": {
-        "secao": "1. Aceitação dos termos",
-        "inicio": false,
-        "papel": "Título"
-      },
-      "page-t10": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Texto"
       },
-      "page-t11": {
-        "secao": "1. Aceitação dos termos",
+      "page-t10": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Título"
       },
+      "page-t11": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Texto"
+      },
       "page-t12": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t13": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
-        "papel": "Título"
+        "papel": "Texto"
       },
       "page-t14": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t15": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
-        "papel": "Título"
+        "papel": "Texto"
       },
       "page-t16": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Texto"
       },
       "page-t17": {
-        "secao": "1. Aceitação dos termos",
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Título"
+      },
+      "page-t18": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
         "inicio": false,
         "papel": "Texto"
+      },
+      "page-t19": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Título"
+      },
+      "page-t20": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Texto"
+      },
+      "page-t21": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Texto"
+      },
+      "page-t22": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Título"
+      },
+      "page-t23": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Texto"
+      },
+      "page-l2": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": true,
+        "papel": "Link",
+        "textos": [
+          "page-t24"
+        ]
+      },
+      "page-t24": {
+        "secao": "Da Comunicação com o GRUPO EQUATORIAL:",
+        "inicio": false,
+        "papel": "Texto do link",
+        "link": "page-l2"
       }
     }
   },

@@ -21,8 +21,11 @@ export async function applySeo(payload: Payload, req?: Partial<PayloadRequest>) 
     const data: Record<string, unknown> = {}
     const edited: string[] = []
 
-    if (doc.title === proto.title) { if (doc.title !== seo.title) data.title = seo.title } else edited.push('título')
-    if (!doc.description || doc.description === proto.description) { if (doc.description !== seo.description) data.description = seo.description } else edited.push('descrição')
+    // "Não editado" = ainda é o do protótipo, o que este SEO já aplicou ou um valor que ele já teve (seo.replaces).
+    const untouchedTitle = doc.title === proto.title || doc.title === seo.title || Boolean(seo.replaces?.title?.includes(doc.title))
+    const untouchedDescription = !doc.description || doc.description === proto.description || doc.description === seo.description || Boolean(seo.replaces?.description?.includes(doc.description))
+    if (untouchedTitle) { if (doc.title !== seo.title) data.title = seo.title } else edited.push('título')
+    if (untouchedDescription) { if (doc.description !== seo.description) data.description = seo.description } else edited.push('descrição')
     if (!doc.focusKeyphrase) data.focusKeyphrase = seo.focusKeyphrase
 
     let described = 0

@@ -60438,7 +60438,7 @@
                       },
                       "children": [
                         {
-                          "text": "Como o EQ Grupo coleta, usa, armazena e protege seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).",
+                          "text": "Última atualização: 03 de março de 2023",
                           "textKey": "page-t6"
                         }
                       ]
@@ -60469,7 +60469,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "1. Dados que coletamos",
+                      "text": "1. Política de Privacidade",
                       "textKey": "page-t7"
                     }
                   ]
@@ -60479,7 +60479,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Dados cadastrais, de contratação e de navegação, coletados diretamente de você ou por meio dos nossos parceiros e convênios.",
+                      "text": "A presente Política de Privacidade contém informações a respeito de modo como tratamos, total ou parcialmente, de forma automatizada ou não, os dados pessoais dos usuários que acessam nosso site. Seu objetivo é esclarecer os interessados acerca dos tipos de dados que são coletados, dos motivos da coleta e da forma como o usuário poderá utilizar, gerenciar ou excluir informações. Esta Política é aplicável ao portal e/ou site do GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR e EQ SEGUROS S.A.).",
                       "textKey": "page-t8"
                     }
                   ]
@@ -60489,7 +60489,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "2. Como utilizamos seus dados",
+                      "text": "2. Finalidade do recebimento dos dados pessoais",
                       "textKey": "page-t9"
                     }
                   ]
@@ -60499,7 +60499,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Para contratação e gestão de produtos, atendimento, prevenção a fraudes e cumprimento de obrigações regulatórias.",
+                      "text": "A presente Política de Privacidade contém informações a respeito de modo como tratamos, total ou parcialmente, de forma automatizada ou não, os dados pessoais dos usuários que acessam nosso site. Seu objetivo é esclarecer os interessados acerca dos tipos de dados que são coletados, dos motivos da coleta e da forma como o usuário poderá utilizar, gerenciar ou excluir informações. Esta Política é aplicável ao portal e/ou site do GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR e EQ SEGUROS S.A.).",
                       "textKey": "page-t10"
                     }
                   ]
@@ -60509,7 +60509,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "3. Compartilhamento",
+                      "text": "3. Orientações Gerais",
                       "textKey": "page-t11"
                     }
                   ]
@@ -60519,7 +60519,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Com parceiros comerciais, seguradoras e resseguradoras, e órgãos reguladores, sempre nos limites da finalidade informada.",
+                      "text": "Para navegar no site, você não precisa fornecer informações confidenciais. Quando exigimos algum dado de identificação nos canais de atendimento ou para fazer o cadastro, tudo fica protegido e armazenado em um banco de dados para futuros contatos. As informações dos clientes e visitantes do site são coletadas e guardadas seguindo padrões rígidos de confidencialidade e segurança. Também podemos tratar os dados para cumprir com a legislação vigente aplicável, como por exemplo, atendimento de solicitações da SUSEP – Superintendência de Seguros Privados. Para acesso às áreas do portal ou às suas seções, que requerem autenticação do usuário, será solicitado um cadastramento de senha. Esta medida reforça a segurança das informações fornecidas, impedindo que outro usuário tenha acesso a elas. No entanto, é imprescindível que o usuário mantenha esta senha em sigilo, assim como todos os demais códigos de acesso.",
                       "textKey": "page-t12"
                     }
                   ]
@@ -60529,7 +60529,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "4. Seus direitos (LGPD)",
+                      "text": "4. Relacionamento com Terceiros",
                       "textKey": "page-t13"
                     }
                   ]
@@ -60539,7 +60539,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Acesso, correção, portabilidade, eliminação e revogação de consentimento, mediante solicitação pelos nossos canais.",
+                      "text": "Durante a utilização do site, a fim de resguardar e de proteger os direitos de terceiros, o usuário do site deverá fornecer somente seus dados pessoais, e não os de terceiros. Nossa Política de Privacidade é pertinente apenas a este site ou links enviados por nós, não é aplicável a qualquer outro \"site\" que a ele esteja associado ou relacionado por meio de \"links\" ou de outras formas de divulgação e acesso. Não nos responsabilizamos por culpa exclusiva de terceiros, como em caso de ataque de hackers ou crackers, ou culpa exclusiva do usuário, como no caso em que ele mesmo transfere seus dados a terceiros.",
                       "textKey": "page-t14"
                     }
                   ]
@@ -60549,7 +60549,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "5. Encarregado (DPO) e canais",
+                      "text": "5. Sua anuência e responsabilidade",
                       "textKey": "page-t15"
                     }
                   ]
@@ -60559,24 +60559,51 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Canal do titular e Encarregado de Dados: contato a ser definido pelo EQ Grupo.",
+                      "text": "É de sua responsabilidade fornecer informações verdadeiras e cuidar dos dados de sua identificação digital individual sempre que acessar o portal e/ou site do GRUPO EQUATORIAL. Você foi orientado dos objetivos e da finalidade do recebimento e tratamento de seus dados. Portanto, declara que está CIENTE e CONCORDA com a política de privacidade do GRUPO EQUATORIAL.",
                       "textKey": "page-t16"
                     }
                   ]
                 },
                 {
-                  "tag": "p",
-                  "attrs": {
-                    "style": "margin-top:24px;"
-                  },
+                  "tag": "h2",
+                  "attrs": {},
                   "children": [
                     {
-                      "tag": "small",
+                      "text": "Dúvidas? Fale com nosso DPO.",
+                      "textKey": "page-t17"
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
                       "attrs": {},
                       "children": [
                         {
-                          "text": "Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente.",
-                          "textKey": "page-t17"
+                          "text": "Fernando Costa Doria",
+                          "textKey": "page-t18"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "mailto:dpo@grupoequatorial.com.br"
+                      },
+                      "linkKey": "page-l2",
+                      "children": [
+                        {
+                          "text": "dpo@grupoequatorial.com.br",
+                          "textKey": "page-t19"
                         }
                       ]
                     }
@@ -62816,63 +62843,73 @@
           },
           {
             "key": "page-t6",
-            "label": "section.phero > div.wrap > div.rv-init > p.lead · Como o EQ Grupo coleta, usa, armazena e protege seus dados pessoais, em conformidade com a",
-            "value": "Como o EQ Grupo coleta, usa, armazena e protege seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018)."
+            "label": "section.phero > div.wrap > div.rv-init > p.lead · Última atualização: 03 de março de 2023",
+            "value": "Última atualização: 03 de março de 2023"
           },
           {
             "key": "page-t7",
-            "label": "section.sec > div.wrap > h2 · 1. Dados que coletamos",
-            "value": "1. Dados que coletamos"
+            "label": "section.sec > div.wrap > h2 · 1. Política de Privacidade",
+            "value": "1. Política de Privacidade"
           },
           {
             "key": "page-t8",
-            "label": "section.sec > div.wrap > p · Dados cadastrais, de contratação e de navegação, coletados diretamente de você ou por meio",
-            "value": "Dados cadastrais, de contratação e de navegação, coletados diretamente de você ou por meio dos nossos parceiros e convênios."
+            "label": "section.sec > div.wrap > p · A presente Política de Privacidade contém informações a respeito de modo como tratamos, to",
+            "value": "A presente Política de Privacidade contém informações a respeito de modo como tratamos, total ou parcialmente, de forma automatizada ou não, os dados pessoais dos usuários que acessam nosso site. Seu objetivo é esclarecer os interessados acerca dos tipos de dados que são coletados, dos motivos da coleta e da forma como o usuário poderá utilizar, gerenciar ou excluir informações. Esta Política é aplicável ao portal e/ou site do GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR e EQ SEGUROS S.A.)."
           },
           {
             "key": "page-t9",
-            "label": "section.sec > div.wrap > h2 · 2. Como utilizamos seus dados",
-            "value": "2. Como utilizamos seus dados"
+            "label": "section.sec > div.wrap > h2 · 2. Finalidade do recebimento dos dados pessoais",
+            "value": "2. Finalidade do recebimento dos dados pessoais"
           },
           {
             "key": "page-t10",
-            "label": "section.sec > div.wrap > p · Para contratação e gestão de produtos, atendimento, prevenção a fraudes e cumprimento de o",
-            "value": "Para contratação e gestão de produtos, atendimento, prevenção a fraudes e cumprimento de obrigações regulatórias."
+            "label": "section.sec > div.wrap > p · A presente Política de Privacidade contém informações a respeito de modo como tratamos, to",
+            "value": "A presente Política de Privacidade contém informações a respeito de modo como tratamos, total ou parcialmente, de forma automatizada ou não, os dados pessoais dos usuários que acessam nosso site. Seu objetivo é esclarecer os interessados acerca dos tipos de dados que são coletados, dos motivos da coleta e da forma como o usuário poderá utilizar, gerenciar ou excluir informações. Esta Política é aplicável ao portal e/ou site do GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR e EQ SEGUROS S.A.)."
           },
           {
             "key": "page-t11",
-            "label": "section.sec > div.wrap > h2 · 3. Compartilhamento",
-            "value": "3. Compartilhamento"
+            "label": "section.sec > div.wrap > h2 · 3. Orientações Gerais",
+            "value": "3. Orientações Gerais"
           },
           {
             "key": "page-t12",
-            "label": "section.sec > div.wrap > p · Com parceiros comerciais, seguradoras e resseguradoras, e órgãos reguladores, sempre nos l",
-            "value": "Com parceiros comerciais, seguradoras e resseguradoras, e órgãos reguladores, sempre nos limites da finalidade informada."
+            "label": "section.sec > div.wrap > p · Para navegar no site, você não precisa fornecer informações confidenciais. Quando exigimos",
+            "value": "Para navegar no site, você não precisa fornecer informações confidenciais. Quando exigimos algum dado de identificação nos canais de atendimento ou para fazer o cadastro, tudo fica protegido e armazenado em um banco de dados para futuros contatos. As informações dos clientes e visitantes do site são coletadas e guardadas seguindo padrões rígidos de confidencialidade e segurança. Também podemos tratar os dados para cumprir com a legislação vigente aplicável, como por exemplo, atendimento de solicitações da SUSEP – Superintendência de Seguros Privados. Para acesso às áreas do portal ou às suas seções, que requerem autenticação do usuário, será solicitado um cadastramento de senha. Esta medida reforça a segurança das informações fornecidas, impedindo que outro usuário tenha acesso a elas. No entanto, é imprescindível que o usuário mantenha esta senha em sigilo, assim como todos os demais códigos de acesso."
           },
           {
             "key": "page-t13",
-            "label": "section.sec > div.wrap > h2 · 4. Seus direitos (LGPD)",
-            "value": "4. Seus direitos (LGPD)"
+            "label": "section.sec > div.wrap > h2 · 4. Relacionamento com Terceiros",
+            "value": "4. Relacionamento com Terceiros"
           },
           {
             "key": "page-t14",
-            "label": "section.sec > div.wrap > p · Acesso, correção, portabilidade, eliminação e revogação de consentimento, mediante solicit",
-            "value": "Acesso, correção, portabilidade, eliminação e revogação de consentimento, mediante solicitação pelos nossos canais."
+            "label": "section.sec > div.wrap > p · Durante a utilização do site, a fim de resguardar e de proteger os direitos de terceiros, ",
+            "value": "Durante a utilização do site, a fim de resguardar e de proteger os direitos de terceiros, o usuário do site deverá fornecer somente seus dados pessoais, e não os de terceiros. Nossa Política de Privacidade é pertinente apenas a este site ou links enviados por nós, não é aplicável a qualquer outro \"site\" que a ele esteja associado ou relacionado por meio de \"links\" ou de outras formas de divulgação e acesso. Não nos responsabilizamos por culpa exclusiva de terceiros, como em caso de ataque de hackers ou crackers, ou culpa exclusiva do usuário, como no caso em que ele mesmo transfere seus dados a terceiros."
           },
           {
             "key": "page-t15",
-            "label": "section.sec > div.wrap > h2 · 5. Encarregado (DPO) e canais",
-            "value": "5. Encarregado (DPO) e canais"
+            "label": "section.sec > div.wrap > h2 · 5. Sua anuência e responsabilidade",
+            "value": "5. Sua anuência e responsabilidade"
           },
           {
             "key": "page-t16",
-            "label": "section.sec > div.wrap > p · Canal do titular e Encarregado de Dados: contato a ser definido pelo EQ Grupo.",
-            "value": "Canal do titular e Encarregado de Dados: contato a ser definido pelo EQ Grupo."
+            "label": "section.sec > div.wrap > p · É de sua responsabilidade fornecer informações verdadeiras e cuidar dos dados de sua ident",
+            "value": "É de sua responsabilidade fornecer informações verdadeiras e cuidar dos dados de sua identificação digital individual sempre que acessar o portal e/ou site do GRUPO EQUATORIAL. Você foi orientado dos objetivos e da finalidade do recebimento e tratamento de seus dados. Portanto, declara que está CIENTE e CONCORDA com a política de privacidade do GRUPO EQUATORIAL."
           },
           {
             "key": "page-t17",
-            "label": "section.sec > div.wrap > p > small · Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente.",
-            "value": "Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente."
+            "label": "section.sec > div.wrap > h2 · Dúvidas? Fale com nosso DPO.",
+            "value": "Dúvidas? Fale com nosso DPO."
+          },
+          {
+            "key": "page-t18",
+            "label": "section.sec > div.wrap > p > b · Fernando Costa Doria",
+            "value": "Fernando Costa Doria"
+          },
+          {
+            "key": "page-t19",
+            "label": "section.sec > div.wrap > p > a · dpo@grupoequatorial.com.br",
+            "value": "dpo@grupoequatorial.com.br"
           }
         ],
         "images": [],
@@ -62881,6 +62918,11 @@
             "key": "page-l1",
             "label": "Home",
             "href": "/"
+          },
+          {
+            "key": "page-l2",
+            "label": "dpo@grupoequatorial.com.br",
+            "href": "mailto:dpo@grupoequatorial.com.br"
           }
         ]
       }
@@ -97540,7 +97582,7 @@
                       },
                       "children": [
                         {
-                          "text": "Condições de uso do site e dos canais digitais do EQ Grupo.",
+                          "text": "Última atualização: 03 de março de 2023",
                           "textKey": "page-t6"
                         }
                       ]
@@ -97567,32 +97609,42 @@
               },
               "children": [
                 {
-                  "tag": "h2",
+                  "tag": "p",
                   "attrs": {},
                   "children": [
                     {
-                      "text": "1. Aceitação dos termos",
+                      "text": "O GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR, inscrita no CNPJ/MF sob o nº 42.150.987/0001-70 e EQ SEGUROS S.A., inscrita no CNPJ/MF sob o nº 21.242.451/0001-05, ambas com sede na cidade de Goiânia, Goiás, à Avenida Jamel Cecílio, 2690, sls 2008 a 2012, Metropolitan Tokio, Jardim Goiás), único e exclusivo proprietário dos domínios associados ao Site e Aplicativo aqui disponibilizados, estabelece as presentes condições de uso do Site e Aplicativos (\"Termo de Uso\"):",
                       "textKey": "page-t7"
                     }
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "h2",
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Ao navegar neste site você concorda com as condições descritas neste documento.",
+                      "text": "Da Comunicação com o GRUPO EQUATORIAL:",
                       "textKey": "page-t8"
                     }
                   ]
                 },
                 {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Para qualquer assunto relacionado ao às condições deste Termo de Uso ou da Política de Privacidade, bem como ao Site/Aplicativo/Conteúdo/Software o Usuário deverá entrar em contato com o GRUPO EQUATORIAL por meio dos canais de atendimento disponibilizados no Aplicativo.",
+                      "textKey": "page-t9"
+                    }
+                  ]
+                },
+                {
                   "tag": "h2",
                   "attrs": {},
                   "children": [
                     {
-                      "text": "2. Uso do site e dos serviços",
-                      "textKey": "page-t9"
+                      "text": "Garantias, Responsabilidades e Danos:",
+                      "textKey": "page-t10"
                     }
                   ]
                 },
@@ -97601,17 +97653,7 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "O conteúdo tem caráter informativo. A contratação de produtos ocorre pelos canais oficiais e parceiros do grupo.",
-                      "textKey": "page-t10"
-                    }
-                  ]
-                },
-                {
-                  "tag": "h2",
-                  "attrs": {},
-                  "children": [
-                    {
-                      "text": "3. Propriedade intelectual",
+                      "text": "O GRUPO EQUATORIAL não garante que as informações, os instrumentos e os materiais contidos, utilizados e oferecidos neste site, em ambiente logado ou não, estejam precisamente atualizados ou completos, e não se responsabiliza por danos causados por eventuais erros de conteúdo ou falhas de acesso ou de equipamento.",
                       "textKey": "page-t11"
                     }
                   ]
@@ -97621,17 +97663,17 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Marcas, textos, imagens e demais elementos são de titularidade do EQ Grupo ou licenciados a ele.",
+                      "text": "O GRUPO EQUATORIAL não se responsabiliza, expressa ou tacitamente, pelo uso indevido das informações, dos instrumentos, dos materiais disponibilizados e / ou dos equipamentos utilizados por este site, para quaisquer que sejam os fins, feito por qualquer usuário, sendo de inteira responsabilidade desse as eventuais lesões a direito próprio ou de terceiros, causadas ou não por esse uso inadequado.",
                       "textKey": "page-t12"
                     }
                   ]
                 },
                 {
-                  "tag": "h2",
+                  "tag": "p",
                   "attrs": {},
                   "children": [
                     {
-                      "text": "4. Limitação de responsabilidade",
+                      "text": "Em nenhuma circunstância, o GRUPO EQUATORIAL, seus diretores ou funcionários serão responsáveis por quaisquer danos diretos ou indiretos, especiais, incidentais ou de consequência, perdas ou despesas oriundos da conexão com este site, em ambiente logado ou não, ou uso da sua parte ou incapacidade de uso por qualquer parte, ou com relação a qualquer falha de desempenho, erro, omissão, interrupção, defeito ou demora na operação ou transmissão, vírus de computador ou falha da linha ou do sistema, mesmo se o GRUPO EQUATORIAL ou seus representantes estejam avisados da possibilidade de tais danos, perdas ou despesas.",
                       "textKey": "page-t13"
                     }
                   ]
@@ -97641,17 +97683,17 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "O EQ Grupo não se responsabiliza por indisponibilidades temporárias ou por uso indevido das informações do site.",
+                      "text": "A providência de todos os recursos para acesso a este site é de inteira e exclusiva responsabilidade do usuário.",
                       "textKey": "page-t14"
                     }
                   ]
                 },
                 {
-                  "tag": "h2",
+                  "tag": "p",
                   "attrs": {},
                   "children": [
                     {
-                      "text": "5. Legislação aplicável e foro",
+                      "text": "O GRUPO EQUATORIAL não se responsabiliza pelo conteúdo de outros sites (a) cujos endereços estejam disponíveis nas páginas deste site, ou (b) cujo endereço deste website esteja neles disponível, tampouco, não terá, em hipótese alguma, o dever de ressarcir quaisquer danos causados, a quem quer que seja, pelos sites nesse item referidos.",
                       "textKey": "page-t15"
                     }
                   ]
@@ -97661,24 +97703,101 @@
                   "attrs": {},
                   "children": [
                     {
-                      "text": "Aplica-se a legislação brasileira, elegendo-se o foro da comarca de Goiânia/GO.",
+                      "text": "Sobre troca de mensagens entre o usuário e o GRUPO EQUATORIAL por meio da Internet, favor consultar a Política de Privacidade.",
                       "textKey": "page-t16"
                     }
                   ]
                 },
                 {
-                  "tag": "p",
-                  "attrs": {
-                    "style": "margin-top:24px;"
-                  },
+                  "tag": "h2",
+                  "attrs": {},
                   "children": [
                     {
-                      "tag": "small",
+                      "text": "Confidencialidade das Informações dos Usuários",
+                      "textKey": "page-t17"
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "O GRUPO EQUATORIAL se reserva o direito de melhorar as funcionalidades deste site em função da análise e da consolidação das informações e sugestões colhidas e das oportunidades dessas para o conjunto de usuários do website. Mais informações sobre o uso das informações coletadas neste website, favor consultar a Política de Privacidade.",
+                      "textKey": "page-t18"
+                    }
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Direitos de Autor e Propriedade Intelectual:",
+                      "textKey": "page-t19"
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Salvo disposição em contrário, todo o conteúdo das páginas deste website, tais como informações, materiais, instrumentos, organização da página, gráficos e desenhos, pertencem ao GRUPO EQUATORIAL.",
+                      "textKey": "page-t20"
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Ao acessar este website e quaisquer de suas páginas, o usuário manifesta sua ciência e concordância de / com todos os termos e condições aqui estabelecidos.",
+                      "textKey": "page-t21"
+                    }
+                  ]
+                },
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Dúvidas? Fale com nosso DPO.",
+                      "textKey": "page-t22"
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "b",
                       "attrs": {},
                       "children": [
                         {
-                          "text": "Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente.",
-                          "textKey": "page-t17"
+                          "text": "Fernando Costa Doria",
+                          "textKey": "page-t23"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "mailto:dpo@grupoequatorial.com.br"
+                      },
+                      "linkKey": "page-l2",
+                      "children": [
+                        {
+                          "text": "dpo@grupoequatorial.com.br",
+                          "textKey": "page-t24"
                         }
                       ]
                     }
@@ -99918,63 +100037,98 @@
           },
           {
             "key": "page-t6",
-            "label": "section.phero > div.wrap > div.rv-init > p.lead · Condições de uso do site e dos canais digitais do EQ Grupo.",
-            "value": "Condições de uso do site e dos canais digitais do EQ Grupo."
+            "label": "section.phero > div.wrap > div.rv-init > p.lead · Última atualização: 03 de março de 2023",
+            "value": "Última atualização: 03 de março de 2023"
           },
           {
             "key": "page-t7",
-            "label": "section.sec > div.wrap > h2 · 1. Aceitação dos termos",
-            "value": "1. Aceitação dos termos"
+            "label": "section.sec > div.wrap > p · O GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR, inscrita no CNPJ/MF s",
+            "value": "O GRUPO EQUATORIAL (formado por EQUATORIAL PREVIDÊNCIA COMPLEMENTAR, inscrita no CNPJ/MF sob o nº 42.150.987/0001-70 e EQ SEGUROS S.A., inscrita no CNPJ/MF sob o nº 21.242.451/0001-05, ambas com sede na cidade de Goiânia, Goiás, à Avenida Jamel Cecílio, 2690, sls 2008 a 2012, Metropolitan Tokio, Jardim Goiás), único e exclusivo proprietário dos domínios associados ao Site e Aplicativo aqui disponibilizados, estabelece as presentes condições de uso do Site e Aplicativos (\"Termo de Uso\"):"
           },
           {
             "key": "page-t8",
-            "label": "section.sec > div.wrap > p · Ao navegar neste site você concorda com as condições descritas neste documento.",
-            "value": "Ao navegar neste site você concorda com as condições descritas neste documento."
+            "label": "section.sec > div.wrap > h2 · Da Comunicação com o GRUPO EQUATORIAL:",
+            "value": "Da Comunicação com o GRUPO EQUATORIAL:"
           },
           {
             "key": "page-t9",
-            "label": "section.sec > div.wrap > h2 · 2. Uso do site e dos serviços",
-            "value": "2. Uso do site e dos serviços"
+            "label": "section.sec > div.wrap > p · Para qualquer assunto relacionado ao às condições deste Termo de Uso ou da Política de Pri",
+            "value": "Para qualquer assunto relacionado ao às condições deste Termo de Uso ou da Política de Privacidade, bem como ao Site/Aplicativo/Conteúdo/Software o Usuário deverá entrar em contato com o GRUPO EQUATORIAL por meio dos canais de atendimento disponibilizados no Aplicativo."
           },
           {
             "key": "page-t10",
-            "label": "section.sec > div.wrap > p · O conteúdo tem caráter informativo. A contratação de produtos ocorre pelos canais oficiais",
-            "value": "O conteúdo tem caráter informativo. A contratação de produtos ocorre pelos canais oficiais e parceiros do grupo."
+            "label": "section.sec > div.wrap > h2 · Garantias, Responsabilidades e Danos:",
+            "value": "Garantias, Responsabilidades e Danos:"
           },
           {
             "key": "page-t11",
-            "label": "section.sec > div.wrap > h2 · 3. Propriedade intelectual",
-            "value": "3. Propriedade intelectual"
+            "label": "section.sec > div.wrap > p · O GRUPO EQUATORIAL não garante que as informações, os instrumentos e os materiais contidos",
+            "value": "O GRUPO EQUATORIAL não garante que as informações, os instrumentos e os materiais contidos, utilizados e oferecidos neste site, em ambiente logado ou não, estejam precisamente atualizados ou completos, e não se responsabiliza por danos causados por eventuais erros de conteúdo ou falhas de acesso ou de equipamento."
           },
           {
             "key": "page-t12",
-            "label": "section.sec > div.wrap > p · Marcas, textos, imagens e demais elementos são de titularidade do EQ Grupo ou licenciados ",
-            "value": "Marcas, textos, imagens e demais elementos são de titularidade do EQ Grupo ou licenciados a ele."
+            "label": "section.sec > div.wrap > p · O GRUPO EQUATORIAL não se responsabiliza, expressa ou tacitamente, pelo uso indevido das i",
+            "value": "O GRUPO EQUATORIAL não se responsabiliza, expressa ou tacitamente, pelo uso indevido das informações, dos instrumentos, dos materiais disponibilizados e / ou dos equipamentos utilizados por este site, para quaisquer que sejam os fins, feito por qualquer usuário, sendo de inteira responsabilidade desse as eventuais lesões a direito próprio ou de terceiros, causadas ou não por esse uso inadequado."
           },
           {
             "key": "page-t13",
-            "label": "section.sec > div.wrap > h2 · 4. Limitação de responsabilidade",
-            "value": "4. Limitação de responsabilidade"
+            "label": "section.sec > div.wrap > p · Em nenhuma circunstância, o GRUPO EQUATORIAL, seus diretores ou funcionários serão respons",
+            "value": "Em nenhuma circunstância, o GRUPO EQUATORIAL, seus diretores ou funcionários serão responsáveis por quaisquer danos diretos ou indiretos, especiais, incidentais ou de consequência, perdas ou despesas oriundos da conexão com este site, em ambiente logado ou não, ou uso da sua parte ou incapacidade de uso por qualquer parte, ou com relação a qualquer falha de desempenho, erro, omissão, interrupção, defeito ou demora na operação ou transmissão, vírus de computador ou falha da linha ou do sistema, mesmo se o GRUPO EQUATORIAL ou seus representantes estejam avisados da possibilidade de tais danos, perdas ou despesas."
           },
           {
             "key": "page-t14",
-            "label": "section.sec > div.wrap > p · O EQ Grupo não se responsabiliza por indisponibilidades temporárias ou por uso indevido da",
-            "value": "O EQ Grupo não se responsabiliza por indisponibilidades temporárias ou por uso indevido das informações do site."
+            "label": "section.sec > div.wrap > p · A providência de todos os recursos para acesso a este site é de inteira e exclusiva respon",
+            "value": "A providência de todos os recursos para acesso a este site é de inteira e exclusiva responsabilidade do usuário."
           },
           {
             "key": "page-t15",
-            "label": "section.sec > div.wrap > h2 · 5. Legislação aplicável e foro",
-            "value": "5. Legislação aplicável e foro"
+            "label": "section.sec > div.wrap > p · O GRUPO EQUATORIAL não se responsabiliza pelo conteúdo de outros sites (a) cujos endereços",
+            "value": "O GRUPO EQUATORIAL não se responsabiliza pelo conteúdo de outros sites (a) cujos endereços estejam disponíveis nas páginas deste site, ou (b) cujo endereço deste website esteja neles disponível, tampouco, não terá, em hipótese alguma, o dever de ressarcir quaisquer danos causados, a quem quer que seja, pelos sites nesse item referidos."
           },
           {
             "key": "page-t16",
-            "label": "section.sec > div.wrap > p · Aplica-se a legislação brasileira, elegendo-se o foro da comarca de Goiânia/GO.",
-            "value": "Aplica-se a legislação brasileira, elegendo-se o foro da comarca de Goiânia/GO."
+            "label": "section.sec > div.wrap > p · Sobre troca de mensagens entre o usuário e o GRUPO EQUATORIAL por meio da Internet, favor ",
+            "value": "Sobre troca de mensagens entre o usuário e o GRUPO EQUATORIAL por meio da Internet, favor consultar a Política de Privacidade."
           },
           {
             "key": "page-t17",
-            "label": "section.sec > div.wrap > p > small · Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente.",
-            "value": "Texto-base do protótipo. O conteúdo jurídico final será fornecido e validado pelo cliente."
+            "label": "section.sec > div.wrap > h2 · Confidencialidade das Informações dos Usuários",
+            "value": "Confidencialidade das Informações dos Usuários"
+          },
+          {
+            "key": "page-t18",
+            "label": "section.sec > div.wrap > p · O GRUPO EQUATORIAL se reserva o direito de melhorar as funcionalidades deste site em funçã",
+            "value": "O GRUPO EQUATORIAL se reserva o direito de melhorar as funcionalidades deste site em função da análise e da consolidação das informações e sugestões colhidas e das oportunidades dessas para o conjunto de usuários do website. Mais informações sobre o uso das informações coletadas neste website, favor consultar a Política de Privacidade."
+          },
+          {
+            "key": "page-t19",
+            "label": "section.sec > div.wrap > h2 · Direitos de Autor e Propriedade Intelectual:",
+            "value": "Direitos de Autor e Propriedade Intelectual:"
+          },
+          {
+            "key": "page-t20",
+            "label": "section.sec > div.wrap > p · Salvo disposição em contrário, todo o conteúdo das páginas deste website, tais como inform",
+            "value": "Salvo disposição em contrário, todo o conteúdo das páginas deste website, tais como informações, materiais, instrumentos, organização da página, gráficos e desenhos, pertencem ao GRUPO EQUATORIAL."
+          },
+          {
+            "key": "page-t21",
+            "label": "section.sec > div.wrap > p · Ao acessar este website e quaisquer de suas páginas, o usuário manifesta sua ciência e con",
+            "value": "Ao acessar este website e quaisquer de suas páginas, o usuário manifesta sua ciência e concordância de / com todos os termos e condições aqui estabelecidos."
+          },
+          {
+            "key": "page-t22",
+            "label": "section.sec > div.wrap > h2 · Dúvidas? Fale com nosso DPO.",
+            "value": "Dúvidas? Fale com nosso DPO."
+          },
+          {
+            "key": "page-t23",
+            "label": "section.sec > div.wrap > p > b · Fernando Costa Doria",
+            "value": "Fernando Costa Doria"
+          },
+          {
+            "key": "page-t24",
+            "label": "section.sec > div.wrap > p > a · dpo@grupoequatorial.com.br",
+            "value": "dpo@grupoequatorial.com.br"
           }
         ],
         "images": [],
@@ -99983,6 +100137,11 @@
             "key": "page-l1",
             "label": "Home",
             "href": "/"
+          },
+          {
+            "key": "page-l2",
+            "label": "dpo@grupoequatorial.com.br",
+            "href": "mailto:dpo@grupoequatorial.com.br"
           }
         ]
       }
