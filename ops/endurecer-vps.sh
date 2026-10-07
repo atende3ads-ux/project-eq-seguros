@@ -55,7 +55,8 @@ findtime = 10m
 maxretry = 5
 bantime.increment = true
 bantime.maxtime = 1w
-ignoreip = 127.0.0.1/8 ::1 ${ADMIN_IPS[*]:-}
+# As faixas privadas são a rede interna do Docker: o Coolify administra o servidor entrando por SSH a partir dela.
+ignoreip = 127.0.0.1/8 ::1 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 ${ADMIN_IPS[*]:-}
 
 [sshd]
 enabled = true

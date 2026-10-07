@@ -42,11 +42,15 @@ Ordem para a VPS nova (ou qualquer VPS Ubuntu):
    Isso liga o firewall (22, 80, 443), o fail2ban e as atualizações automáticas, e desliga o login por senha.
 5. **Antes de fechar a sessão, abra outra e confirme que entra.** Se algo travar, use o Console da Hostinger (hPanel) para corrigir.
 
+**Aplicado na VPS do cliente em 07/10/2026:** firewall (22, 80, 443), fail2ban, atualizações automáticas, login SSH só por chave e backup diário. Depois, o acesso é `ssh -i ~/.ssh/eq-vps root@179.236.237.154`.
+
+**Não remova a chave `coolify` de `/root/.ssh/authorized_keys`:** é por ela que o Coolify administra o servidor, entrando por SSH a partir da rede interna do Docker. Por isso o fail2ban ignora as faixas de rede privadas e o firewall mantém a porta 22 aberta.
+
 **Limite importante:** o firewall do Ubuntu não controla portas publicadas pelo Docker. As portas do Coolify (8000, 6001 e 6002) continuam abertas por fora dele. Depois que o painel tiver domínio com HTTPS, feche essas três no firewall da Hostinger (hPanel → VPS → Segurança → Firewall), liberando só 22, 80 e 443.
 
 ## Backup
 
-`ops/backup-eq.sh --instalar` (como root, na VPS) cria uma tarefa diária às 03:15 e roda a primeira cópia na hora. Guarda em `/var/backups/eq-seguros`: 14 dias de cópias diárias e 8 domingos. Cada cópia do banco é feita com a API de backup do SQLite (consistente com o site no ar), conferida com `integrity_check` antes de ser guardada, e a tarefa falha com mensagem clara se algo estiver errado (`systemctl status eq-backup`).
+Instalação: `scp -i ~/.ssh/eq-vps ops/backup-eq.sh root@IP:/usr/local/bin/eq-backup` e depois `ssh -i ~/.ssh/eq-vps root@IP '/usr/local/bin/eq-backup --instalar'`. Isso cria uma tarefa diária às 03:15 (horário do servidor, que é UTC: 00:15 em Brasília) e roda a primeira cópia na hora. Guarda em `/var/backups/eq-seguros`: 14 dias de cópias diárias e 8 domingos. Cada cópia do banco é feita com a API de backup do SQLite (consistente com o site no ar), conferida com `integrity_check` antes de ser guardada, e a tarefa falha com mensagem clara se algo estiver errado (`systemctl status eq-backup`).
 
 **Essa cópia fica no mesmo servidor.** Protege de erro humano e de corrupção, mas não da perda da VPS. Para copiar para fora, instale o `rclone`, configure um destino (Google Drive, S3…) e crie `/etc/eq-backup.conf` com `RCLONE_REMOTE=nome:pasta`.
 

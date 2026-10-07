@@ -3,6 +3,7 @@
 #
 #   backup-eq.sh              faz o backup, confere que dá para restaurar e apaga os antigos
 #   backup-eq.sh --instalar   instala como tarefa diária (03:15) e roda o primeiro backup agora
+#                             (rode o ARQUIVO no servidor: scp ops/backup-eq.sh root@IP:/usr/local/bin/eq-backup)
 #
 # O banco é copiado com a API de backup do SQLite, que é consistente mesmo com o site no ar
 # (copiar o arquivo no meio de uma gravação pode gerar uma cópia corrompida).
@@ -20,7 +21,8 @@ fail() { log "ERRO: $*" >&2; exit 1; }
 if [[ "${1:-}" == "--instalar" ]]; then
   [[ $EUID -eq 0 ]] || fail "rode como root"
   command -v sqlite3 >/dev/null || { apt-get update -qq && apt-get install -y -qq sqlite3; }
-  install -m 0755 "$0" /usr/local/bin/eq-backup
+  [[ -f "$0" ]] || fail "copie o script para o servidor e rode o arquivo (scp ... /usr/local/bin/eq-backup), não por entrada padrão"
+  [[ "$0" -ef /usr/local/bin/eq-backup ]] || install -m 0755 "$0" /usr/local/bin/eq-backup
   cat > /etc/systemd/system/eq-backup.service <<'UNIT'
 [Unit]
 Description=Backup do banco e das imagens do site EQ Seguros
