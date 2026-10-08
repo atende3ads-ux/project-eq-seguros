@@ -130,6 +130,17 @@ export const Settings: GlobalConfig = {
         { name: 'shareImage', label: 'Imagem de compartilhamento', type: 'upload', relationTo: 'media',
           admin: { description: 'Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Use JPG ou PNG de 1200 × 630 px: as redes não mostram SVG.' } },
       ] },
+      { label: 'Rastreamento', fields: [
+        { name: 'gtmId', label: 'Google Tag Manager', type: 'text',
+          validate: (value: string | null | undefined) => !value || /^GTM-[A-Z0-9]{4,12}$/.test(value.trim()) || 'Use o formato GTM-XXXXXXX.',
+          admin: { description: 'ID do contêiner, no formato GTM-XXXXXXX. Tudo o que está configurado dentro dele (Google Analytics, Google Ads, remarketing) passa a funcionar no site. Deixe vazio para não carregar.' } },
+        { name: 'ga4Id', label: 'Google Analytics 4 (direto)', type: 'text',
+          validate: (value: string | null | undefined) => !value || /^G-[A-Z0-9]{6,12}$/.test(value.trim()) || 'Use o formato G-XXXXXXXXXX.',
+          admin: { description: 'ID da métrica, no formato G-XXXXXXXXXX. Use só para uma propriedade que NÃO esteja configurada dentro do Tag Manager: se estiver nas duas, cada visita é contada duas vezes.' } },
+        { name: 'clarityId', label: 'Microsoft Clarity', type: 'text',
+          validate: (value: string | null | undefined) => !value || /^[a-z0-9]{6,16}$/.test(value.trim()) || 'Use só letras minúsculas e números, como no painel do Clarity.',
+          admin: { description: 'ID do projeto no Clarity (gravações e mapas de calor). Deixe vazio para não carregar.' } },
+      ] },
     ] },
   ],
 }

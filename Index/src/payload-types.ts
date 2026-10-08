@@ -664,6 +664,18 @@ export interface Setting {
    * Prévia que aparece ao enviar um link do site no WhatsApp, LinkedIn ou Facebook. Use JPG ou PNG de 1200 × 630 px: as redes não mostram SVG.
    */
   shareImage?: (number | null) | Media;
+  /**
+   * ID do contêiner, no formato GTM-XXXXXXX. Tudo o que está configurado dentro dele (Google Analytics, Google Ads, remarketing) passa a funcionar no site. Deixe vazio para não carregar.
+   */
+  gtmId?: string | null;
+  /**
+   * ID da métrica, no formato G-XXXXXXXXXX. Use só para uma propriedade que NÃO esteja configurada dentro do Tag Manager: se estiver nas duas, cada visita é contada duas vezes.
+   */
+  ga4Id?: string | null;
+  /**
+   * ID do projeto no Clarity (gravações e mapas de calor). Deixe vazio para não carregar.
+   */
+  clarityId?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -714,6 +726,9 @@ export interface SettingsSelect<T extends boolean = true> {
   favicon?: T;
   defaultDescription?: T;
   shareImage?: T;
+  gtmId?: T;
+  ga4Id?: T;
+  clarityId?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

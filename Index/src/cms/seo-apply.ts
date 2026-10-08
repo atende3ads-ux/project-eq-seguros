@@ -8,8 +8,12 @@ import { pageSeo, postSeo, siteDefaultDescription } from './seo-pages'
  * já escreveu: título e descrição só são trocados enquanto ainda estão como
  * vieram do protótipo (ou vazios); frase-chave e descrição de imagem, só se
  * estiverem vazias. Rodar de novo não muda mais nada.
+ *
+ * `settings: false` deixa a descrição padrão do site de fora. As migrações usam assim: num banco
+ * novo elas rodam antes das migrações que acrescentaram colunas às Configurações, e ler o global
+ * inteiro nesse ponto falha. A descrição padrão entra depois, na migração do conteúdo do site antigo.
  */
-export async function applySeo(payload: Payload, req?: Partial<PayloadRequest>) {
+export async function applySeo(payload: Payload, req?: Partial<PayloadRequest>, { settings: withSettings = true } = {}) {
   const original = new Map(prototype.pages.map((page) => [page.slug, { title: stripSiteName(page.title, page.slug), description: page.description }]))
   const done = { pages: 0, keptPages: 0, images: 0, posts: 0 }
 
@@ -43,9 +47,11 @@ export async function applySeo(payload: Payload, req?: Partial<PayloadRequest>) 
     done.pages += 1
   }
 
-  const settings = await payload.findGlobal({ slug: 'settings', overrideAccess: true, req })
-  if (!settings.defaultDescription?.trim()) {
-    await payload.updateGlobal({ slug: 'settings', data: { defaultDescription: siteDefaultDescription }, overrideAccess: true, req })
+  if (withSettings) {
+    const settings = await payload.findGlobal({ slug: 'settings', overrideAccess: true, req })
+    if (!settings.defaultDescription?.trim()) {
+      await payload.updateGlobal({ slug: 'settings', data: { defaultDescription: siteDefaultDescription }, overrideAccess: true, req })
+    }
   }
 
   for (const [slug, seo] of Object.entries(postSeo)) {

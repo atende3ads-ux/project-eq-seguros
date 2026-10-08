@@ -8,7 +8,7 @@ import { applySeo } from '../cms/seo-apply'
  * novo não há páginas ainda: a importação inicial aplica o mesmo SEO.
  */
 export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
-  await applySeo(payload, req)
+  await applySeo(payload, req, { settings: false })
 }
 
 // Os valores anteriores não são guardados: desfazer não restaura o texto antigo.

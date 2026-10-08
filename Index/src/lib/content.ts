@@ -20,7 +20,7 @@ export const getSiteContent = cache(async () => {
   return await payload.findGlobal({ slug: 'site', depth: 1, overrideAccess: false }) as unknown as Content
 })
 export type Upload = number | { url?: string | null; alt?: string | null } | null | undefined
-export type Settings = { siteName?: string; logo?: Upload; favicon?: Upload; defaultDescription?: string | null; shareImage?: Upload }
+export type Settings = { siteName?: string; logo?: Upload; favicon?: Upload; defaultDescription?: string | null; shareImage?: Upload; gtmId?: string | null; ga4Id?: string | null; clarityId?: string | null }
 export const uploadURL = (upload: Upload) => (typeof upload === 'object' && upload?.url) || undefined
 export const getSettings = cache(async () => {
   const payload = await getCMS()

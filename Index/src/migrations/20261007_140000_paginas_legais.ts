@@ -23,7 +23,7 @@ export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
       data: { copy: source.content.copy, images: source.content.images, links: source.content.links },
     })
   }
-  await applySeo(payload, req)
+  await applySeo(payload, req, { settings: false })
 }
 
 // O texto anterior era o do protótipo e não é guardado.

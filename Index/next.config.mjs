@@ -1,7 +1,18 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 import path from 'node:path'
+import { legacyRedirects } from './redirects.mjs'
 
 const isProduction = process.env.NODE_ENV === 'production'
+
+/**
+ * Serviços de medição liberados: só os endereços que o contêiner do Google Tag Manager da EQ
+ * usa (Google Analytics 4, Google Ads, Meta Pixel) mais o Microsoft Clarity. Uma ferramenta
+ * nova no Tag Manager que fale com outro endereço será bloqueada até ser liberada aqui.
+ */
+const google = ['https://www.googletagmanager.com', 'https://*.googletagmanager.com', 'https://www.google-analytics.com', 'https://*.google-analytics.com', 'https://*.analytics.google.com']
+const googleAds = ['https://www.googleadservices.com', 'https://googleads.g.doubleclick.net', 'https://*.g.doubleclick.net', 'https://ad.doubleclick.net', 'https://pagead2.googlesyndication.com', 'https://www.google.com', 'https://www.google.com.br']
+const meta = ['https://connect.facebook.net', 'https://www.facebook.com']
+const clarity = ['https://www.clarity.ms', 'https://scripts.clarity.ms', 'https://*.clarity.ms', 'https://c.bing.com']
 
 /**
  * Política de conteúdo: o site só carrega recursos dele mesmo, mais as fontes do Google.
@@ -12,14 +23,14 @@ const isProduction = process.env.NODE_ENV === 'production'
  */
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  ['script-src', "'self'", "'unsafe-inline'", ...google, 'https://www.googleadservices.com', meta[0], clarity[0], clarity[1]].join(' '),
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "img-src 'self' data: blob:",
+  ['img-src', "'self'", 'data:', 'blob:', ...google, ...googleAds, ...meta, ...clarity].join(' '),
   "media-src 'self'",
-  "connect-src 'self'",
-  // Só o mapa da página de Contato.
-  "frame-src 'self' https://maps.google.com https://www.google.com",
+  ['connect-src', "'self'", ...google, ...googleAds, ...meta, ...clarity].join(' '),
+  // O mapa da página de Contato e o trecho do Tag Manager para quem navega sem JavaScript.
+  "frame-src 'self' https://maps.google.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net",
   "frame-ancestors 'self'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -47,6 +58,8 @@ export default withPayload({
     return [
       { source: '/index.html', destination: '/', permanent: true },
       { source: '/:page.html', destination: '/:page', permanent: true },
+      // Endereços do site antigo (ver redirects.mjs).
+      ...legacyRedirects.map(([source, destination]) => ({ source, destination, permanent: true })),
     ]
   },
   async headers() {

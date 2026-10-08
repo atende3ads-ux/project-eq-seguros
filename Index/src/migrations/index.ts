@@ -7,6 +7,8 @@ import * as migration_20261006_230000_rodape_link_3ads from './20261006_230000_r
 import * as migration_20261007_120000_ano_automatico from './20261007_120000_ano_automatico';
 import * as migration_20261007_130000_seo_completo from './20261007_130000_seo_completo';
 import * as migration_20261007_140000_paginas_legais from './20261007_140000_paginas_legais';
+import * as migration_20261008_210508_rastreamento from './20261008_210508_rastreamento';
+import * as migration_20261008_220000_conteudo_do_site_antigo from './20261008_220000_conteudo_do_site_antigo';
 
 export const migrations = [
   {
@@ -32,26 +34,36 @@ export const migrations = [
   {
     up: migration_20261006_222019_users_reset_password_requested_at.up,
     down: migration_20261006_222019_users_reset_password_requested_at.down,
-    name: '20261006_222019_users_reset_password_requested_at'
+    name: '20261006_222019_users_reset_password_requested_at',
   },
   {
     up: migration_20261006_230000_rodape_link_3ads.up,
     down: migration_20261006_230000_rodape_link_3ads.down,
-    name: '20261006_230000_rodape_link_3ads'
+    name: '20261006_230000_rodape_link_3ads',
   },
   {
     up: migration_20261007_120000_ano_automatico.up,
     down: migration_20261007_120000_ano_automatico.down,
-    name: '20261007_120000_ano_automatico'
+    name: '20261007_120000_ano_automatico',
   },
   {
     up: migration_20261007_130000_seo_completo.up,
     down: migration_20261007_130000_seo_completo.down,
-    name: '20261007_130000_seo_completo'
+    name: '20261007_130000_seo_completo',
   },
   {
     up: migration_20261007_140000_paginas_legais.up,
     down: migration_20261007_140000_paginas_legais.down,
-    name: '20261007_140000_paginas_legais'
+    name: '20261007_140000_paginas_legais',
+  },
+  {
+    up: migration_20261008_210508_rastreamento.up,
+    down: migration_20261008_210508_rastreamento.down,
+    name: '20261008_210508_rastreamento',
+  },
+  {
+    up: migration_20261008_220000_conteudo_do_site_antigo.up,
+    down: migration_20261008_220000_conteudo_do_site_antigo.down,
+    name: '20261008_220000_conteudo_do_site_antigo'
   },
 ];

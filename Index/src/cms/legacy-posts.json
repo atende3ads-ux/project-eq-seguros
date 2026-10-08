@@ -1,0 +1,718 @@
+[
+  {
+    "slug": "api-a-relacao-entre-a-integracao-de-sistemas-e-a-transformacao-digital-do-mercado-de-seguros",
+    "title": "API: a relação entre a integração de sistemas e a transformação digital do mercado de seguros",
+    "category": "API",
+    "publishedAt": "2024-02-09T12:00:00-03:00",
+    "cover": "blog03.png",
+    "coverAlt": "API de integração de seguros",
+    "blocks": [
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A API é uma nova ferramenta tecnológica que propõe maior integração no mercado de seguros. É uma forma de proporcionar mais facilidade nos procedimentos e mais segurança, além de auxiliar as seguradoras e corretores e melhorar sua atuação no mercado.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Confira a seguir informações detalhadas sobre o que é a API e como se dá essa integração.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "O que é API, afinal?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "API é a sigla de Application Programming Interface, uma ferramenta que busca integrar os sistemas, trabalhando com informações presentes nas mais diversas plataformas de maneira que permite que os serviços e procedimentos sejam agilizados e feitos em menos tempo. Assim, alguns processos que poderiam apresentar maior burocracia e demora se tornam mais rápidos.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Este processo de integração é feito por meio de algumas definições comuns a diversos sistemas e que permitem que os mesmos possam compartilhar informações. Além disso, a comunicação entre as plataformas também perpassa o hardware, afinal, é possível compartilhar essas informações seja por meio de celulares, notebooks, desktop e outros.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A API também integra uma série de rotinas padrão e situações recorrentes no dia-a-dia da seguradora. Outro ponto interessante é que uma API pode promover serviços e softwares derivados de seus serviços, ou seja, programas que utilizam sua base para conectar e desenvolver outros serviços.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Tipos de API",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Existem tipos diferentes de API, aquelas abertas ou públicas; as privadas ou internas e aquelas criadas e utilizadas entre parceiros. Dentre aquelas da primeira modalidade podem ser citadas como exemplo: Facebook, WhatsApp, Youtube, Trello, entre outros. As API abertas são utilizadas no compartilhamento de informações em escala global.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Na segunda modalidade, as API privadas ou internas, são exemplos: Internet Banking, as Assistentes Virtuais de diversos mercados virtuais como a Siri e a Alexa, e também aqueles sistemas de compartilhamento de dados do governo. Nesse caso, são utilizadas dentro de sistemas específicos.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "As API entre parceiros podem ser colocadas no meio termo entre as abertas e as privadas. São utilizadas com objetivos específicos como o compartilhamento de rotinas de escritórios ou informações que são utilizáveis por mais de um sistema.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Como funciona a API e a integração de sistemas e sua relação com a transformação digital do mercado de seguros",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A cada momento, com os padrões de integração de informação ficando cada vez melhores e mais complexos, as seguradoras e corretoras de seguros começam a se inserir nesse espaço e a lidar com essa nova ferramenta que pode trazer inúmeras vantagens à rotina. Outro ponto que acaba forçando essa integração e a mudança é o padrão de exigência dos usuários que aumenta a cada dia.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "De acordo com a melhoria feita em outros espaços da vida, outros setores como o dos seguros acabam tendo que implementar modificações que aumentem a qualidade dos serviços.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Além disso, a experiência dos próprios funcionários pode melhorar em muito com a facilidade de acesso a informações compartilhadas sem precisar dispor de tempo a mais gasto com procedimentos que podem durar muito tempo. A burocracia diminui consideravelmente com o uso das API.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A transformação digital pela qual passa o mundo chega também no setor dos seguros fazendo com que exista uma necessidade cada vez maior de modificar as formas de busca e utilização de informações comuns. Assim, as API se tornam indispensáveis nesse momento.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Um dos serviços que demanda uma integração maior é o Open Insurance, que necessita de maior abertura no compartilhamento de dados para que os serviços sejam ampliados e possam alcançar públicos maiores. Sendo assim, a mudança na forma de lidar com a informação se torna mais presente e mais urgente.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Quais são as maiores vantagens da API",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Dentre as vantagens da utilização das APIs está a redução de custos, além de economia de tempo e recursos. Para buscar informações e para construir relações que demandam mais detalhes será necessário um tempo maior para buscar todas essas informações, no entanto, com as API o processo fica bem mais simples e rápido.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A transformação digital e a integração da empresa ficam mais fáceis e proporcionam mais rapidez nas tramitações diversas e necessárias nas seguradoras. Além disso, as APIs também promovem mais segurança no compartilhamento de dados e informações, além de otimizar sua organização.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A troca de informações também ajuda a cada vez mais criar um espaço de compartilhamento que seja maior e que envolva mais programas, criando assim uma cultura de compartilhamento de dados e informações.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A criação e evolução das APIs é um processo que tende a crescer cada vez mais, de acordo com a mudança e utilização cada vez maiores de tecnologia na resolução de problemas e na otimização de tempo.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Se gostou deste conteúdo, ",
+            "bold": false
+          },
+          {
+            "link": "https://www.eqseguros.com.br/fale-conosco",
+            "newTab": true,
+            "text": "fale agora mesmo com um de nossos especialistas",
+            "bold": false
+          },
+          {
+            "text": " e descubra como a EQ Seguros pode ajudar o seu negócio!",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "seoTitle": "Integração de sistemas e API em seguros",
+    "seoDescription": "Entenda como a API e a integração de sistemas aceleram a transformação digital do mercado de seguros, com mais facilidade e segurança para todos.",
+    "focusKeyphrase": "API de seguros",
+    "excerpt": "A API é uma nova ferramenta tecnológica que propõe maior integração no mercado de seguros. É uma forma de proporcionar mais facilidade nos procedimentos e mais segurança, além de auxiliar as seguradoras e corretores e melhorar sua atuação no mercado."
+  },
+  {
+    "slug": "como-aumentar-seu-faturamento-atraves-do-cross-sell-de-seguros",
+    "title": "Como aumentar seu faturamento através do Cross-Sell de seguros",
+    "category": "Dicas de vendas",
+    "publishedAt": "2024-02-09T12:00:00-03:00",
+    "cover": "blog/como-aumentar-seu-faturamento-atraves-do-cross-sell-de-seguros.jpg",
+    "coverAlt": "Como aumentar seu faturamento através do Cross-Sell de seguros",
+    "blocks": [
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Adquirir novos clientes é essencial para o crescimento de qualquer corretora de seguros, no entanto, em um mercado altamente competitivo, isso por si só não garante mais uma carteira segura. Afinal, a concorrência é cada vez mais acirrada — e é justamente essa a importância de as corretoras mudarem sua estratégia e apostarem no cross-selling.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Isso porque, ao invés de se concentrar exclusivamente em adquirir novos clientes, a estratégia de cross-selling permite que as corretoras maximizem seus lucros vendendo mais produtos para seus clientes existentes, aumentando a fidelidade dos clientes e maximizando o retorno sobre o investimento a longo prazo.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Quer saber mais sobre este assunto? Então, continue sua leitura!",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Mas então, o que é cross selling?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Cross selling é a técnica de venda que consiste em oferecer ao cliente produtos ou serviços complementares ao que ele já comprou ou está interessado. É uma estratégia para aumentar as vendas e a satisfação do cliente ao oferecer soluções adicionais que possam atender às suas necessidades.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Por exemplo, se um cliente está comprando uma televisão, o vendedor pode oferecer um suporte de parede para a televisão ou um pacote de serviços de programação a cabo. Isso poderá ajudá-lo o cliente a obter mais valor da compra e, assim, aumentar a receita da empresa.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Como utilizar o cross selling como estratégia de vendas?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Identificar as necessidades do cliente é fundamental para alavancar as vendas e oferecer o melhor produto. Nesse contexto, venda original e venda cruzada são estratégias importantes para aumentar a rentabilidade e gerar lucros para os corretores.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Quando feitas de forma correta, elas podem trazer resultados positivos e aumentar a satisfação do consumidor, o que pode resultar em fidelização e até mesmo a indicação para outros clientes em potencial.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Vale lembrar que não há um padrão a ser seguido quando o assunto é utilizar estratégias de vendas cruzadas. Normalmente, as corretoras podem utilizar uma estratégia de vendas cruzadas tanto ofertando pacotes de seguros se automóveis, já incluindo apólices de seguro de vida, quanto um seguro residencial acompanhado do próprio seguro de vida.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Outro exemplo de cross-selling é a venda de seguros de saúde que incluem também coberturas relacionadas à saúde bucal dos pacientes. Afinal, esses dois tipos de seguros são complementares, o que significa que as necessidades do consumidor serão atendidas de modo muito mais abrangente.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Ou seja, no cross-selling, à medida que o portfólio de produtos de um segurado é ampliado, os clientes terão maior possibilidade de se fidelizarem, já que são grandes as chances de todos os serviços serem contratados junto a eles próprios.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Isso é particularmente importante no setor de seguros, onde a fidelidade dos clientes é crucial para o sucesso a longo prazo de uma corretora. Além disso, é mais econômico vender para a mesma pessoa do que adquirir novos clientes constantemente. De acordo com estatísticas, essa conta pode ser até 7 vezes mais barata.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Dicas para fazer sucesso com vendas cruzadas",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "O cross-selling é uma técnica de vendas que envolve a recomendação de produtos ou serviços relacionados ao que o cliente já está comprando ou expressou interesse. Assim, para obter sucesso com esse tipo de estratégia de vendas, pode ser interessante adotar alguns cuidados, como:",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "●   ",
+            "bold": false
+          },
+          {
+            "text": " Conheça seus clientes",
+            "bold": true
+          },
+          {
+            "text": ": antes de mais nada, você deve conhecer seus clientes, bem como seus interesses e suas necessidades, afinal, apenas dessa forma é possível recomendar produtos ou serviços que realmente lhes serão úteis;",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " ●   ",
+            "bold": false
+          },
+          {
+            "text": " Ofereça recomendações personalizadas:",
+            "bold": true
+          },
+          {
+            "text": " dê recomendações personalizadas para cada cliente, baseadas em suas necessidades e interesses. Isso fará com que o consumidor sinta que está sendo tratado de forma individual e pessoal;",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " ●    ",
+            "bold": false
+          },
+          {
+            "text": "Faça ofertas complementares: ",
+            "bold": true
+          },
+          {
+            "text": "ofereça produtos ou serviços complementares ao que o cliente já está comprando, como, por exemplo, uma bolsa para acompanhar uma roupa ou um seguro que acompanhe a compra de um carro;",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " ●    ",
+            "bold": false
+          },
+          {
+            "text": "Crie ofertas oportunas:",
+            "bold": true
+          },
+          {
+            "text": " quando o cliente estiver realizando uma compra, é uma boa oportunidade para oferecer outros produtos relacionados que estejam em oferta, por exemplo;",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " ●    ",
+            "bold": false
+          },
+          {
+            "text": "Use a tecnologia:",
+            "bold": true
+          },
+          {
+            "text": " disponha da tecnologia para coletar e analisar dados dos clientes, Assim, sua empresa poderá personalizar recomendações de acordo com as necessidades de cada um;",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " ●    ",
+            "bold": false
+          },
+          {
+            "text": "Oferte benefícios",
+            "bold": true
+          },
+          {
+            "text": ": conceda benefícios para os clientes que comprarem mais de um produto, como descontos ou brindes. Isso aumenta a probabilidade de eles aceitarem a recomendação e gastarem muito mais.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Lembre-se de que o objetivo é ajudar o cliente a encontrar os produtos ou serviços que realmente possam ser úteis para ele, e não simplesmente aumentar as suas vendas. Esse detalhe será simplesmente a consequência de um trabalho bem feito.",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "seoTitle": "Cross-selling de seguros: aumente o faturamento",
+    "seoDescription": "Veja o que é cross-selling de seguros e como usar a venda cruzada para fidelizar clientes, aumentar o faturamento e vender mais para quem já compra.",
+    "focusKeyphrase": "cross-selling",
+    "excerpt": "Adquirir novos clientes é essencial para o crescimento de qualquer corretora de seguros, no entanto, em um mercado altamente competitivo, isso por si só não garante mais uma carteira segura."
+  },
+  {
+    "slug": "open-insurance-entenda-o-que-e-como-funciona-e-suas-vantagens",
+    "title": "Open Insurance: entenda o que é, como funciona e suas vantagens",
+    "category": "API",
+    "publishedAt": "2024-02-09T12:00:00-03:00",
+    "cover": "blog/open-insurance-entenda-o-que-e-como-funciona-e-suas-vantagens.jpg",
+    "coverAlt": "open insurance",
+    "blocks": [
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A digitalização dos mercados está aumentando a necessidade de soluções inovadoras para o setor de seguros, e o Open Insurance é uma das tendências emergentes nesta área. Ele permite que as seguradoras e previdências compartilhem dados e informações para gerar as melhores ofertas para os clientes, oferecendo uma experiência de seguro mais personalizada, transparente e acessível.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Porém, é importante lembrar que o Open Insurance ainda está em fase de implementação no Brasil e deve ser totalmente implementado apenas em 2024. No entanto, ele já está impactando as organizações do setor de seguros, pois essa mudança requer uma adaptação ao contexto da digitalização e modernização de processos.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Neste post explicamos em detalhes o que significa Open Insurance, como ele funciona e seus principais benefícios. Portanto, se quer saber mais, continue a sua leitura!",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Afinal, o que é o Open Insurance?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Open Insurance é um modelo de negócios no setor de seguros que permite aos clientes personalizar suas coberturas de seguro, usando tecnologias digitais para coletar e processar dados e oferecer opções de seguros personalizadas.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Sua ideia é oferecer uma experiência de seguro mais transparente, flexível e acessível para os clientes, permitindo-lhes escolher exatamente o que eles precisam e pagando apenas pelo que usam.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "De modo geral, essa é uma tendência emergente no setor de seguros. Prova disso é que há muitas startups e empresas estabelecidas buscando implementar essa abordagem. Não é demais lembrar também que com essa metodologia, a competitividade entre as empresas de seguro certamente será elevada.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Como funciona o Open Insurance?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Open Insurance funciona permitindo que os clientes personalizem suas coberturas de seguro, usando tecnologias digitais para coletar e processar dados. Isso é feito por meio de plataformas digitais que permitem que os clientes façam suas próprias pesquisas, comprem e gerenciem suas políticas.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "A base do Open Insurance é a utilização da tecnologia para coletar e processar dados dos clientes. Isso inclui dados demográficos, de seguros anteriores, de condições de saúde e de estilo de vida. Estes dados são usados para personalizar as coberturas de seguro para cada cliente individualmente, tornando-as mais precisas e acessíveis.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Além disso, Open Insurance se baseia em oferecer transparência e flexibilidade para os clientes. As plataformas digitais permitem que os clientes vejam as coberturas e preços disponíveis, comparando-os e escolhendo aqueles que melhor atendem às suas necessidades. Isso permite que os clientes comprem apenas o que precisam e evitem pagar por coberturas desnecessárias.",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " Outra base importante do Open Insurance é a utilização de modelos de preços dinâmicos. Isso significa que os preços das coberturas podem ser ajustados em tempo real, com base em dados coletados sobre o cliente, o risco e o mercado. Isso permite oferecer preços mais competitivos e justos para os clientes.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Vale lembrar que a privacidade dos dados do cliente é uma preocupação crítica no modelo de negócios Open Insurance. Por essa razão, é importante que as empresas de seguros implementem medidas de segurança robustas para proteger esses dados e garantir que eles só sejam compartilhados com o consentimento explícito do cliente.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Quais vantagens este método oferece?",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "O Open Insurance oferece inúmeros benefícios, tanto para os clientes quanto para as empresas de seguros. Algumas dessas vantagens incluem:",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Personalização",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Os clientes podem personalizar suas coberturas de seguro para atender às suas próprias necessidades. Isso significa que é possível escolher exatamente o que é estritamente necessário, evitando assim pagar por coberturas desnecessárias, por exemplo.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Transparência",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Os clientes também poderão acompanhar as coberturas e preços disponíveis, além de ser possível compará-los com outros serviços. Dessa forma, será possível que o cliente escolha a opção que melhor atenda às suas necessidades. Isso, por sua vez, contribuirá para uma maior transparência do processo de compra de seguros.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Preços justos",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "O Open Insurance usa modelos de preços dinâmicos que ajustam os preços em tempo real com base em dados coletados sobre o cliente, o risco e o mercado. Isso permite oferecer preços mais competitivos e justos para os clientes, como já citamos.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Conveniência",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Os clientes podem comprar e gerenciar suas políticas de seguro on-line, o que é mais conveniente do que ter que ir até uma agência de seguros. Além disso, vale destacar a redução de despesas. Afinal, o uso de tecnologia para coletar e processar dados pode ajudar as empresas de seguros a reduzir os custos operacionais, como despesas de marketing e de vendas, gerando assim um alívio para o bolso dos consumidores.",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "parts": [
+          {
+            "text": "Melhores decisões comerciais",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "parts": [
+          {
+            "text": "Do ponto de vista das empresas, será possível tomar melhores decisões comerciais. Isso porque, com dados coletados de clientes, as seguradoras poderão tomar decisões mais informadas, identificando, por exemplo, tendências e necessidades do mercado — o que lhes permitirá ajustar estratégias de negócios a fim de melhor aproveitar essas oportunidades.",
+            "bold": false
+          },
+          {
+            "br": true
+          },
+          {
+            "text": " E então, o que achou deste conteúdo? Já está preparado para as novidades do Open Insurance? Conte-nos como você acha que seu negócio pode ser beneficiado e compartilhe conosco suas experiências e ideias nos comentários abaixo. Vamos discutir juntos como podemos aproveitar as vantagens do Open Insurance!",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "seoTitle": "Open Insurance: o que é e como funciona",
+    "seoDescription": "Open Insurance: entenda o que é, como funciona e quais as vantagens da tendência que digitaliza o mercado e traz soluções inovadoras para os seguros.",
+    "focusKeyphrase": "Open Insurance",
+    "excerpt": "A digitalização dos mercados está aumentando a necessidade de soluções inovadoras para o setor de seguros, e o Open Insurance é uma das tendências emergentes nesta área."
+  }
+]
