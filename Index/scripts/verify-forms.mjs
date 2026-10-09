@@ -59,7 +59,7 @@ console.log('\n2. Envio completo')
   expect(!('email' in sent) && sent.answers.some((a) => a.label === 'E-mail'), 'o corpo leva as respostas por rótulo')
   expect(await page.inputValue('[name=nome]') === '', 'os campos são limpos')
   expect((await page.locator('.eq-sr').innerText()).startsWith('Mensagem enviada'), 'leitores de tela recebem o aviso')
-  await button.click({ force: true }); await page.waitForTimeout(500)
+  await button.dispatchEvent('click'); await page.waitForTimeout(500) // pelo DOM: o cabeçalho fixo cobre o botão e um clique por coordenada cairia nele
   expect(posts.length === 1, 'clicar de novo no botão verde não reenvia')
   expect(await page.evaluate(() => window.dataLayer.some((x) => x && x.event === 'generate_lead' && x.form_name && !JSON.stringify(x).includes('@'))), 'evento generate_lead no dataLayer, sem dados pessoais')
   await page.fill('[name=nome]', 'Outra pessoa')
