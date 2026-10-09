@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import path from 'node:path'
-import { legacyRedirects } from '../redirects.mjs'
+import { legacyRedirects, canonicalOrigin, otherHosts } from '../redirects.mjs'
 
 const root = path.resolve(import.meta.dirname, '..')
 const prototype = JSON.parse(fs.readFileSync(path.join(root, 'src/generated/prototype.json'), 'utf8'))
@@ -47,4 +47,12 @@ test('should never redirect to itself or chain through another redirect', () => 
     assert.notEqual(source, destination)
     assert.ok(!legacyRedirects.some(([other]) => matches(other, destination)), `${source} → ${destination} cai em outro redirecionamento`)
   }
+})
+
+test('should send the other domains to the official address, never to themselves', () => {
+  const official = new URL(canonicalOrigin)
+  assert.equal(official.protocol, 'https:'); assert.equal(official.pathname, '/')
+  assert.ok(otherHosts.includes('eqgrupo.com.br') && otherHosts.includes('www.eqgrupo.com.br') && otherHosts.includes('www.eqseguros.com.br'))
+  assert.ok(!otherHosts.includes(official.host), 'o domínio oficial não pode redirecionar para si mesmo')
+  assert.equal(new Set(otherHosts).size, otherHosts.length)
 })

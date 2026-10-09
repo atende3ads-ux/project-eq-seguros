@@ -1,6 +1,6 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 import path from 'node:path'
-import { legacyRedirects } from './redirects.mjs'
+import { legacyRedirects, canonicalOrigin, otherHosts } from './redirects.mjs'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -58,6 +58,8 @@ export default withPayload({
   turbopack: { root: path.resolve('.') },
   async redirects() {
     return [
+      // Outros domínios e o www vão para o endereço oficial, antes de qualquer outra regra.
+      ...otherHosts.map((host) => ({ source: '/:path*', has: [{ type: 'host', value: host }], destination: `${canonicalOrigin}/:path*`, permanent: true })),
       { source: '/index.html', destination: '/', permanent: true },
       { source: '/:page.html', destination: '/:page', permanent: true },
       // Endereços do site antigo (ver redirects.mjs).
