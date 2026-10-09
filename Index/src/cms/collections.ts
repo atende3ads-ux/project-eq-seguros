@@ -8,8 +8,9 @@ const adminOnly: Access = ({ req }) => req.user?.role === 'admin'
 
 export const Users: CollectionConfig = {
   slug: 'users', labels: { singular: 'Usuário', plural: 'Usuários' },
-  auth: { maxLoginAttempts: 5, lockTime: 600000 }, admin: { useAsTitle: 'name' },
-  access: { create: adminOnly, read: signedIn, update: ({ req }) => req.user?.role === 'admin' ? true : { id: { equals: req.user?.id ?? -1 } }, delete: adminOnly },
+  // O Editor não vê a lista de usuários nem o menu "Usuários": só a própria conta (nome e senha, em "Conta").
+  auth: { maxLoginAttempts: 5, lockTime: 600000 }, admin: { useAsTitle: 'name', hidden: ({ user }) => user?.role !== 'admin' },
+  access: { create: adminOnly, read: ({ req }) => req.user?.role === 'admin' ? true : { id: { equals: req.user?.id ?? -1 } }, update: ({ req }) => req.user?.role === 'admin' ? true : { id: { equals: req.user?.id ?? -1 } }, delete: adminOnly },
   fields: [
     { name: 'name', label: 'Nome', type: 'text', required: true },
     { name: 'role', label: 'Permissão', type: 'select', required: true, defaultValue: 'editor', saveToJWT: true,
@@ -134,8 +135,9 @@ export const Site: GlobalConfig = {
 
 /** Informações gerais do site, como em Configurações → Geral do WordPress. */
 export const Settings: GlobalConfig = {
-  slug: 'settings', label: 'Configurações do site', access: { read: () => true, update: signedIn },
-  admin: { group: 'Configurações', description: 'Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.' },
+  // Só o Administrador muda as configurações: elas incluem os IDs de rastreamento e o e-mail que recebe os contatos.
+  slug: 'settings', label: 'Configurações do site', access: { read: () => true, update: adminOnly },
+  admin: { group: 'Configurações', hidden: ({ user }) => user?.role !== 'admin', description: 'Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.' },
   fields: [
     { type: 'tabs', tabs: [
       { label: 'Identidade', fields: [
