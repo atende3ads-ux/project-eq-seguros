@@ -1,5 +1,6 @@
 import { MigrateUpArgs, MigrateDownArgs } from '@payloadcms/db-sqlite'
 import prototype from '../generated/prototype.json'
+import { hasPages } from '../cms/fresh'
 import { applySeo } from '../cms/seo-apply'
 
 /**
@@ -12,7 +13,8 @@ import { applySeo } from '../cms/seo-apply'
  */
 const SLUGS = ['privacidade', 'termos']
 
-export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
+  if (!await hasPages(db)) return
   for (const slug of SLUGS) {
     const source = prototype.pages.find((page) => page.slug === slug)
     const found = await payload.find({ collection: 'pages', where: { slug: { equals: slug } }, limit: 1, depth: 0, overrideAccess: true, req })

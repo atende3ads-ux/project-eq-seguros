@@ -7,6 +7,8 @@ import type { PostCard } from '@/lib/blog'
 import { segments, imageURL, casesVisible, casesSectionIds, isCasesHref } from '@/lib/cases'
 import { withYear } from '@/lib/year'
 import { ContactForm } from '../Forms/ContactForm'
+import { MENU_ICONS } from '@/lib/menu-icons'
+import type { MenuLink } from '@/lib/content'
 
 const names: Record<string, string> = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', viewbox: 'viewBox', preserveaspectratio: 'preserveAspectRatio', crossorigin: 'crossOrigin', colspan: 'colSpan', rowspan: 'rowSpan', readonly: 'readOnly', maxlength: 'maxLength', srcset: 'srcSet', 'xlink:href': 'xlinkHref', 'xmlns:xlink': 'xmlnsXlink', frameborder: 'frameBorder', allowfullscreen: 'allowFullScreen', referrerpolicy: 'referrerPolicy', contenteditable: 'contentEditable', autocomplete: 'autoComplete', spellcheck: 'spellCheck' }
 const safeURL = (value: string) => /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) ? value : '#'
@@ -21,8 +23,8 @@ function style(value: string): CSSProperties {
  * `posts`: os cards fixos do layout (`.post-grid`) passam a mostrar posts publicados.
  * `blogListing`: na página do blog, filtros, grade e "carregar mais" viram a listagem com filtro.
  */
-type Args = { nodes: TemplateNode[]; content: Content; records?: CaseRecord[]; selectedCase?: CaseRecord; posts?: PostCard[]; blogListing?: boolean }
-export function Template({ nodes, content, records = [], selectedCase, posts, blogListing }: Args) {
+type Args = { nodes: TemplateNode[]; content: Content; records?: CaseRecord[]; selectedCase?: CaseRecord; posts?: PostCard[]; blogListing?: boolean; serviceMenu?: MenuLink[] }
+export function Template({ nodes, content, records = [], selectedCase, posts, blogListing, serviceMenu }: Args) {
   const texts = new Map(content.copy?.map((entry) => [entry.key, entry.value]))
   const images = new Map(content.images?.map((entry) => [entry.key, entry]))
   const links = new Map(content.links?.map((entry) => [entry.key, entry.href]))
@@ -48,7 +50,7 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
   }
   const visible = (list?: TemplateNode[]) => list?.filter((node) => !hide(node))
 
-  function render(node: TemplateNode, key: string): ReactNode {
+  function render(node: TemplateNode, key: string, panel?: string): ReactNode {
     if (!node.tag) return withYear((node.textKey && texts.has(node.textKey) ? texts.get(node.textKey) : node.text) ?? '')
     const id = node.attrs?.id
     if (hasCaseListing && id === 'cases-filtro') return <CasesListing key={key} records={records}/>
@@ -85,8 +87,15 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
     if (node.linkKey && links.has(node.linkKey)) attrs.href = safeURL(links.get(node.linkKey)!)
     let children: ReactNode = node.tag === 'title' || node.tag === 'textarea'
       ? node.children?.map((child) => withYear((child.textKey && texts.has(child.textKey) ? texts.get(child.textKey) : child.text) || '')).join('')
-      : visible(node.children)?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`)}</Fragment>)
+      : visible(node.children)?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`, id ?? panel)}</Fragment>)
     if (id === 'cases-destaque') children = <CaseCards records={records.filter((r) => r.destaque).slice(0, 3)}/>
+    // Páginas de serviço criadas pelo painel entram no menu Seguros → Para Pessoas, depois das originais.
+    if (panel === 'seg-pessoas' && serviceMenu?.length && classOf(node).includes('dd-cards') && Array.isArray(children)) {
+      children = [...children, ...serviceMenu.map((item) => <a className="dd-card" href={`/${item.slug}`} key={`menu-${item.slug}`}>
+        <span className="dd-ic"><svg viewBox="0 0 24 24" dangerouslySetInnerHTML={{ __html: (MENU_ICONS[item.icon] || MENU_ICONS.doc).svg }}/></span>
+        <span className="dd-tx"><h4>{item.title}</h4>{item.description && <p>{item.description}</p>}<span className="dd-more">Saiba mais →</span></span>
+      </a>)]
+    }
     if (selectedCase) {
       const record = selectedCase
       const values: Record<string, string> = { 'case-crumb': record.parceiro, 'case-seg': segments[record.segmento], 'case-titulo': record.titulo, 'case-resumo': record.resumo, 'case-parceiro': record.parceiro, 'case-desafio': record.desafio, 'case-solucao': record.solucao, 'case-quote': record.depoimento?.texto || '', 'case-autor': record.depoimento?.autor || '', 'case-cargo': record.depoimento?.cargo || '' }

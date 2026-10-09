@@ -35,7 +35,7 @@ export default function SeoAnalysis() {
       }
       return JSON.stringify(snapshot)
     }
-    const scope = scopeFor(slug)
+    const scope = scopeFor(value('template') || slug)
     const copy: { key: string; value: string }[] = []
     for (let i = 0; fields[`copy.${i}.key`]; i += 1) copy.push({ key: value(`copy.${i}.key`), value: value(`copy.${i}.value`) })
     const alts: string[] = []

@@ -1,4 +1,5 @@
 import { MigrateUpArgs, MigrateDownArgs } from '@payloadcms/db-sqlite'
+import { hasPages } from '../cms/fresh'
 import { applySeo } from '../cms/seo-apply'
 
 /**
@@ -7,7 +8,8 @@ import { applySeo } from '../cms/seo-apply'
  * veio do protótipo ou vazio; o que a equipe editou fica como está. Num banco
  * novo não há páginas ainda: a importação inicial aplica o mesmo SEO.
  */
-export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
+export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
+  if (!await hasPages(db)) return
   await applySeo(payload, req, { settings: false })
 }
 

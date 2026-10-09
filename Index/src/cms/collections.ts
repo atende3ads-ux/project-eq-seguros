@@ -1,5 +1,7 @@
 import type { Access, CollectionConfig, GlobalConfig } from 'payload'
 import { contentFields } from './fields'
+import { MENU_ICON_OPTIONS } from '../lib/menu-icons'
+import { newServicePage } from './service-pages-endpoint'
 
 const signedIn: Access = ({ req }) => Boolean(req.user)
 const adminOnly: Access = ({ req }) => req.user?.role === 'admin'
@@ -34,8 +36,18 @@ export const Media: CollectionConfig = {
 
 export const Pages: CollectionConfig = {
   slug: 'pages', labels: { singular: 'Página', plural: 'Páginas do site' },
-  admin: { useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'], description: 'Cada linha é uma seção da página, na ordem do site. Abra a seção para editar títulos, textos, botões, links e imagens.' },
-  access: { read: ({ req }) => req.user ? true : { status: { equals: 'published' } }, create: adminOnly, update: signedIn, delete: adminOnly },
+  admin: {
+    useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'],
+    description: 'Cada linha é uma seção da página, na ordem do site. Abra a seção para editar títulos, textos, botões, links e imagens.',
+    components: { beforeListTable: ['/components/admin/NewServicePage'] },
+  },
+  // Página nova só nasce do botão "Nova página de serviço" (a partir de um modelo): uma página em branco não teria desenho.
+  // Só as páginas criadas pelo painel (com `template`) podem ser apagadas; as originais do site não.
+  access: {
+    read: ({ req }) => req.user ? true : { status: { equals: 'published' } }, create: () => false, update: signedIn,
+    delete: ({ req }) => req.user?.role === 'admin' ? { template: { exists: true } } : false,
+  },
+  endpoints: [newServicePage],
   // Abas sem `name` são apenas visuais: os campos continuam na raiz do documento.
   fields: [
     { type: 'tabs', tabs: [
@@ -51,6 +63,16 @@ export const Pages: CollectionConfig = {
         { name: 'seoAnalysis', type: 'ui', admin: { components: { Field: '/components/admin/SeoAnalysis' } } },
         { name: 'status', label: 'Visibilidade', type: 'select', defaultValue: 'published', options: [{ label: 'Publicada', value: 'published' }, { label: 'Rascunho', value: 'draft' }] },
         { name: 'slug', label: 'Identificador da página', type: 'text', required: true, unique: true, admin: { hidden: true, readOnly: true } },
+        // Desenho que a página usa: o próprio endereço nas páginas originais; o do modelo nas criadas pelo painel.
+        { name: 'template', type: 'text', admin: { hidden: true, readOnly: true } },
+        { type: 'collapsible', label: 'Menu Seguros', admin: { condition: (data) => Boolean(data?.template), description: 'Como esta página aparece no menu Seguros do site.' }, fields: [
+        { name: 'showInMenu', label: 'Mostrar no menu Seguros', type: 'checkbox', defaultValue: true,
+          admin: { description: 'O card aparece em Seguros → Para Pessoas, depois dos seguros atuais, assim que a página for publicada.' } },
+        { name: 'menuTitle', label: 'Nome no menu', type: 'text', maxLength: 40 },
+        { name: 'menuDescription', label: 'Frase curta no menu', type: 'text', maxLength: 90,
+          admin: { description: 'Uma linha sobre o seguro, como nos outros cards ("Morte, invalidez e proteção da família.").' } },
+        { name: 'menuIcon', label: 'Ícone no menu', type: 'select', defaultValue: 'doc', options: MENU_ICON_OPTIONS },
+              ] },
       ] },
     ] },
   ],

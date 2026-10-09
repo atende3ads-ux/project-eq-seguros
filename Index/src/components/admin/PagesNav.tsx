@@ -37,9 +37,14 @@ export default async function PagesNav() {
   const payload = await getPayload({ config })
   const { docs } = await payload.find({ collection: 'pages', limit: 100, depth: 0, overrideAccess: true, pagination: false })
   const bySlug = new Map(docs.map((doc) => [doc.slug, doc]))
-  const grouped = new Set(GROUPS.flatMap((group) => group.slugs))
+  // Páginas de serviço criadas pelo painel entram em Seguros, depois das originais, com o nome do menu.
+  const created = docs.filter((doc) => doc.template).sort((a, b) => a.createdAt.localeCompare(b.createdAt)).map((doc) => doc.slug)
+  const names: Record<string, string> = { ...NAMES }
+  for (const doc of docs) if (doc.template) names[doc.slug] = doc.menuTitle || doc.title
+  const base = GROUPS.map((group) => group.titulo === 'Seguros' ? { ...group, slugs: [...group.slugs, ...created] } : group)
+  const grouped = new Set(base.flatMap((group) => group.slugs))
   const leftovers = docs.filter((doc) => !grouped.has(doc.slug)).map((doc) => doc.slug)
-  const groups = leftovers.length ? [...GROUPS, { titulo: 'Outras', slugs: leftovers }] : GROUPS
+  const groups = leftovers.length ? [...base, { titulo: 'Outras', slugs: leftovers }] : base
 
   return (
     <div className="eq-nav">
@@ -56,7 +61,7 @@ export default async function PagesNav() {
                 return (
                   <li key={doc!.id}>
                     <a className="eq-nav__link" href={`/admin/collections/pages/${doc!.id}`}>
-                      <span>{NAMES[doc!.slug] || doc!.slug}</span>
+                      <span>{names[doc!.slug] || doc!.slug}</span>
                       {oculta && <span className="eq-nav__badge" title="Fora do ar até o material chegar">oculta</span>}
                       {doc!.status === 'draft' && <span className="eq-nav__badge">rascunho</span>}
                     </a>

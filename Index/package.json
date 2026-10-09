@@ -10,7 +10,8 @@
     "test:password": "node scripts/verify-password-toggle.mjs",
     "test:security": "node scripts/verify-security.mjs",
     "test:consent": "node scripts/verify-consent.mjs",
-    "test:forms": "node scripts/verify-forms.mjs"
+    "test:forms": "node scripts/verify-forms.mjs",
+    "test:service-pages": "node scripts/verify-service-pages.mjs"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "3.90.2", "@payloadcms/next": "3.90.2",

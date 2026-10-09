@@ -13,7 +13,7 @@ export const templates = prototype.pages as unknown as PageTemplate[]
 export const getPageContent = cache(async (slug: string) => {
   const payload = await getCMS()
   const result = await payload.find({ collection: 'pages', where: { slug: { equals: slug } }, limit: 1, depth: 1, overrideAccess: false })
-  return result.docs[0] as unknown as (Content & { title: string; description?: string; featuredImage?: Upload }) | undefined
+  return result.docs[0] as unknown as (Content & { title: string; description?: string; featuredImage?: Upload; template?: string | null }) | undefined
 })
 export const getSiteContent = cache(async () => {
   const payload = await getCMS()
@@ -25,6 +25,19 @@ export const uploadURL = (upload: Upload) => (typeof upload === 'object' && uplo
 export const getSettings = cache(async () => {
   const payload = await getCMS()
   return await payload.findGlobal({ slug: 'settings', depth: 1, overrideAccess: false }) as unknown as Settings
+})
+export type MenuLink = { slug: string; title: string; description: string; icon: string }
+/**
+ * Páginas de serviço criadas pelo painel que estão publicadas e marcadas para o menu Seguros,
+ * da mais antiga para a mais nova. Rascunhos e páginas apagadas somem do menu sozinhos.
+ */
+export const getServiceMenu = cache(async (): Promise<MenuLink[]> => {
+  const payload = await getCMS()
+  const result = await payload.find({
+    collection: 'pages', where: { and: [{ template: { exists: true } }, { showInMenu: { equals: true } }] },
+    sort: 'createdAt', limit: 50, depth: 0, pagination: false, overrideAccess: false,
+  })
+  return result.docs.map((page) => ({ slug: page.slug, title: page.menuTitle?.trim() || page.title, description: page.menuDescription?.trim() || '', icon: page.menuIcon || 'doc' }))
 })
 /** Posts publicados, do mais recente para o mais antigo. */
 export const getPosts = cache(async () => {

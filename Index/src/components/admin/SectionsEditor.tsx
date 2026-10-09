@@ -21,7 +21,8 @@ const LISTS: List[] = ['copy', 'images', 'links']
  * `copy`, `images` e `links` do documento; aqui só muda a forma de editar.
  */
 export default function SectionsEditor() {
-  const slug = useFormFields(([fields]) => fields.slug?.value as string | undefined)
+  // Páginas criadas pelo painel usam o desenho do modelo (`template`); as originais, o do próprio endereço.
+  const slug = useFormFields(([fields]) => (fields.template?.value || fields.slug?.value) as string | undefined)
   // Só as chaves, numa string: o editor não renderiza de novo a cada letra digitada.
   const signature = useFormFields(([fields]) => LISTS.map((list) => {
     const keys: string[] = []
@@ -194,7 +195,8 @@ function TextFields({ item }: { item: Item }) {
 
 /** Destino do link logo depois do último texto dele (um card inteiro tem um link só). */
 function TextLink({ item }: { item: Item }) {
-  const slug = useFormFields(([fields]) => fields.slug?.value as string | undefined)
+  // Páginas criadas pelo painel usam o desenho do modelo (`template`); as originais, o do próprio endereço.
+  const slug = useFormFields(([fields]) => (fields.template?.value || fields.slug?.value) as string | undefined)
   const linkKey = item.entry.link
   const link = linkKey ? scopeFor(slug)[linkKey] : undefined
   const index = useFormFields(([fields]) => {

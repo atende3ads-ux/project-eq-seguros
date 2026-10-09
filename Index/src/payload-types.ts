@@ -182,6 +182,34 @@ export interface Page {
   featuredImage?: (number | null) | Media;
   status?: ('published' | 'draft') | null;
   slug: string;
+  template?: string | null;
+  /**
+   * O card aparece em Seguros → Para Pessoas, depois dos seguros atuais, assim que a página for publicada.
+   */
+  showInMenu?: boolean | null;
+  menuTitle?: string | null;
+  /**
+   * Uma linha sobre o seguro, como nos outros cards ("Morte, invalidez e proteção da família.").
+   */
+  menuDescription?: string | null;
+  menuIcon?:
+    | (
+        | 'heart'
+        | 'shield'
+        | 'pulse'
+        | 'leaf'
+        | 'plane'
+        | 'life'
+        | 'gift'
+        | 'api'
+        | 'doc'
+        | 'bolt'
+        | 'users'
+        | 'handshake'
+        | 'award'
+        | 'chat'
+      )
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -517,6 +545,11 @@ export interface PagesSelect<T extends boolean = true> {
   featuredImage?: T;
   status?: T;
   slug?: T;
+  template?: T;
+  showInMenu?: T;
+  menuTitle?: T;
+  menuDescription?: T;
+  menuIcon?: T;
   updatedAt?: T;
   createdAt?: T;
 }

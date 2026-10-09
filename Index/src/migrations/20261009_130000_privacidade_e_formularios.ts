@@ -2,6 +2,7 @@ import { MigrateUpArgs, MigrateDownArgs } from '@payloadcms/db-sqlite'
 import prototype from '../generated/prototype.json'
 import { applySeo } from '../cms/seo-apply'
 import { stripSiteName } from '../lib/site-title'
+import { hasPages } from '../cms/fresh'
 import { fillSettings } from '../cms/settings-sql'
 
 /**
@@ -29,6 +30,8 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
 
   await fillSettings(db, { form_recipient: RECIPIENT })
 
+  // Banco novo: a importação inicial cria todas as páginas, inclusive esta.
+  if (!await hasPages(db)) return
   const page = prototype.pages.find((item) => item.slug === THANKS)
   const exists = await payload.count({ collection: 'pages', where: { slug: { equals: THANKS } }, overrideAccess: true, req })
   if (page && !exists.totalDocs) {

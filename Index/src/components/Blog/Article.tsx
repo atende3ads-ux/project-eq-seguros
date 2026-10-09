@@ -1,6 +1,7 @@
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import prototype from '@/generated/prototype.json'
 import type { Post } from '@/payload-types'
+import type { MenuLink } from '@/lib/content'
 import type { Content, PageTemplate, TemplateNode } from '@/lib/types'
 import { categoryName, coverAlt, coverURL, formatDate, readingTime, toCard } from '@/lib/blog'
 import { Template } from '../Template'
@@ -14,13 +15,13 @@ const classes = (node: TemplateNode) => (node.attrs?.class || '').split(' ')
 const isArticle = (node: TemplateNode): boolean =>
   classes(node).includes('crumbbar') || classes(node).includes('phero') || classes(node).includes('prose') || Boolean(node.children?.some(isArticle))
 
-type Args = { post: Post; related: Post[]; template: PageTemplate; page: Content; site: Content; preview?: boolean }
+type Args = { post: Post; related: Post[]; template: PageTemplate; page: Content; site: Content; preview?: boolean; serviceMenu?: MenuLink[] }
 
-export function Article({ post, related, template, page, site, preview }: Args) {
+export function Article({ post, related, template, page, site, preview, serviceMenu }: Args) {
   const image = coverURL(post)
   const date = formatDate(post.publishedAt)
   return <>
-    <Template nodes={template.header} content={site} />
+    <Template nodes={template.header} content={site} serviceMenu={serviceMenu} />
     {preview && post._status !== 'published' && <div className="blog-preview-bar">Prévia do rascunho: este post ainda não está publicado.</div>}
     <div className="crumbbar"><div className="wrap"><div className="crumb">
       <a href="/">Home</a><span className="sep">›</span><a href="/blog">Blog</a><span className="sep">›</span><b>{categoryName(post)}</b>

@@ -1,7 +1,7 @@
 import { headers } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { Article } from '@/components/Blog/Article'
-import { getCMS, getPageContent, getPost, getPosts, getSettings, getSiteContent, templates } from '@/lib/content'
+import { getCMS, getPageContent, getPost, getPosts, getServiceMenu, getSettings, getSiteContent, templates } from '@/lib/content'
 import { coverURL, plainText } from '@/lib/blog'
 import { openGraph, twitter } from '@/lib/share'
 import { pageTitle } from '@/lib/site-title'
@@ -37,11 +37,11 @@ export default async function BlogPost(args: Args) {
   const { post, preview } = await load(args)
   const template = templates.find((item) => item.slug === 'post')
   if (!post || !template) notFound()
-  const [page, site, posts] = await Promise.all([getPageContent('post'), getSiteContent(), getPosts()])
+  const [page, site, posts, serviceMenu] = await Promise.all([getPageContent('post'), getSiteContent(), getPosts(), getServiceMenu()])
   if (!page) notFound()
   // "Leia também": primeiro os da mesma categoria, depois os mais recentes.
   const categoryId = (value: typeof post.category) => typeof value === 'object' && value ? value.id : value
   const related = posts.filter((item) => item.id !== post.id)
     .sort((a, b) => Number(categoryId(b.category) === categoryId(post.category)) - Number(categoryId(a.category) === categoryId(post.category)))
-  return <Article post={post} related={related} template={template} page={page} site={site} preview={preview} />
+  return <Article post={post} related={related} template={template} page={page} site={site} preview={preview} serviceMenu={serviceMenu} />
 }

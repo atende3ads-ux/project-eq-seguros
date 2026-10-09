@@ -10,6 +10,7 @@ import * as migration_20261007_140000_paginas_legais from './20261007_140000_pag
 import * as migration_20261008_210508_rastreamento from './20261008_210508_rastreamento';
 import * as migration_20261008_220000_conteudo_do_site_antigo from './20261008_220000_conteudo_do_site_antigo';
 import * as migration_20261009_120801_formularios from './20261009_120801_formularios';
+import * as migration_20261009_125000_paginas_de_servico from './20261009_125000_paginas_de_servico';
 import * as migration_20261009_130000_privacidade_e_formularios from './20261009_130000_privacidade_e_formularios';
 
 export const migrations = [
@@ -74,8 +75,13 @@ export const migrations = [
     name: '20261009_120801_formularios',
   },
   {
+    up: migration_20261009_125000_paginas_de_servico.up,
+    down: migration_20261009_125000_paginas_de_servico.down,
+    name: '20261009_125000_paginas_de_servico'
+  },
+  {
     up: migration_20261009_130000_privacidade_e_formularios.up,
     down: migration_20261009_130000_privacidade_e_formularios.down,
-    name: '20261009_130000_privacidade_e_formularios'
+    name: '20261009_130000_privacidade_e_formularios',
   },
 ];
