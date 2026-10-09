@@ -29,3 +29,7 @@ form .btn[disabled] { opacity: .7; cursor: progress; transform: none; }
 .eq-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
 @keyframes eq-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .btn .eq-spin { animation-duration: 2.4s; } }
+
+/* Perguntas frequentes (sanfona): a seta acompanha o fechamento animado feito em Interactions. */
+.faq details.faq-closing summary::after{transform:rotate(45deg);margin-top:-4px;}
+@media (prefers-reduced-motion: reduce){.faq details summary::after{transition:none;}}

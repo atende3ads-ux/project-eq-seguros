@@ -34,6 +34,42 @@ export function Interactions({ slug }: { slug: string }) {
       const button = menu?.querySelector<HTMLElement>('.btn')
       if (button) button.style.display = open ? 'inline-flex' : 'none'
     }, options)
+    // Perguntas frequentes em sanfona: abrir uma fecha a que estava aberta, com animação curta de altura.
+    const faqAnimations = new WeakMap<HTMLElement, Animation>()
+    const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const faqToggle = (item: HTMLDetailsElement, show: boolean) => {
+      const summary = item.querySelector('summary')
+      if (!summary) return
+      const current = item.offsetHeight
+      faqAnimations.get(item)?.cancel()
+      // Altura fechada = título + bordas (a caixa usa border-box).
+      const closed = summary.offsetHeight + (item.offsetHeight - item.clientHeight)
+      const run = (from: number, to: number, done?: () => void) => {
+        if (reduceMotion()) return done?.()
+        const animation = item.animate({ height: [`${from}px`, `${to}px`] }, { duration: 280, easing: 'cubic-bezier(.22,.68,.32,1)' })
+        faqAnimations.set(item, animation)
+        animation.onfinish = () => { faqAnimations.delete(item); done?.() }
+      }
+      if (show) {
+        item.classList.remove('faq-closing')
+        const start = item.open ? current : closed
+        item.open = true
+        run(start, item.offsetHeight)
+      } else {
+        item.classList.add('faq-closing')   // a seta já gira enquanto a caixa fecha
+        run(current, closed, () => { item.open = false; item.classList.remove('faq-closing') })
+        if (reduceMotion()) { item.open = false; item.classList.remove('faq-closing') }
+      }
+    }
+    document.addEventListener('click', (event) => {
+      const summary = (event.target as Element).closest?.('.faq summary')
+      if (!summary) return
+      event.preventDefault()
+      const item = summary.parentElement as HTMLDetailsElement
+      const opening = !item.open || item.classList.contains('faq-closing')
+      if (opening) item.closest('.faq')?.querySelectorAll<HTMLDetailsElement>('details[open]').forEach((other) => { if (other !== item && !other.classList.contains('faq-closing')) faqToggle(other, false) })
+      faqToggle(item, opening)
+    }, options)
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (!entry.isIntersecting) return
       const element = entry.target
