@@ -5,11 +5,11 @@
 1. A pessoa preenche um formulário do site (Contato, cotações, Seja parceiro, Consignado).
 2. O servidor confere os dados, bloqueia robôs e **guarda o contato** em *Mensagens recebidas* no painel.
 3. Em seguida avisa a equipe por e-mail, no endereço de *Configurações do site → Formulários* (hoje `comercial@eqseguros.com.br`). O e-mail de quem escreveu vai em "Responder para".
-4. A pessoa vai para a página de agradecimento (`/formulario-enviado`), que serve de marcador de conversão.
+4. O botão mostra "Enviando…" e, quando o servidor confirma, fica verde com "Mensagem enviada com sucesso" (sem trocar de página). Nesse momento o site registra o evento `generate_lead` no Tag Manager, sem nenhum dado pessoal, só o nome do formulário. É esse evento, e não uma página de agradecimento, que serve de marcador de conversão: no Tag Manager, crie um gatilho do tipo *Evento personalizado* com o nome `generate_lead`.
 
 O e-mail é só um aviso. Se ele falhar, o contato continua salvo e a coluna **E-mail para a equipe** mostra "Falhou". Nenhum contato se perde.
 
-Os textos dos campos, os botões e a página de agradecimento são editáveis no painel como qualquer página. As opções das listas (Assunto, Seguro de interesse) ficam no código, em `Index/src/lib/forms.ts`.
+Os textos dos campos e os botões são editáveis no painel como qualquer página. As opções das listas (Assunto, Seguro de interesse) ficam no código, em `Index/src/lib/forms.ts`.
 
 ## O que precisa ser criado uma vez (conta do cliente)
 

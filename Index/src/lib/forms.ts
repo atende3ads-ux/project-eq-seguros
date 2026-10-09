@@ -6,9 +6,6 @@
  * O tipo de cada campo vem do rótulo: "E-mail" é e-mail, "Telefone" é telefone, e assim por diante.
  */
 
-/** Páginas que existem mas não entram no Google nem no sitemap. */
-export const NOT_INDEXED = new Set(['formulario-enviado'])
-
 export type Kind = 'text' | 'email' | 'phone' | 'document' | 'money' | 'select' | 'textarea'
 export type Spec = { kind: Kind; name: string; options?: string[] }
 

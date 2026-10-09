@@ -24,14 +24,14 @@ export function ContactForm({ fields, button, siteKey, className }: Props) {
   const id = useId()
   const started = useRef(0)
   const form = useRef<HTMLFormElement>(null)
-  const [state, setState] = useState<'idle' | 'sending'>('idle')
+  const [state, setState] = useState<'idle' | 'sending' | 'sent'>('idle')
   const [error, setError] = useState('')
   const [invalid, setInvalid] = useState('')
   useEffect(() => { started.current = Date.now() }, [])
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (state === 'sending') return
+    if (state !== 'idle') return
     const data = new FormData(event.currentTarget)
     const answers: Answer[] = fields.map((field) => ({ label: field.label, value: String(data.get(specFor(field.label).name) ?? '').trim() }))
     for (const [index, field] of fields.entries()) {
@@ -60,14 +60,15 @@ export function ContactForm({ fields, button, siteKey, className }: Props) {
       if (!result.ok) { setError(result.error || 'Não conseguimos enviar agora. Tente de novo em instantes.'); setState('idle'); return }
       // Só depois da confirmação do servidor. Sem nenhum dado pessoal: só o nome do formulário.
       window.dataLayer?.push({ event: 'generate_lead', form_name: body.form })
-      location.assign('/formulario-enviado')
+      form.current?.reset()
+      setState('sent')
     } catch {
       setError('Não conseguimos enviar agora. Confira a conexão e tente de novo, ou fale com a gente pelo telefone.')
       setState('idle')
     }
   }
 
-  return <form ref={form} className={className} noValidate onSubmit={submit} onFocusCapture={() => { void loadRecaptcha(siteKey) }} aria-busy={state === 'sending'}>
+  return <form ref={form} className={className} noValidate onSubmit={submit} onInput={() => { if (state === 'sent') setState('idle') }} onFocusCapture={() => { void loadRecaptcha(siteKey) }} aria-busy={state === 'sending'}>
     {fields.map((field) => {
       const spec = specFor(field.label)
       const fieldId = `${id}-${spec.name}`
@@ -83,7 +84,12 @@ export function ContactForm({ fields, button, siteKey, className }: Props) {
     })}
     <div className="eq-hp" aria-hidden="true"><label>Não preencha este campo<input type="text" name="website" tabIndex={-1} autoComplete="off"/></label></div>
     <p className="eq-form-error" id={`${id}-error`} role="alert">{error}</p>
-    <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={state === 'sending'}>{state === 'sending' ? 'Enviando…' : button}</button>
+    <button type="submit" className={`btn btn-primary${state === 'sent' ? ' eq-sent' : ''}`} style={{ width: '100%', justifyContent: 'center' }} disabled={state === 'sending'} aria-disabled={state === 'sent' || undefined}>
+      {state === 'sending' ? <><span className="eq-spin" aria-hidden="true"/>Enviando…</>
+        : state === 'sent' ? <><svg className="eq-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="4 12 10 18 20 6"/></svg>Mensagem enviada com sucesso</>
+        : button}
+    </button>
+    <p className="eq-sr" role="status">{state === 'sent' ? 'Mensagem enviada com sucesso. Retornamos o contato em até 1 dia útil.' : ''}</p>
     <p className="eq-form-note">Ao enviar, você concorda com o uso dos seus dados para retornarmos o contato. Veja a <a href="/privacidade">Política de Privacidade</a>.{siteKey && <> Este site é protegido pelo reCAPTCHA, e valem a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e os <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Termos de Serviço</a> do Google.</>}</p>
   </form>
 }

@@ -21,3 +21,11 @@
 form .btn[disabled] { opacity: .7; cursor: progress; transform: none; }
 /* O selo do reCAPTCHA fica escondido; o aviso exigido pelo Google está no texto abaixo do formulário. */
 .grecaptcha-badge { visibility: hidden; }
+
+/* Botão de envio: carregando e enviado (verde, com contraste de 5,4:1 para o texto branco). */
+.btn .eq-spin { width: 1em; height: 1em; margin-right: .6em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: eq-spin .8s linear infinite; }
+.btn .eq-check { width: 1.15em; height: 1.15em; margin-right: .55em; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.btn.eq-sent, .btn.eq-sent:hover { background: #1E7B45; color: #fff; transform: none; cursor: default; }
+.eq-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: 0; }
+@keyframes eq-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .btn .eq-spin { animation-duration: 2.4s; } }

@@ -1,8 +1,4 @@
 import { MigrateUpArgs, MigrateDownArgs } from '@payloadcms/db-sqlite'
-import prototype from '../generated/prototype.json'
-import { applySeo } from '../cms/seo-apply'
-import { stripSiteName } from '../lib/site-title'
-import { hasPages } from '../cms/fresh'
 import { fillSettings } from '../cms/settings-sql'
 
 /**
@@ -10,13 +6,11 @@ import { fillSettings } from '../cms/settings-sql'
  * - rodapé: o link "Configurações de privacidade" (texto `footer-t52`, endereço `footer-l27`), que reabre as
  *   preferências de cookies;
  * - Configurações → Formulários: e-mail que recebe os contatos, se ainda vazio;
- * - página "Mensagem enviada" (`/formulario-enviado`), para onde o visitante vai depois de enviar um contato.
  * Num banco novo, o rodapé e as páginas já vêm da importação inicial; aqui só entra o que falta.
  */
 const FOOTER_TEXT = { key: 'footer-t52', label: 'footer.ft > div.ft-bar > div.wrap > span.ft-priv > a · Configurações de privacidade', value: 'Configurações de privacidade' }
 const FOOTER_LINK = { key: 'footer-l27', label: 'Configurações de privacidade', href: '#configuracoes-de-privacidade' }
 const RECIPIENT = 'comercial@eqseguros.com.br'
-const THANKS = 'formulario-enviado'
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   const site = await payload.findGlobal({ slug: 'site', overrideAccess: true, req })
@@ -29,17 +23,6 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   }
 
   await fillSettings(db, { form_recipient: RECIPIENT })
-
-  // Banco novo: a importação inicial cria todas as páginas, inclusive esta.
-  if (!await hasPages(db)) return
-  const page = prototype.pages.find((item) => item.slug === THANKS)
-  const exists = await payload.count({ collection: 'pages', where: { slug: { equals: THANKS } }, overrideAccess: true, req })
-  if (page && !exists.totalDocs) {
-    await payload.create({ collection: 'pages', overrideAccess: true, req, data: {
-      slug: page.slug, title: stripSiteName(page.title, page.slug), description: page.description, status: 'published', ...page.content,
-    } })
-    await applySeo(payload, req, { settings: false })
-  }
 }
 
 // O que a equipe editou depois (link, destinatário, página) não é desfeito.
