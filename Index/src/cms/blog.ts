@@ -47,7 +47,8 @@ export const Posts: CollectionConfig = {
       { _status: { equals: 'published' } },
       { publishedAt: { less_than_equal: new Date().toISOString() } },
     ] as Where[] },
-    readVersions: signedIn, create: signedIn, update: signedIn, delete: adminOnly,
+    // O Editor também apaga posts; categorias ficam só com o Administrador (apagar uma que está em uso deixaria posts sem categoria).
+    readVersions: signedIn, create: signedIn, update: signedIn, delete: signedIn,
   },
   fields: [
     { type: 'tabs', tabs: [

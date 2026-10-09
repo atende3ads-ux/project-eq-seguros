@@ -51,6 +51,26 @@ try {
   expect((await asEditor(`/api/categories/${cat.doc.id}`, { method: 'PATCH', body: JSON.stringify({ name: 'Categoria de teste 2' }) })).status === 200, 'edita categoria')
   expect((await asEditor(`/api/categories/${cat.doc.id}`, { method: 'DELETE' })).status === 403, 'apagar fica com o administrador')
   await asAdmin(`/api/categories/${cat.doc.id}`, { method: 'DELETE' })
+  // Post: cria um rascunho e apaga.
+  const cat2 = await (await asAdmin('/api/categories', { method: 'POST', body: JSON.stringify({ name: 'Categoria do post de teste' }) })).json()
+  const lexical = { root: { type: 'root', format: '', indent: 0, version: 1, direction: null, children: [{ type: 'paragraph', format: '', indent: 0, version: 1, direction: null, textFormat: 0, textStyle: '', children: [{ type: 'text', version: 1, detail: 0, format: 0, mode: 'normal', style: '', text: 'Texto de teste.' }] }] } }
+  const post = await (await asEditor('/api/posts?draft=true', { method: 'POST', body: JSON.stringify({ title: 'Post de teste de permissão', content: lexical, category: cat2.doc.id, authorName: 'Teste', _status: 'draft' }) })).json()
+  expect(Boolean(post.doc?.id), 'cria post (rascunho)')
+  expect((await asEditor(`/api/posts/${post.doc.id}`, { method: 'DELETE' })).status === 200, 'APAGA post do blog')
+  await asAdmin(`/api/categories/${cat2.doc.id}`, { method: 'DELETE' })
+  // Imagem: envia um PNG de 1 pixel e apaga.
+  const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGNgYGD4DwABBAEAXk3OOQAAAABJRU5ErkJggg==', 'base64')
+  const form = new FormData(); form.append('_payload', JSON.stringify({ alt: 'Imagem de teste' })); form.append('file', new Blob([png], { type: 'image/png' }), 'teste-permissao.png')
+  const tokenEditor = await login(editor)
+  const media = await (await fetch(BASE + '/api/media', { method: 'POST', headers: { Authorization: `JWT ${tokenEditor}` }, body: form })).json()
+  expect(Boolean(media.doc?.id), 'envia imagem para a biblioteca')
+  expect((await asEditor(`/api/media/${media.doc.id}`, { method: 'DELETE' })).status === 200, 'APAGA imagem da biblioteca')
+  // Mensagem: o formulário cria uma; o Editor não consegue apagar.
+  const sent = await fetch(BASE + '/enviar-formulario', { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: BASE, 'x-forwarded-for': '10.3.3.3' }, body: JSON.stringify({ form: 'Teste de permissão', page: '/contato', startedAt: Date.now() - 30000, answers: [{ label: 'Nome', value: 'Teste de permissão ' + Date.now() }] }) })
+  const message = (await (await asAdmin('/api/messages?limit=1&sort=-createdAt&depth=0')).json()).docs[0]
+  expect(sent.status === 200 && Boolean(message), 'mensagem de teste criada pelo formulário')
+  expect((await asEditor(`/api/messages/${message.id}`, { method: 'DELETE' })).status === 403, 'NÃO apaga mensagens recebidas')
+  expect((await asAdmin(`/api/messages/${message.id}`, { method: 'DELETE' })).status === 200, '(o Administrador apaga a mensagem de teste)')
   const page = (await (await asEditor('/api/pages?where[slug][equals]=seguro-vida&depth=0')).json()).docs[0]
   const same = await asEditor(`/api/pages/${page.id}`, { method: 'PATCH', body: JSON.stringify({ focusKeyphrase: page.focusKeyphrase || 'seguro de vida' }) })
   expect(same.status === 200, 'edita páginas do site')

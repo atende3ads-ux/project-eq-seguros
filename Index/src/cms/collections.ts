@@ -28,7 +28,8 @@ export const Users: CollectionConfig = {
 
 export const Media: CollectionConfig = {
   slug: 'media', labels: { singular: 'Imagem', plural: 'Biblioteca de imagens' },
-  access: { read: () => true, create: signedIn, update: signedIn, delete: adminOnly },
+  // O Editor também apaga imagens da biblioteca.
+  access: { read: () => true, create: signedIn, update: signedIn, delete: signedIn },
   // SVG serve para ícones e logos. O Payload recusa SVG com script, eventos ou outro conteúdo
   // perigoso, e o servidor entrega todo SVG com uma política que impede scripts (next.config.mjs).
   upload: { staticDir: 'media', mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif', 'image/svg+xml'] },
