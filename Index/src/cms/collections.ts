@@ -141,6 +141,10 @@ export const Settings: GlobalConfig = {
           validate: (value: string | null | undefined) => !value || /^[a-z0-9]{6,16}$/.test(value.trim()) || 'Use só letras minúsculas e números, como no painel do Clarity.',
           admin: { description: 'ID do projeto no Clarity (gravações e mapas de calor). Deixe vazio para não carregar.' } },
       ] },
+      { label: 'Formulários', fields: [
+        { name: 'formRecipient', label: 'E-mail que recebe os contatos', type: 'email',
+          admin: { description: 'Os contatos enviados pelos formulários do site chegam neste e-mail, com o e-mail de quem escreveu em “Responder para”. Todo contato também fica salvo em Mensagens recebidas, mesmo se este e-mail não chegar.' } },
+      ] },
     ] },
   ],
 }

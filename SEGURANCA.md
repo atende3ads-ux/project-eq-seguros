@@ -17,6 +17,8 @@ O site é uma aplicação Next.js com o painel Payload, publicada em Docker pelo
 - **Rastreamento:** os IDs ficam em Configurações do site → Rastreamento e só são carregados quando `SITE_ENV=production`, para o endereço provisório não sujar os números. Se alguém colocar no Tag Manager uma ferramenta que fale com outro endereço (Meta Pixel, LinkedIn, RD Station…), ela será bloqueada até o endereço entrar em `next.config.mjs`.
 - **Ao incluir um serviço externo** (reCAPTCHA, vídeo, chat), a política vai bloqueá-lo até ser liberada em `next.config.mjs`. Libere só o endereço necessário, na diretiva certa (`script-src`, `frame-src`, `connect-src`, `img-src`), e rode `npm run test:security`.
 - **SVG:** a biblioteca de imagens aceita SVG. O Payload recusa SVG com script, eventos ou iframe, e o servidor entrega todo SVG com `sandbox`, então nenhum script roda mesmo se o arquivo for aberto direto.
+- **Formulários:** a rota `/enviar-formulario` só aceita envio vindo do próprio site, limita 5 envios por 10 minutos por origem, descarta robôs (campo escondido, tempo mínimo), valida tudo no servidor e usa reCAPTCHA v3 quando há chaves. O contato é gravado antes do e-mail; nada do que a pessoa digitou entra no HTML do e-mail sem escape.
+- **Consentimento:** nada opcional carrega antes da escolha do visitante (ver `FORMULARIOS.md`).
 - **Painel sem Gravatar:** o painel não envia o hash do e-mail de quem está logado a um serviço externo.
 - **Permissões:** o Editor de conteúdo não cria usuários nem apaga registros. O cadastro do primeiro usuário só existe enquanto não há nenhum.
 
@@ -72,6 +74,7 @@ Instalação: `scp -i ~/.ssh/eq-vps ops/backup-eq.sh root@IP:/usr/local/bin/eq-b
 
 - Fechar as portas 8000, 6001 e 6002 (depende do domínio com HTTPS do Coolify, `coolify.eqseguros.com.br`).
 - Cópia dos backups para fora do servidor.
-- Formulários reais (hoje são só desenho) com CAPTCHA, limite por IP e campo-armadilha.
+- Formulários: criar as chaves do Resend e do reCAPTCHA e colocá-las no Coolify (passo a passo em `FORMULARIOS.md`).
+- Jurídico: a Política de Privacidade não menciona cookies nem ferramentas de medição; precisa de revisão do cliente.
 - Contato de segurança (`/.well-known/security.txt`): depende de o cliente indicar um e-mail.
 - Os 5 alertas moderados do `npm audit` vêm do `@payloadcms/db-sqlite` e não têm correção disponível. Reavaliar a cada atualização do Payload.

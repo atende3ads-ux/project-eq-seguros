@@ -16,7 +16,8 @@ export const legacyRedirects = [
   ['/area-do-corretor', '/parceiros'],
   ['/seja-um-parceiro', '/seja-parceiro'],
   ['/aviso-de-sinistro', '/atendimento'],
-  ['/cases-de-sucesso', '/cases'],
+  // Os cases estão fora do ar (CASES_VISIBLE): enquanto isso levam a Parceiros. Quando voltarem, troque por '/cases'.
+  ['/cases-de-sucesso', '/parceiros'],
   ['/duvidas', '/ajuda'],
   ['/duvidas/:assunto', '/ajuda'],
   ['/fale-conosco', '/contato'],

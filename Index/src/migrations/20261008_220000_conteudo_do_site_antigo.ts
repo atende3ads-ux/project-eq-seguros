@@ -3,6 +3,7 @@ import path from 'node:path'
 import { existsSync } from 'node:fs'
 import { importLegacyPosts } from '../cms/legacy-posts'
 import { siteDefaultDescription } from '../cms/seo-pages'
+import { fillSettings } from '../cms/settings-sql'
 
 /**
  * Prepara o site para assumir o endereço do site antigo da EQ:
@@ -16,17 +17,10 @@ import { siteDefaultDescription } from '../cms/seo-pages'
  */
 const TRACKING = { gtmId: 'GTM-M6GGJCP', ga4Id: 'G-CX9NWGZ8FY', clarityId: 'mcupj06yj5' } as const
 
-export async function up({ payload, req }: MigrateUpArgs): Promise<void> {
-  const settings = await payload.findGlobal({ slug: 'settings', depth: 0, overrideAccess: true, req })
-  const data: Record<string, unknown> = {}
-  for (const [field, value] of Object.entries(TRACKING)) if (!settings[field as keyof typeof TRACKING]) data[field] = value
-  if (!settings.defaultDescription?.trim()) data.defaultDescription = siteDefaultDescription
+export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   const image = path.resolve('public/assets/compartilhar-eq.jpg')
-  if (!settings.shareImage && existsSync(image)) {
-    const media = await payload.create({ collection: 'media', data: { alt: 'Equipe da EQ Seguros no escritório' }, filePath: image, overrideAccess: true, req })
-    data.shareImage = media.id
-  }
-  if (Object.keys(data).length) await payload.updateGlobal({ slug: 'settings', data, overrideAccess: true, req })
+  await fillSettings(db, { gtm_id: TRACKING.gtmId, ga4_id: TRACKING.ga4Id, clarity_id: TRACKING.clarityId, default_description: siteDefaultDescription }, async () =>
+    existsSync(image) ? (await payload.create({ collection: 'media', data: { alt: 'Equipe da EQ Seguros no escritório' }, filePath: image, overrideAccess: true, req })).id : undefined)
   await importLegacyPosts(payload, req)
 }
 

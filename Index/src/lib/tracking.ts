@@ -17,6 +17,9 @@ const valid = (value: string | null | undefined, kind: keyof typeof FORMAT) => {
   return id && FORMAT[kind].test(id) ? id : undefined
 }
 
+/** Versão do aviso. Mudar este valor faz o aviso aparecer de novo para todos (mudança de finalidade, nova ferramenta). */
+export const CONSENT_VERSION = '2026-10-09'
+
 export type Tracking = { gtm?: string; ga4?: string; clarity?: string }
 
 export function trackingFor(settings: Settings, production = process.env.SITE_ENV === 'production'): Tracking {

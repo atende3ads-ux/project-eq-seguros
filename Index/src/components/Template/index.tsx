@@ -6,6 +6,7 @@ import { BlogListing, PostCards } from '../Blog'
 import type { PostCard } from '@/lib/blog'
 import { segments, imageURL, casesVisible, casesSectionIds, isCasesHref } from '@/lib/cases'
 import { withYear } from '@/lib/year'
+import { ContactForm } from '../Forms/ContactForm'
 
 const names: Record<string, string> = { class: 'className', for: 'htmlFor', tabindex: 'tabIndex', viewbox: 'viewBox', preserveaspectratio: 'preserveAspectRatio', crossorigin: 'crossOrigin', colspan: 'colSpan', rowspan: 'rowSpan', readonly: 'readOnly', maxlength: 'maxLength', srcset: 'srcSet', 'xlink:href': 'xlinkHref', 'xmlns:xlink': 'xmlnsXlink', frameborder: 'frameBorder', allowfullscreen: 'allowFullScreen', referrerpolicy: 'referrerPolicy', contenteditable: 'contentEditable', autocomplete: 'autoComplete', spellcheck: 'spellCheck' }
 const safeURL = (value: string) => /^(\/(?!\/)|#|https?:\/\/|mailto:|tel:)/i.test(value) ? value : '#'
@@ -57,6 +58,16 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
     }
     if (posts && classOf(node).includes('post-grid')) {
       return <div className="post-grid" key={key}><PostCards posts={posts.slice(0, node.children?.filter((child) => child.tag).length || 3)}/></div>
+    }
+    // Os formulários do modelo (rótulos, textos de exemplo e botão) viram campos de verdade, com os mesmos textos editáveis.
+    if (node.tag === 'form' && classOf(node).includes('form')) {
+      const textOf = (n?: TemplateNode): string => !n ? '' : n.tag ? (n.children || []).map(textOf).join('') : (n.textKey && texts.has(n.textKey) ? texts.get(n.textKey) : n.text) ?? ''
+      const fields = (node.children || []).filter((child) => classOf(child).includes('field')).map((field) => ({
+        label: textOf(field.children?.find((child) => child.tag === 'label')).trim(),
+        placeholder: textOf(field.children?.find((child) => classOf(child).includes('input'))).trim(),
+      }))
+      const button = textOf(node.children?.find((child) => classOf(child).includes('btn'))).trim()
+      return <ContactForm key={key} className={node.attrs?.class} fields={fields} button={button || 'Enviar'} siteKey={process.env.RECAPTCHA_SITE_KEY || ''}/>
     }
     const attrs: Record<string, unknown> = { key }
     for (const [name, value] of Object.entries(node.attrs || {})) {

@@ -162,6 +162,11 @@ export const pageSeo: Record<string, PageSeo> = {
       description: ['Termos de uso do site e dos canais digitais do EQ Grupo: aceitação, uso dos serviços, propriedade intelectual, responsabilidade e foro em Goiânia.'],
     },
   },
+  'formulario-enviado': {
+    title: 'Mensagem enviada: obrigado pelo contato',
+    description: 'Mensagem enviada com sucesso: a equipe do EQ Grupo retorna o contato em até 1 dia útil. Para urgências, fale pelo WhatsApp ou pelo telefone (62) 3572-6000.',
+    focusKeyphrase: 'mensagem enviada',
+  },
   cases: {
     title: 'Cases de sucesso: parceiros que vendem mais',
     description: 'Cases de sucesso de parceiros que vendem mais com os seguros da EQ na jornada de venda: fintechs, varejistas, plataformas de benefícios e corretoras.',

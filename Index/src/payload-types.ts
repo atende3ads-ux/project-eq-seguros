@@ -70,6 +70,7 @@ export interface Config {
     pages: Page;
     posts: Post;
     categories: Category;
+    messages: Message;
     media: Media;
     cases: Case;
     users: User;
@@ -83,6 +84,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    messages: MessagesSelect<false> | MessagesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     cases: CasesSelect<false> | CasesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -283,6 +285,36 @@ export interface Category {
   createdAt: string;
 }
 /**
+ * Contatos enviados pelos formulários do site. Marque “Atendida” depois de responder. Os dados pessoais ficam só aqui: apague o que não for mais necessário.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "messages".
+ */
+export interface Message {
+  id: number;
+  summary?: string | null;
+  /**
+   * Marque quando o contato já foi respondido.
+   */
+  handled?: boolean | null;
+  form?: string | null;
+  page?: string | null;
+  /**
+   * Se aparecer “Falhou”, o contato está salvo aqui, mas o aviso não chegou: confira a chave de e-mail.
+   */
+  mailStatus?: ('sent' | 'failed' | 'not-configured') | null;
+  mailError?: string | null;
+  answers?:
+    | {
+        label: string;
+        value: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "cases".
  */
@@ -389,6 +421,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'categories';
         value: number | Category;
+      } | null)
+    | ({
+        relationTo: 'messages';
+        value: number | Message;
       } | null)
     | ({
         relationTo: 'media';
@@ -511,6 +547,27 @@ export interface PostsSelect<T extends boolean = true> {
 export interface CategoriesSelect<T extends boolean = true> {
   name?: T;
   slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "messages_select".
+ */
+export interface MessagesSelect<T extends boolean = true> {
+  summary?: T;
+  handled?: T;
+  form?: T;
+  page?: T;
+  mailStatus?: T;
+  mailError?: T;
+  answers?:
+    | T
+    | {
+        label?: T;
+        value?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
@@ -676,6 +733,10 @@ export interface Setting {
    * ID do projeto no Clarity (gravações e mapas de calor). Deixe vazio para não carregar.
    */
   clarityId?: string | null;
+  /**
+   * Os contatos enviados pelos formulários do site chegam neste e-mail, com o e-mail de quem escreveu em “Responder para”. Todo contato também fica salvo em Mensagens recebidas, mesmo se este e-mail não chegar.
+   */
+  formRecipient?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -729,6 +790,7 @@ export interface SettingsSelect<T extends boolean = true> {
   gtmId?: T;
   ga4Id?: T;
   clarityId?: T;
+  formRecipient?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

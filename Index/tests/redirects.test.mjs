@@ -28,6 +28,10 @@ test('should send every redirect to a page that exists', () => {
   for (const [, destination] of legacyRedirects) assert.ok(exists(destination), `destino inexistente: ${destination}`)
 })
 
+test('should not send visitors to pages that are offline while cases are hidden', () => {
+  for (const [, destination] of legacyRedirects) assert.ok(!['/cases', '/case'].includes(destination), `destino fora do ar: ${destination}`)
+})
+
 test('should not redirect an address that the new site already answers', () => {
   // Redirecionar uma página que existe a esconderia.
   for (const [source] of legacyRedirects) assert.ok(!exists(source) || source === '/404', `origem já existe no site novo: ${source}`)

@@ -164,6 +164,7 @@
     '<div class="ft-bar"><div class="wrap">' +
       '<span>© 2026 EQ Seguros &amp; EQUATORIAL · EQ Grupo</span>' +
       '<span>Desenvolvido por <a href="https://3ads.com.br" target="_blank" rel="noopener noreferrer"><b>3ADS</b></a></span>' +
+      '<span class="ft-priv"><a href="#configuracoes-de-privacidade">Configurações de privacidade</a></span>' +
     '</div></div></footer>';
 
 

@@ -12,6 +12,8 @@ const isProduction = process.env.NODE_ENV === 'production'
 const google = ['https://www.googletagmanager.com', 'https://*.googletagmanager.com', 'https://www.google-analytics.com', 'https://*.google-analytics.com', 'https://*.analytics.google.com']
 const googleAds = ['https://www.googleadservices.com', 'https://googleads.g.doubleclick.net', 'https://*.g.doubleclick.net', 'https://ad.doubleclick.net', 'https://pagead2.googlesyndication.com', 'https://www.google.com', 'https://www.google.com.br']
 const meta = ['https://connect.facebook.net', 'https://www.facebook.com']
+/** reCAPTCHA v3 dos formulários: só os caminhos do reCAPTCHA, não o Google inteiro. */
+const recaptcha = ['https://www.google.com/recaptcha/', 'https://www.gstatic.com/recaptcha/']
 const clarity = ['https://www.clarity.ms', 'https://scripts.clarity.ms', 'https://*.clarity.ms', 'https://c.bing.com']
 
 /**
@@ -23,7 +25,7 @@ const clarity = ['https://www.clarity.ms', 'https://scripts.clarity.ms', 'https:
  */
 const contentSecurityPolicy = [
   "default-src 'self'",
-  ['script-src', "'self'", "'unsafe-inline'", ...google, 'https://www.googleadservices.com', meta[0], clarity[0], clarity[1]].join(' '),
+  ['script-src', "'self'", "'unsafe-inline'", ...google, 'https://www.googleadservices.com', meta[0], clarity[0], clarity[1], ...recaptcha].join(' '),
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   ['img-src', "'self'", 'data:', 'blob:', ...google, ...googleAds, ...meta, ...clarity].join(' '),

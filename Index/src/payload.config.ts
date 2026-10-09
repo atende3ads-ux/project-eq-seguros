@@ -7,6 +7,7 @@ import { pt } from '@payloadcms/translations/languages/pt'
 import sharp from 'sharp'
 import { Users, Media, Pages, Cases, Site, Settings } from './cms/collections'
 import { Categories, Posts } from './cms/blog'
+import { Messages } from './cms/messages'
 import { seedPrototype } from './cms/seed'
 import { seedBlog } from './cms/seed-blog'
 import { migrations } from './migrations'
@@ -31,7 +32,7 @@ export default buildConfig({
     },
     meta: { titleSuffix: ' | EQ Seguros' },
   },
-  collections: [Pages, Posts, Categories, Media, Cases, Users], globals: [Settings, Site],
+  collections: [Pages, Posts, Categories, Messages, Media, Cases, Users], globals: [Settings, Site],
   editor: lexicalEditor(), sharp,
   db: sqliteAdapter({ client: { url: process.env.DATABASE_URL || 'file:./.data/eq-seguros.db' }, prodMigrations: migrations }),
   i18n: { supportedLanguages: { pt }, fallbackLanguage: 'pt' },

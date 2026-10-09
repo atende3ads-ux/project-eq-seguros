@@ -5,7 +5,7 @@ import { DEFAULT_SITE_NAME } from '@/lib/site-title'
 import { openGraph, twitter } from '@/lib/share'
 import { organizationLd } from '@/lib/structured-data'
 import { JsonLd } from '@/components/JsonLd'
-import { TrackingBody, TrackingHead } from '@/components/Tracking'
+import { TrackingHead } from '@/components/Tracking'
 import { trackingFor } from '@/lib/tracking'
 
 const FALLBACK_ICON = '/assets/eq-simbolo.png'
@@ -36,10 +36,11 @@ export default async function Layout({ children }: { children: ReactNode }) {
   const settings = await getSettings()
   const tracking = trackingFor(settings)
   return <html lang="pt-BR"><head>
-    <TrackingHead {...tracking}/>
+    <TrackingHead tracking={tracking} siteName={settings.siteName?.trim() || DEFAULT_SITE_NAME}/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/assets/style.css"/>
-  </head><body><TrackingBody {...tracking}/><JsonLd data={organizationLd(settings)}/>{children}</body></html>
+    <link rel="stylesheet" href="/assets/forms.css"/>
+  </head><body><JsonLd data={organizationLd(settings)}/>{children}</body></html>
 }

@@ -38700,6 +38700,2462 @@
       }
     },
     {
+      "slug": "formulario-enviado",
+      "title": "Mensagem enviada | EQ Seguros",
+      "description": "Recebemos a sua mensagem e a equipe do EQ Grupo retorna o contato em até 1 dia útil. Veja outros canais de atendimento caso a necessidade seja urgente.",
+      "body": [
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "crumbbar"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "wrap"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "crumb"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/"
+                      },
+                      "linkKey": "page-l1",
+                      "children": [
+                        {
+                          "text": "Home",
+                          "textKey": "page-t1"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "sep"
+                      },
+                      "children": [
+                        {
+                          "text": "›",
+                          "textKey": "page-t2"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "b",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Mensagem enviada",
+                          "textKey": "page-t3"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "tag": "section",
+          "attrs": {
+            "class": "phero"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "wrap"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "rv-init"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "kicker"
+                      },
+                      "children": [
+                        {
+                          "text": "Obrigado",
+                          "textKey": "page-t4"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h1",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Mensagem enviada com sucesso",
+                          "textKey": "page-t5"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": {
+                        "class": "lead"
+                      },
+                      "children": [
+                        {
+                          "text": "Recebemos a sua mensagem e a equipe do EQ Grupo retorna o contato em até 1 dia útil. Se a necessidade for urgente, fale com a gente pelo WhatsApp ou pelo telefone (62) 3572-6000.",
+                          "textKey": "page-t6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "tag": "section",
+          "attrs": {
+            "class": "sec"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "wrap rv-init"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "btn-row"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "btn btn-primary",
+                        "href": "/"
+                      },
+                      "linkKey": "page-l2",
+                      "children": [
+                        {
+                          "text": "Voltar para a página inicial",
+                          "textKey": "page-t7"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "link-arrow",
+                        "href": "/atendimento"
+                      },
+                      "linkKey": "page-l3",
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Ver canais de atendimento",
+                              "textKey": "page-t8"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\n"
+        },
+        {
+          "text": "\n\n\n"
+        }
+      ],
+      "header": [
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "chancela"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "wrap"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "text": "Empresas do grupo:",
+                      "textKey": "header-t1"
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "badge"
+                  },
+                  "children": [
+                    {
+                      "text": "EQ Seguros S.A.",
+                      "textKey": "header-t2"
+                    }
+                  ]
+                },
+                {
+                  "tag": "span",
+                  "attrs": {
+                    "class": "badge"
+                  },
+                  "children": [
+                    {
+                      "text": "Equatorial Previdência",
+                      "textKey": "header-t3"
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "right"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "fone"
+                      },
+                      "children": [
+                        {
+                          "tag": "svg",
+                          "attrs": {
+                            "viewbox": "0 0 24 24"
+                          },
+                          "children": [
+                            {
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "text": " 0800 201 1838",
+                          "textKey": "header-t4"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "sep"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "reg"
+                      },
+                      "children": [
+                        {
+                          "text": "Regulado pela SUSEP",
+                          "textKey": "header-t5"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "header",
+          "attrs": {
+            "class": "nav",
+            "id": "nav"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "wrap"
+              },
+              "children": [
+                {
+                  "tag": "a",
+                  "attrs": {
+                    "class": "logo",
+                    "href": "/"
+                  },
+                  "linkKey": "header-l1",
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/logo-eq-seguros-2.png",
+                        "alt": "EQ Seguros"
+                      },
+                      "imageKey": "header-i1",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "nav",
+                  "attrs": {
+                    "class": "menu",
+                    "id": "menu"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/grupo-eq"
+                      },
+                      "linkKey": "header-l2",
+                      "children": [
+                        {
+                          "text": "EQ Grupo",
+                          "textKey": "header-t6"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "has-dd"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "nav-top",
+                            "href": "/seguros"
+                          },
+                          "linkKey": "header-l3",
+                          "children": [
+                            {
+                              "text": "Seguros",
+                              "textKey": "header-t7"
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {
+                                "class": "caret"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "dd"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-head"
+                              },
+                              "children": [
+                                {
+                                  "text": "Nossos Seguros",
+                                  "textKey": "header-t8"
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-body"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-cats"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-cat on",
+                                        "data-cat": "seg-pessoas"
+                                      },
+                                      "children": [
+                                        {
+                                          "text": "Para Pessoas",
+                                          "textKey": "header-t9"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-cat",
+                                        "data-cat": "seg-servicos"
+                                      },
+                                      "children": [
+                                        {
+                                          "text": "Serviços",
+                                          "textKey": "header-t10"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-cat",
+                                        "data-cat": "seg-api"
+                                      },
+                                      "children": [
+                                        {
+                                          "text": "Via API",
+                                          "textKey": "header-t11"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-panels"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "dd-panel on",
+                                        "id": "seg-pessoas"
+                                      },
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-label"
+                                          },
+                                          "children": [
+                                            {
+                                              "text": "Seguros de pessoas",
+                                              "textKey": "header-t12"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-cards"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seguro-vida"
+                                              },
+                                              "linkKey": "header-l4",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro de Vida",
+                                                          "textKey": "header-t13"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Morte, invalidez e proteção da família.",
+                                                          "textKey": "header-t14"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t15"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seguro-prestamista"
+                                              },
+                                              "linkKey": "header-l5",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro Prestamista",
+                                                          "textKey": "header-t16"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Quita o saldo devedor em imprevistos.",
+                                                          "textKey": "header-t17"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t18"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seguro-acidentes"
+                                              },
+                                              "linkKey": "header-l6",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "22 12 18 12 15 21 9 3 6 12 2 12"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro de Acidentes",
+                                                          "textKey": "header-t19"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Morte acidental e invalidez por acidente.",
+                                                          "textKey": "header-t20"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t21"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seguro-funeral"
+                                              },
+                                              "linkKey": "header-l7",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M20.2 12.2a6 6 0 0 0-8.5-8.5L5 10.5V19h8.5z"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "16",
+                                                            "y1": "8",
+                                                            "x2": "2",
+                                                            "y2": "22"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "17.5",
+                                                            "y1": "15",
+                                                            "x2": "9",
+                                                            "y2": "15"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro Funeral",
+                                                          "textKey": "header-t22"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Auxílio funeral para a família.",
+                                                          "textKey": "header-t23"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t24"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seguro-viagem"
+                                              },
+                                              "linkKey": "header-l8",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M22 2 11 13"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M22 2 15 22l-4-9-9-4 20-7z"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro Viagem Nacional",
+                                                          "textKey": "header-t25"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Viagens pelo Brasil, inclusive de ônibus.",
+                                                          "textKey": "header-t26"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t27"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "dd-panel",
+                                        "id": "seg-servicos"
+                                      },
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-label"
+                                          },
+                                          "children": [
+                                            {
+                                              "text": "Serviços agregados",
+                                              "textKey": "header-t28"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-cards"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/atendimento"
+                                              },
+                                              "linkKey": "header-l9",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "circle",
+                                                          "attrs": {
+                                                            "cx": "12",
+                                                            "cy": "12",
+                                                            "r": "10"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "circle",
+                                                          "attrs": {
+                                                            "cx": "12",
+                                                            "cy": "12",
+                                                            "r": "4"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "4.9",
+                                                            "y1": "4.9",
+                                                            "x2": "9.2",
+                                                            "y2": "9.2"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "14.8",
+                                                            "y1": "14.8",
+                                                            "x2": "19.1",
+                                                            "y2": "19.1"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "14.8",
+                                                            "y1": "9.2",
+                                                            "x2": "19.1",
+                                                            "y2": "4.9"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "9.2",
+                                                            "y1": "14.8",
+                                                            "x2": "4.9",
+                                                            "y2": "19.1"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Assistências",
+                                                          "textKey": "header-t29"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Telemedicina, residencial, pet e mais.",
+                                                          "textKey": "header-t30"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t31"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/atendimento"
+                                              },
+                                              "linkKey": "header-l10",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "20 12 20 22 4 22 4 12"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "rect",
+                                                          "attrs": {
+                                                            "x": "2",
+                                                            "y": "7",
+                                                            "width": "20",
+                                                            "height": "5"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "12",
+                                                            "y1": "22",
+                                                            "x2": "12",
+                                                            "y2": "7"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Sorteios",
+                                                          "textKey": "header-t32"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Prêmios vinculados aos produtos.",
+                                                          "textKey": "header-t33"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t34"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "dd-panel",
+                                        "id": "seg-api"
+                                      },
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-label"
+                                          },
+                                          "children": [
+                                            {
+                                              "text": "Distribuição via parceiros",
+                                              "textKey": "header-t35"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-cards"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/tecnologia"
+                                              },
+                                              "linkKey": "header-l11",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "16 18 22 12 16 6"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "8 6 2 12 8 18"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguro embarcado",
+                                                          "textKey": "header-t36"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguros de pessoas na jornada do parceiro, via API.",
+                                                          "textKey": "header-t37"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t38"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-foot"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "wrap"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/atendimento"
+                                      },
+                                      "linkKey": "header-l12",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "polygon",
+                                              "attrs": {
+                                                "points": "13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Acione seu seguro",
+                                              "textKey": "header-t39"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/contato"
+                                      },
+                                      "linkKey": "header-l13",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "path",
+                                              "attrs": {
+                                                "d": "M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Fale Conosco",
+                                              "textKey": "header-t40"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "has-dd"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "nav-top",
+                            "href": "/credito"
+                          },
+                          "linkKey": "header-l14",
+                          "children": [
+                            {
+                              "text": "Crédito",
+                              "textKey": "header-t41"
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {
+                                "class": "caret"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "dd"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-head"
+                              },
+                              "children": [
+                                {
+                                  "text": "Crédito",
+                                  "textKey": "header-t42"
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-body nocats"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-cats"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-cat on",
+                                        "data-cat": "cred"
+                                      },
+                                      "children": [
+                                        {
+                                          "text": "Crédito",
+                                          "textKey": "header-t43"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-panels"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "dd-panel on",
+                                        "id": "cred"
+                                      },
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-label"
+                                          },
+                                          "children": [
+                                            {
+                                              "text": "Consignado Público e Pecúlio",
+                                              "textKey": "header-t44"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-cards"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/consignado"
+                                              },
+                                              "linkKey": "header-l15",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "14 2 14 8 20 8"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "16",
+                                                            "y1": "13",
+                                                            "x2": "8",
+                                                            "y2": "13"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "16",
+                                                            "y1": "17",
+                                                            "x2": "8",
+                                                            "y2": "17"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Empréstimo Consignado",
+                                                          "textKey": "header-t45"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Consignado Público, conforme a margem consignável.",
+                                                          "textKey": "header-t46"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t47"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/peculio"
+                                              },
+                                              "linkKey": "header-l16",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "20 12 20 22 4 22 4 12"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "rect",
+                                                          "attrs": {
+                                                            "x": "2",
+                                                            "y": "7",
+                                                            "width": "20",
+                                                            "height": "5"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "line",
+                                                          "attrs": {
+                                                            "x1": "12",
+                                                            "y1": "22",
+                                                            "x2": "12",
+                                                            "y2": "7"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Pecúlio",
+                                                          "textKey": "header-t48"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Indenização por morte de qualquer causa.",
+                                                          "textKey": "header-t49"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t50"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-foot"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "wrap"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/atendimento"
+                                      },
+                                      "linkKey": "header-l17",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "polygon",
+                                              "attrs": {
+                                                "points": "13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Acione seu seguro",
+                                              "textKey": "header-t51"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/contato"
+                                      },
+                                      "linkKey": "header-l18",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "path",
+                                              "attrs": {
+                                                "d": "M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Fale Conosco",
+                                              "textKey": "header-t52"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/tecnologia"
+                      },
+                      "linkKey": "header-l19",
+                      "children": [
+                        {
+                          "text": "Tecnologia EQ",
+                          "textKey": "header-t53"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/atendimento"
+                      },
+                      "linkKey": "header-l20",
+                      "children": [
+                        {
+                          "text": "Atendimento",
+                          "textKey": "header-t54"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "span",
+                      "attrs": {
+                        "class": "has-dd"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "nav-top",
+                            "href": "/parceiros"
+                          },
+                          "linkKey": "header-l21",
+                          "children": [
+                            {
+                              "text": "Para Parceiros",
+                              "textKey": "header-t55"
+                            },
+                            {
+                              "tag": "span",
+                              "attrs": {
+                                "class": "caret"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "dd"
+                          },
+                          "children": [
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-head"
+                              },
+                              "children": [
+                                {
+                                  "text": "Para Parceiros",
+                                  "textKey": "header-t56"
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-body nocats"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-cats"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-cat on",
+                                        "data-cat": "parc"
+                                      },
+                                      "children": [
+                                        {
+                                          "text": "Para Parceiros",
+                                          "textKey": "header-t57"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "dd-panels"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "dd-panel on",
+                                        "id": "parc"
+                                      },
+                                      "children": [
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-label"
+                                          },
+                                          "children": [
+                                            {
+                                              "text": "Hub do parceiro",
+                                              "textKey": "header-t58"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "div",
+                                          "attrs": {
+                                            "class": "dd-cards"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/parceiros"
+                                              },
+                                              "linkKey": "header-l22",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "circle",
+                                                          "attrs": {
+                                                            "cx": "9",
+                                                            "cy": "7",
+                                                            "r": "4"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M23 21v-2a4 4 0 0 0-3-3.87"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M16 3.13a4 4 0 0 1 0 7.75"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Para Parceiros",
+                                                          "textKey": "header-t59"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seguros e crédito para corretores e representantes.",
+                                                          "textKey": "header-t60"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t61"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/seja-parceiro"
+                                              },
+                                              "linkKey": "header-l23",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M11 17l2 2a1 1 0 1 0 3-3"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M14 14l2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M21 3l1 11h-2"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M3 3L2 14l6.5 6.5a1 1 0 1 0 3-3"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "path",
+                                                          "attrs": {
+                                                            "d": "M3 4h8"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Seja um Parceiro",
+                                                          "textKey": "header-t62"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Cadastro e etapas para começar a vender com a EQ.",
+                                                          "textKey": "header-t63"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t64"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "tag": "a",
+                                              "attrs": {
+                                                "class": "dd-card",
+                                                "href": "/cases"
+                                              },
+                                              "linkKey": "header-l24",
+                                              "children": [
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-ic"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "svg",
+                                                      "attrs": {
+                                                        "viewbox": "0 0 24 24"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "tag": "circle",
+                                                          "attrs": {
+                                                            "cx": "12",
+                                                            "cy": "8",
+                                                            "r": "6"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "tag": "polyline",
+                                                          "attrs": {
+                                                            "points": "15.5 13 17 22 12 19 7 22 8.5 13"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "tag": "span",
+                                                  "attrs": {
+                                                    "class": "dd-tx"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "tag": "h4",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Cases de sucesso",
+                                                          "textKey": "header-t65"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "p",
+                                                      "attrs": {},
+                                                      "children": [
+                                                        {
+                                                          "text": "Como parceiros embarcaram os seguros da EQ.",
+                                                          "textKey": "header-t66"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "tag": "span",
+                                                      "attrs": {
+                                                        "class": "dd-more"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "text": "Saiba mais →",
+                                                          "textKey": "header-t67"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "attrs": {
+                                "class": "dd-foot"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "wrap"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/ajuda"
+                                      },
+                                      "linkKey": "header-l25",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "path",
+                                              "attrs": {
+                                                "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "tag": "polyline",
+                                              "attrs": {
+                                                "points": "14 2 14 8 20 8"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "tag": "line",
+                                              "attrs": {
+                                                "x1": "16",
+                                                "y1": "13",
+                                                "x2": "8",
+                                                "y2": "13"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "tag": "line",
+                                              "attrs": {
+                                                "x1": "16",
+                                                "y1": "17",
+                                                "x2": "8",
+                                                "y2": "17"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Central de Ajuda",
+                                              "textKey": "header-t68"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "tag": "a",
+                                      "attrs": {
+                                        "class": "dd-act",
+                                        "href": "/contato"
+                                      },
+                                      "linkKey": "header-l26",
+                                      "children": [
+                                        {
+                                          "tag": "svg",
+                                          "attrs": {
+                                            "viewbox": "0 0 24 24"
+                                          },
+                                          "children": [
+                                            {
+                                              "tag": "path",
+                                              "attrs": {
+                                                "d": "M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "tag": "span",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "text": "Fale Conosco",
+                                              "textKey": "header-t69"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/blog"
+                      },
+                      "linkKey": "header-l27",
+                      "children": [
+                        {
+                          "text": "Blog",
+                          "textKey": "header-t70"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "btn btn-primary",
+                        "href": "/contato",
+                        "style": "display:none;"
+                      },
+                      "linkKey": "header-l28",
+                      "children": [
+                        {
+                          "text": "Fale com um especialista",
+                          "textKey": "header-t71"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "nav-cta"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "btn btn-primary",
+                        "href": "/contato"
+                      },
+                      "linkKey": "header-l29",
+                      "children": [
+                        {
+                          "text": "Fale com um especialista",
+                          "textKey": "header-t72"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "button",
+                  "attrs": {
+                    "class": "burger",
+                    "id": "burger",
+                    "aria-label": "Abrir menu"
+                  },
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "attrs": {
+                        "viewbox": "0 0 24 24"
+                      },
+                      "children": [
+                        {
+                          "tag": "line",
+                          "attrs": {
+                            "x1": "3",
+                            "y1": "7",
+                            "x2": "21",
+                            "y2": "7"
+                          },
+                          "children": []
+                        },
+                        {
+                          "tag": "line",
+                          "attrs": {
+                            "x1": "3",
+                            "y1": "12",
+                            "x2": "21",
+                            "y2": "12"
+                          },
+                          "children": []
+                        },
+                        {
+                          "tag": "line",
+                          "attrs": {
+                            "x1": "3",
+                            "y1": "17",
+                            "x2": "21",
+                            "y2": "17"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "content": {
+        "copy": [
+          {
+            "key": "page-t1",
+            "label": "div.crumbbar > div.wrap > div.crumb > a · Home",
+            "value": "Home"
+          },
+          {
+            "key": "page-t2",
+            "label": "div.crumbbar > div.wrap > div.crumb > span.sep · ›",
+            "value": "›"
+          },
+          {
+            "key": "page-t3",
+            "label": "div.crumbbar > div.wrap > div.crumb > b · Mensagem enviada",
+            "value": "Mensagem enviada"
+          },
+          {
+            "key": "page-t4",
+            "label": "section.phero > div.wrap > div.rv-init > span.kicker · Obrigado",
+            "value": "Obrigado"
+          },
+          {
+            "key": "page-t5",
+            "label": "section.phero > div.wrap > div.rv-init > h1 · Mensagem enviada com sucesso",
+            "value": "Mensagem enviada com sucesso"
+          },
+          {
+            "key": "page-t6",
+            "label": "section.phero > div.wrap > div.rv-init > p.lead · Recebemos a sua mensagem e a equipe do EQ Grupo retorna o contato em até 1 dia útil. Se a ",
+            "value": "Recebemos a sua mensagem e a equipe do EQ Grupo retorna o contato em até 1 dia útil. Se a necessidade for urgente, fale com a gente pelo WhatsApp ou pelo telefone (62) 3572-6000."
+          },
+          {
+            "key": "page-t7",
+            "label": "section.sec > div.wrap > div.btn-row > a.btn · Voltar para a página inicial",
+            "value": "Voltar para a página inicial"
+          },
+          {
+            "key": "page-t8",
+            "label": "section.sec > div.wrap > div.btn-row > a.link-arrow > span · Ver canais de atendimento",
+            "value": "Ver canais de atendimento"
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "page-l1",
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "key": "page-l2",
+            "label": "Voltar para a página inicial",
+            "href": "/"
+          },
+          {
+            "key": "page-l3",
+            "label": "Ver canais de atendimento",
+            "href": "/atendimento"
+          }
+        ]
+      }
+    },
+    {
       "slug": "grupo-eq",
       "title": "EQ Grupo | Solidez e confiança desde 1972",
       "description": "Entidade de previdência complementar e seguradora: a história, os números e a governança do EQ Grupo.",
@@ -101165,6 +103621,27 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "ft-priv"
+                    },
+                    "children": [
+                      {
+                        "tag": "a",
+                        "attrs": {
+                          "href": "#configuracoes-de-privacidade"
+                        },
+                        "linkKey": "footer-l27",
+                        "children": [
+                          {
+                            "text": "Configurações de privacidade",
+                            "textKey": "footer-t52"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -101789,6 +104266,11 @@
           "key": "footer-t51",
           "label": "footer.ft > div.ft-bar > div.wrap > span > a > b · 3ADS",
           "value": "3ADS"
+        },
+        {
+          "key": "footer-t52",
+          "label": "footer.ft > div.ft-bar > div.wrap > span.ft-priv > a · Configurações de privacidade",
+          "value": "Configurações de privacidade"
         }
       ],
       "images": [
@@ -102086,6 +104568,11 @@
           "key": "footer-l26",
           "label": "3ADS",
           "href": "https://3ads.com.br"
+        },
+        {
+          "key": "footer-l27",
+          "label": "Configurações de privacidade",
+          "href": "#configuracoes-de-privacidade"
         }
       ]
     }

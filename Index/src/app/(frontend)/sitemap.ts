@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { getCMS } from '@/lib/content'
+import { NOT_INDEXED } from '@/lib/forms'
 import { casesVisible, casesSlugs } from '@/lib/cases'
 export const dynamic = 'force-dynamic'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -8,7 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = await payload.find({ collection: 'pages', limit: 100, overrideAccess: false })
   const url = process.env.SERVER_URL || 'http://localhost:3000'
   // `post` é só o modelo dos artigos; cada post publicado entra com o próprio endereço.
-  const hidden = (slug: string) => slug === 'case' || slug === 'post' || (!casesVisible && casesSlugs.has(slug))
+  const hidden = (slug: string) => slug === 'case' || slug === 'post' || NOT_INDEXED.has(slug) || (!casesVisible && casesSlugs.has(slug))
   const posts = await payload.find({ collection: 'posts', limit: 500, depth: 0, overrideAccess: false, pagination: false })
   return [
     ...pages.docs.filter((p) => !hidden(p.slug)).map((p) => ({ url: `${url}${p.slug === 'index' ? '/' : '/' + p.slug}`, lastModified: new Date(p.updatedAt) })),
