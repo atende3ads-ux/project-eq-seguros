@@ -1,0 +1,147 @@
+/* ==========================================================================
+   ERRO 404 · EQ Seguros
+   Só o que é novo. Tudo com prefixo .err404- para colar sem conflito.
+   Reaproveita do site: .phero, .wrap, .kicker, .lead, .btn, .btn-primary,
+   .btn-row, .link-arrow, .rv-init e os tokens de :root.
+   Mobile first: a base serve 320px; os @media (min-width) ampliam.
+   ========================================================================== */
+
+/* ---------- Seção: ocupa a altura útil da tela ---------- */
+.err404-tela{
+  /* altura do cabeçalho (faixa navy + navegação), medida no site: de 156px (tablet) a 233px (320px, com a
+     faixa navy em duas linhas); no celular o conteúdo é mais alto que a tela e o valor não faz diferença.
+     Ajuste aqui se o cabeçalho mudar. */
+  --err404-header:160px;
+  display:flex;align-items:center;
+  min-height:calc(100vh - var(--err404-header));   /* navegadores antigos */
+  min-height:calc(100svh - var(--err404-header));  /* desconta a barra do navegador no celular */
+  padding:44px 0 56px;
+  color-scheme:light;                              /* o site não tem modo escuro */
+}
+.err404-tela > .wrap{width:100%;}                  /* o .wrap é filho flex: precisa de largura total */
+
+/* ---------- Grade: arte + texto ---------- */
+.err404-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;}
+
+/* ---------- Arte: bloco navy com o numeral ---------- */
+.err404-arte{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  height:148px;border-radius:var(--r-md);
+  background:var(--grad-navy);
+}
+/* pontinhos brancos, mesmo padrão do .phero.dark */
+.err404-arte::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(255,255,255,.09) 1.6px,transparent 1.7px);
+  background-size:17px 17px;
+}
+.err404-num{
+  position:relative;z-index:2;
+  font-size:5.4rem;font-weight:800;line-height:1;letter-spacing:-.04em;
+  color:#fff;font-variant-numeric:tabular-nums;
+}
+.err404-zero{color:var(--orange-light);}           /* laranja claro, o tom da marca para fundo escuro */
+.err404-onda{position:absolute;left:0;right:0;bottom:-1px;z-index:1;width:100%;height:46%;display:block;}
+.err404-onda-fundo{fill:rgba(255,255,255,.055);}
+.err404-onda-linha{
+  fill:none;stroke:var(--orange);stroke-width:2;stroke-linecap:round;
+  vector-effect:non-scaling-stroke;                /* a linha não engrossa quando o SVG estica */
+}
+
+/* ---------- Texto e ações ---------- */
+.err404-texto{min-width:0;}
+.err404-acoes{align-items:center;gap:8px 26px;margin-top:30px;}
+.err404-acoes .btn{width:100%;margin-bottom:6px;}  /* botão em largura total no celular */
+.err404-acoes .link-arrow{min-height:44px;}        /* alvo de toque */
+
+.err404-contato{margin-top:22px;font-size:.95rem;line-height:1.7;color:var(--gray);}
+.err404-contato a{
+  color:var(--navy);font-weight:600;
+  text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px;
+  overflow-wrap:anywhere;                          /* o e-mail quebra em vez de estourar em 320px */
+  transition:color .3s var(--ease);
+}
+.err404-contato a:hover{color:var(--orange-dark);}
+
+/* ---------- Atalhos ---------- */
+.err404-atalhos{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);}
+.err404-atalhos-titulo{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;margin-bottom:16px;}
+.err404-lista{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;}
+
+.err404-atalho{
+  display:flex;align-items:center;gap:14px;height:100%;min-height:68px;
+  padding:12px 18px 12px 12px;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);
+  box-shadow:var(--sh-sm);color:var(--navy);
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s;
+}
+.err404-atalho:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--orange);}
+.err404-ico{
+  flex:0 0 44px;width:44px;height:44px;border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  background:var(--amber-tint);color:var(--navy);
+}
+.err404-ico svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;}
+.err404-atalho-nome{flex:1 1 auto;min-width:0;font-size:1rem;font-weight:600;line-height:1.3;}
+.err404-seta{
+  flex:0 0 15px;width:15px;height:15px;fill:none;stroke:currentColor;
+  stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+  transition:transform .35s var(--ease);
+}
+.err404-atalho:hover .err404-seta{transform:translate(3px,-3px);}
+
+/* ---------- Foco visível (teclado) ---------- */
+.err404-tela a:focus-visible{outline:3px solid var(--orange);outline-offset:2px;}
+.err404-tela .link-arrow:focus-visible,
+.err404-contato a:focus-visible{border-radius:4px;}
+
+/* ---------- Entrada suave, sem depender de JavaScript ----------
+   O .rv-init do site começa invisível; aqui ele entra por animação CSS,
+   então a tela aparece mesmo se o script de revelação não rodar. */
+@keyframes err404-entra{
+  from{opacity:0;transform:translateY(28px);}
+  to{opacity:1;transform:none;}
+}
+.err404-tela .rv-init{animation:err404-entra .85s cubic-bezier(.22,.68,.32,1) both;}
+.err404-tela .err404-texto.rv-init{animation-delay:.08s;}
+.err404-tela .err404-atalhos.rv-init{animation-delay:.18s;}
+
+/* ---------- 521px+: botão volta ao tamanho natural ---------- */
+@media (min-width:521px){
+  .err404-acoes .btn{width:auto;margin-bottom:0;}
+  .err404-arte{height:176px;}
+  .err404-num{font-size:6.6rem;}
+}
+
+/* ---------- 600px+: atalhos em duas colunas ---------- */
+@media (min-width:600px){
+  .err404-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+}
+
+/* ---------- 960px+: duas colunas, arte à direita ---------- */
+@media (min-width:960px){
+  .err404-tela{--err404-header:138px;padding:76px 0 84px;}   /* mesmo respiro do .phero */
+  .err404-grid{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+  .err404-arte{order:2;height:auto;aspect-ratio:5/4;max-height:400px;width:100%;border-radius:var(--r-lg);}
+  .err404-num{font-size:clamp(8.5rem,14.5vw,12rem);}
+  .err404-acoes{margin-top:38px;}
+  .err404-atalhos{margin-top:60px;padding-top:34px;}
+}
+
+/* ---------- 1100px+: quatro atalhos lado a lado ---------- */
+@media (min-width:1100px){
+  .err404-lista{grid-template-columns:repeat(4,minmax(0,1fr));}
+}
+
+/* ---------- 1200px+: coluna de texto mais larga, as três ações cabem em uma linha ---------- */
+@media (min-width:1200px){
+  .err404-grid{grid-template-columns:1.2fr .8fr;}
+  .err404-acoes{gap:8px 22px;}
+}
+
+/* ---------- Menos movimento ---------- */
+@media (prefers-reduced-motion:reduce){
+  .err404-tela .rv-init{animation:none;opacity:1;transform:none;}
+  .err404-atalho,.err404-atalho:hover,.err404-seta,.err404-atalho:hover .err404-seta{transition:none;transform:none;}
+}
