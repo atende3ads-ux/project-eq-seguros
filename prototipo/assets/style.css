@@ -199,6 +199,21 @@ header.nav .wrap{display:flex;align-items:center;gap:26px;height:84px;max-width:
 .burger{display:none;width:46px;height:46px;border:1.5px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;align-items:center;justify-content:center;margin-left:auto;}
 .burger svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;}
 
+/* Cabeçalho entre 861px e 1260px: o menu completo não cabia e o botão "Fale com um especialista" ficava cortado,
+   com rolagem horizontal. Aqui o menu fica mais compacto; abaixo de 1010px o botão do topo some (o menu continua
+   levando a Atendimento e Contato) e, abaixo de 861px, vale o menu de celular. */
+@media(min-width:861px) and (max-width:1260px){
+  header.nav .wrap{gap:12px;}
+  .logo img{height:32px;}
+  .menu{gap:0;}
+  .menu > a{padding:10px 8px;font-size:.84rem;}
+  .nav-cta .btn{padding:11px 15px;font-size:.8rem;}
+}
+@media(min-width:861px) and (max-width:1010px){
+  .nav-cta{display:none;}
+  .menu{margin-left:auto;}
+}
+
 /* ===================== HERO ===================== */
 .hero{
   position:relative;overflow:hidden;
