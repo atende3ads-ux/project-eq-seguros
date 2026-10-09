@@ -9,7 +9,7 @@ const adminOnly: Access = ({ req }) => req.user?.role === 'admin'
 export const Users: CollectionConfig = {
   slug: 'users', labels: { singular: 'Usuário', plural: 'Usuários' },
   // O Editor não vê a lista de usuários nem o menu "Usuários": só a própria conta (nome e senha, em "Conta").
-  auth: { maxLoginAttempts: 5, lockTime: 600000 }, admin: { useAsTitle: 'name', hidden: ({ user }) => user?.role !== 'admin' },
+  auth: { maxLoginAttempts: 5, lockTime: 600000 }, admin: { hideAPIURL: true, useAsTitle: 'name', hidden: ({ user }) => user?.role !== 'admin' },
   access: { create: adminOnly, read: ({ req }) => req.user?.role === 'admin' ? true : { id: { equals: req.user?.id ?? -1 } }, update: ({ req }) => req.user?.role === 'admin' ? true : { id: { equals: req.user?.id ?? -1 } }, delete: adminOnly },
   fields: [
     { name: 'name', label: 'Nome', type: 'text', required: true },
@@ -28,6 +28,7 @@ export const Users: CollectionConfig = {
 
 export const Media: CollectionConfig = {
   slug: 'media', labels: { singular: 'Imagem', plural: 'Biblioteca de imagens' },
+  admin: { hideAPIURL: true },
   // O Editor também apaga imagens da biblioteca.
   access: { read: () => true, create: signedIn, update: signedIn, delete: signedIn },
   // SVG serve para ícones e logos. O Payload recusa SVG com script, eventos ou outro conteúdo
@@ -39,7 +40,7 @@ export const Media: CollectionConfig = {
 export const Pages: CollectionConfig = {
   slug: 'pages', labels: { singular: 'Página', plural: 'Páginas do site' },
   admin: {
-    useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'],
+    hideAPIURL: true, useAsTitle: 'title', defaultColumns: ['title', 'slug', 'status', 'updatedAt'],
     description: 'Cada linha é uma seção da página, na ordem do site. Abra a seção para editar títulos, textos, botões, links e imagens.',
     components: { beforeListTable: ['/components/admin/NewServicePage'] },
   },
@@ -82,7 +83,7 @@ export const Pages: CollectionConfig = {
 
 export const Cases: CollectionConfig = {
   slug: 'cases', labels: { singular: 'Case', plural: 'Cases de sucesso' },
-  admin: { useAsTitle: 'titulo', defaultColumns: ['titulo', 'parceiro', 'aprovado'] },
+  admin: { hideAPIURL: true, useAsTitle: 'titulo', defaultColumns: ['titulo', 'parceiro', 'aprovado'] },
   access: { read: ({ req }) => req.user || process.env.SITE_ENV !== 'production' ? true : { aprovado: { equals: true } }, create: signedIn, update: signedIn, delete: adminOnly },
   fields: [
     { type: 'tabs', tabs: [
@@ -126,7 +127,7 @@ export const Cases: CollectionConfig = {
 }
 
 export const Site: GlobalConfig = {
-  slug: 'site', label: 'Cabeçalho e rodapé', access: { read: () => true, update: signedIn }, admin: { group: 'Configurações' },
+  slug: 'site', label: 'Cabeçalho e rodapé', access: { read: () => true, update: signedIn }, admin: { group: 'Configurações', hideAPIURL: true },
   fields: [
     ...contentFields,
     { name: 'bootstrapComplete', type: 'checkbox', defaultValue: false, admin: { hidden: true }, access: { update: () => false } },
@@ -138,7 +139,7 @@ export const Site: GlobalConfig = {
 export const Settings: GlobalConfig = {
   // Só o Administrador muda as configurações: elas incluem os IDs de rastreamento e o e-mail que recebe os contatos.
   slug: 'settings', label: 'Configurações do site', access: { read: () => true, update: adminOnly },
-  admin: { group: 'Configurações', hidden: ({ user }) => user?.role !== 'admin', description: 'Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.' },
+  admin: { group: 'Configurações', hideAPIURL: true, hidden: ({ user }) => user?.role !== 'admin', description: 'Nome, logo, ícone e informações padrão de busca e compartilhamento, válidos para o site inteiro.' },
   fields: [
     { type: 'tabs', tabs: [
       { label: 'Identidade', fields: [

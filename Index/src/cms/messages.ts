@@ -11,7 +11,7 @@ const adminOnly: Access = ({ req }) => req.user?.role === 'admin'
 export const Messages: CollectionConfig = {
   slug: 'messages', labels: { singular: 'Mensagem recebida', plural: 'Mensagens recebidas' },
   admin: {
-    group: 'Formulários', useAsTitle: 'summary', defaultColumns: ['createdAt', 'summary', 'form', 'mailStatus', 'handled'],
+    hideAPIURL: true, group: 'Formulários', useAsTitle: 'summary', defaultColumns: ['createdAt', 'summary', 'form', 'mailStatus', 'handled'],
     description: 'Contatos enviados pelos formulários do site. Marque “Atendida” depois de responder. Os dados pessoais ficam só aqui: apague o que não for mais necessário.',
   },
   defaultSort: '-createdAt',

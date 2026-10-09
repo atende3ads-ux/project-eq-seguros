@@ -19,7 +19,7 @@ const requiredToPublish: UploadFieldSingleValidation = (value, { data }) =>
 
 export const Categories: CollectionConfig = {
   slug: 'categories', labels: { singular: 'Categoria', plural: 'Categorias' },
-  admin: { group: 'Blog', useAsTitle: 'name', defaultColumns: ['name', 'slug'], description: 'Assuntos dos posts. Aparecem no filtro da página do blog e na etiqueta de cada card.' },
+  admin: { hideAPIURL: true, group: 'Blog', useAsTitle: 'name', defaultColumns: ['name', 'slug'], description: 'Assuntos dos posts. Aparecem no filtro da página do blog e na etiqueta de cada card.' },
   access: { read: () => true, create: signedIn, update: signedIn, delete: adminOnly },
   fields: [
     { name: 'name', label: 'Nome', type: 'text', required: true },
@@ -35,7 +35,7 @@ export const Categories: CollectionConfig = {
 export const Posts: CollectionConfig = {
   slug: 'posts', labels: { singular: 'Post', plural: 'Posts' },
   admin: {
-    group: 'Blog', useAsTitle: 'title', defaultColumns: ['title', 'category', '_status', 'publishedAt'],
+    hideAPIURL: true, group: 'Blog', useAsTitle: 'title', defaultColumns: ['title', 'category', '_status', 'publishedAt'],
     description: 'Crie e edite os artigos do blog. Salvar rascunho guarda sem mudar o site; Publicar coloca o post no ar.',
     preview: (doc) => doc?.slug ? `/blog/${encodeURIComponent(String(doc.slug))}?previa=1` : null,
   },

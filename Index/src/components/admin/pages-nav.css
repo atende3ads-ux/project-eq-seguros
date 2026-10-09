@@ -56,3 +56,8 @@
   color: var(--eq-hint-text, var(--theme-elevation-600));
   background: var(--eq-hint-bg, var(--theme-elevation-100));
 }
+
+/* A aba "Editar" é a tela em que a pessoa já está e não clica. Quando ela é a única aba do documento
+   (páginas, imagens, categorias, cases, configurações), a barra de abas inteira some.
+   Nos posts há também "Versões": a barra fica. */
+.doc-tabs:has(.doc-tabs__tabs > :only-child){display:none;}
