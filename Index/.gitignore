@@ -8,3 +8,7 @@ media/
 *.tsbuildinfo
 test-results/
 .DS_Store
+
+# Logs dos testes locais (servidor de e-mail e reCAPTCHA de mentira)
+mail-log.jsonl
+captcha-log.txt

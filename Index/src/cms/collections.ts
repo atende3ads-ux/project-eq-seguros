@@ -33,7 +33,7 @@ export const Media: CollectionConfig = {
   access: { read: () => true, create: signedIn, update: signedIn, delete: signedIn },
   // SVG serve para ícones e logos. O Payload recusa SVG com script, eventos ou outro conteúdo
   // perigoso, e o servidor entrega todo SVG com uma política que impede scripts (next.config.mjs).
-  upload: { staticDir: 'media', mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif', 'image/svg+xml'] },
+  upload: { staticDir: 'media', mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif', 'image/gif', 'image/svg+xml', 'application/pdf'] },
   fields: [{ name: 'alt', label: 'Descrição acessível', type: 'text', required: true }],
 }
 

@@ -25,6 +25,14 @@ export const legacyRedirects = [
   ['/politica-de-privacidade', '/privacidade'],
   ['/termos-de-uso', '/termos'],
   ['/blog-categorias/:categoria', '/blog'],
+  ['/portal-do-cliente', '/ajuda'],
+  ['/politica-de-sustentabilidade', '/compliance'],
+  // Documentos que o site antigo publicava em /uploads: agora ficam em /documentos.
+  ['/uploads/POEQASG__Politica_Sustentabilidade.pdf', '/documentos/politica-de-sustentabilidade.pdf'],
+  ['/uploads/Demonstracoes_Contabeis.pdf', '/documentos/demonstracoes-contabeis.pdf'],
+  ['/uploads/Estatuto_Social.pdf', '/documentos/estatuto-social.pdf'],
+  ['/uploads/POEQCODEC__Codigo_de_Etica_e_Conduta__EPC_EQ__V006__Assinado_1742481645144856.pdf', '/documentos/codigo-de-etica-e-conduta.pdf'],
+  ['/uploads/POEQPLD__Politica_de_Prevencao_a_Lavagem_de_Dinheiro__Assinada_1742481639175711.pdf', '/documentos/politica-de-prevencao-a-lavagem-de-dinheiro.pdf'],
   ['/404', '/'],
 ]
 

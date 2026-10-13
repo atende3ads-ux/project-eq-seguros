@@ -43,6 +43,8 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
   function hide(node: TemplateNode): boolean {
     // Sem posts publicados para mostrar, some a seção de cards inteira (não fica um título sem nada embaixo).
     if (posts && !posts.length && !blogListing && node.tag === 'section' && hasPostGrid(node)) return true
+    // Ícone de rede social sem endereço ainda (LinkedIn): só aparece quando a equipe preencher o link no painel.
+    if (node.tag === 'a' && node.attrs?.['aria-label'] && node.linkKey && links.get(node.linkKey) === '#') return true
     if (casesVisible) return false
     if (subtree(node, (n) => Boolean(n.attrs?.id && casesSectionIds.has(n.attrs.id)))) return true
     if (node.tag !== 'a' && node.tag !== 'li') return false

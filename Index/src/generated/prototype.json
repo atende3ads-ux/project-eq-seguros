@@ -24379,7 +24379,9 @@
                       "tag": "a",
                       "attrs": {
                         "class": "card clickable rv-init",
-                        "href": "#"
+                        "href": "/documentos/politica-de-sustentabilidade.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
                       },
                       "linkKey": "page-l3",
                       "children": [
@@ -24452,7 +24454,9 @@
                       "tag": "a",
                       "attrs": {
                         "class": "card clickable rv-init",
-                        "href": "#"
+                        "href": "/documentos/demonstracoes-contabeis.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
                       },
                       "linkKey": "page-l4",
                       "children": [
@@ -24587,6 +24591,252 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "card clickable rv-init",
+                        "href": "/documentos/estatuto-social.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                      },
+                      "linkKey": "page-l6",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "cico"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "polyline",
+                                  "attrs": {
+                                    "points": "14 2 14 8 20 8"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "13",
+                                    "x2": "8",
+                                    "y2": "13"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "17",
+                                    "x2": "8",
+                                    "y2": "17"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "h4",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Estatuto Social",
+                              "textKey": "page-t27"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Estatuto do grupo, disponível para download.",
+                              "textKey": "page-t28"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "card clickable rv-init",
+                        "href": "/documentos/codigo-de-etica-e-conduta.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                      },
+                      "linkKey": "page-l7",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "cico"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "polyline",
+                                  "attrs": {
+                                    "points": "14 2 14 8 20 8"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "13",
+                                    "x2": "8",
+                                    "y2": "13"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "17",
+                                    "x2": "8",
+                                    "y2": "17"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "h4",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Código de Ética e Conduta",
+                              "textKey": "page-t29"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Princípios e condutas esperados de todos os colaboradores.",
+                              "textKey": "page-t30"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "card clickable rv-init",
+                        "href": "/documentos/politica-de-prevencao-a-lavagem-de-dinheiro.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                      },
+                      "linkKey": "page-l8",
+                      "children": [
+                        {
+                          "tag": "div",
+                          "attrs": {
+                            "class": "cico"
+                          },
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "attrs": {
+                                "viewbox": "0 0 24 24"
+                              },
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "attrs": {
+                                    "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "polyline",
+                                  "attrs": {
+                                    "points": "14 2 14 8 20 8"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "13",
+                                    "x2": "8",
+                                    "y2": "13"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "tag": "line",
+                                  "attrs": {
+                                    "x1": "16",
+                                    "y1": "17",
+                                    "x2": "8",
+                                    "y2": "17"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "h4",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Prevenção à Lavagem de Dinheiro",
+                              "textKey": "page-t31"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "text": "Política de prevenção, disponível para download.",
+                              "textKey": "page-t32"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -24623,7 +24873,7 @@
                       "children": [
                         {
                           "text": "Autorizações SUSEP",
-                          "textKey": "page-t27"
+                          "textKey": "page-t33"
                         }
                       ]
                     },
@@ -24633,7 +24883,7 @@
                       "children": [
                         {
                           "text": "Autorizadas a operar em todo o Brasil",
-                          "textKey": "page-t28"
+                          "textKey": "page-t34"
                         }
                       ]
                     }
@@ -24657,7 +24907,7 @@
                           "children": [
                             {
                               "text": "Equatorial Previdência",
-                              "textKey": "page-t29"
+                              "textKey": "page-t35"
                             }
                           ]
                         },
@@ -24667,7 +24917,7 @@
                           "children": [
                             {
                               "text": "Carta Patente ",
-                              "textKey": "page-t30"
+                              "textKey": "page-t36"
                             },
                             {
                               "tag": "b",
@@ -24675,13 +24925,13 @@
                               "children": [
                                 {
                                   "text": "102/1982",
-                                  "textKey": "page-t31"
+                                  "textKey": "page-t37"
                                 }
                               ]
                             },
                             {
                               "text": " · SUSEP 10120.",
-                              "textKey": "page-t32"
+                              "textKey": "page-t38"
                             }
                           ]
                         }
@@ -24699,7 +24949,7 @@
                           "children": [
                             {
                               "text": "EQ Seguros S/A",
-                              "textKey": "page-t33"
+                              "textKey": "page-t39"
                             }
                           ]
                         },
@@ -24709,7 +24959,7 @@
                           "children": [
                             {
                               "text": "Portaria SUSEP ",
-                              "textKey": "page-t34"
+                              "textKey": "page-t40"
                             },
                             {
                               "tag": "b",
@@ -24717,13 +24967,13 @@
                               "children": [
                                 {
                                   "text": "6036/2014",
-                                  "textKey": "page-t35"
+                                  "textKey": "page-t41"
                                 }
                               ]
                             },
                             {
                               "text": " e ",
-                              "textKey": "page-t36"
+                              "textKey": "page-t42"
                             },
                             {
                               "tag": "b",
@@ -24731,13 +24981,13 @@
                               "children": [
                                 {
                                   "text": "7777/2021",
-                                  "textKey": "page-t37"
+                                  "textKey": "page-t43"
                                 }
                               ]
                             },
                             {
                               "text": " · SUSEP 01554.",
-                              "textKey": "page-t38"
+                              "textKey": "page-t44"
                             }
                           ]
                         }
@@ -24802,7 +25052,7 @@
                       "children": [
                         {
                           "text": "Ouvidoria",
-                          "textKey": "page-t39"
+                          "textKey": "page-t45"
                         }
                       ]
                     },
@@ -24812,7 +25062,7 @@
                       "children": [
                         {
                           "text": "Canais da Ouvidoria",
-                          "textKey": "page-t40"
+                          "textKey": "page-t46"
                         }
                       ]
                     }
@@ -24865,7 +25115,7 @@
                               "children": [
                                 {
                                   "text": "Ouvidoria",
-                                  "textKey": "page-t41"
+                                  "textKey": "page-t47"
                                 }
                               ]
                             },
@@ -24877,7 +25127,7 @@
                               "children": [
                                 {
                                   "text": "0800 703 1989",
-                                  "textKey": "page-t42"
+                                  "textKey": "page-t48"
                                 }
                               ]
                             },
@@ -24889,7 +25139,7 @@
                               "children": [
                                 {
                                   "text": "ouvidoria@sinapp.org.br",
-                                  "textKey": "page-t43"
+                                  "textKey": "page-t49"
                                 }
                               ]
                             }
@@ -24938,7 +25188,7 @@
                               "children": [
                                 {
                                   "text": "Def. auditiva / fala",
-                                  "textKey": "page-t44"
+                                  "textKey": "page-t50"
                                 }
                               ]
                             },
@@ -24950,7 +25200,7 @@
                               "children": [
                                 {
                                   "text": "0800 201 1838",
-                                  "textKey": "page-t45"
+                                  "textKey": "page-t51"
                                 }
                               ]
                             },
@@ -24962,7 +25212,7 @@
                               "children": [
                                 {
                                   "text": "Somente telefone fixo TDD · ouvidoria.auditivo.fala@sinapp.org.br",
-                                  "textKey": "page-t46"
+                                  "textKey": "page-t52"
                                 }
                               ]
                             }
@@ -25011,7 +25261,7 @@
                               "children": [
                                 {
                                   "text": "Def. visual",
-                                  "textKey": "page-t47"
+                                  "textKey": "page-t53"
                                 }
                               ]
                             },
@@ -25023,7 +25273,7 @@
                               "children": [
                                 {
                                   "text": "0800 703 1989",
-                                  "textKey": "page-t48"
+                                  "textKey": "page-t54"
                                 }
                               ]
                             },
@@ -25035,7 +25285,7 @@
                               "children": [
                                 {
                                   "text": "ouvidoria.visual@sinapp.org.br",
-                                  "textKey": "page-t49"
+                                  "textKey": "page-t55"
                                 }
                               ]
                             }
@@ -27384,108 +27634,108 @@
           },
           {
             "key": "page-t27",
+            "label": "section.sec > div.wrap > div.grid > a.card > h4 · Estatuto Social",
+            "value": "Estatuto Social"
+          },
+          {
+            "key": "page-t28",
+            "label": "section.sec > div.wrap > div.grid > a.card > p · Estatuto do grupo, disponível para download.",
+            "value": "Estatuto do grupo, disponível para download."
+          },
+          {
+            "key": "page-t29",
+            "label": "section.sec > div.wrap > div.grid > a.card > h4 · Código de Ética e Conduta",
+            "value": "Código de Ética e Conduta"
+          },
+          {
+            "key": "page-t30",
+            "label": "section.sec > div.wrap > div.grid > a.card > p · Princípios e condutas esperados de todos os colaboradores.",
+            "value": "Princípios e condutas esperados de todos os colaboradores."
+          },
+          {
+            "key": "page-t31",
+            "label": "section.sec > div.wrap > div.grid > a.card > h4 · Prevenção à Lavagem de Dinheiro",
+            "value": "Prevenção à Lavagem de Dinheiro"
+          },
+          {
+            "key": "page-t32",
+            "label": "section.sec > div.wrap > div.grid > a.card > p · Política de prevenção, disponível para download.",
+            "value": "Política de prevenção, disponível para download."
+          },
+          {
+            "key": "page-t33",
             "label": "section.sec > div.wrap > div.sechead > span.kicker · Autorizações SUSEP",
             "value": "Autorizações SUSEP"
           },
           {
-            "key": "page-t28",
+            "key": "page-t34",
             "label": "section.sec > div.wrap > div.sechead > h2 · Autorizadas a operar em todo o Brasil",
             "value": "Autorizadas a operar em todo o Brasil"
           },
           {
-            "key": "page-t29",
+            "key": "page-t35",
             "label": "section.sec > div.wrap > div.grid > div.card > h4 · Equatorial Previdência",
             "value": "Equatorial Previdência"
           },
           {
-            "key": "page-t30",
+            "key": "page-t36",
             "label": "section.sec > div.wrap > div.grid > div.card > p · Carta Patente",
             "value": "Carta Patente "
           },
           {
-            "key": "page-t31",
+            "key": "page-t37",
             "label": "section.sec > div.wrap > div.grid > div.card > p > b · 102/1982",
             "value": "102/1982"
           },
           {
-            "key": "page-t32",
+            "key": "page-t38",
             "label": "section.sec > div.wrap > div.grid > div.card > p · · SUSEP 10120.",
             "value": " · SUSEP 10120."
           },
           {
-            "key": "page-t33",
+            "key": "page-t39",
             "label": "section.sec > div.wrap > div.grid > div.card > h4 · EQ Seguros S/A",
             "value": "EQ Seguros S/A"
           },
           {
-            "key": "page-t34",
+            "key": "page-t40",
             "label": "section.sec > div.wrap > div.grid > div.card > p · Portaria SUSEP",
             "value": "Portaria SUSEP "
           },
           {
-            "key": "page-t35",
+            "key": "page-t41",
             "label": "section.sec > div.wrap > div.grid > div.card > p > b · 6036/2014",
             "value": "6036/2014"
           },
           {
-            "key": "page-t36",
+            "key": "page-t42",
             "label": "section.sec > div.wrap > div.grid > div.card > p · e",
             "value": " e "
           },
           {
-            "key": "page-t37",
+            "key": "page-t43",
             "label": "section.sec > div.wrap > div.grid > div.card > p > b · 7777/2021",
             "value": "7777/2021"
           },
           {
-            "key": "page-t38",
+            "key": "page-t44",
             "label": "section.sec > div.wrap > div.grid > div.card > p · · SUSEP 01554.",
             "value": " · SUSEP 01554."
           },
           {
-            "key": "page-t39",
+            "key": "page-t45",
             "label": "section.sec > div.wrap > div.sechead > span.kicker · Ouvidoria",
             "value": "Ouvidoria"
           },
           {
-            "key": "page-t40",
+            "key": "page-t46",
             "label": "section.sec > div.wrap > div.sechead > h2 · Canais da Ouvidoria",
             "value": "Canais da Ouvidoria"
           },
           {
-            "key": "page-t41",
+            "key": "page-t47",
             "label": "section.sec > div.wrap > div.chan > div.c > div > div.ct · Ouvidoria",
             "value": "Ouvidoria"
-          },
-          {
-            "key": "page-t42",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cv · 0800 703 1989",
-            "value": "0800 703 1989"
-          },
-          {
-            "key": "page-t43",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cn · ouvidoria@sinapp.org.br",
-            "value": "ouvidoria@sinapp.org.br"
-          },
-          {
-            "key": "page-t44",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.ct · Def. auditiva / fala",
-            "value": "Def. auditiva / fala"
-          },
-          {
-            "key": "page-t45",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cv · 0800 201 1838",
-            "value": "0800 201 1838"
-          },
-          {
-            "key": "page-t46",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cn · Somente telefone fixo TDD · ouvidoria.auditivo.fala@sinapp.org.br",
-            "value": "Somente telefone fixo TDD · ouvidoria.auditivo.fala@sinapp.org.br"
-          },
-          {
-            "key": "page-t47",
-            "label": "section.sec > div.wrap > div.chan > div.c > div > div.ct · Def. visual",
-            "value": "Def. visual"
           },
           {
             "key": "page-t48",
@@ -27494,6 +27744,36 @@
           },
           {
             "key": "page-t49",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cn · ouvidoria@sinapp.org.br",
+            "value": "ouvidoria@sinapp.org.br"
+          },
+          {
+            "key": "page-t50",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.ct · Def. auditiva / fala",
+            "value": "Def. auditiva / fala"
+          },
+          {
+            "key": "page-t51",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cv · 0800 201 1838",
+            "value": "0800 201 1838"
+          },
+          {
+            "key": "page-t52",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cn · Somente telefone fixo TDD · ouvidoria.auditivo.fala@sinapp.org.br",
+            "value": "Somente telefone fixo TDD · ouvidoria.auditivo.fala@sinapp.org.br"
+          },
+          {
+            "key": "page-t53",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.ct · Def. visual",
+            "value": "Def. visual"
+          },
+          {
+            "key": "page-t54",
+            "label": "section.sec > div.wrap > div.chan > div.c > div > div.cv · 0800 703 1989",
+            "value": "0800 703 1989"
+          },
+          {
+            "key": "page-t55",
             "label": "section.sec > div.wrap > div.chan > div.c > div > div.cn · ouvidoria.visual@sinapp.org.br",
             "value": "ouvidoria.visual@sinapp.org.br"
           }
@@ -27513,17 +27793,32 @@
           {
             "key": "page-l3",
             "label": "Política de SustentabilidadeDocumento obrigatório, disponível para download.",
-            "href": "#"
+            "href": "/documentos/politica-de-sustentabilidade.pdf"
           },
           {
             "key": "page-l4",
             "label": "Balanço / DemonstraçõesResultados e balanço do grupo.",
-            "href": "#"
+            "href": "/documentos/demonstracoes-contabeis.pdf"
           },
           {
             "key": "page-l5",
             "label": "LGPD · Privacidade de dadosTratamento de dados conforme a Lei nº 13.709/2018.",
             "href": "/privacidade"
+          },
+          {
+            "key": "page-l6",
+            "label": "Estatuto SocialEstatuto do grupo, disponível para download.",
+            "href": "/documentos/estatuto-social.pdf"
+          },
+          {
+            "key": "page-l7",
+            "label": "Código de Ética e CondutaPrincípios e condutas esperados de todos os colaboradores.",
+            "href": "/documentos/codigo-de-etica-e-conduta.pdf"
+          },
+          {
+            "key": "page-l8",
+            "label": "Prevenção à Lavagem de DinheiroPolítica de prevenção, disponível para download.",
+            "href": "/documentos/politica-de-prevencao-a-lavagem-de-dinheiro.pdf"
           }
         ]
       }
@@ -100280,7 +100575,9 @@
                             "tag": "a",
                             "attrs": {
                               "aria-label": "Instagram",
-                              "href": "#"
+                              "href": "https://www.instagram.com/eq.seguros/",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer"
                             },
                             "linkKey": "footer-l1",
                             "children": [
@@ -100305,7 +100602,9 @@
                             "tag": "a",
                             "attrs": {
                               "aria-label": "Facebook",
-                              "href": "#"
+                              "href": "https://www.facebook.com/eqseguros",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer"
                             },
                             "linkKey": "footer-l2",
                             "children": [
@@ -100330,7 +100629,9 @@
                             "tag": "a",
                             "attrs": {
                               "aria-label": "YouTube",
-                              "href": "#"
+                              "href": "https://www.youtube.com/@grupoequatorial3548",
+                              "target": "_blank",
+                              "rel": "noopener noreferrer"
                             },
                             "linkKey": "footer-l3",
                             "children": [
@@ -101986,17 +102287,17 @@
         {
           "key": "footer-l1",
           "label": "Instagram",
-          "href": "#"
+          "href": "https://www.instagram.com/eq.seguros/"
         },
         {
           "key": "footer-l2",
           "label": "Facebook",
-          "href": "#"
+          "href": "https://www.facebook.com/eqseguros"
         },
         {
           "key": "footer-l3",
           "label": "YouTube",
-          "href": "#"
+          "href": "https://www.youtube.com/@grupoequatorial3548"
         },
         {
           "key": "footer-l4",

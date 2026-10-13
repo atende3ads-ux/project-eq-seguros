@@ -13,6 +13,7 @@ import * as migration_20261009_120801_formularios from './20261009_120801_formul
 import * as migration_20261009_125000_paginas_de_servico from './20261009_125000_paginas_de_servico';
 import * as migration_20261009_130000_privacidade_e_formularios from './20261009_130000_privacidade_e_formularios';
 import * as migration_20261009_150000_remove_pagina_agradecimento from './20261009_150000_remove_pagina_agradecimento';
+import * as migration_20261013_150000_compliance_documentos_e_redes_sociais from './20261013_150000_compliance_documentos_e_redes_sociais';
 
 export const migrations = [
   {
@@ -88,6 +89,11 @@ export const migrations = [
   {
     up: migration_20261009_150000_remove_pagina_agradecimento.up,
     down: migration_20261009_150000_remove_pagina_agradecimento.down,
-    name: '20261009_150000_remove_pagina_agradecimento'
+    name: '20261009_150000_remove_pagina_agradecimento',
+  },
+  {
+    up: migration_20261013_150000_compliance_documentos_e_redes_sociais.up,
+    down: migration_20261013_150000_compliance_documentos_e_redes_sociais.down,
+    name: '20261013_150000_compliance_documentos_e_redes_sociais'
   },
 ];
