@@ -1,8 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { Collapsible, FieldPathContext, TextareaField, TextField, UploadField, useFormFields } from '@payloadcms/ui'
-import type { TextareaFieldClient, TextFieldClient, UploadFieldClient } from 'payload'
+import { CheckboxField, Collapsible, FieldPathContext, TextareaField, TextField, UploadField, useFormFields } from '@payloadcms/ui'
+import type { CheckboxFieldClient, TextareaFieldClient, TextFieldClient, UploadFieldClient } from 'payload'
 import { validateHref } from '@/lib/href'
 import { listOf, scopeFor, type Entry, type List } from './content-map'
 import './sections-editor.css'
@@ -46,7 +46,7 @@ export default function SectionsEditor() {
           aqui você edita só o que se repete em todos: a chamada no fim do artigo e o título de &quot;Leia também&quot;.
         </p>
       )}
-      {sections.map((section, number) => <SectionBlock key={`${number}-${section.name}`} section={section} number={number + 1} />)}
+      {sections.map((section, number) => <SectionBlock key={`${number}-${section.name}`} section={section} number={number + 1} isCompliance={slug === 'compliance'} />)}
     </div>
   )
 }
@@ -103,7 +103,7 @@ function buildSections(scope: Record<string, Entry>, indexes: Indexes): Section[
   return sections
 }
 
-function SectionBlock({ section, number }: { section: Section; number: number }) {
+function SectionBlock({ section, number, isCompliance }: { section: Section; number: number; isCompliance: boolean }) {
   // Campos só existem na tela depois de abrir a seção: páginas longas continuam leves.
   const [open, setOpen] = useState(false)
   const counters: Record<string, number> = {}
@@ -133,10 +133,13 @@ function SectionBlock({ section, number }: { section: Section; number: number })
             const fields = block.items.map((item) => <ItemFields key={`${item.list}:${item.key}`} item={item} />)
             if (!block.grupo) return fields
             const tipo = block.grupo.tipo
+            const cardLink = block.items.find((item) => item.list === 'links')?.key
             counters[tipo] = (counters[tipo] || 0) + 1
             return (
               <fieldset className="eq-group" key={block.grupo.id || index}>
                 <legend><GroupLegend label={`${tipo} ${counters[tipo]}`} items={block.items} /></legend>
+                {isCompliance && section.name === 'Documentos e conformidade' && cardLink &&
+                  <CardVisibility linkKey={cardLink} />}
                 {fields}
               </fieldset>
             )
@@ -145,6 +148,20 @@ function SectionBlock({ section, number }: { section: Section; number: number })
       )}
     </Collapsible>
   )
+}
+
+function CardVisibility({ linkKey }: { linkKey: string }) {
+  const index = useFormFields(([fields]) => {
+    for (let i = 0; fields[`links.${i}.key`]; i += 1) if (fields[`links.${i}.key`]?.value === linkKey) return i
+    return -1
+  })
+  if (index < 0) return null
+  const path = `links.${index}.hidden`
+  const field: CheckboxFieldClient = {
+    name: 'hidden', type: 'checkbox', label: 'Ocultar este card do site',
+    admin: { description: 'O card desaparece ao salvar. Para reexibir, informe um link válido e desmarque esta opção.' },
+  }
+  return <FieldPathContext value={path}><CheckboxField path={path} field={field} /></FieldPathContext>
 }
 
 /** Título atual da seção ao lado do nome, para reconhecer a seção sem abrir. */

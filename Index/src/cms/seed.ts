@@ -10,9 +10,12 @@ export async function seedPrototype(payload: Payload) {
   for (const page of data.pages) {
     const found = await payload.count({ collection: 'pages', where: { slug: { equals: page.slug } }, overrideAccess: true })
     if (found.totalDocs) continue
+    const content = page.slug === 'compliance'
+      ? { ...page.content, links: page.content.links.map((link) => link.key === 'page-l6' ? { ...link, href: '#', hidden: true } : link) }
+      : page.content
     await payload.create({ collection: 'pages', overrideAccess: true, data: {
       slug: page.slug, title: stripSiteName(page.title, page.slug), description: page.description,
-      status: 'published', ...page.content,
+      status: 'published', ...content,
     } })
   }
   if (!site.copy?.length) {

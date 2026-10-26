@@ -35,5 +35,7 @@ export const contentFields: Field[] = [
     fields: [
       ...reference,
       { name: 'href', label: 'Link (destino)', type: 'text', required: true, validate: validateHref },
+      { name: 'hidden', label: 'Ocultar card do site', type: 'checkbox', defaultValue: false,
+        admin: { hidden: true } },
     ] },
 ]

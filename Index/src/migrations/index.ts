@@ -14,12 +14,19 @@ import * as migration_20261009_125000_paginas_de_servico from './20261009_125000
 import * as migration_20261009_130000_privacidade_e_formularios from './20261009_130000_privacidade_e_formularios';
 import * as migration_20261009_150000_remove_pagina_agradecimento from './20261009_150000_remove_pagina_agradecimento';
 import * as migration_20261013_150000_compliance_documentos_e_redes_sociais from './20261013_150000_compliance_documentos_e_redes_sociais';
+import * as migration_20261026_184256_card_visibility from './20261026_184256_card_visibility';
 
 export const migrations = [
   {
     up: migration_20260917_172103_initial.up,
     down: migration_20260917_172103_initial.down,
     name: '20260917_172103_initial',
+  },
+  // Migrações antigas consultam o modelo atual; a coluna deve existir antes dessas leituras.
+  {
+    up: migration_20261026_184256_card_visibility.up,
+    down: migration_20261026_184256_card_visibility.down,
+    name: '20261026_184256_card_visibility',
   },
   {
     up: migration_20260929_184151_settings.up,
@@ -79,7 +86,7 @@ export const migrations = [
   {
     up: migration_20261009_125000_paginas_de_servico.up,
     down: migration_20261009_125000_paginas_de_servico.down,
-    name: '20261009_125000_paginas_de_servico'
+    name: '20261009_125000_paginas_de_servico',
   },
   {
     up: migration_20261009_130000_privacidade_e_formularios.up,
@@ -94,6 +101,6 @@ export const migrations = [
   {
     up: migration_20261013_150000_compliance_documentos_e_redes_sociais.up,
     down: migration_20261013_150000_compliance_documentos_e_redes_sociais.down,
-    name: '20261013_150000_compliance_documentos_e_redes_sociais'
+    name: '20261013_150000_compliance_documentos_e_redes_sociais',
   },
 ];

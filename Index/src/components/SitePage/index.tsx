@@ -27,7 +27,7 @@ export async function SitePage({ slug, caseSlug }: { slug: string; caseSlug?: st
   if (slug === 'case' && !selectedCase) notFound()
   return <>
     <Template nodes={template.header} content={site} serviceMenu={serviceMenu}/>
-    <Template nodes={template.body} content={page} records={records} selectedCase={selectedCase} posts={posts?.map(toCard)} blogListing={slug === 'blog'}/>
+    <Template nodes={template.body} content={page} pageSlug={template.slug} records={records} selectedCase={selectedCase} posts={posts?.map(toCard)} blogListing={slug === 'blog'}/>
     <Template nodes={prototype.site.footer as TemplateNode[]} content={site}/>
     <JsonLd data={breadcrumbLd(template.body as TemplateNode[], page)}/>
     <Interactions slug={slug}/>

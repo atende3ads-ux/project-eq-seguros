@@ -24596,7 +24596,7 @@
                       "tag": "a",
                       "attrs": {
                         "class": "card clickable rv-init",
-                        "href": "/documentos/estatuto-social.pdf",
+                        "href": "#",
                         "target": "_blank",
                         "rel": "noopener noreferrer"
                       },
@@ -27808,7 +27808,7 @@
           {
             "key": "page-l6",
             "label": "Estatuto SocialEstatuto do grupo, disponível para download.",
-            "href": "/documentos/estatuto-social.pdf"
+            "href": "#"
           },
           {
             "key": "page-l7",

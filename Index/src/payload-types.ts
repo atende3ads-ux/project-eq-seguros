@@ -164,6 +164,7 @@ export interface Page {
         key: string;
         label?: string | null;
         href: string;
+        hidden?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -537,6 +538,7 @@ export interface PagesSelect<T extends boolean = true> {
         key?: T;
         label?: T;
         href?: T;
+        hidden?: T;
         id?: T;
       };
   focusKeyphrase?: T;
@@ -802,6 +804,7 @@ export interface Site {
         key: string;
         label?: string | null;
         href: string;
+        hidden?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -857,6 +860,7 @@ export interface SiteSelect<T extends boolean = true> {
         key?: T;
         label?: T;
         href?: T;
+        hidden?: T;
         id?: T;
       };
   bootstrapComplete?: T;

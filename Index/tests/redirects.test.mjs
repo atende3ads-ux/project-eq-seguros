@@ -60,16 +60,18 @@ test('should send the other domains to the official address, never to themselves
   assert.equal(new Set(otherHosts).size, otherHosts.length)
 })
 
-test('should keep the compliance PDFs in the site and link every one on the Compliance page', () => {
+test('should keep the available compliance PDFs in the site and link every one on the Compliance page', () => {
   const compliance = prototype.pages.find((page) => page.slug === 'compliance')
   const hrefs = compliance.content.links.map((link) => link.href).filter((href) => href.startsWith('/documentos/'))
-  assert.equal(hrefs.length, 5)
+  assert.equal(hrefs.length, 4)
   for (const href of hrefs) {
     const file = path.join(root, 'public', href)
     assert.ok(fs.existsSync(file), `PDF ausente: ${href}`)
     assert.equal(fs.readFileSync(file).subarray(0, 5).toString(), '%PDF-', `não é PDF: ${href}`)
   }
-  for (const [, destination] of legacyRedirects.filter(([source]) => source.startsWith('/uploads/'))) assert.ok(hrefs.includes(destination), `redirecionamento sem cartão: ${destination}`)
+  for (const [, destination] of legacyRedirects.filter(([source, destination]) => source.startsWith('/uploads/') && destination.startsWith('/documentos/'))) assert.ok(hrefs.includes(destination), `redirecionamento sem cartão: ${destination}`)
+  assert.deepEqual(legacyRedirects.find(([source]) => source === '/uploads/Estatuto_Social.pdf'), ['/uploads/Estatuto_Social.pdf', '/compliance'])
+  assert.ok(!fs.existsSync(path.join(root, 'public/documentos/estatuto-social.pdf')))
 })
 test('should give the three social networks of the footer a real address', () => {
   const footer = prototype.site.content.links

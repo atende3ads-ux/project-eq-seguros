@@ -23,11 +23,12 @@ function style(value: string): CSSProperties {
  * `posts`: os cards fixos do layout (`.post-grid`) passam a mostrar posts publicados.
  * `blogListing`: na página do blog, filtros, grade e "carregar mais" viram a listagem com filtro.
  */
-type Args = { nodes: TemplateNode[]; content: Content; records?: CaseRecord[]; selectedCase?: CaseRecord; posts?: PostCard[]; blogListing?: boolean; serviceMenu?: MenuLink[] }
-export function Template({ nodes, content, records = [], selectedCase, posts, blogListing, serviceMenu }: Args) {
+type Args = { nodes: TemplateNode[]; content: Content; pageSlug?: string; records?: CaseRecord[]; selectedCase?: CaseRecord; posts?: PostCard[]; blogListing?: boolean; serviceMenu?: MenuLink[] }
+export function Template({ nodes, content, pageSlug, records = [], selectedCase, posts, blogListing, serviceMenu }: Args) {
   const texts = new Map(content.copy?.map((entry) => [entry.key, entry.value]))
   const images = new Map(content.images?.map((entry) => [entry.key, entry]))
   const links = new Map(content.links?.map((entry) => [entry.key, entry.href]))
+  const hiddenLinks = new Set(content.links?.filter((entry) => entry.hidden).map((entry) => entry.key))
   const hasCaseListing = nodes.some(function contains(node): boolean { return node.attrs?.id === 'cases-filtro' || Boolean(node.children?.some(contains)) })
 
   function subtree(node: TemplateNode, test: (node: TemplateNode) => boolean): boolean {
@@ -73,6 +74,7 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
       const button = textOf(node.children?.find((child) => classOf(child).includes('btn'))).trim()
       return <ContactForm key={key} className={node.attrs?.class} fields={fields} button={button || 'Enviar'} siteKey={process.env.RECAPTCHA_SITE_KEY || ''}/>
     }
+    const isDocumentGrid = pageSlug === 'compliance' && classOf(node).includes('g3') && node.children?.some((child) => child.linkKey === 'page-l6')
     const attrs: Record<string, unknown> = { key }
     for (const [name, value] of Object.entries(node.attrs || {})) {
       if (/^on/i.test(name)) continue
@@ -87,9 +89,13 @@ export function Template({ nodes, content, records = [], selectedCase, posts, bl
       }
     }
     if (node.linkKey && links.has(node.linkKey)) attrs.href = safeURL(links.get(node.linkKey)!)
+    if (isDocumentGrid) attrs.className = `${node.attrs?.class || ''} compliance-docs`
+    const shownChildren = isDocumentGrid
+      ? visible(node.children)?.filter((child) => !child.linkKey || !hiddenLinks.has(child.linkKey))
+      : visible(node.children)
     let children: ReactNode = node.tag === 'title' || node.tag === 'textarea'
       ? node.children?.map((child) => withYear((child.textKey && texts.has(child.textKey) ? texts.get(child.textKey) : child.text) || '')).join('')
-      : visible(node.children)?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`, id ?? panel)}</Fragment>)
+      : shownChildren?.map((child, i) => <Fragment key={i}>{render(child, `${key}.${i}`, id ?? panel)}</Fragment>)
     if (id === 'cases-destaque') children = <CaseCards records={records.filter((r) => r.destaque).slice(0, 3)}/>
     // Páginas de serviço criadas pelo painel entram no menu Seguros → Para Pessoas, depois das originais.
     if (panel === 'seg-pessoas' && serviceMenu?.length && classOf(node).includes('dd-cards') && Array.isArray(children)) {
