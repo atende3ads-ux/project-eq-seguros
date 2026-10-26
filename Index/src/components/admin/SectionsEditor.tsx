@@ -133,7 +133,7 @@ function SectionBlock({ section, number, isCompliance }: { section: Section; num
             const fields = block.items.map((item) => <ItemFields key={`${item.list}:${item.key}`} item={item} />)
             if (!block.grupo) return fields
             const tipo = block.grupo.tipo
-            const cardLink = block.items.find((item) => item.list === 'links')?.key
+            const cardLink = block.items.find((item) => item.entry.link)?.entry.link
             counters[tipo] = (counters[tipo] || 0) + 1
             return (
               <fieldset className="eq-group" key={block.grupo.id || index}>
