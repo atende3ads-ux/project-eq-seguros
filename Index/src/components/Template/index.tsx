@@ -84,8 +84,16 @@ export function Template({ nodes, content, pageSlug, records = [], selectedCase,
     if (node.imageKey) {
       const image = images.get(node.imageKey)
       if (image) {
-        attrs.src = safeURL(typeof image.media === 'object' && image.media?.url ? image.media.url : image.src)
+        const media = typeof image.media === 'object' && image.media ? image.media : undefined
+        const imageURL = media?.url || image.src
+        const mediaAspectRatio = media?.width && media?.height ? media.width / media.height : 0
+        const shouldContainImage = media?.mimeType === 'image/svg+xml'
+          || mediaAspectRatio >= 2.2
+          || /\.svg(?:[?#]|$)/i.test(imageURL)
+
+        attrs.src = safeURL(imageURL)
         attrs.alt = image.alt
+        if (shouldContainImage) attrs.className = `${String(attrs.className || '')} eq-image--contain`.trim()
       }
     }
     if (node.linkKey && links.has(node.linkKey)) attrs.href = safeURL(links.get(node.linkKey)!)

@@ -1,5 +1,16 @@
 export type TextEntry = { key: string; label: string; value: string }
-export type ImageEntry = { key: string; label: string; src: string; alt: string; media?: number | { url?: string | null } | null }
+export type ImageEntry = {
+  key: string
+  label: string
+  src: string
+  alt: string
+  media?: number | {
+    url?: string | null
+    mimeType?: string | null
+    width?: number | null
+    height?: number | null
+  } | null
+}
 export type LinkEntry = { key: string; label: string; href: string; hidden?: boolean | null }
 export type Content = { copy?: TextEntry[]; images?: ImageEntry[]; links?: LinkEntry[] }
 export type TemplateNode = { tag?: string; attrs?: Record<string, string>; children?: TemplateNode[]; text?: string; textKey?: string; imageKey?: string; linkKey?: string }

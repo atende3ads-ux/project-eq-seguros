@@ -246,7 +246,7 @@ function ImageFields({ item }: { item: Item }) {
     admin: {
       description: isLogo
         ? 'O logo também pode ser trocado em "Configurações do site", que tem prioridade sobre esta imagem.'
-        : current ? 'Escolha uma imagem da biblioteca para substituir a atual.' : undefined,
+        : 'Imagens SVG e artes muito horizontais são exibidas inteiras, sem corte. Fotos mantêm o enquadramento da página.',
     },
   } as UploadFieldClient
   const alt: TextFieldClient = {

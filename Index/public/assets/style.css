@@ -764,6 +764,8 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
 .imgbox{border-radius:var(--r-md);overflow:hidden;background:var(--navy);aspect-ratio:16/10;
   display:flex;align-items:center;justify-content:center;}
 .imgbox img{width:100%;height:100%;object-fit:cover;}
+/* Logos e artes panorâmicas vindos do Payload devem caber na moldura sem cortes. */
+.imgbox img.eq-image--contain{object-fit:contain;}
 /* dentro de secao escura o placeholder navy sumiria: clareia e ganha fio */
 .sec.dark .imgbox{background:var(--navy-soft);box-shadow:inset 0 0 0 1px rgba(255,255,255,.10);}
 .imgbox .lbl{color:rgba(255,255,255,.5);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;}
