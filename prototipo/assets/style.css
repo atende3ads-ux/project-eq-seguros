@@ -402,6 +402,10 @@ footer.ft{background:var(--navy-deep);color:#8E9AAD;padding:96px 0 0;font-size:.
 .lk-top img{width:645px;margin-left:0;}
 .lk-bot{width:132px;}
 .lk-bot img{width:486px;margin-left:-353px;}
+/* O site usa logos separados; o recorte acima fica apenas para o protótipo antigo. */
+.lk.eq-footer-lockup{max-width:100%;}
+.lk-bot.eq-footer-lockup{width:200px;}
+.lk img.eq-image--contain{width:100%;max-width:100%;height:auto;margin-left:0;object-fit:contain;}
 footer.ft h4{color:#fff;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px;font-weight:700;}
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;padding-bottom:52px;}
 .ft-desc{font-size:.86rem;color:#8E9AAD;line-height:1.7;max-width:290px;}
@@ -488,6 +492,7 @@ footer.ft ul li[data-nav]{cursor:pointer;transition:color .25s;}
   .ft-top,.ft-mid{grid-template-columns:1fr;gap:32px;}
   .lk-top{width:326px;} .lk-top img{width:461px;}
   .lk-bot{width:94px;}  .lk-bot img{width:347px;margin-left:-252px;}
+  .lk-bot.eq-footer-lockup{width:142px;}
 }
 @media(max-width:520px){
   .prod-grid{grid-template-columns:1fr;}

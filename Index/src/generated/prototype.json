@@ -102128,13 +102128,13 @@
         {
           "key": "footer-i1",
           "label": "EQ Grupo · EQ Seguros",
-          "src": "/assets/logos-footer.png",
+          "src": "/assets/logo-eq-grupo-seguros.svg",
           "alt": "EQ Grupo · EQ Seguros"
         },
         {
           "key": "footer-i2",
           "label": "Equatorial Previdência",
-          "src": "/assets/logos-footer.png",
+          "src": "/assets/logo-equatorial.png",
           "alt": "Equatorial Previdência"
         }
       ],

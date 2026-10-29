@@ -81,13 +81,24 @@ export function Template({ nodes, content, pageSlug, records = [], selectedCase,
       const prop = names[name] || (name.startsWith('aria-') || name.startsWith('data-') ? name : name.replace(/-([a-z])/g, (_, c) => c.toUpperCase()))
       attrs[prop] = name === 'style' ? style(value) : ['hidden', 'disabled', 'required', 'checked', 'multiple', 'allowfullscreen'].includes(name) ? true : value
     }
+    if (classOf(node).includes('lk') && node.children?.some((child) => child.imageKey === 'footer-i1' || child.imageKey === 'footer-i2')) {
+      attrs.className = `${String(attrs.className || '')} eq-footer-lockup`.trim()
+    }
     if (node.imageKey) {
       const image = images.get(node.imageKey)
       if (image) {
         const media = typeof image.media === 'object' && image.media ? image.media : undefined
-        const imageURL = media?.url || image.src
+        // O rodapé antigo usava uma imagem composta, cortada via CSS em duas linhas.
+        // Artes independentes (incluindo uploads do Payload) precisam aparecer inteiras.
+        const footerLogo = node.imageKey === 'footer-i1' || node.imageKey === 'footer-i2'
+        const legacyFooterSrc = image.src === '/assets/logos-footer.png'
+        const defaultSrc = footerLogo && legacyFooterSrc
+          ? node.imageKey === 'footer-i1' ? '/assets/logo-eq-grupo-seguros.svg' : '/assets/logo-equatorial.png'
+          : image.src
+        const imageURL = media?.url || defaultSrc
         const mediaAspectRatio = media?.width && media?.height ? media.width / media.height : 0
-        const shouldContainImage = media?.mimeType === 'image/svg+xml'
+        const shouldContainImage = footerLogo
+          || media?.mimeType === 'image/svg+xml'
           || mediaAspectRatio >= 2.2
           || /\.svg(?:[?#]|$)/i.test(imageURL)
 
