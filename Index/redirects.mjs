@@ -37,10 +37,20 @@ export const legacyRedirects = [
 ]
 
 /**
- * Endereço oficial do site e os outros endereços que levam a ele: o `www` e o domínio eqgrupo.com.br
- * (que antes só repassava para grupoeq.com.br). Redirecionamento permanente, mantendo o caminho.
+ * Endereço oficial do site e os outros endereços que levam a ele. Redirecionamento
+ * permanente, mantendo o caminho.
  * Cada domínio daqui também precisa estar em *Domains* da aplicação no Coolify e com o DNS apontado
  * para o servidor, senão o pedido nem chega ao site.
  */
 export const canonicalOrigin = 'https://eqseguros.com.br'
-export const otherHosts = ['www.eqseguros.com.br', 'eqgrupo.com.br', 'www.eqgrupo.com.br']
+export const otherHosts = [
+  'www.eqseguros.com.br',
+  'eqgrupo.com.br',
+  'www.eqgrupo.com.br',
+  'grupoeq.com.br',
+  'www.grupoeq.com.br',
+  'grupoequatorial.com.br',
+  'www.grupoequatorial.com.br',
+  'equatorialprevidencia.com.br',
+  'www.equatorialprevidencia.com.br',
+]

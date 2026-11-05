@@ -55,7 +55,9 @@ test('should never redirect to itself or chain through another redirect', () => 
 test('should send the other domains to the official address, never to themselves', () => {
   const official = new URL(canonicalOrigin)
   assert.equal(official.protocol, 'https:'); assert.equal(official.pathname, '/')
-  assert.ok(otherHosts.includes('eqgrupo.com.br') && otherHosts.includes('www.eqgrupo.com.br') && otherHosts.includes('www.eqseguros.com.br'))
+  for (const host of ['www.eqseguros.com.br', 'eqgrupo.com.br', 'www.eqgrupo.com.br', 'grupoeq.com.br', 'www.grupoeq.com.br', 'grupoequatorial.com.br', 'www.grupoequatorial.com.br', 'equatorialprevidencia.com.br', 'www.equatorialprevidencia.com.br']) {
+    assert.ok(otherHosts.includes(host), `domínio sem redirecionamento: ${host}`)
+  }
   assert.ok(!otherHosts.includes(official.host), 'o domínio oficial não pode redirecionar para si mesmo')
   assert.equal(new Set(otherHosts).size, otherHosts.length)
 })
