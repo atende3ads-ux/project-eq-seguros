@@ -17,13 +17,13 @@
   "dependencies": {
     "@payloadcms/db-sqlite": "3.90.2", "@payloadcms/next": "3.90.2",
     "@payloadcms/richtext-lexical": "3.90.2", "@payloadcms/translations": "3.90.2",
-    "graphql": "^16.11.0", "next": "16.4.0", "payload": "3.90.2",
+    "graphql": "^16.15.0", "next": "16.4.0", "payload": "3.90.2",
     "react": "19.2.1", "react-dom": "19.2.1", "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "@types/node": "^24.0.0", "@types/react": "^19.2.0", "@types/react-dom": "^19.2.0",
-    "cheerio": "^1.2.0", "playwright": "^1.55.0", "pixelmatch": "^7.1.0", "pngjs": "^7.0.0",
-    "typescript": "^5.9.0", "tsx": "^4.20.0"
+    "@types/node": "^24.19.2", "@types/react": "^19.2.0", "@types/react-dom": "^19.2.0",
+    "cheerio": "^1.2.0", "playwright": "^1.65.0", "pixelmatch": "^7.1.0", "pngjs": "^7.0.0",
+    "typescript": "^5.9.0", "tsx": "^4.23.15"
   },
   "overrides": {
     "dompurify": "3.4.16",
